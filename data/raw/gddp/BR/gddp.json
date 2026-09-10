@@ -1,0 +1,212 @@
+{
+  "records": [
+    {
+      "district": "Patna",
+      "y_crore": 169836.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Nalanda",
+      "y_crore": 21652.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Bhojpur",
+      "y_crore": 21576.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Buxar",
+      "y_crore": 13279.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Rohtas",
+      "y_crore": 25299.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Kaimur",
+      "y_crore": 13194.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Gaya",
+      "y_crore": 36593.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Jehanabad",
+      "y_crore": 8275.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Arwal",
+      "y_crore": 3910.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Narwada",
+      "y_crore": 12211.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Aurangabad",
+      "y_crore": 20514.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Saran",
+      "y_crore": 23971.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Siwan",
+      "y_crore": 22437.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Gopalganj",
+      "y_crore": 14120.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "West Champaran",
+      "y_crore": 24850.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "East Champaran",
+      "y_crore": 29281.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Muzaffarpur",
+      "y_crore": 43004.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Sitamarhi",
+      "y_crore": 17853.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Sheohar",
+      "y_crore": 3131.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Vaishali",
+      "y_crore": 25208.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Darbhanga",
+      "y_crore": 28601.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Madhubani",
+      "y_crore": 24234.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Samastipur",
+      "y_crore": 27759.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Begusarai",
+      "y_crore": 38873.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Munger",
+      "y_crore": 14939.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Sheikhpura",
+      "y_crore": 3889.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Lakhisarai",
+      "y_crore": 7718.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Jamui",
+      "y_crore": 11486.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Khagaria",
+      "y_crore": 11971.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Bhagalpur",
+      "y_crore": 32203.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Banka",
+      "y_crore": 14088.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Sahasra",
+      "y_crore": 12985.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Supaul",
+      "y_crore": 13558.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Madhepura",
+      "y_crore": 12742.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Purnea",
+      "y_crore": 23085.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Kishanganj",
+      "y_crore": 11702.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Araria",
+      "y_crore": 15962.0,
+      "source_name": "Nominal GDP in Crore INR"
+    },
+    {
+      "district": "Katihar",
+      "y_crore": 21209.0,
+      "source_name": "Nominal GDP in Crore INR"
+    }
+  ],
+  "source_file": "Bihar Districts GDDP.xlsx",
+  "source_url": "",
+  "page": "https://state.bihar.gov.in/finance/CitizenHome.html",
+  "year": "2023-24",
+  "price_basis": "current",
+  "base_year": null,
+  "units": "INR crore",
+  "provenance": {
+    "parser": "xlsx_table",
+    "sheet": "Sheet1",
+    "title": "Bihar district income estimates 2023-24",
+    "value_column": "Nominal GDP in Crore INR",
+    "n_districts": 38
+  },
+  "notes": [
+    "Bihar district income estimates 2023-24, nominal (current-price) district GDP in ₹ crore, as compiled from the Bihar Economic Survey district income series.",
+    "Current prices: do not compare levels against constant-price states without deflating."
+  ]
+}

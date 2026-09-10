@@ -1,0 +1,575 @@
+{
+  "state": "MH",
+  "name": "Maharashtra",
+  "n_r7": 61822,
+  "n_r6": 9119,
+  "districts": [
+    "Ahmednagar",
+    "Akola",
+    "Amravati",
+    "Beed",
+    "Bhandara",
+    "Buldhana",
+    "Chandrapur",
+    "Chhatrapati Sambhajinagar",
+    "Dharashiv",
+    "Dhule",
+    "Gadchiroli",
+    "Gondia",
+    "Hingoli",
+    "Jalgaon",
+    "Jalna",
+    "Kolhapur",
+    "Latur",
+    "Mumbai",
+    "Nagpur",
+    "Nanded",
+    "Nandurbar",
+    "Nashik",
+    "Parbhani",
+    "Pune",
+    "Raigad",
+    "Ratnagiri",
+    "Sangli",
+    "Satara",
+    "Sindhudurg",
+    "Solapur",
+    "Thane",
+    "Wardha",
+    "Washim",
+    "Yavatmal"
+  ],
+  "district_files": {
+    "Ahmednagar": "r7/ahmednagar.json",
+    "Akola": "r7/akola.json",
+    "Amravati": "r7/amravati.json",
+    "Beed": "r7/beed.json",
+    "Bhandara": "r7/bhandara.json",
+    "Buldhana": "r7/buldhana.json",
+    "Chandrapur": "r7/chandrapur.json",
+    "Chhatrapati Sambhajinagar": "r7/chhatrapati-sambhajinagar.json",
+    "Dharashiv": "r7/dharashiv.json",
+    "Dhule": "r7/dhule.json",
+    "Gadchiroli": "r7/gadchiroli.json",
+    "Gondia": "r7/gondia.json",
+    "Hingoli": "r7/hingoli.json",
+    "Jalgaon": "r7/jalgaon.json",
+    "Jalna": "r7/jalna.json",
+    "Kolhapur": "r7/kolhapur.json",
+    "Latur": "r7/latur.json",
+    "Mumbai": "r7/mumbai.json",
+    "Nagpur": "r7/nagpur.json",
+    "Nanded": "r7/nanded.json",
+    "Nandurbar": "r7/nandurbar.json",
+    "Nashik": "r7/nashik.json",
+    "Parbhani": "r7/parbhani.json",
+    "Pune": "r7/pune.json",
+    "Raigad": "r7/raigad.json",
+    "Ratnagiri": "r7/ratnagiri.json",
+    "Sangli": "r7/sangli.json",
+    "Satara": "r7/satara.json",
+    "Sindhudurg": "r7/sindhudurg.json",
+    "Solapur": "r7/solapur.json",
+    "Thane": "r7/thane.json",
+    "Wardha": "r7/wardha.json",
+    "Washim": "r7/washim.json",
+    "Yavatmal": "r7/yavatmal.json"
+  },
+  "district_table": [
+    {
+      "district": "Mumbai",
+      "n_cells": 107,
+      "population": 13336438.0,
+      "y_crore": 484521.0,
+      "gdp_crore": 484520.99999999994,
+      "median_gdp_per_capita_inr": 344208.30399647023
+    },
+    {
+      "district": "Thane",
+      "n_cells": 2017,
+      "population": 13525128.0,
+      "y_crore": 356248.0,
+      "gdp_crore": 356248.0,
+      "median_gdp_per_capita_inr": 71569.46830487244
+    },
+    {
+      "district": "Pune",
+      "n_cells": 3235,
+      "population": 12143851.0,
+      "y_crore": 281986.0,
+      "gdp_crore": 281986.0,
+      "median_gdp_per_capita_inr": 56978.73117141969
+    },
+    {
+      "district": "Nagpur",
+      "n_cells": 1922,
+      "population": 5301193.0,
+      "y_crore": 122869.0,
+      "gdp_crore": 122869.0,
+      "median_gdp_per_capita_inr": 62477.632288424444
+    },
+    {
+      "district": "Nashik",
+      "n_cells": 3263,
+      "population": 7432968.0,
+      "y_crore": 118946.0,
+      "gdp_crore": 118946.0,
+      "median_gdp_per_capita_inr": 82974.45129082946
+    },
+    {
+      "district": "Solapur",
+      "n_cells": 2979,
+      "population": 4868292.0,
+      "y_crore": 84237.0,
+      "gdp_crore": 84236.99999999999,
+      "median_gdp_per_capita_inr": 112293.59056253817
+    },
+    {
+      "district": "Kolhapur",
+      "n_cells": 1568,
+      "population": 4096876.0,
+      "y_crore": 83296.0,
+      "gdp_crore": 83296.0,
+      "median_gdp_per_capita_inr": 126512.68684373115
+    },
+    {
+      "district": "Ahmednagar",
+      "n_cells": 3495,
+      "population": 5170720.0,
+      "y_crore": 76819.0,
+      "gdp_crore": 76819.0,
+      "median_gdp_per_capita_inr": 121262.32039600745
+    },
+    {
+      "district": "Chhatrapati Sambhajinagar",
+      "n_cells": 2095,
+      "population": 4622886.0,
+      "y_crore": 66319.0,
+      "gdp_crore": 66319.0,
+      "median_gdp_per_capita_inr": 77984.8037066285
+    },
+    {
+      "district": "Raigad",
+      "n_cells": 1466,
+      "population": 3083347.0,
+      "y_crore": 64516.0,
+      "gdp_crore": 64516.0,
+      "median_gdp_per_capita_inr": 104669.15951462471
+    },
+    {
+      "district": "Jalgaon",
+      "n_cells": 2398,
+      "population": 4787334.0,
+      "y_crore": 58683.0,
+      "gdp_crore": 58683.0,
+      "median_gdp_per_capita_inr": 97836.33642437414
+    },
+    {
+      "district": "Satara",
+      "n_cells": 2166,
+      "population": 3216022.0,
+      "y_crore": 53302.0,
+      "gdp_crore": 53302.0,
+      "median_gdp_per_capita_inr": 127801.93195296655
+    },
+    {
+      "district": "Sangli",
+      "n_cells": 1710,
+      "population": 3252782.0,
+      "y_crore": 52441.0,
+      "gdp_crore": 52441.0,
+      "median_gdp_per_capita_inr": 94315.28748303179
+    },
+    {
+      "district": "Nanded",
+      "n_cells": 2062,
+      "population": 3931605.0,
+      "y_crore": 44418.0,
+      "gdp_crore": 44418.0,
+      "median_gdp_per_capita_inr": 87380.95877749026
+    },
+    {
+      "district": "Amravati",
+      "n_cells": 2423,
+      "population": 3232720.0,
+      "y_crore": 42123.0,
+      "gdp_crore": 42123.0,
+      "median_gdp_per_capita_inr": 78864.22682630092
+    },
+    {
+      "district": "Chandrapur",
+      "n_cells": 2159,
+      "population": 2379610.0,
+      "y_crore": 37470.0,
+      "gdp_crore": 37470.0,
+      "median_gdp_per_capita_inr": 111134.19747941112
+    },
+    {
+      "district": "Latur",
+      "n_cells": 1420,
+      "population": 2842711.0,
+      "y_crore": 35201.0,
+      "gdp_crore": 35201.0,
+      "median_gdp_per_capita_inr": 88411.8720216356
+    },
+    {
+      "district": "Beed",
+      "n_cells": 2122,
+      "population": 3077796.0,
+      "y_crore": 33187.0,
+      "gdp_crore": 33187.0,
+      "median_gdp_per_capita_inr": 96112.56356873365
+    },
+    {
+      "district": "Yavatmal",
+      "n_cells": 2627,
+      "population": 3102470.0,
+      "y_crore": 32519.0,
+      "gdp_crore": 32519.000000000004,
+      "median_gdp_per_capita_inr": 89938.36982125415
+    },
+    {
+      "district": "Dhule",
+      "n_cells": 1500,
+      "population": 2447475.0,
+      "y_crore": 28856.0,
+      "gdp_crore": 28856.0,
+      "median_gdp_per_capita_inr": 90714.30964865195
+    },
+    {
+      "district": "Ratnagiri",
+      "n_cells": 1732,
+      "population": 1540149.0,
+      "y_crore": 28483.0,
+      "gdp_crore": 28483.0,
+      "median_gdp_per_capita_inr": 140891.69532335858
+    },
+    {
+      "district": "Akola",
+      "n_cells": 1071,
+      "population": 2048554.0,
+      "y_crore": 27080.0,
+      "gdp_crore": 27080.0,
+      "median_gdp_per_capita_inr": 92998.47821058914
+    },
+    {
+      "district": "Buldhana",
+      "n_cells": 1967,
+      "population": 2991142.0,
+      "y_crore": 26093.0,
+      "gdp_crore": 26093.0,
+      "median_gdp_per_capita_inr": 79151.32031417693
+    },
+    {
+      "district": "Jalna",
+      "n_cells": 1552,
+      "population": 2381717.0,
+      "y_crore": 25683.0,
+      "gdp_crore": 25682.999999999996,
+      "median_gdp_per_capita_inr": 95526.80546253601
+    },
+    {
+      "district": "Parbhani",
+      "n_cells": 1270,
+      "population": 2175133.0,
+      "y_crore": 23836.0,
+      "gdp_crore": 23836.0,
+      "median_gdp_per_capita_inr": 96520.53579815397
+    },
+    {
+      "district": "Wardha",
+      "n_cells": 1230,
+      "population": 1392336.0,
+      "y_crore": 22072.0,
+      "gdp_crore": 22072.000000000004,
+      "median_gdp_per_capita_inr": 104467.53984551085
+    },
+    {
+      "district": "Dharashiv",
+      "n_cells": 1506,
+      "population": 1934522.0,
+      "y_crore": 21938.0,
+      "gdp_crore": 21938.0,
+      "median_gdp_per_capita_inr": 103760.63118682815
+    },
+    {
+      "district": "Gondia",
+      "n_cells": 983,
+      "population": 1566203.0,
+      "y_crore": 17979.0,
+      "gdp_crore": 17979.0,
+      "median_gdp_per_capita_inr": 91014.32871670494
+    },
+    {
+      "district": "Bhandara",
+      "n_cells": 797,
+      "population": 1194257.0,
+      "y_crore": 16919.0,
+      "gdp_crore": 16919.0,
+      "median_gdp_per_capita_inr": 120197.6060839509
+    },
+    {
+      "district": "Sindhudurg",
+      "n_cells": 1056,
+      "population": 833668.0,
+      "y_crore": 16630.0,
+      "gdp_crore": 16630.0,
+      "median_gdp_per_capita_inr": 165409.37936725968
+    },
+    {
+      "district": "Nandurbar",
+      "n_cells": 1259,
+      "population": 2085266.0,
+      "y_crore": 15704.0,
+      "gdp_crore": 15704.0,
+      "median_gdp_per_capita_inr": 67039.73773131147
+    },
+    {
+      "district": "Hingoli",
+      "n_cells": 918,
+      "population": 1375405.0,
+      "y_crore": 12035.0,
+      "gdp_crore": 12035.0,
+      "median_gdp_per_capita_inr": 79338.04837066325
+    },
+    {
+      "district": "Washim",
+      "n_cells": 1024,
+      "population": 1379972.0,
+      "y_crore": 11929.0,
+      "gdp_crore": 11929.0,
+      "median_gdp_per_capita_inr": 82635.79080025182
+    },
+    {
+      "district": "Gadchiroli",
+      "n_cells": 2723,
+      "population": 1227252.0,
+      "y_crore": 10921.0,
+      "gdp_crore": 10921.0,
+      "median_gdp_per_capita_inr": 61162.92896828059
+    }
+  ],
+  "metros": {
+    "Mumbai Metropolitan": [
+      "Mumbai",
+      "Thane",
+      "Raigad"
+    ]
+  },
+  "center": [
+    76.0,
+    19.05
+  ],
+  "zoom": 6.15,
+  "metrics": [
+    {
+      "id": "wealth_index",
+      "label": "Wealth index",
+      "units": "percentile 0\u00e2\u20ac\u201c100",
+      "group": "Model output",
+      "default": true
+    },
+    {
+      "id": "gdp_per_capita_inr",
+      "label": "Allocated GDDP per capita",
+      "units": "\u00e2\u201a\u00b9/person",
+      "group": "Model output"
+    },
+    {
+      "id": "gdp_crore",
+      "label": "Allocated cell GDDP",
+      "units": "\u00e2\u201a\u00b9 crore",
+      "group": "Model output"
+    },
+    {
+      "id": "intensity_raw",
+      "label": "Economic intensity s_i (pre-scale)",
+      "units": "index",
+      "group": "Model output"
+    },
+    {
+      "id": "population",
+      "label": "Population",
+      "units": "people",
+      "group": "Input"
+    },
+    {
+      "id": "night_lights",
+      "label": "Night lights",
+      "units": "nW/cm\u00c2\u00b2/sr",
+      "group": "Input"
+    },
+    {
+      "id": "road_km",
+      "label": "Road length",
+      "units": "km",
+      "group": "Input"
+    },
+    {
+      "id": "poi_count",
+      "label": "OSM POIs (all groups)",
+      "units": "count",
+      "group": "Input"
+    },
+    {
+      "id": "building_area_m2",
+      "label": "Building footprint area",
+      "units": "m\u00c2\u00b2",
+      "group": "Input"
+    },
+    {
+      "id": "building_count",
+      "label": "Building count",
+      "units": "buildings",
+      "group": "Input"
+    },
+    {
+      "id": "building_share",
+      "label": "Built-up share of cell",
+      "units": "share 0\u00e2\u20ac\u201c1",
+      "group": "Input"
+    },
+    {
+      "id": "landuse_residential",
+      "label": "Landuse: residential",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_commercial",
+      "label": "Landuse: commercial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_industrial",
+      "label": "Landuse: industrial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "poi_amenity_restaurant",
+      "label": "Restaurants",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_cafe",
+      "label": "Caf\u00c3\u00a9s",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_hospital",
+      "label": "Hospitals",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_bank",
+      "label": "Banks",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_supermarket",
+      "label": "Supermarkets",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_tourism_hotel",
+      "label": "Hotels",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_leisure",
+      "label": "Leisure sites",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_office",
+      "label": "Offices",
+      "units": "count",
+      "group": "POI class"
+    }
+  ],
+  "source": {
+    "gddp_year": "2023-24",
+    "price_basis": "constant",
+    "base_year": "2011-12",
+    "units": "INR crore",
+    "page": "https://data.opencity.in/dataset/economic-survey-of-maharashtra-2024-25",
+    "notes": [
+      "Mumbai# = Mumbai City + Mumbai Suburban",
+      "Thane$ = Thane + Palghar",
+      "Source: DES Maharashtra via OpenCity CKAN (public domain extract of Economic Survey 2024-25)"
+    ],
+    "total_crore": 2435259.0,
+    "population_product": "Kontur Population India 2023 (H3 R8 summed to R7)",
+    "total_population": 129977800.0,
+    "nightlights_product": "VIIRS VNL v2.2 average_masked (annual mean radiance)",
+    "nightlights_year": "2025",
+    "nightlights_used": true,
+    "osm": "OpenStreetMap via Geofabrik extract (ODbL)"
+  },
+  "evaluation": {
+    "max_abs_rel_recon_error": 2.0155215150633305e-16,
+    "ensemble": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pre_scale_district_log_loss": 0.04386526228232306,
+      "caption": "ensemble range across seeds, not a calibrated probability of error."
+    },
+    "holdout": {
+      "holdout_districts": [
+        "Akola",
+        "Amravati",
+        "Dharashiv",
+        "Dhule",
+        "Kolhapur",
+        "Nagpur",
+        "Pune"
+      ],
+      "n_train_districts": 27,
+      "n_holdout_districts": 7,
+      "pre_scale_holdout_mape": 0.5678476705941933,
+      "final_loss": 0.039188253660448966,
+      "note": "MAPE is on district sums BEFORE dasymetric scale. Post-scale reconstruction \u2248 0 is conservation, not accuracy."
+    },
+    "ablation_ntl": {
+      "runs": [
+        {
+          "tag": "with_ntl",
+          "n_features": 94,
+          "pre_scale_district_log_loss": 0.0347423788032131,
+          "final_train_loss": 0.03494936530762627
+        },
+        {
+          "tag": "without_ntl",
+          "n_features": 92,
+          "pre_scale_district_log_loss": 0.055828829531607393,
+          "final_train_loss": 0.056340345627918044
+        }
+      ],
+      "note": "Ablation compares pre-scale district log-loss with and without night_lights features. NTL is in the model when the raster is present."
+    },
+    "spearman": {
+      "wealth_index_vs_night_lights": 0.29050638825786057,
+      "wealth_index_vs_road_km": 0.24749549610875485,
+      "wealth_index_vs_poi_count": 0.19948570321537873,
+      "gdp_per_capita_vs_night_lights": 0.29050638825786057,
+      "note": "Spearman vs NTL/roads/POIs is a sanity check, not truth. wealth_index is not a DHS score."
+    }
+  },
+  "caption": "ensemble range across seeds, not a calibrated probability of error.",
+  "disclaimer": "Cell GDP is an allocation of official district GDP, not a measurement. wealth_index is not a DHS score."
+}

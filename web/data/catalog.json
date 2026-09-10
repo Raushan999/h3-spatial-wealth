@@ -1,0 +1,299 @@
+{
+  "metrics": [
+    {
+      "id": "wealth_index",
+      "label": "Wealth index",
+      "units": "percentile 0\u00e2\u20ac\u201c100",
+      "group": "Model output",
+      "default": true
+    },
+    {
+      "id": "gdp_per_capita_inr",
+      "label": "Allocated GDDP per capita",
+      "units": "\u00e2\u201a\u00b9/person",
+      "group": "Model output"
+    },
+    {
+      "id": "gdp_crore",
+      "label": "Allocated cell GDDP",
+      "units": "\u00e2\u201a\u00b9 crore",
+      "group": "Model output"
+    },
+    {
+      "id": "intensity_raw",
+      "label": "Economic intensity s_i (pre-scale)",
+      "units": "index",
+      "group": "Model output"
+    },
+    {
+      "id": "population",
+      "label": "Population",
+      "units": "people",
+      "group": "Input"
+    },
+    {
+      "id": "night_lights",
+      "label": "Night lights",
+      "units": "nW/cm\u00c2\u00b2/sr",
+      "group": "Input"
+    },
+    {
+      "id": "road_km",
+      "label": "Road length",
+      "units": "km",
+      "group": "Input"
+    },
+    {
+      "id": "poi_count",
+      "label": "OSM POIs (all groups)",
+      "units": "count",
+      "group": "Input"
+    },
+    {
+      "id": "building_area_m2",
+      "label": "Building footprint area",
+      "units": "m\u00c2\u00b2",
+      "group": "Input"
+    },
+    {
+      "id": "building_count",
+      "label": "Building count",
+      "units": "buildings",
+      "group": "Input"
+    },
+    {
+      "id": "building_share",
+      "label": "Built-up share of cell",
+      "units": "share 0\u00e2\u20ac\u201c1",
+      "group": "Input"
+    },
+    {
+      "id": "landuse_residential",
+      "label": "Landuse: residential",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_industrial",
+      "label": "Landuse: industrial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "poi_amenity_restaurant",
+      "label": "Restaurants",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_hospital",
+      "label": "Hospitals",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_bank",
+      "label": "Banks",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_leisure",
+      "label": "Leisure sites",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_office",
+      "label": "Offices",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "landuse_commercial",
+      "label": "Landuse: commercial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_retail",
+      "label": "Landuse: retail",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "poi_amenity_cafe",
+      "label": "Caf\u00c3\u00a9s",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_bar",
+      "label": "Bars",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_pub",
+      "label": "Pubs",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_cinema",
+      "label": "Cinemas",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_theatre",
+      "label": "Theatres",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_nightclub",
+      "label": "Nightclubs",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_university",
+      "label": "Universities",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_mall",
+      "label": "Malls / department stores",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_luxury",
+      "label": "Jewellery & boutiques",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_supermarket",
+      "label": "Supermarkets",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_convenience",
+      "label": "Convenience stores",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_tourism_hotel",
+      "label": "Hotels",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_tourism_guest_house",
+      "label": "Guest houses",
+      "units": "count",
+      "group": "POI class"
+    }
+  ],
+  "states": [
+    {
+      "state": "BR",
+      "name": "Bihar",
+      "center": [
+        85.5,
+        25.6
+      ],
+      "zoom": 6.4,
+      "n_r7": 17829,
+      "gddp_year": "2023-24",
+      "price_basis": "current"
+    },
+    {
+      "state": "DL",
+      "name": "Delhi (NCT)",
+      "center": [
+        77.1,
+        28.65
+      ],
+      "zoom": 9.4,
+      "n_r7": 276,
+      "gddp_year": "2023-24",
+      "price_basis": "constant"
+    },
+    {
+      "state": "KA",
+      "name": "Karnataka",
+      "center": [
+        76.5,
+        15.0
+      ],
+      "zoom": 6.2,
+      "n_r7": 37430,
+      "gddp_year": "2024-25",
+      "price_basis": "constant"
+    },
+    {
+      "state": "MH",
+      "name": "Maharashtra",
+      "center": [
+        76.0,
+        19.05
+      ],
+      "zoom": 6.15,
+      "n_r7": 61822,
+      "gddp_year": "2023-24",
+      "price_basis": "constant"
+    },
+    {
+      "state": "RJ",
+      "name": "Rajasthan",
+      "center": [
+        74.2,
+        26.6
+      ],
+      "zoom": 6.1,
+      "n_r7": 65948,
+      "gddp_year": "2023-24",
+      "price_basis": "constant"
+    },
+    {
+      "state": "TG",
+      "name": "Telangana",
+      "center": [
+        79.0,
+        17.9
+      ],
+      "zoom": 6.6,
+      "n_r7": 21638,
+      "gddp_year": "2022-23",
+      "price_basis": "current"
+    },
+    {
+      "state": "UP",
+      "name": "Uttar Pradesh",
+      "center": [
+        80.9,
+        26.85
+      ],
+      "zoom": 6.0,
+      "n_r7": 46723,
+      "gddp_year": "2021-22",
+      "price_basis": "constant"
+    }
+  ],
+  "default_metric": "wealth_index",
+  "colour_mode_default": "percentile",
+  "copy": {
+    "ntl": "Night-time lights (VIIRS average_masked) are in the model wherever the composite covers the state.",
+    "dhs": "wealth_index is a within-state percentile of allocated GDDP per capita, not a DHS wealth score.",
+    "allocation": "Cell GDP is an allocation of official district GDP, not a measurement.",
+    "ensemble": "ensemble range across seeds, not a calibrated probability of error.",
+    "absolute_warning": "Absolute colour scales use native units (\u00e2\u201a\u00b9/person, people, nW/cm\u00c2\u00b2/sr, \u00e2\u20ac\u00a6). States are estimated for different years and price bases, so do not compare two states on one absolute scale.",
+    "years": "Each state is disaggregated from its own official GDDP release, so the reference year differs by state. The year is shown next to the state name."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "url": "https://state.bihar.gov.in/finance/CitizenHome.html",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T14:53:16.885835+00:00",
+  "license": "State DES / official statistical publication (open government data)",
+  "units": "INR crore",
+  "status": "ok",
+  "kind": "xlsx_table",
+  "year": "2023-24",
+  "price_basis": "current",
+  "base_year": null,
+  "source_file": "Bihar Districts GDDP.xlsx",
+  "provenance": {
+    "parser": "xlsx_table",
+    "sheet": "Sheet1",
+    "title": "Bihar district income estimates 2023-24",
+    "value_column": "Nominal GDP in Crore INR",
+    "n_districts": 38
+  },
+  "notes": [
+    "Bihar district income estimates 2023-24, nominal (current-price) district GDP in ₹ crore, as compiled from the Bihar Economic Survey district income series.",
+    "Current prices: do not compare levels against constant-price states without deflating."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "source": "OpenStreetMap via Overpass API",
+  "url": "https://overpass-api.de/api/interpreter",
+  "license": "ODbL",
+  "filters": "major highways + selected amenity/shop/office nodes",
+  "tiles": [
+    "tile_1.json",
+    "tile_2.json",
+    "tile_3.json",
+    "tile_4.json"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿downloading https://download.geofabrik.de/asia/india/northern-zone-latest.osm.pbf
+DL D:\CursorProjects\spatialdisintegration\data\raw\osm\IN\northern-zone-latest.osm.pbf 223 MB
+downloading https://download.geofabrik.de/asia/india/western-zone-latest.osm.pbf
+MH D:\CursorProjects\spatialdisintegration\data\raw\osm\IN\western-zone-latest.osm.pbf 221 MB
+downloading https://download.geofabrik.de/asia/india/southern-zone-latest.osm.pbf
+KA D:\CursorProjects\spatialdisintegration\data\raw\osm\IN\southern-zone-latest.osm.pbf 559 MB
+downloading https://download.geofabrik.de/asia/india/central-zone-latest.osm.pbf
+UP D:\CursorProjects\spatialdisintegration\data\raw\osm\IN\central-zone-latest.osm.pbf 351 MB
+downloading https://download.geofabrik.de/asia/india/eastern-zone-latest.osm.pbf
+BR D:\CursorProjects\spatialdisintegration\data\raw\osm\IN\eastern-zone-latest.osm.pbf 247 MB
+RJ D:\CursorProjects\spatialdisintegration\data\raw\osm\IN\northern-zone-latest.osm.pbf 223 MB
+TG D:\CursorProjects\spatialdisintegration\data\raw\osm\IN\southern-zone-latest.osm.pbf 559 MB
+ALL DONE

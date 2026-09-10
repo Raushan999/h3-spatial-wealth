@@ -1,0 +1,16 @@
+{
+  "url": "https://data.humdata.org/dataset/kontur-population-india",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T15:03:40.291687+00:00",
+  "license": "CC BY (Kontur Population via HDX)",
+  "units": "people per H3 cell (R8, ~400 m)",
+  "status": "ok",
+  "path": "D:\\CursorProjects\\spatialdisintegration\\data\\raw\\population\\kontur_population_india.gpkg",
+  "size_bytes": 544862208,
+  "other_copies_on_disk": [
+    "D:\\CursorProjects\\spatialdisintegration\\data\\raw\\population\\IN\\kontur_population_IN_20231101.gpkg"
+  ],
+  "download": "https://geodata-eu-central-1-kontur-public.s3.amazonaws.com/kontur_datasets/kontur_population_IN_20231101.gpkg.gz",
+  "role": "default exposure w_i and population feature",
+  "year": 2023
+}

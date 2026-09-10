@@ -1,0 +1,576 @@
+{
+  "state": "TG",
+  "name": "Telangana",
+  "n_r7": 21638,
+  "n_r6": 3232,
+  "districts": [
+    "Adilabad",
+    "Bhadradri Kothagudem",
+    "Hanamkonda",
+    "Hyderabad",
+    "Jagtial",
+    "Jangaon",
+    "Jayashankar Bhupalpally",
+    "Jogulamba Gadwal",
+    "Kamareddy",
+    "Karimnagar",
+    "Khammam",
+    "Kumuram Bheem Asifabad",
+    "Mahabubabad",
+    "Mahabubnagar",
+    "Mancherial",
+    "Medak",
+    "Medchal Malkajgiri",
+    "Mulugu",
+    "Nagarkurnool",
+    "Nalgonda",
+    "Narayanpet",
+    "Nirmal",
+    "Nizamabad",
+    "Peddapalli",
+    "Rajanna Sircilla",
+    "Ranga Reddy",
+    "Sangareddy",
+    "Siddipet",
+    "Suryapet",
+    "Vikarabad",
+    "Wanaparthy",
+    "Warangal",
+    "Yadadri Bhuvanagiri"
+  ],
+  "district_files": {
+    "Adilabad": "r7/adilabad.json",
+    "Bhadradri Kothagudem": "r7/bhadradri-kothagudem.json",
+    "Hanamkonda": "r7/hanamkonda.json",
+    "Hyderabad": "r7/hyderabad.json",
+    "Jagtial": "r7/jagtial.json",
+    "Jangaon": "r7/jangaon.json",
+    "Jayashankar Bhupalpally": "r7/jayashankar-bhupalpally.json",
+    "Jogulamba Gadwal": "r7/jogulamba-gadwal.json",
+    "Kamareddy": "r7/kamareddy.json",
+    "Karimnagar": "r7/karimnagar.json",
+    "Khammam": "r7/khammam.json",
+    "Kumuram Bheem Asifabad": "r7/kumuram-bheem-asifabad.json",
+    "Mahabubabad": "r7/mahabubabad.json",
+    "Mahabubnagar": "r7/mahabubnagar.json",
+    "Mancherial": "r7/mancherial.json",
+    "Medak": "r7/medak.json",
+    "Medchal Malkajgiri": "r7/medchal-malkajgiri.json",
+    "Mulugu": "r7/mulugu.json",
+    "Nagarkurnool": "r7/nagarkurnool.json",
+    "Nalgonda": "r7/nalgonda.json",
+    "Narayanpet": "r7/narayanpet.json",
+    "Nirmal": "r7/nirmal.json",
+    "Nizamabad": "r7/nizamabad.json",
+    "Peddapalli": "r7/peddapalli.json",
+    "Rajanna Sircilla": "r7/rajanna-sircilla.json",
+    "Ranga Reddy": "r7/ranga-reddy.json",
+    "Sangareddy": "r7/sangareddy.json",
+    "Siddipet": "r7/siddipet.json",
+    "Suryapet": "r7/suryapet.json",
+    "Vikarabad": "r7/vikarabad.json",
+    "Wanaparthy": "r7/wanaparthy.json",
+    "Warangal": "r7/warangal.json",
+    "Yadadri Bhuvanagiri": "r7/yadadri-bhuvanagiri.json"
+  },
+  "district_table": [
+    {
+      "district": "Ranga Reddy",
+      "n_cells": 969,
+      "population": 3829913.0,
+      "y_crore": 283419.0,
+      "gdp_crore": 283419.0,
+      "median_gdp_per_capita_inr": 491496.80062411795
+    },
+    {
+      "district": "Hyderabad",
+      "n_cells": 53,
+      "population": 4021759.0,
+      "y_crore": 228623.0,
+      "gdp_crore": 228623.0,
+      "median_gdp_per_capita_inr": 541062.8323534768
+    },
+    {
+      "district": "Medchal Malkajgiri",
+      "n_cells": 203,
+      "population": 3271992.0,
+      "y_crore": 88867.0,
+      "gdp_crore": 88867.0,
+      "median_gdp_per_capita_inr": 160891.56410230108
+    },
+    {
+      "district": "Sangareddy",
+      "n_cells": 842,
+      "population": 1727592.0,
+      "y_crore": 60401.0,
+      "gdp_crore": 60401.0,
+      "median_gdp_per_capita_inr": 331399.34004346014
+    },
+    {
+      "district": "Nalgonda",
+      "n_cells": 1345,
+      "population": 1811997.0,
+      "y_crore": 50616.0,
+      "gdp_crore": 50616.0,
+      "median_gdp_per_capita_inr": 254581.08907371404
+    },
+    {
+      "district": "Khammam",
+      "n_cells": 857,
+      "population": 1560349.0,
+      "y_crore": 40803.0,
+      "gdp_crore": 40803.0,
+      "median_gdp_per_capita_inr": 209940.91463097127
+    },
+    {
+      "district": "Nizamabad",
+      "n_cells": 829,
+      "population": 1748265.0,
+      "y_crore": 36536.0,
+      "gdp_crore": 36536.0,
+      "median_gdp_per_capita_inr": 169314.34100375074
+    },
+    {
+      "district": "Bhadradri Kothagudem",
+      "n_cells": 2014,
+      "population": 1422315.0,
+      "y_crore": 34215.0,
+      "gdp_crore": 34215.0,
+      "median_gdp_per_capita_inr": 196042.43362674475
+    },
+    {
+      "district": "Suryapet",
+      "n_cells": 649,
+      "population": 1135192.0,
+      "y_crore": 30003.0,
+      "gdp_crore": 30003.0,
+      "median_gdp_per_capita_inr": 235578.18893565724
+    },
+    {
+      "district": "Mahabubnagar",
+      "n_cells": 544,
+      "population": 1126032.0,
+      "y_crore": 28960.0,
+      "gdp_crore": 28960.0,
+      "median_gdp_per_capita_inr": 217265.60374933493
+    },
+    {
+      "district": "Siddipet",
+      "n_cells": 708,
+      "population": 1144383.0,
+      "y_crore": 28030.0,
+      "gdp_crore": 28030.000000000004,
+      "median_gdp_per_capita_inr": 220292.04908341356
+    },
+    {
+      "district": "Karimnagar",
+      "n_cells": 402,
+      "population": 1131916.0,
+      "y_crore": 26603.0,
+      "gdp_crore": 26603.0,
+      "median_gdp_per_capita_inr": 160580.63112391706
+    },
+    {
+      "district": "Yadadri Bhuvanagiri",
+      "n_cells": 644,
+      "population": 838343.0,
+      "y_crore": 24611.0,
+      "gdp_crore": 24611.0,
+      "median_gdp_per_capita_inr": 273701.1387062233
+    },
+    {
+      "district": "Hanamkonda",
+      "n_cells": 187,
+      "population": 1105444.0,
+      "y_crore": 23869.0,
+      "gdp_crore": 23869.0,
+      "median_gdp_per_capita_inr": 115312.43160963438
+    },
+    {
+      "district": "Medak",
+      "n_cells": 537,
+      "population": 876284.0,
+      "y_crore": 23558.0,
+      "gdp_crore": 23558.0,
+      "median_gdp_per_capita_inr": 257789.37886289318
+    },
+    {
+      "district": "Peddapalli",
+      "n_cells": 439,
+      "population": 925955.0,
+      "y_crore": 22353.0,
+      "gdp_crore": 22353.0,
+      "median_gdp_per_capita_inr": 182545.458795553
+    },
+    {
+      "district": "Kamareddy",
+      "n_cells": 686,
+      "population": 1036433.0,
+      "y_crore": 22053.0,
+      "gdp_crore": 22053.0,
+      "median_gdp_per_capita_inr": 192271.65354100626
+    },
+    {
+      "district": "Mancherial",
+      "n_cells": 706,
+      "population": 777085.0,
+      "y_crore": 21395.0,
+      "gdp_crore": 21395.0,
+      "median_gdp_per_capita_inr": 217568.58857875445
+    },
+    {
+      "district": "Nagarkurnool",
+      "n_cells": 1162,
+      "population": 966885.0,
+      "y_crore": 21277.0,
+      "gdp_crore": 21277.0,
+      "median_gdp_per_capita_inr": 216397.69047890522
+    },
+    {
+      "district": "Jagtial",
+      "n_cells": 538,
+      "population": 1055914.0,
+      "y_crore": 21217.0,
+      "gdp_crore": 21217.0,
+      "median_gdp_per_capita_inr": 171910.89927315974
+    },
+    {
+      "district": "Vikarabad",
+      "n_cells": 692,
+      "population": 1315644.0,
+      "y_crore": 19840.0,
+      "gdp_crore": 19840.0,
+      "median_gdp_per_capita_inr": 135664.86902313124
+    },
+    {
+      "district": "Warangal",
+      "n_cells": 380,
+      "population": 772398.0,
+      "y_crore": 18887.0,
+      "gdp_crore": 18887.0,
+      "median_gdp_per_capita_inr": 235262.90578098575
+    },
+    {
+      "district": "Mahabubabad",
+      "n_cells": 669,
+      "population": 819355.0,
+      "y_crore": 18172.0,
+      "gdp_crore": 18172.0,
+      "median_gdp_per_capita_inr": 213916.53778385173
+    },
+    {
+      "district": "Adilabad",
+      "n_cells": 782,
+      "population": 813981.0,
+      "y_crore": 17190.0,
+      "gdp_crore": 17190.0,
+      "median_gdp_per_capita_inr": 183476.5355452128
+    },
+    {
+      "district": "Nirmal",
+      "n_cells": 721,
+      "population": 765466.0,
+      "y_crore": 16956.0,
+      "gdp_crore": 16956.0,
+      "median_gdp_per_capita_inr": 203315.3813855493
+    },
+    {
+      "district": "Jogulamba Gadwal",
+      "n_cells": 479,
+      "population": 670344.0,
+      "y_crore": 14219.0,
+      "gdp_crore": 14218.999999999998,
+      "median_gdp_per_capita_inr": 194298.64105321627
+    },
+    {
+      "district": "Wanaparthy",
+      "n_cells": 429,
+      "population": 689969.0,
+      "y_crore": 14151.0,
+      "gdp_crore": 14151.000000000002,
+      "median_gdp_per_capita_inr": 196842.26980138588
+    },
+    {
+      "district": "Jayashankar Bhupalpally",
+      "n_cells": 537,
+      "population": 411205.0,
+      "y_crore": 13809.0,
+      "gdp_crore": 13809.0,
+      "median_gdp_per_capita_inr": 308274.4030407382
+    },
+    {
+      "district": "Jangaon",
+      "n_cells": 445,
+      "population": 678210.0,
+      "y_crore": 13593.0,
+      "gdp_crore": 13592.999999999996,
+      "median_gdp_per_capita_inr": 180980.84943577752
+    },
+    {
+      "district": "Narayanpet",
+      "n_cells": 439,
+      "population": 651982.0,
+      "y_crore": 12980.0,
+      "gdp_crore": 12980.0,
+      "median_gdp_per_capita_inr": 191164.2436457987
+    },
+    {
+      "district": "Rajanna Sircilla",
+      "n_cells": 342,
+      "population": 596605.0,
+      "y_crore": 12778.0,
+      "gdp_crore": 12778.0,
+      "median_gdp_per_capita_inr": 207990.51841647888
+    },
+    {
+      "district": "Kumuram Bheem Asifabad",
+      "n_cells": 851,
+      "population": 566352.0,
+      "y_crore": 11136.0,
+      "gdp_crore": 11136.0,
+      "median_gdp_per_capita_inr": 186597.20701994
+    },
+    {
+      "district": "Mulugu",
+      "n_cells": 558,
+      "population": 282304.0,
+      "y_crore": 6914.0,
+      "gdp_crore": 6914.0,
+      "median_gdp_per_capita_inr": 230019.26428962243
+    }
+  ],
+  "metros": {
+    "Hyderabad metro": [
+      "Hyderabad",
+      "Ranga Reddy",
+      "Medchal Malkajgiri",
+      "Sangareddy"
+    ]
+  },
+  "center": [
+    79.0,
+    17.9
+  ],
+  "zoom": 6.6,
+  "metrics": [
+    {
+      "id": "wealth_index",
+      "label": "Wealth index",
+      "units": "percentile 0\u00e2\u20ac\u201c100",
+      "group": "Model output",
+      "default": true
+    },
+    {
+      "id": "gdp_per_capita_inr",
+      "label": "Allocated GDDP per capita",
+      "units": "\u00e2\u201a\u00b9/person",
+      "group": "Model output"
+    },
+    {
+      "id": "gdp_crore",
+      "label": "Allocated cell GDDP",
+      "units": "\u00e2\u201a\u00b9 crore",
+      "group": "Model output"
+    },
+    {
+      "id": "intensity_raw",
+      "label": "Economic intensity s_i (pre-scale)",
+      "units": "index",
+      "group": "Model output"
+    },
+    {
+      "id": "population",
+      "label": "Population",
+      "units": "people",
+      "group": "Input"
+    },
+    {
+      "id": "night_lights",
+      "label": "Night lights",
+      "units": "nW/cm\u00c2\u00b2/sr",
+      "group": "Input"
+    },
+    {
+      "id": "road_km",
+      "label": "Road length",
+      "units": "km",
+      "group": "Input"
+    },
+    {
+      "id": "poi_count",
+      "label": "OSM POIs (all groups)",
+      "units": "count",
+      "group": "Input"
+    },
+    {
+      "id": "building_area_m2",
+      "label": "Building footprint area",
+      "units": "m\u00c2\u00b2",
+      "group": "Input"
+    },
+    {
+      "id": "building_count",
+      "label": "Building count",
+      "units": "buildings",
+      "group": "Input"
+    },
+    {
+      "id": "building_share",
+      "label": "Built-up share of cell",
+      "units": "share 0\u00e2\u20ac\u201c1",
+      "group": "Input"
+    },
+    {
+      "id": "landuse_residential",
+      "label": "Landuse: residential",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_commercial",
+      "label": "Landuse: commercial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_industrial",
+      "label": "Landuse: industrial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "poi_amenity_restaurant",
+      "label": "Restaurants",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_cafe",
+      "label": "Caf\u00c3\u00a9s",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_bar",
+      "label": "Bars",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_hospital",
+      "label": "Hospitals",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_bank",
+      "label": "Banks",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_mall",
+      "label": "Malls / department stores",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_supermarket",
+      "label": "Supermarkets",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_tourism_hotel",
+      "label": "Hotels",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_leisure",
+      "label": "Leisure sites",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_office",
+      "label": "Offices",
+      "units": "count",
+      "group": "POI class"
+    }
+  ],
+  "source": {
+    "gddp_year": "2022-23",
+    "price_basis": "current",
+    "base_year": null,
+    "units": "INR crore",
+    "page": "https://data.opencity.in/dataset/telangana-socio-economic-outlook-2024",
+    "notes": [
+      "DES Telangana via OpenCity, Socio-Economic Outlook 2024. Latest free table is current-price GDDP 2022-23 (no constant-price column in the CSV)."
+    ],
+    "total_crore": 1308034.0,
+    "population_product": "Kontur Population India 2023 (H3 R8 summed to R7)",
+    "total_population": 40547863.0,
+    "nightlights_product": "VIIRS VNL v2.2 average_masked (annual mean radiance)",
+    "nightlights_year": "2025",
+    "nightlights_used": true,
+    "osm": "OpenStreetMap via Geofabrik extract (ODbL)"
+  },
+  "evaluation": {
+    "max_abs_rel_recon_error": 1.495849723059579e-16,
+    "ensemble": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pre_scale_district_log_loss": 0.03751651796042626,
+      "caption": "ensemble range across seeds, not a calibrated probability of error."
+    },
+    "holdout": {
+      "holdout_districts": [
+        "Bhadradri Kothagudem",
+        "Hanamkonda",
+        "Kamareddy",
+        "Karimnagar",
+        "Mancherial",
+        "Mulugu",
+        "Nizamabad"
+      ],
+      "n_train_districts": 26,
+      "n_holdout_districts": 7,
+      "pre_scale_holdout_mape": 0.851438531417221,
+      "final_loss": 0.05657490128478626,
+      "note": "MAPE is on district sums BEFORE dasymetric scale. Post-scale reconstruction \u2248 0 is conservation, not accuracy."
+    },
+    "ablation_ntl": {
+      "runs": [
+        {
+          "tag": "with_ntl",
+          "n_features": 94,
+          "pre_scale_district_log_loss": 0.02707037862150595,
+          "final_train_loss": 0.02733437463462183
+        },
+        {
+          "tag": "without_ntl",
+          "n_features": 92,
+          "pre_scale_district_log_loss": 0.050776689478839385,
+          "final_train_loss": 0.05127661769104615
+        }
+      ],
+      "note": "Ablation compares pre-scale district log-loss with and without night_lights features. NTL is in the model when the raster is present."
+    },
+    "spearman": {
+      "wealth_index_vs_night_lights": 0.2632335463646605,
+      "wealth_index_vs_road_km": 0.21135598497786448,
+      "wealth_index_vs_poi_count": 0.1628117873044012,
+      "gdp_per_capita_vs_night_lights": 0.2632335463646605,
+      "note": "Spearman vs NTL/roads/POIs is a sanity check, not truth. wealth_index is not a DHS score."
+    }
+  },
+  "caption": "ensemble range across seeds, not a calibrated probability of error.",
+  "disclaimer": "Cell GDP is an allocation of official district GDP, not a measurement. wealth_index is not a DHS score."
+}

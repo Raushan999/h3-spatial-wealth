@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GNN walkthrough — how district GDP becomes hex-level GDP</title>
+  <style>
+    :root {
+      --bg:#0b1016; --panel:#121a24; --panel2:#0e151d; --text:#e8eef4; --muted:#93a3b4;
+      --line:#26313d; --accent:#41b6c4; --accent2:#ffd166; --warm:#ef767a; --good:#8ecf7b;
+    }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--text); }
+    a { color:#8ec8ff; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    button, select {
+      background:#18222e; color:var(--text); border:1px solid var(--line);
+      border-radius:8px; padding:6px 11px; font-size:12.5px; font-family:inherit; cursor:pointer;
+    }
+    button:hover:not(:disabled) { border-color:var(--accent); }
+    button:disabled { opacity:.4; cursor:default; }
+    button.primary { background:var(--accent); color:#062028; border-color:var(--accent); font-weight:600; }
+    .wrap { max-width:1280px; margin:0 auto; padding:14px 16px 40px; }
+
+    header.top { display:flex; flex-wrap:wrap; gap:10px 14px; align-items:center; border-bottom:1px solid var(--line); padding-bottom:12px; }
+    header.top h1 { font-size:17px; margin:0; font-weight:650; letter-spacing:.2px; }
+    header.top .spacer { flex:1; }
+    .badge { font-size:11px; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:3px 9px; }
+
+    .lede { font-size:12.5px; color:var(--muted); line-height:1.55; margin:10px 0 0; max-width:96ch; }
+    .lede b { color:var(--text); }
+
+    /* ---------------- step rail ---------------- */
+    .rail { display:flex; gap:6px; margin:14px 0 10px; flex-wrap:wrap; }
+    .rail button {
+      flex:1 1 0; min-width:104px; text-align:left; padding:7px 9px; line-height:1.25;
+      background:var(--panel2); border-radius:9px; position:relative; overflow:hidden;
+    }
+    .rail button .n { display:block; font-size:10px; color:var(--muted); letter-spacing:.6px; }
+    .rail button .t { display:block; font-size:11.5px; }
+    .rail button.on { border-color:var(--accent); background:#16303a; }
+    .rail button.on .n { color:var(--accent); }
+    .rail button.done { border-color:#2f4a56; }
+
+    .controls { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
+    .controls .grow { flex:1; }
+    .progress { height:3px; background:var(--line); border-radius:2px; overflow:hidden; min-width:120px; flex:1; }
+    .progress i { display:block; height:100%; width:0; background:var(--accent); transition:width .25s linear; }
+
+    /* ---------------- stage ---------------- */
+    .board { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); gap:14px; align-items:start; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:13px 14px; }
+    .card h2 { font-size:13px; margin:0 0 9px; letter-spacing:.2px; }
+    .card h2 .step-no { color:var(--accent); font-size:11px; margin-right:6px; }
+    .card p { font-size:12.5px; color:var(--muted); line-height:1.6; margin:0 0 10px; }
+    .stage { background:#080d12; border:1px solid var(--line); border-radius:10px; }
+    svg.scene { display:block; width:100%; height:auto; }
+
+    .kv { width:100%; border-collapse:collapse; font-size:12px; }
+    .kv th, .kv td { padding:4px 6px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    .kv th { color:var(--muted); font-weight:500; width:47%; }
+    .kv td { font-variant-numeric:tabular-nums; }
+    .kv tr:last-child th, .kv tr:last-child td { border-bottom:none; }
+
+    .formula {
+      font-family:"Cascadia Code",Consolas,monospace; font-size:12px; background:#0a1219;
+      border:1px solid var(--line); border-left:2px solid var(--accent); border-radius:6px;
+      padding:7px 9px; margin:0 0 8px; color:#cfe6ee; overflow-x:auto; white-space:nowrap;
+    }
+    .note { font-size:11.5px; color:var(--muted); line-height:1.55; }
+    .warn { color:var(--accent2); }
+
+    .bars { display:flex; flex-direction:column; gap:5px; }
+    .bar { display:grid; grid-template-columns:118px 1fr 78px; gap:8px; align-items:center; font-size:11.5px; }
+    .bar .lab { color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .bar .track { height:9px; background:#0a1219; border-radius:5px; position:relative; overflow:hidden; }
+    .bar .track i { position:absolute; top:0; bottom:0; background:var(--accent); border-radius:5px; width:0; transition:width .6s cubic-bezier(.2,.7,.2,1); }
+    .bar .track i.neg { background:var(--warm); }
+    .bar .val { text-align:right; font-variant-numeric:tabular-nums; }
+
+    .dims { display:grid; grid-template-columns:repeat(12,1fr); gap:3px; }
+    .dims div { height:26px; border-radius:3px; background:#0a1219; position:relative; }
+    .dims div span { position:absolute; left:0; right:0; bottom:0; border-radius:3px; background:var(--accent); transition:height .5s ease; }
+
+    .chips { display:flex; flex-wrap:wrap; gap:6px; }
+    .chip { font-size:11px; border:1px solid var(--line); border-radius:999px; padding:3px 8px; color:var(--muted); }
+    .chip b { color:var(--text); font-weight:600; }
+
+    .bottom { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px; margin-top:14px; }
+
+    @media (max-width:940px) { .board { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a href="index.html">&larr; Map</a>
+    <h1>How the hierarchical GNN turns one district total into hex-level GDP</h1>
+    <span class="spacer"></span>
+    <label class="badge">State <select id="state" style="border:none;background:transparent;padding:0 0 0 4px"></select></label>
+    <span class="badge" id="yearBadge">—</span>
+  </header>
+
+  <p class="lede">
+    Every number on this page comes from the trained run for the selected cell: the feature table,
+    the logged layer activations of seed 0, and the epoch losses. Architecture is unchanged &mdash;
+    GraphSAGE message passing with a GCNII initial residual over H3 R7 nodes with R6/R5 parents.
+    <b>Night lights are in the model wherever the composite covers the state.</b>
+    <b>wealth_index is a within-state percentile, not a DHS wealth score.</b>
+  </p>
+
+  <div class="rail" id="rail"></div>
+
+  <div class="controls">
+    <button id="prev">&#9664; Back</button>
+    <button id="play" class="primary">&#9654; Play</button>
+    <button id="next">Next &#9654;</button>
+    <div class="progress"><i id="progBar"></i></div>
+    <label class="badge">Speed
+      <select id="speed" style="border:none;background:transparent;padding:0 0 0 4px">
+        <option value="1.6">slow</option>
+        <option value="1" selected>normal</option>
+        <option value="0.6">fast</option>
+      </select>
+    </label>
+    <span class="spacer"></span>
+    <button id="btnRich">Preset: rich urban</button>
+    <button id="btnPoor">Preset: poor rural</button>
+    <select id="cellPick" title="Any cell in the loaded district"></select>
+  </div>
+
+  <div class="board">
+    <section class="card">
+      <div class="stage"><svg class="scene" id="scene" viewBox="0 0 660 400" preserveAspectRatio="xMidYMid meet"></svg></div>
+      <p class="note" id="sceneNote" style="margin-top:9px"></p>
+    </section>
+    <section class="card">
+      <h2><span class="step-no" id="stepNo"></span><span id="stepTitle"></span></h2>
+      <p id="stepBody"></p>
+      <div id="stepFormula"></div>
+      <div id="stepPanel"></div>
+    </section>
+  </div>
+
+  <div class="bottom">
+    <section class="card">
+      <h2>Selected cell</h2>
+      <div id="identity"></div>
+    </section>
+    <section class="card">
+      <h2>Training loss, all seeds</h2>
+      <div class="stage"><svg class="scene" id="loss" viewBox="0 0 420 170"></svg></div>
+      <p class="note" id="lossNote" style="margin-top:8px"></p>
+    </section>
+    <section class="card">
+      <h2>What this is not</h2>
+      <p class="note" id="disclaimer"></p>
+      <p class="note" id="trainNote"></p>
+    </section>
+  </div>
+</div>
+
+<script src="https://unpkg.com/h3-js@4.1.0/dist/h3-js.umd.js"></script>
+<script>
+"use strict";
+const $ = (id) => document.getElementById(id);
+const params = new URLSearchParams(location.search);
+const SVGNS = "http://www.w3.org/2000/svg";
+
+let catalog = null, summary = null, explainer = null, cell = null;
+let districtCells = [], districtIndex = new Map();
+let step = 0, playing = false, timer = null;
+
+/* ---------------------------------------------------------------- format */
+const nf = (v, d = 2) => {
+  if (v == null || !isFinite(v)) return "—";
+  const a = Math.abs(v);
+  if (a >= 1e7) return Number(v).toLocaleString("en-IN", { maximumFractionDigits: 0 });
+  if (a >= 1000) return Number(v).toLocaleString("en-IN", { maximumFractionDigits: 0 });
+  if (a > 0 && a < 0.01) return Number(v).toExponential(2);
+  return Number(v).toFixed(d);
+};
+const rupee = (v) => {
+  if (v == null || !isFinite(v)) return "—";
+  const a = Math.abs(v);
+  if (a >= 1e11) return `₹${(v / 1e7).toLocaleString("en-IN", { maximumFractionDigits: 0 })} cr`;
+  if (a >= 1e7) return `₹${(v / 1e7).toFixed(2)} cr`;
+  if (a >= 1e5) return `₹${(v / 1e5).toFixed(2)} lakh`;
+  return `₹${nf(v, 0)}`;
+};
+const pct = (v) => (v == null || !isFinite(v) ? "—" : `${Number(v).toFixed(1)}`);
+const has = (v) => v != null && isFinite(v);
+
+function kv(rows) {
+  return `<table class="kv">${rows
+    .filter((r) => r)
+    .map(([k, v]) => `<tr><th>${k}</th><td>${v}</td></tr>`)
+    .join("")}</table>`;
+}
+function bars(rows, unitFmt) {
+  const max = Math.max(...rows.map((r) => Math.abs(r[1])), 1e-9);
+  return `<div class="bars">${rows
+    .map(([lab, v, txt]) => {
+      const w = Math.min(100, (Math.abs(v) / max) * 100);
+      return `<div class="bar"><span class="lab" title="${lab}">${lab}</span>
+        <span class="track"><i class="${v < 0 ? "neg" : ""}" style="width:${w.toFixed(1)}%"></i></span>
+        <span class="val">${txt != null ? txt : (unitFmt ? unitFmt(v) : nf(v))}</span></div>`;
+    })
+    .join("")}</div>`;
+}
+
+/* ---------------------------------------------------------------- svg helpers */
+function el(tag, attrs, text) {
+  const n = document.createElementNS(SVGNS, tag);
+  for (const k in attrs) n.setAttribute(k, attrs[k]);
+  if (text != null) n.textContent = text;
+  return n;
+}
+function hexPts(cx, cy, r) {
+  const p = [];
+  for (let i = 0; i < 6; i++) {
+    const a = (Math.PI / 180) * (90 + 60 * i);
+    p.push([cx + r * Math.cos(a), cy - r * Math.sin(a)]);
+  }
+  return p;
+}
+function hexPath(cx, cy, r) {
+  return "M" + hexPts(cx, cy, r).map(([x, y]) => `${x.toFixed(1)},${y.toFixed(1)}`).join("L") + "Z";
+}
+// Neighbour centres of a pointy-top hex, in H3 ring order (arbitrary but stable).
+function ringCentres(cx, cy, r) {
+  const d = Math.sqrt(3) * r;
+  return [0, 60, 120, 180, 240, 300].map((deg) => {
+    const a = (Math.PI / 180) * deg;
+    return [cx + d * Math.cos(a), cy - d * Math.sin(a)];
+  });
+}
+function hex(svg, cx, cy, r, opts = {}) {
+  const p = el("path", {
+    d: hexPath(cx, cy, r),
+    fill: opts.fill || "#132030",
+    stroke: opts.stroke || "#2a3a4a",
+    "stroke-width": opts.sw || 1,
+    opacity: opts.opacity != null ? opts.opacity : 1,
+  });
+  if (opts.delay != null) {
+    p.setAttribute("opacity", "0");
+    p.appendChild(el("animate", {
+      attributeName: "opacity", from: 0, to: opts.opacity != null ? opts.opacity : 1,
+      dur: "0.45s", begin: `${opts.delay}s`, fill: "freeze",
+    }));
+  }
+  svg.appendChild(p);
+  return p;
+}
+function label(svg, x, y, text, opts = {}) {
+  svg.appendChild(el("text", {
+    x, y, fill: opts.fill || "#93a3b4", "font-size": opts.size || 11,
+    "text-anchor": opts.anchor || "middle", "font-weight": opts.weight || 400,
+    "font-family": opts.mono ? "Consolas,monospace" : "inherit",
+  }, text));
+}
+function box(svg, x, y, w, h, opts = {}) {
+  svg.appendChild(el("rect", {
+    x, y, width: w, height: h, rx: opts.rx || 8,
+    fill: opts.fill || "#101b26", stroke: opts.stroke || "#2a3a4a", "stroke-width": opts.sw || 1,
+  }));
+}
+function flowDot(svg, from, to, opts = {}) {
+  const [x1, y1] = from, [x2, y2] = to;
+  const mx = (x1 + x2) / 2, my = (y1 + y2) / 2;
+  const path = `M${x1.toFixed(1)},${y1.toFixed(1)}Q${mx.toFixed(1)},${my.toFixed(1)} ${x2.toFixed(1)},${y2.toFixed(1)}`;
+  svg.appendChild(el("path", { d: path, fill: "none", stroke: opts.stroke || "#41b6c4", "stroke-width": .9, opacity: .35 }));
+  const dot = el("circle", { r: opts.r || 3.4, fill: opts.fill || "#41b6c4" });
+  dot.appendChild(el("animateMotion", {
+    dur: `${opts.dur || 1.5}s`, repeatCount: "indefinite", path,
+    begin: `${opts.begin || 0}s`, keyPoints: "0;1", keyTimes: "0;1", calcMode: "linear",
+  }));
+  svg.appendChild(dot);
+}
+function clearScene() {
+  const s = $("scene");
+  while (s.firstChild) s.removeChild(s.firstChild);
+  return s;
+}
+
+/* ---------------------------------------------------------------- steps */
+const FALLBACK_STEPS = [
+  { id: "district", title: "Official district GDP", body: "" },
+  { id: "cells", title: "Split the district into H3 cells", body: "" },
+  { id: "features", title: "Attach features to each cell", body: "" },
+  { id: "graph", title: "Wire the graph", body: "" },
+  { id: "message", title: "Message passing", body: "" },
+  { id: "embedding", title: "Node embedding", body: "" },
+  { id: "score", title: "Economic intensity", body: "" },
+  { id: "share", title: "Normalised share", body: "" },
+  { id: "final", title: "Final cell GDP and wealth", body: "" },
+];
+const SHORT = {
+  district: "District total", cells: "H3 cells", features: "Features", graph: "Graph",
+  message: "Messages", embedding: "Embedding", score: "Intensity", share: "Share", final: "Final ₹",
+};
+const DUR = { district: 3.4, cells: 4.2, features: 4.6, graph: 4.0, message: 5.2, embedding: 4.6, score: 4.6, share: 4.6, final: 5.0 };
+const steps = () => (explainer && explainer.steps && explainer.steps.length ? explainer.steps : FALLBACK_STEPS);
+
+/* ---------------------------------------------------------------- scenes */
+function sceneDistrict() {
+  const svg = clearScene();
+  const ctx = (cell && cell.district_context) || {};
+  const yg = has(ctx.Y_g_inr) ? ctx.Y_g_inr : (cell && has(cell.Y_g) ? cell.Y_g : null);
+  box(svg, 130, 60, 400, 150, { rx: 14, fill: "#0f1d2a", stroke: "#41b6c4", sw: 1.6 });
+  label(svg, 330, 92, (cell && cell.district) || "District", { fill: "#e8eef4", size: 15, weight: 600 });
+  label(svg, 330, 118, "official GDDP, Y_g", { size: 11.5 });
+  const t = el("text", { x: 330, y: 162, fill: "#41b6c4", "font-size": 30, "text-anchor": "middle", "font-weight": 700 }, "₹0");
+  svg.appendChild(t);
+  label(svg, 330, 190, summary && summary.source
+    ? `${summary.source.gddp_year || "—"} · ${summary.source.price_basis || "—"} prices${summary.source.base_year ? " (base " + summary.source.base_year + ")" : ""}`
+    : "", { size: 11 });
+  if (has(yg)) {
+    const t0 = performance.now(), dur = 1200;
+    const tick = (now) => {
+      const k = Math.min(1, (now - t0) / dur);
+      t.textContent = rupee(yg * (1 - Math.pow(1 - k, 3)));
+      if (k < 1 && $("scene").contains(t)) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  } else t.textContent = "—";
+  label(svg, 330, 250, "This is the only monetary truth in the pipeline.", { size: 12, fill: "#93a3b4" });
+  label(svg, 330, 272, "The model never changes it — it only decides how to split it.", { size: 12, fill: "#93a3b4" });
+  const n = has(ctx.n_cells) ? ctx.n_cells : null;
+  label(svg, 330, 320, n ? `${nf(n, 0)} H3 R7 cells share this total` : "", { size: 12, fill: "#ffd166" });
+  $("sceneNote").textContent = "Y_g is read from the state statistics department release; see the source panel on the map page.";
+}
+
+function sceneCells() {
+  const svg = clearScene();
+  box(svg, 40, 30, 580, 300, { rx: 14, fill: "#0d1620", stroke: "#2a3a4a" });
+  const r = 24, dy = r * 1.5, dx = Math.sqrt(3) * r;
+  let i = 0, mid = null;
+  for (let row = 0; row < 7; row++) {
+    for (let col = 0; col < 12; col++) {
+      const cx = 88 + col * dx + (row % 2 ? dx / 2 : 0);
+      const cy = 66 + row * dy;
+      if (cx > 600 || cy > 310) continue;
+      const isSel = row === 3 && col === 5;
+      if (isSel) mid = [cx, cy];
+      hex(svg, cx, cy, r - 1.5, {
+        fill: isSel ? "#2a6d7c" : "#132030",
+        stroke: isSel ? "#41b6c4" : "#26313d",
+        sw: isSel ? 2 : 1,
+        delay: (i % 12) * 0.06 + Math.floor(i / 12) * 0.12,
+      });
+      i++;
+    }
+  }
+  if (mid) {
+    label(svg, mid[0], mid[1] + 4, "i", { fill: "#e8eef4", size: 13, weight: 700 });
+    svg.appendChild(el("path", {
+      d: `M${mid[0]},${mid[1] - 44}L${mid[0]},${mid[1] - 30}`, stroke: "#41b6c4", "stroke-width": 1.5,
+    }));
+    label(svg, mid[0], mid[1] - 52, "the cell we follow", { fill: "#41b6c4", size: 11 });
+  }
+  label(svg, 330, 362, "~5 km² per hexagon · one hexagon = one graph node", { size: 12 });
+  $("sceneNote").textContent = (cell && cell.h3_r7)
+    ? `Followed cell: ${cell.h3_r7} (R7). Parents ${cell.h3_r6 || "—"} (R6) and ${cell.h3_r5 || "—"} (R5). Grid drawn schematically; the map page shows real geometry.`
+    : "";
+}
+
+const FEATURE_ROWS = [
+  ["population", "Population", (v) => `${nf(v, 0)} people`],
+  ["night_lights", "Night lights", (v) => `${nf(v, 2)} nW/cm²/sr`],
+  ["road_km", "Road length", (v) => `${nf(v, 1)} km`],
+  ["building_area_m2", "Building area", (v) => `${nf(v, 0)} m²`],
+  ["building_count", "Buildings", (v) => nf(v, 0)],
+  ["poi_count", "OSM POIs", (v) => nf(v, 0)],
+];
+
+function sceneFeatures() {
+  const svg = clearScene();
+  const inp = (cell && cell.inputs) || {};
+  const rows = FEATURE_ROWS.filter(([k]) => has(inp[k]));
+  const poi = Object.entries(inp)
+    .filter(([k, v]) => k.startsWith("poi_") && k !== "poi_count" && v > 0)
+    .sort((a, b) => b[1] - a[1]).slice(0, 5);
+  const lu = Object.entries(inp).filter(([k, v]) => k.startsWith("landuse_") && v > 0);
+
+  hex(svg, 96, 200, 60, { fill: "#2a6d7c", stroke: "#41b6c4", sw: 2 });
+  label(svg, 96, 205, "x_i", { fill: "#e8eef4", size: 16, weight: 700 });
+  label(svg, 96, 280, "one cell", { size: 11 });
+
+  const all = rows.map(([k, lab, f]) => [lab, inp[k], f(inp[k])])
+    .concat(poi.map(([k, v]) => [k.replace(/^poi_/, "POI ").replace(/_/g, " "), v, nf(v, 0)]))
+    .concat(lu.map(([k, v]) => [k.replace("landuse_", "Landuse "), v, `${(v * 100).toFixed(1)}%`]));
+
+  const maxByGroup = (arr) => Math.max(...arr.map((x) => x[1]), 1e-9);
+  const y0 = 46, gap = 26, x0 = 210, w = 300;
+  all.slice(0, 12).forEach((row, i) => {
+    const y = y0 + i * gap;
+    label(svg, x0 - 8, y + 9, row[0], { anchor: "end", size: 11 });
+    box(svg, x0, y, w, 12, { rx: 6, fill: "#0a1219", stroke: "#1b2733" });
+    // Bars are log-scaled within the panel so counts and areas can share one axis.
+    const lg = (v) => Math.log10(1 + Math.max(0, v));
+    const frac = lg(row[1]) / Math.max(lg(maxByGroup(all)), 1e-9);
+    const b = el("rect", { x: x0 + 1, y: y + 1, width: 0, height: 10, rx: 5, fill: i < rows.length ? "#41b6c4" : "#5b8fa8" });
+    b.appendChild(el("animate", { attributeName: "width", from: 0, to: Math.max(2, frac * (w - 2)), dur: "0.7s", begin: `${i * 0.07}s`, fill: "freeze" }));
+    svg.appendChild(b);
+    label(svg, x0 + w + 8, y + 9, row[2], { anchor: "start", size: 11, fill: "#cfe6ee", mono: true });
+  });
+  label(svg, 330, 386, "log10 axis so counts, areas and shares fit one panel", { size: 10.5 });
+  $("sceneNote").textContent = "Each magnitude enters the model twice: an exists flag (is it non-zero?) and its z-scored log10 value. Shares enter directly. Zero stays zero — nothing is imputed.";
+}
+
+function neighbourList() {
+  if (cell && cell.neighbors && cell.neighbors.length) return cell.neighbors;
+  if (!cell || !cell.h3_r7 || !districtIndex.size || typeof h3 === "undefined") return [];
+  let ring = [];
+  try { ring = h3.gridRingUnsafe(cell.h3_r7, 1); } catch (e) { ring = h3.gridDisk(cell.h3_r7, 1).filter((x) => x !== cell.h3_r7); }
+  return ring.map((id) => districtIndex.get(id)).filter(Boolean).map((row) => ({
+    h3_r7: row.h, population: row.p, night_lights: row.nl, road_km: row.rd,
+    poi_count: row.poi, wealth_index: row.w,
+  }));
+}
+
+function sceneGraph(animate) {
+  const svg = clearScene();
+  const cx = 300, cy = 250, r = 40;
+  const nbs = neighbourList();
+  const centres = ringCentres(cx, cy, r);
+
+  box(svg, 430, 40, 190, 54, { rx: 10 });
+  label(svg, 525, 62, `R6 parent`, { size: 11, fill: "#ffd166" });
+  label(svg, 525, 80, (cell && cell.h3_r6) || (cell && cell.parents && cell.parents.h3_r6) || "—", { size: 10.5, mono: true });
+  box(svg, 430, 106, 190, 54, { rx: 10 });
+  label(svg, 525, 128, `R5 parent`, { size: 11, fill: "#ffd166" });
+  label(svg, 525, 146, (cell && cell.h3_r5) || (cell && cell.parents && cell.parents.h3_r5) || "—", { size: 10.5, mono: true });
+
+  centres.forEach(([nx, ny], i) => {
+    const n = nbs[i];
+    svg.appendChild(el("line", { x1: cx, y1: cy, x2: nx, y2: ny, stroke: n ? "#41b6c4" : "#26313d", "stroke-width": 1, opacity: .5 }));
+    hex(svg, nx, ny, r - 3, {
+      fill: n ? "#16303a" : "#0e161e", stroke: n ? "#33707f" : "#1b2733",
+      delay: animate ? 0.25 + i * 0.12 : null,
+    });
+    if (n) {
+      label(svg, nx, ny - 4, `${nf(n.population, 0)}`, { fill: "#cfe6ee", size: 11, weight: 600 });
+      label(svg, nx, ny + 12, `w ${pct(n.wealth_index)}`, { size: 10 });
+    } else {
+      label(svg, nx, ny + 4, "outside", { size: 9.5 });
+    }
+  });
+  hex(svg, cx, cy, r, { fill: "#2a6d7c", stroke: "#41b6c4", sw: 2 });
+  label(svg, cx, cy + 5, "i", { fill: "#e8eef4", size: 17, weight: 700 });
+  svg.appendChild(el("line", { x1: cx + r + 44, y1: cy - 60, x2: 430, y2: 133, stroke: "#ffd166", "stroke-width": 1, opacity: .45 }));
+  label(svg, 330, 372, `${nbs.length} of 6 immediate neighbours are inside the modelled state`, { size: 11.5 });
+  $("sceneNote").textContent = "Edges are H3 adjacency (k = 1) plus the containment edges to the R6 and R5 parents. Cells on the state border simply have fewer neighbours; the graph is not padded.";
+}
+
+function sceneMessage() {
+  const svg = clearScene();
+  const cx = 300, cy = 220, r = 38;
+  const nbs = neighbourList();
+  const centres = ringCentres(cx, cy, r);
+  const tr = (cell && cell.trace) || null;
+  const L1 = tr && tr.layers && tr.layers[0];
+
+  centres.forEach(([nx, ny], i) => {
+    const n = nbs[i];
+    hex(svg, nx, ny, r - 4, { fill: n ? "#16303a" : "#0e161e", stroke: n ? "#33707f" : "#1b2733" });
+    if (n) {
+      label(svg, nx, ny + 4, "h_j", { fill: "#8ecf7b", size: 12, weight: 600 });
+      flowDot(svg, [nx, ny], [cx, cy], { dur: 1.6, begin: i * 0.22, fill: "#8ecf7b" });
+    }
+  });
+  box(svg, 452, 150, 172, 46, { rx: 10, stroke: "#ffd166" });
+  label(svg, 538, 170, "parent pooling", { size: 11, fill: "#ffd166" });
+  label(svg, 538, 187, "mean of children", { size: 10.5 });
+  flowDot(svg, [452, 173], [cx + r, cy - 6], { dur: 2.0, fill: "#ffd166" });
+
+  box(svg, 36, 150, 150, 46, { rx: 10, stroke: "#41b6c4" });
+  label(svg, 111, 170, "initial residual", { size: 11, fill: "#41b6c4" });
+  label(svg, 111, 187, `α = ${L1 ? nf(L1.alpha, 2) : "0.10"} · x_i`, { size: 10.5, mono: true });
+  flowDot(svg, [186, 173], [cx - r, cy - 6], { dur: 2.0, begin: .4, fill: "#41b6c4" });
+
+  hex(svg, cx, cy, r, { fill: "#2a6d7c", stroke: "#41b6c4", sw: 2 });
+  label(svg, cx, cy + 5, "h_i", { fill: "#e8eef4", size: 14, weight: 700 });
+
+  const stats = L1
+    ? [
+        ["mean(neighbours)", L1.neighbour_conv && L1.neighbour_conv.norm],
+        ["from R6 parent", L1.from_parent_r6 && L1.from_parent_r6.norm],
+        ["mixed", L1.mixed && L1.mixed.norm],
+        ["after residual", L1.after_initial_residual && L1.after_initial_residual.norm],
+      ]
+    : [];
+  stats.forEach(([lab, v], i) => {
+    const x = 60 + i * 145;
+    label(svg, x + 60, 322, lab, { size: 10.5 });
+    label(svg, x + 60, 344, has(v) ? `‖·‖ ${nf(v, 1)}` : "—", { size: 13, fill: "#cfe6ee", weight: 600, mono: true });
+  });
+  label(svg, 330, 380, tr ? "layer 1 activation norms, logged from seed 0" : "layer activations logged for the two preset cells only", { size: 10.5, fill: tr ? "#93a3b4" : "#ffd166" });
+  $("sceneNote").textContent = "GraphSAGE averages the neighbour embeddings and concatenates them with the cell's own; the R6 parent pools its children and broadcasts context back down. The GCNII initial residual re-injects the raw features at every layer, so 4 rounds of mixing cannot wash the cell's own evidence away.";
+}
+
+function sceneEmbedding() {
+  const svg = clearScene();
+  const tr = (cell && cell.trace) || null;
+  const stack = tr
+    ? [{ name: "input embedding", v: tr.input_embedding }].concat(
+        (tr.layers || []).map((l) => ({ name: `after layer ${l.layer}`, v: l.after_initial_residual })),
+        tr.readout && tr.readout.final_embedding ? [{ name: "final embedding", v: tr.readout.final_embedding }] : []
+      )
+    : [];
+  if (!stack.length) {
+    label(svg, 330, 190, "Layer activations are logged for the two preset cells.", { size: 13, fill: "#ffd166" });
+    label(svg, 330, 216, "Pick a preset above to see the real embedding.", { size: 12 });
+    $("sceneNote").textContent = "";
+    return;
+  }
+  const y0 = 34, rowH = Math.min(64, 340 / stack.length);
+  stack.forEach((s, si) => {
+    const y = y0 + si * rowH;
+    label(svg, 150, y + rowH / 2, s.name, { anchor: "end", size: 11 });
+    const head = (s.v && s.v.head) || [];
+    const mx = Math.max(...head.map(Math.abs), 1e-9);
+    head.forEach((val, i) => {
+      const bw = 26, x = 168 + i * (bw + 3), h = Math.max(2, (Math.abs(val) / mx) * (rowH - 24));
+      box(svg, x, y + 4, bw, rowH - 20, { rx: 3, fill: "#0a1219", stroke: "#161f29" });
+      const b = el("rect", {
+        x: x + 1, y: y + 4 + (rowH - 20) - 1, width: bw - 2, height: 0, rx: 2,
+        fill: val < 0 ? "#ef767a" : "#41b6c4",
+      });
+      b.appendChild(el("animate", { attributeName: "height", from: 0, to: h, dur: "0.5s", begin: `${si * 0.35 + i * 0.02}s`, fill: "freeze" }));
+      b.appendChild(el("animate", { attributeName: "y", from: y + 4 + (rowH - 20) - 1, to: y + 4 + (rowH - 20) - 1 - h, dur: "0.5s", begin: `${si * 0.35 + i * 0.02}s`, fill: "freeze" }));
+      svg.appendChild(b);
+    });
+    label(svg, 560, y + rowH / 2 - 6, `‖·‖ ${nf(s.v.norm, 1)}`, { anchor: "start", size: 10.5, mono: true, fill: "#cfe6ee" });
+    label(svg, 560, y + rowH / 2 + 9, `${s.v.active}/${s.v.dim} active`, { anchor: "start", size: 10 });
+  });
+  label(svg, 330, 392, "first 12 of 64 dimensions · ReLU means most units sit at the floor", { size: 10.5 });
+  $("sceneNote").textContent = "Only the first 12 of the 64 dimensions are logged per layer, together with the vector norm and how many units are active. Nothing here is reconstructed — the bars are the recorded activations of seed 0.";
+}
+
+function sceneScore() {
+  const svg = clearScene();
+  const ro = cell && cell.trace && cell.trace.readout;
+  const units = (ro && ro.top_units) || [];
+  if (units.length) {
+    const mx = Math.max(...units.map((u) => Math.abs(u.contribution)), 1e-9);
+    label(svg, 40, 28, "top readout units: activation × weight", { anchor: "start", size: 11.5, fill: "#cfe6ee" });
+    units.slice(0, 8).forEach((u, i) => {
+      const y = 46 + i * 28;
+      label(svg, 96, y + 13, `unit ${u.unit}`, { anchor: "end", size: 11 });
+      box(svg, 106, y + 2, 300, 13, { rx: 6, fill: "#0a1219", stroke: "#1b2733" });
+      const w = Math.max(2, (Math.abs(u.contribution) / mx) * 298);
+      const b = el("rect", { x: 107, y: y + 3, width: 0, height: 11, rx: 5, fill: u.contribution < 0 ? "#ef767a" : "#41b6c4" });
+      b.appendChild(el("animate", { attributeName: "width", from: 0, to: w, dur: "0.6s", begin: `${i * 0.07}s`, fill: "freeze" }));
+      svg.appendChild(b);
+      label(svg, 416, y + 13, `w ${nf(u.weight, 3)}`, { anchor: "start", size: 10.5, mono: true });
+      label(svg, 500, y + 13, nf(u.contribution, 1), { anchor: "start", size: 10.5, mono: true, fill: "#cfe6ee" });
+    });
+  } else {
+    label(svg, 330, 120, "Readout weights are logged for the two preset cells.", { size: 13, fill: "#ffd166" });
+  }
+  const y = 300;
+  box(svg, 40, y, 170, 62, { rx: 10 });
+  label(svg, 125, y + 22, "Σ contributions + bias", { size: 10.5 });
+  label(svg, 125, y + 44, ro ? nf(ro.logit, 1) : "—", { size: 15, fill: "#cfe6ee", weight: 600, mono: true });
+  label(svg, 232, y + 36, "→ softplus →", { size: 11, fill: "#41b6c4" });
+  box(svg, 300, y, 150, 62, { rx: 10, stroke: "#41b6c4", sw: 1.6 });
+  label(svg, 375, y + 22, "s_i ≥ 0", { size: 10.5 });
+  label(svg, 375, y + 44, cell ? nf(cell.s_i, 1) : "—", { size: 15, fill: "#41b6c4", weight: 700, mono: true });
+  box(svg, 464, y, 156, 62, { rx: 10 });
+  label(svg, 542, y + 22, "across 5 seeds", { size: 10.5 });
+  label(svg, 542, y + 44, cell ? `${nf(cell.s_i_min, 1)} – ${nf(cell.s_i_max, 1)}` : "—", { size: 12.5, fill: "#ffd166", mono: true });
+  $("sceneNote").textContent = "s_i is a unitless per-person intensity, not rupees. It is only ever constrained through district sums, so the spread across seeds is the honest signal of how weakly any single cell is pinned down.";
+}
+
+function sceneShare() {
+  const svg = clearScene();
+  const ctx = (cell && cell.district_context) || {};
+  const Zg = has(cell && cell.district_sum_raw) ? cell.district_sum_raw : ctx.district_sum_raw_inr;
+  const Yg = has(cell && cell.Y_g) ? cell.Y_g : ctx.Y_g_inr;
+  box(svg, 40, 40, 180, 78, { rx: 10, stroke: "#41b6c4" });
+  label(svg, 130, 62, "s_i × population_i", { size: 11 });
+  label(svg, 130, 88, cell ? nf(cell.s_i, 1) : "—", { size: 12, mono: true, fill: "#cfe6ee" });
+  label(svg, 130, 106, cell ? `× ${nf(cell.population, 0)}` : "—", { size: 12, mono: true, fill: "#cfe6ee" });
+  label(svg, 254, 82, "→", { size: 20, fill: "#41b6c4" });
+  box(svg, 286, 40, 160, 78, { rx: 10 });
+  label(svg, 366, 62, "z_i (unscaled)", { size: 11 });
+  label(svg, 366, 92, cell ? rupee(cell.z_i) : "—", { size: 14, mono: true, fill: "#cfe6ee" });
+  label(svg, 476, 82, "Σ over district", { size: 11, fill: "#93a3b4", anchor: "start" });
+
+  const mx = Math.max(Zg || 0, Yg || 0, 1e-9);
+  const barY = 176, barW = 480;
+  [["Z_g = Σ z_i (model)", Zg, "#5b8fa8"], ["Y_g (official)", Yg, "#41b6c4"]].forEach(([lab, v, col], i) => {
+    const y = barY + i * 56;
+    label(svg, 40, y - 6, lab, { anchor: "start", size: 11.5 });
+    box(svg, 40, y, barW, 22, { rx: 6, fill: "#0a1219", stroke: "#1b2733" });
+    const b = el("rect", { x: 41, y: y + 1, width: 0, height: 20, rx: 5, fill: col });
+    b.appendChild(el("animate", { attributeName: "width", from: 0, to: Math.max(3, ((v || 0) / mx) * (barW - 2)), dur: "0.8s", begin: `${i * 0.25}s`, fill: "freeze" }));
+    svg.appendChild(b);
+    label(svg, 530, y + 16, rupee(v), { anchor: "start", size: 11.5, mono: true, fill: "#cfe6ee" });
+  });
+  box(svg, 40, 306, 300, 62, { rx: 10, stroke: "#ffd166" });
+  label(svg, 190, 328, "dasymetric factor  scale_g = Y_g / Z_g", { size: 11 });
+  label(svg, 190, 352, cell ? nf(cell.dasymetric_scale, 5) : "—", { size: 16, fill: "#ffd166", weight: 700, mono: true });
+  label(svg, 360, 340, "applied to every cell in the district", { anchor: "start", size: 11 });
+  $("sceneNote").textContent = "One factor per district, so the ranking of cells inside a district is untouched by rescaling. The loss already pushes Z_g towards Y_g during training; this last step closes the remaining gap exactly.";
+}
+
+function sceneFinal() {
+  const svg = clearScene();
+  hex(svg, 140, 150, 78, { fill: "#2a6d7c", stroke: "#41b6c4", sw: 2 });
+  label(svg, 140, 130, "cell i", { fill: "#cfe6ee", size: 12 });
+  label(svg, 140, 162, cell ? rupee(cell.gdp_inr) : "—", { fill: "#e8eef4", size: 15, weight: 700 });
+  label(svg, 140, 184, "allocated GDDP", { fill: "#93a3b4", size: 10.5 });
+
+  const rows = [
+    ["₹ per person", cell ? `${nf(cell.gdp_per_capita_inr, 0)}` : "—",
+      cell && has(cell.gdp_per_capita_inr_min) ? `${nf(cell.gdp_per_capita_inr_min, 0)} – ${nf(cell.gdp_per_capita_inr_max, 0)}` : null],
+    ["wealth_index (percentile)", cell ? pct(cell.wealth_index) : "—",
+      cell && has(cell.wealth_index_min) ? `${pct(cell.wealth_index_min)} – ${pct(cell.wealth_index_max)}` : null],
+  ];
+  rows.forEach(([lab, val, rng], i) => {
+    const y = 56 + i * 108;
+    box(svg, 262, y, 358, 86, { rx: 10, stroke: i ? "#ffd166" : "#41b6c4" });
+    label(svg, 282, y + 24, lab, { anchor: "start", size: 11.5 });
+    label(svg, 282, y + 56, val, { anchor: "start", size: 24, weight: 700, fill: i ? "#ffd166" : "#41b6c4", mono: true });
+    if (rng) label(svg, 282, y + 76, `seed range ${rng}`, { anchor: "start", size: 10.5 });
+  });
+  box(svg, 262, 278, 358, 74, { rx: 10 });
+  label(svg, 441, 302, "district reconstruction after scaling", { size: 11 });
+  const ctx = (cell && cell.district_context) || {};
+  label(svg, 441, 330, has(ctx.gdp_inr_after_scale) ? `${rupee(ctx.gdp_inr_after_scale)} = Y_g` : "sums to Y_g by construction",
+    { size: 13, fill: "#8ecf7b", mono: true });
+  label(svg, 140, 300, "conservation, not accuracy", { size: 11.5, fill: "#ffd166" });
+  $("sceneNote").textContent = "Cells in a district sum exactly to the published total, which is arithmetic rather than validation. What can be checked is the spread across seeds and the pre-scale hold-out error, both reported on the map page.";
+}
+
+const SCENES = {
+  district: sceneDistrict, cells: sceneCells, features: sceneFeatures,
+  graph: () => sceneGraph(true), message: sceneMessage, embedding: sceneEmbedding,
+  score: sceneScore, share: sceneShare, final: sceneFinal,
+};
+
+/* ---------------------------------------------------------------- side panel */
+function panelFor(id) {
+  const inp = (cell && cell.inputs) || {};
+  const ctx = (cell && cell.district_context) || {};
+  const tr = (cell && cell.trace) || null;
+  const L = tr && tr.layers ? tr.layers : [];
+  const ro = tr && tr.readout;
+  const noTrace = `<p class="note warn">Layer-by-layer activations are recorded for the two preset cells of this state. Everything else on this page is real for the cell you picked.</p>`;
+
+  switch (id) {
+    case "district":
+      return kv([
+        ["District", (cell && cell.district) || "—"],
+        ["Y_g", `${rupee(ctx.Y_g_inr != null ? ctx.Y_g_inr : cell && cell.Y_g)}`],
+        ["Published as", summary && summary.source ? `₹${nf(ctx.Y_g_crore, 0)} crore, ${summary.source.gddp_year || "—"}` : "—"],
+        ["Price basis", summary && summary.source ? `${summary.source.price_basis || "—"}${summary.source.base_year ? ", base " + summary.source.base_year : ""}` : "—"],
+        ["District population", has(ctx.population) ? `${nf(ctx.population, 0)} (Kontur)` : "—"],
+        ["Cells in district", has(ctx.n_cells) ? nf(ctx.n_cells, 0) : "—"],
+      ]);
+    case "cells":
+      return kv([
+        ["H3 R7 cell", `<code>${(cell && cell.h3_r7) || "—"}</code>`],
+        ["R6 parent", `<code>${(cell && (cell.h3_r6 || (cell.parents || {}).h3_r6)) || "—"}</code>`],
+        ["R5 parent", `<code>${(cell && (cell.h3_r5 || (cell.parents || {}).h3_r5)) || "—"}</code>`],
+        ["Centroid", cell && has(cell.lat) ? `${cell.lat.toFixed(4)}, ${cell.lon.toFixed(4)}` : "—"],
+        ["Cells in state", summary ? nf(summary.n_r7, 0) : "—"],
+      ]);
+    case "features": {
+      const rows = FEATURE_ROWS.filter(([k]) => has(inp[k])).map(([k, lab, f]) => [lab, f(inp[k])]);
+      const top = (cell && cell.top_features) || [];
+      return kv(rows) + (top.length
+        ? `<p class="note" style="margin-top:10px">Largest z-scores after standardisation:</p>` +
+          bars(top.slice(0, 6).map((t) => [t.feature.replace(/_z$/, ""), t.z, nf(t.z, 2)]))
+        : "");
+    }
+    case "graph": {
+      const nbs = neighbourList();
+      if (!nbs.length) return `<p class="note">No in-state neighbours for this cell.</p>`;
+      return `<table class="kv"><tr><th>neighbour</th><td>pop · wealth</td></tr>` +
+        nbs.map((n) => `<tr><th><code>${(n.h3_r7 || "").slice(0, 10)}…</code></th><td>${nf(n.population, 0)} · ${pct(n.wealth_index)}</td></tr>`).join("") +
+        `</table><p class="note" style="margin-top:8px">Neighbour mean population ${nf(nbs.reduce((a, n) => a + (n.population || 0), 0) / nbs.length, 0)}.</p>`;
+    }
+    case "message":
+      if (!L.length) return noTrace;
+      return kv(L.flatMap((l) => [
+        [`layer ${l.layer} · mean(neighbours)`, l.neighbour_conv ? `‖·‖ ${nf(l.neighbour_conv.norm, 1)}, ${l.neighbour_conv.active}/${l.neighbour_conv.dim} active` : "—"],
+        [`layer ${l.layer} · parent context`, l.from_parent_r6 ? `‖·‖ ${nf(l.from_parent_r6.norm, 1)}` : "—"],
+        [`layer ${l.layer} · after residual α=${nf(l.alpha, 2)}`, l.after_initial_residual ? `‖·‖ ${nf(l.after_initial_residual.norm, 1)}` : "—"],
+      ])) + `<p class="note" style="margin-top:8px">${tr.n_neighbours} neighbour messages were averaged for this cell.</p>`;
+    case "embedding":
+      if (!tr) return noTrace;
+      return kv([
+        ["Dimensions", `${tr.input_embedding.dim}`],
+        ["Rounds of message passing", `${L.length}`],
+        ["Input ‖·‖", nf(tr.input_embedding.norm, 1)],
+        ["Final ‖·‖", ro && ro.final_embedding ? nf(ro.final_embedding.norm, 1) : "—"],
+        ["Active units at readout", ro && ro.final_embedding ? `${ro.final_embedding.active} of ${ro.final_embedding.dim}` : "—"],
+      ]);
+    case "score":
+      return kv([
+        ["Readout bias", ro ? nf(ro.bias, 4) : "—"],
+        ["Pre-softplus logit", ro ? nf(ro.logit, 1) : "—"],
+        ["s_i (seed 0)", cell ? nf(cell.s_i, 2) : "—"],
+        ["s_i across 5 seeds", cell ? `${nf(cell.s_i_min, 2)} – ${nf(cell.s_i_max, 2)}` : "—"],
+      ]) + (ro ? "" : noTrace);
+    case "share":
+      return kv([
+        ["s_i", cell ? nf(cell.s_i, 2) : "—"],
+        ["population_i", cell ? nf(cell.population, 0) : "—"],
+        ["z_i = s_i × pop_i", cell ? rupee(cell.z_i) : "—"],
+        ["Z_g = Σ z_i", rupee(has(cell && cell.district_sum_raw) ? cell.district_sum_raw : ctx.district_sum_raw_inr)],
+        ["Y_g", rupee(has(cell && cell.Y_g) ? cell.Y_g : ctx.Y_g_inr)],
+        ["scale_g", cell ? nf(cell.dasymetric_scale, 5) : "—"],
+        ["cell share of district", cell && has(cell.z_i) && has(ctx.district_sum_raw_inr) ? `${((cell.z_i / ctx.district_sum_raw_inr) * 100).toFixed(3)}%` : "—"],
+      ]);
+    case "final":
+      return kv([
+        ["Allocated cell GDDP", cell ? rupee(cell.gdp_inr) : "—"],
+        ["Per capita", cell ? `₹${nf(cell.gdp_per_capita_inr, 0)} / person` : "—"],
+        ["Per capita, seed range", cell && has(cell.gdp_per_capita_inr_min) ? `₹${nf(cell.gdp_per_capita_inr_min, 0)} – ₹${nf(cell.gdp_per_capita_inr_max, 0)}` : "—"],
+        ["wealth_index", cell ? pct(cell.wealth_index) : "—"],
+        ["wealth_index, seed range", cell && has(cell.wealth_index_min) ? `${pct(cell.wealth_index_min)} – ${pct(cell.wealth_index_max)}` : "—"],
+        ["District reconstruction", has(ctx.gdp_inr_after_scale) ? rupee(ctx.gdp_inr_after_scale) : "—"],
+      ]) + `<p class="note" style="margin-top:8px">${(explainer && explainer.disclaimer) || ""}</p>`;
+    default:
+      return "";
+  }
+}
+
+const FORMULA_FOR = {
+  score: "s_i = softplus(W·h_i + b)   # intensity ≥ 0, unitless",
+  share: "z_i = s_i · pop_i    Z_g = Σ_{i∈g} z_i    scale_g = Y_g / Z_g",
+  final: "gdp_i = z_i · scale_g    wealth_index_i = percentile(gdp_i / pop_i)",
+  message: "h_i^(l+1) = σ( (1−α)·[h_i ‖ mean_j h_j ‖ h_parent] W + α·x_i W₀ )",
+  features: "x_i = z( [exists(v), log10(v)]  for magnitudes ; shares direct )",
+};
+
+/* ---------------------------------------------------------------- render */
+function renderStep() {
+  const S = steps();
+  step = Math.max(0, Math.min(S.length - 1, step));
+  const s = S[step];
+  $("stepNo").textContent = `Step ${step + 1}/${S.length}`;
+  $("stepTitle").textContent = s.title;
+  $("stepBody").textContent = s.body || "";
+  $("stepFormula").innerHTML = FORMULA_FOR[s.id] ? `<p class="formula">${FORMULA_FOR[s.id]}</p>` : "";
+  $("stepPanel").innerHTML = panelFor(s.id);
+  (SCENES[s.id] || (() => clearScene()))();
+  [...$("rail").children].forEach((b, i) => {
+    b.classList.toggle("on", i === step);
+    b.classList.toggle("done", i < step);
+  });
+  $("progBar").style.width = `${((step + 1) / S.length) * 100}%`;
+  $("prev").disabled = step === 0;
+  $("next").disabled = step === S.length - 1;
+}
+
+function buildRail() {
+  const rail = $("rail");
+  rail.innerHTML = "";
+  steps().forEach((s, i) => {
+    const b = document.createElement("button");
+    b.innerHTML = `<span class="n">${String(i + 1).padStart(2, "0")}</span><span class="t">${SHORT[s.id] || s.title}</span>`;
+    b.onclick = () => { pause(); step = i; renderStep(); };
+    rail.appendChild(b);
+  });
+}
+
+function schedule() {
+  clearTimeout(timer);
+  if (!playing) return;
+  const s = steps()[step];
+  const ms = (DUR[s.id] || 4) * 1000 * parseFloat($("speed").value);
+  timer = setTimeout(() => {
+    if (step >= steps().length - 1) { pause(); return; }
+    step += 1; renderStep(); schedule();
+  }, ms);
+}
+function play() {
+  playing = true;
+  $("play").innerHTML = "&#10074;&#10074; Pause";
+  if (step >= steps().length - 1) { step = 0; renderStep(); }
+  schedule();
+}
+function pause() {
+  playing = false;
+  clearTimeout(timer);
+  $("play").innerHTML = "&#9654; Play";
+}
+
+function renderIdentity() {
+  if (!cell) { $("identity").innerHTML = `<p class="note">No cell selected.</p>`; return; }
+  const inp = cell.inputs || {};
+  const rows = [
+    ["H3 R7", `<code>${cell.h3_r7}</code>`],
+    ["District", cell.district || "—"],
+    ["Population w_i", has(cell.population) ? nf(cell.population, 0) : "—"],
+    has(inp.night_lights) ? ["Night lights", `${nf(inp.night_lights, 2)} nW/cm²/sr`] : null,
+    has(inp.road_km) ? ["Road length", `${nf(inp.road_km, 2)} km`] : null,
+    has(inp.poi_count) ? ["OSM POIs", nf(inp.poi_count, 0)] : null,
+    has(inp.building_area_m2) ? ["Building area", `${nf(inp.building_area_m2, 0)} m²`] : null,
+    has(inp.building_count) ? ["Buildings", nf(inp.building_count, 0)] : null,
+    ["Allocated ₹/person", has(cell.gdp_per_capita_inr) ? `₹${nf(cell.gdp_per_capita_inr, 0)}` : "—"],
+    ["wealth_index", has(cell.wealth_index) ? `${pct(cell.wealth_index)}${has(cell.wealth_index_min) ? ` (${pct(cell.wealth_index_min)}–${pct(cell.wealth_index_max)})` : ""}` : "—"],
+  ];
+  $("identity").innerHTML = kv(rows) +
+    (cell.__fallback ? `<p class="note warn" style="margin-top:8px">Values for this cell come from the published R7 table. Internal layer activations exist only for the two preset cells.</p>` : "");
+}
+
+function drawLoss(histories) {
+  const svg = $("loss");
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const series = (histories || []).filter((h) => h && h.length);
+  if (!series.length) { $("lossNote").textContent = "No loss history in this run."; return; }
+  const w = 420, h = 170, pad = 30;
+  const all = series.flat();
+  const xs = all.map((d) => d.epoch), ys = all.map((d) => d.loss).filter((v) => isFinite(v) && v > 0);
+  const xmin = Math.min(...xs), xmax = Math.max(...xs);
+  const ymin = Math.min(...ys), ymax = Math.max(...ys);
+  const lg = (v) => Math.log10(Math.max(v, 1e-9));
+  const X = (v) => pad + (w - pad - 8) * (v - xmin) / Math.max(1, xmax - xmin);
+  const Y = (v) => h - pad - (h - pad - 12) * (lg(v) - lg(ymin)) / Math.max(1e-9, lg(ymax) - lg(ymin));
+  svg.appendChild(el("line", { x1: pad, y1: h - pad, x2: w - 8, y2: h - pad, stroke: "#26313d" }));
+  svg.appendChild(el("line", { x1: pad, y1: 12, x2: pad, y2: h - pad, stroke: "#26313d" }));
+  series.forEach((s, i) => {
+    const d = s.filter((p) => isFinite(p.loss) && p.loss > 0)
+      .map((p, j) => `${j ? "L" : "M"}${X(p.epoch).toFixed(1)},${Y(p.loss).toFixed(1)}`).join(" ");
+    const path = el("path", { d, fill: "none", stroke: i === 0 ? "#41b6c4" : "#37596b", "stroke-width": i === 0 ? 1.8 : 1 });
+    const len = 1400;
+    path.setAttribute("stroke-dasharray", len);
+    path.setAttribute("stroke-dashoffset", len);
+    path.appendChild(el("animate", { attributeName: "stroke-dashoffset", from: len, to: 0, dur: "1.4s", begin: `${i * 0.1}s`, fill: "freeze" }));
+    svg.appendChild(path);
+  });
+  svg.appendChild(el("text", { x: 4, y: 16, fill: "#93a3b4", "font-size": 9.5 }, "loss (log)"));
+  svg.appendChild(el("text", { x: w - 40, y: h - 10, fill: "#93a3b4", "font-size": 9.5 }, "epoch"));
+  svg.appendChild(el("text", { x: pad + 4, y: h - pad - 4, fill: "#93a3b4", "font-size": 9 }, nf(ymin, 4)));
+  const last = series.map((s) => s[s.length - 1].loss);
+  $("lossNote").textContent =
+    `${series.length} seed${series.length > 1 ? "s" : ""}; seed 0 highlighted. Final district log-loss ` +
+    `${nf(Math.min(...last), 4)}–${nf(Math.max(...last), 4)}. ${(explainer && explainer.training && explainer.training.loss) || ""}`;
+}
+
+/* ---------------------------------------------------------------- data */
+// Mirror of the expander in index.html: prepare_data.py writes columns, not rows.
+function expand(payload) {
+  if (!payload.columnar) return payload.cells || [];
+  const cols = payload.cols, keys = Object.keys(cols).filter((k) => k !== "h" && k !== "d");
+  const dv = payload.d_vals, pd = payload.per_district || {};
+  const n = payload.n != null ? payload.n : cols.h.length;
+  const rows = new Array(n);
+  for (let i = 0; i < n; i++) {
+    const r = { h: cols.h[i] };
+    r.d = dv ? dv[cols.d[i]] : payload.district;
+    for (const k of keys) { const v = cols[k][i]; if (v != null) r[k] = v; }
+    const extra = pd[r.d];
+    if (extra) for (const k in extra) if (extra[k] != null) r[k] = extra[k];
+    rows[i] = r;
+  }
+  return rows;
+}
+
+function fallbackCell(row) {
+  const inputs = {};
+  const MAP = { p: "population", nl: "night_lights", rd: "road_km", poi: "poi_count", bldg: "building_area_m2", bcnt: "building_count" };
+  for (const k in MAP) if (row[k] != null) inputs[MAP[k]] = row[k];
+  for (const k in row) {
+    if (k.startsWith("pg_")) inputs[`poi_${k.slice(3)}`] = row[k];
+    if (k.startsWith("lu_")) inputs[`landuse_${k.slice(3)}`] = row[k];
+  }
+  const yg = row.y != null ? row.y * 1e7 : null;
+  const zi = row.zr != null ? row.zr : null;
+  return {
+    __fallback: true,
+    h3_r7: row.h,
+    h3_r6: typeof h3 !== "undefined" ? h3.cellToParent(row.h, 6) : null,
+    h3_r5: typeof h3 !== "undefined" ? h3.cellToParent(row.h, 5) : null,
+    district: row.d, inputs,
+    lat: typeof h3 !== "undefined" ? h3.cellToLatLng(row.h)[0] : null,
+    lon: typeof h3 !== "undefined" ? h3.cellToLatLng(row.h)[1] : null,
+    population: row.p, s_i: row.sr, z_i: zi,
+    Y_g: yg, dasymetric_scale: row.s,
+    gdp_inr: row.c != null ? row.c * 1e7 : null,
+    gdp_per_capita_inr: row.g, gdp_per_capita_inr_min: row.gmin, gdp_per_capita_inr_max: row.gmax,
+    wealth_index: row.w, wealth_index_min: row.wmin, wealth_index_max: row.wmax,
+    district_sum_raw: null,
+    district_context: { district: row.d, Y_g_inr: yg, Y_g_crore: row.y },
+    neighbors: null, trace: null, top_features: null,
+  };
+}
+
+async function loadDistrict(code, districtName) {
+  districtCells = []; districtIndex = new Map();
+  const file = summary && summary.district_files && summary.district_files[districtName];
+  if (!file) return;
+  const payload = await fetch(`data/${code}/${file}`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  if (!payload) return;
+  districtCells = expand(payload);
+  districtIndex = new Map(districtCells.map((c) => [c.h, c]));
+  const sel = $("cellPick");
+  sel.innerHTML = "";
+  const ranked = [...districtCells].filter((c) => c.w != null).sort((a, b) => b.w - a.w);
+  const pick = ranked.slice(0, 400);
+  pick.forEach((c) => {
+    const o = document.createElement("option");
+    o.value = c.h;
+    o.textContent = `${c.h.slice(0, 9)}… · wealth ${pct(c.w)}`;
+    sel.appendChild(o);
+  });
+  sel.disabled = !pick.length;
+}
+
+function selectPreset(which) {
+  if (!explainer || !explainer.cells || !explainer.cells[which]) return;
+  cell = explainer.cells[which];
+  afterSelect();
+}
+function selectHex(id) {
+  if (explainer && explainer.cells) {
+    const hit = Object.values(explainer.cells).find((c) => c.h3_r7 === id);
+    if (hit) { cell = hit; afterSelect(); return true; }
+  }
+  const row = districtIndex.get(id);
+  if (row) { cell = fallbackCell(row); afterSelect(); return true; }
+  return false;
+}
+function afterSelect() {
+  renderIdentity();
+  if ($("cellPick").querySelector(`option[value="${cell.h3_r7}"]`)) $("cellPick").value = cell.h3_r7;
+  renderStep();
+}
+
+async function loadState(code) {
+  pause();
+  summary = await fetch(`data/${code}/summary.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  explainer = await fetch(`data/${code}/explainer.json`).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  $("yearBadge").textContent = summary && summary.source
+    ? `GDDP ${summary.source.gddp_year || "—"} · ${summary.source.price_basis || "—"} prices`
+    : "—";
+  $("disclaimer").textContent = (explainer && explainer.disclaimer) ||
+    "Cell GDP is an allocation of official district GDP, not a measurement.";
+  $("trainNote").textContent = (explainer && explainer.training && explainer.training.note) || "";
+  buildRail();
+  drawLoss(explainer && explainer.loss_curve);
+
+  const wantHex = params.get("h");
+  const wantDistrict = params.get("d");
+  let districtName = wantDistrict;
+  if (!districtName && explainer && explainer.cells && explainer.cells.rich_urban) districtName = explainer.cells.rich_urban.district;
+  if (!districtName && summary && summary.districts && summary.districts.length) districtName = summary.districts[0];
+  if (districtName) await loadDistrict(code, districtName);
+
+  const presetsOk = explainer && explainer.cells && explainer.cells.rich_urban;
+  $("btnRich").disabled = !presetsOk;
+  $("btnPoor").disabled = !(explainer && explainer.cells && explainer.cells.poor_rural);
+
+  if (!(wantHex && selectHex(wantHex))) {
+    if (presetsOk) selectPreset("rich_urban");
+    else if (districtCells.length) { cell = fallbackCell(districtCells[0]); afterSelect(); }
+    else { cell = null; renderIdentity(); renderStep(); }
+  }
+  step = 0;
+  renderStep();
+}
+
+/* ---------------------------------------------------------------- boot */
+$("prev").onclick = () => { pause(); step -= 1; renderStep(); };
+$("next").onclick = () => { pause(); step += 1; renderStep(); };
+$("play").onclick = () => (playing ? pause() : play());
+$("speed").onchange = () => { if (playing) schedule(); };
+$("btnRich").onclick = () => { pause(); selectPreset("rich_urban"); };
+$("btnPoor").onclick = () => { pause(); selectPreset("poor_rural"); };
+$("cellPick").onchange = (e) => { pause(); selectHex(e.target.value); };
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") { pause(); step += 1; renderStep(); }
+  if (e.key === "ArrowLeft") { pause(); step -= 1; renderStep(); }
+  if (e.key === " ") { e.preventDefault(); playing ? pause() : play(); }
+});
+
+fetch("data/catalog.json").then((r) => r.json()).then(async (cat) => {
+  catalog = cat;
+  const sel = $("state");
+  cat.states.forEach((s) => {
+    const o = document.createElement("option");
+    o.value = s.state;
+    o.textContent = `${s.name} · ${s.gddp_year || "—"}`;
+    sel.appendChild(o);
+  });
+  const initial = params.get("state") || cat.states[0].state;
+  sel.value = initial;
+  await loadState(initial);
+  sel.onchange = (e) => loadState(e.target.value);
+}).catch((err) => {
+  $("stepBody").textContent = `Could not load web/data/catalog.json (${err}). Run python web/prepare_data.py first.`;
+});
+</script>
+</body>
+</html>

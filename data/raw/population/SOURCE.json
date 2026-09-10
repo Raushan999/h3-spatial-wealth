@@ -1,0 +1,7 @@
+{
+  "source": "WorldPop Global 2000-2020, 1km, 2020",
+  "url": "https://data.worldpop.org/GIS/Population/Global_2000_2020_1km_UNadj/2020/IND/ind_ppp_2020_1km_Aggregated_UNadj.tif",
+  "un_adjusted": true,
+  "citation": "WorldPop (www.worldpop.org). School of Geography and Environmental Science, University of Southampton.",
+  "year": 2020
+}

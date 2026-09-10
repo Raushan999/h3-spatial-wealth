@@ -1,0 +1,27 @@
+{
+  "records": [
+    {
+      "district": "Delhi",
+      "y_crore": 672247.0,
+      "source_name": "GSDP at constant (2011-12) prices 2023-24, Statistical Abstract of Delhi 2024 executive summary"
+    }
+  ],
+  "source_file": "delhi_statistical_abstract_2024.pdf",
+  "source_url": "https://des.delhi.gov.in/sites/default/files/DES/generic_multiple_files/statistical_abstract-2024.pdf",
+  "page": "https://des.delhi.gov.in/",
+  "year": "2023-24",
+  "price_basis": "constant",
+  "base_year": "2011-12",
+  "units": "INR crore",
+  "provenance": {
+    "parser": "gsdp_single_pdf",
+    "page": 10,
+    "quote": "GSDP at constant (2011-12) prices is expected to increase from ₹ 343798 Crore in 2011-12 to ₹ 625981 Crore in 2022-23 and ₹ 672247 Crore in 2023-24 with annual average growth rate of 5.87 % (2011-12 to 2023-24).  The gr",
+    "geography": "Delhi / NCT only (not NCR)",
+    "n_districts": 1
+  },
+  "notes": [
+    "Figure is **Delhi / NCT** only, not NCR. Source: Statistical Abstract of Delhi 2024 (DES, Govt of NCT of Delhi), Executive Summary A: 'GSDP at constant (2011-12) prices ... ₹672247 Crore in 2023-24'.",
+    "DES Delhi does not publish district GDDP, so the 11 NCT revenue districts form a single Y_g reporting unit. No NCR super-district is invented."
+  ]
+}

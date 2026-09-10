@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spatial wealth surfaces — India</title>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <style>
+    :root {
+      --bg:#0f1419; --panel:rgba(16,22,29,.93); --text:#e8eef4; --muted:#93a2b1;
+      --line:#2a3542; --accent:#8ec8ff; --warn:#3a2a12; --warnline:#6a4a1a; --warntext:#f3d7a1;
+    }
+    * { box-sizing:border-box; }
+    html, body { margin:0; height:100%; background:var(--bg); overflow:hidden; }
+    body { font-family:"Segoe UI",system-ui,sans-serif; color:var(--text); }
+
+    #maps { display:flex; height:100%; width:100%; }
+    .pane { flex:1; position:relative; min-width:0; }
+    .pane + .pane { border-left:1px solid #000; }
+    .pane .map { position:absolute; inset:0; }
+    .pane-tag {
+      position:absolute; z-index:2; top:10px; left:50%; transform:translateX(-50%);
+      background:var(--panel); border:1px solid var(--line); border-radius:999px;
+      padding:4px 12px; font-size:11.5px; white-space:nowrap; pointer-events:none;
+    }
+    #paneR { display:none; }
+    body.split #paneR { display:block; }
+
+    .card {
+      position:absolute; z-index:5; background:var(--panel); color:var(--text);
+      border:1px solid var(--line); border-radius:12px;
+      backdrop-filter:blur(6px); box-shadow:0 6px 24px rgba(0,0,0,.35);
+    }
+    #topbar { top:12px; left:12px; right:12px; display:flex; gap:10px; align-items:center;
+              padding:8px 10px; flex-wrap:wrap; }
+    #topbar .brand { font-size:13.5px; font-weight:600; margin-right:2px; white-space:nowrap; }
+    #topbar .sep { width:1px; height:22px; background:var(--line); }
+    #topbar .grow { flex:1 1 auto; }
+    #legendCard { right:12px; bottom:12px; width:250px; padding:10px 12px; }
+    #filterCard { left:12px; bottom:12px; width:268px; padding:4px 12px 8px; }
+    #detail { right:12px; top:66px; width:322px; max-height:calc(100% - 150px);
+              overflow:auto; padding:10px 12px; display:none; }
+    body.has-detail #detail { display:block; }
+
+    label { font-size:11px; color:var(--muted); display:block; margin:6px 0 3px; }
+    select, input[type=range], button, input[type=search] {
+      width:100%; background:#1b2430; color:var(--text);
+      border:1px solid var(--line); border-radius:8px; padding:5px 8px; font-size:12px;
+      font-family:inherit;
+    }
+    button { cursor:pointer; }
+    button:hover { border-color:var(--accent); }
+    button.ghost { background:transparent; }
+    .inline { display:flex; gap:8px; align-items:flex-end; }
+    .inline > * { flex:1; }
+    .w-metric { min-width:210px; flex:0 1 250px; }
+    .w-small { flex:0 0 128px; }
+    .w-mid { flex:0 0 168px; }
+    .toggle { display:flex; align-items:center; gap:6px; font-size:11.5px; color:var(--muted);
+              white-space:nowrap; cursor:pointer; }
+    .toggle input { width:auto; }
+
+    details { border-top:1px solid var(--line); }
+    details:first-of-type { border-top:none; }
+    summary { cursor:pointer; font-size:12px; padding:8px 0 6px; list-style:none;
+              display:flex; justify-content:space-between; align-items:center; }
+    summary::-webkit-details-marker { display:none; }
+    summary::after { content:"▾"; color:var(--muted); font-size:10px; }
+    details[open] summary::after { content:"▴"; }
+    details > div { padding-bottom:8px; }
+
+    .legend { display:flex; height:10px; border-radius:6px; overflow:hidden; margin:6px 0 4px; }
+    .legend span { flex:1; }
+    .ends { display:flex; justify-content:space-between; font-size:10.5px; color:var(--muted); gap:8px; }
+    .note { font-size:10.5px; color:var(--muted); line-height:1.45; margin:6px 0 0; }
+    .badge { display:inline-block; font-size:10.5px; color:var(--muted); border:1px solid var(--line);
+             border-radius:999px; padding:2px 8px; white-space:nowrap; }
+    .badge b { color:var(--text); font-weight:600; }
+    .warn { display:none; background:var(--warn); border:1px solid var(--warnline);
+            color:var(--warntext); padding:7px 9px; border-radius:8px; font-size:10.5px; margin-top:8px; }
+    .warn.on { display:block; }
+    a { color:var(--accent); }
+
+    #tooltip {
+      position:fixed; z-index:9; pointer-events:none; display:none; max-width:260px;
+      background:#11181f; border:1px solid var(--line); border-radius:8px;
+      padding:7px 9px; font-size:11.5px; line-height:1.5;
+    }
+    #tooltip b { display:block; margin-bottom:3px; font-size:12px; }
+
+    table.kv { width:100%; border-collapse:collapse; font-size:11.5px; }
+    table.kv td { padding:3px 0; vertical-align:top; border-bottom:1px solid rgba(42,53,66,.5); }
+    table.kv td:first-child { color:var(--muted); padding-right:8px; }
+    table.kv td:last-child { text-align:right; font-variant-numeric:tabular-nums; }
+    h2 { font-size:12.5px; margin:10px 0 4px; color:var(--muted); font-weight:600;
+         text-transform:uppercase; letter-spacing:.04em; }
+    h2:first-child { margin-top:0; }
+    #detailTitle { font-size:14px; margin:0 0 2px; }
+    .rowbtns { display:flex; gap:6px; margin-top:8px; }
+    #spinner { position:absolute; z-index:8; top:50%; left:50%; transform:translate(-50%,-50%);
+               background:var(--panel); border:1px solid var(--line); border-radius:8px;
+               padding:8px 14px; font-size:12px; display:none; }
+    #spinner.on { display:block; }
+  </style>
+</head>
+<body>
+  <div id="maps">
+    <div class="pane" id="paneL"><div id="mapL" class="map"></div><div class="pane-tag" id="tagL"></div></div>
+    <div class="pane" id="paneR"><div id="mapR" class="map"></div><div class="pane-tag" id="tagR"></div></div>
+  </div>
+  <div id="spinner">loading…</div>
+
+  <div class="card" id="topbar">
+    <span class="brand">Spatial wealth surfaces</span>
+    <div class="sep"></div>
+    <div class="w-mid"><label for="state">State</label><select id="state"></select></div>
+    <div class="w-metric"><label for="metricL">Metric</label><select id="metricL"></select></div>
+    <div class="w-mid"><label for="scale">Colour scale</label>
+      <select id="scale">
+        <option value="percentile" selected>Percentile</option>
+        <option value="absolute">Absolute (native units)</option>
+      </select>
+    </div>
+    <div class="w-metric" id="rightMetricWrap" style="display:none">
+      <label for="metricR">Compare with</label><select id="metricR"></select>
+    </div>
+    <div class="grow"></div>
+    <label class="toggle" for="splitToggle" style="margin:0">
+      <input type="checkbox" id="splitToggle" /> Split view
+    </label>
+    <span class="badge" id="yearBadge"></span>
+  </div>
+
+  <div class="card" id="filterCard">
+    <details open>
+      <summary>Filters</summary>
+      <div>
+        <label for="metro">Metro area</label>
+        <select id="metro"><option value="">Whole state</option></select>
+        <label for="district">District <span id="resNote" class="badge"></span></label>
+        <select id="district"><option value="">All districts (overview grid)</option></select>
+        <label>Hide cells under <b id="popLabel">0</b> people</label>
+        <input id="popMin" type="range" min="0" max="20000" step="250" value="0" />
+      </div>
+    </details>
+    <details>
+      <summary>Data &amp; downloads</summary>
+      <div>
+        <div class="rowbtns">
+          <button id="dlCsv">CSV</button>
+          <button id="dlDict" class="ghost">Dictionary</button>
+        </div>
+        <div class="rowbtns">
+          <button id="goWalk" class="ghost">Open GNN walkthrough →</button>
+        </div>
+        <p class="note" id="srcNote"></p>
+      </div>
+    </details>
+    <details>
+      <summary>Method &amp; caveats</summary>
+      <div>
+        <p class="note" id="methodNote"></p>
+      </div>
+    </details>
+  </div>
+
+  <div class="card" id="legendCard">
+    <div id="legendTitle" style="font-size:12px"></div>
+    <div class="legend">
+      <span style="background:#081d58"></span><span style="background:#225ea8"></span>
+      <span style="background:#41b6c4"></span><span style="background:#c7e9b4"></span>
+      <span style="background:#ffffcc"></span>
+    </div>
+    <div class="ends"><span id="legLow">low</span><span id="legHigh">high</span></div>
+    <p class="note" id="legScope"></p>
+    <div class="warn" id="absWarn"></div>
+  </div>
+
+  <div class="card" id="detail">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
+      <div><div id="detailTitle">Cell</div><div class="note" id="detailSub"></div></div>
+      <button class="ghost" style="width:auto;padding:2px 8px" id="detailClose">✕</button>
+    </div>
+    <div id="detailBody"></div>
+  </div>
+
+  <div id="tooltip"></div>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script src="https://unpkg.com/h3-js@4.1.0/dist/h3-js.umd.js"></script>
+  <script>
+  // ---------------------------------------------------------------- schema
+  // Short JSON keys written by web/prepare_data.py -> label + unit + format.
+  const F = [
+    ["d",    "District",                  "",                 "text"],
+    ["w",    "Wealth index",              "percentile 0–100", "num2"],
+    ["g",    "Allocated GDDP per capita", "₹/person",         "inr"],
+    ["c",    "Allocated cell GDDP",       "₹ crore",          "num3"],
+    ["sr",   "Economic intensity s_i",    "index (pre-scale)","num4"],
+    ["zr",   "z_i = s_i × population",    "",                 "num0"],
+    ["s",    "Dasymetric scale for district", "Y_g / Z_g",    "sci"],
+    ["y",    "Official district GDDP Y_g","₹ crore",          "num0"],
+    ["p",    "Population",                "people",           "num0"],
+    ["ar",   "Cell area",                 "km²",              "num2"],
+    ["nl",   "Night lights",              "nW/cm²/sr",        "num3"],
+    ["rd",   "Road length",               "km",               "num2"],
+    ["poi",  "OSM POIs (all groups)",     "count",            "num0"],
+    ["bldg", "Building footprint area",   "m²",               "num0"],
+    ["bcnt", "Building count",            "buildings",        "num0"],
+    ["bsh",  "Built-up share of cell",    "share",            "num4"],
+  ];
+  const LABEL = {}, UNIT = {}, FMT = {};
+  for (const [k, l, u, f] of F) { LABEL[k] = l; UNIT[k] = u; FMT[k] = f; }
+
+  const fmt = {
+    text: (v) => v,
+    num0: (v) => Number(v).toLocaleString("en-IN", { maximumFractionDigits: 0 }),
+    num2: (v) => Number(v).toLocaleString("en-IN", { maximumFractionDigits: 2 }),
+    num3: (v) => Number(v).toLocaleString("en-IN", { maximumFractionDigits: 3 }),
+    num4: (v) => Number(v).toLocaleString("en-IN", { maximumFractionDigits: 4 }),
+    inr:  (v) => "₹" + Number(v).toLocaleString("en-IN", { maximumFractionDigits: 0 }),
+    sci:  (v) => Number(v).toExponential(3),
+  };
+  const show = (k, v) => (v == null ? "—" : (fmt[FMT[k]] || fmt.num2)(v));
+
+  // Metric id -> short key. Landuse and POI-class keys are derived the same
+  // way prepare_data.py derives them, so new classes need no code change here.
+  function metricKey(id) {
+    const fixed = {
+      wealth_index: "w", gdp_per_capita_inr: "g", gdp_crore: "c", intensity_raw: "sr",
+      population: "p", night_lights: "nl", road_km: "rd", poi_count: "poi",
+      building_area_m2: "bldg", building_count: "bcnt", building_share: "bsh",
+    };
+    if (fixed[id]) return fixed[id];
+    if (id.startsWith("landuse_")) return "lu_" + id.slice(8, 11);
+    if (id.startsWith("poi_")) return "pg_" + id.slice(4).replace(/[^a-z]/g, "").slice(0, 10);
+    return id;
+  }
+
+  // prepare_data.py stores one array per field. Rebuild row objects once here so
+  // the rest of the code (and the popup) keeps working with plain properties.
+  function expand(payload) {
+    if (!payload.columnar) return payload.cells || [];
+    const cols = payload.cols, keys = Object.keys(cols).filter((k) => k !== "h" && k !== "d");
+    const dv = payload.d_vals, pd = payload.per_district || {};
+    const n = payload.n != null ? payload.n : cols.h.length;
+    const rows = new Array(n);
+    for (let i = 0; i < n; i++) {
+      const r = { h: cols.h[i] };
+      r.d = dv ? dv[cols.d[i]] : payload.district;
+      for (const k of keys) { const v = cols[k][i]; if (v != null) r[k] = v; }
+      const extra = pd[r.d];
+      if (extra) for (const k in extra) if (extra[k] != null) r[k] = extra[k];
+      rows[i] = r;
+    }
+    return rows;
+  }
+
+  // ---------------------------------------------------------------- state
+  let catalog = null, summary = null, cells = [], ranks = {}, syncing = false;
+  let scope = "state", selected = null;
+  const $ = (id) => document.getElementById(id);
+  const metricOf = (which) => $(which).value;
+  const isAbs = () => $("scale").value === "absolute";
+  const metricDef = (id) => (summary?.metrics || catalog.metrics).find((m) => m.id === id) || { id, label: id, units: "" };
+
+  const style = {
+    version: 8,
+    sources: { osm: { type: "raster", tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"], tileSize: 256, attribution: "© OpenStreetMap contributors" } },
+    layers: [{ id: "osm", type: "raster", source: "osm" }],
+  };
+  const mapL = new maplibregl.Map({ container: "mapL", style, center: [78, 22], zoom: 5 });
+  const mapR = new maplibregl.Map({ container: "mapR", style, center: [78, 22], zoom: 5 });
+  const maps = () => (document.body.classList.contains("split") ? [mapL, mapR] : [mapL]);
+  const tooltip = $("tooltip");
+
+  // ---------------------------------------------------------------- colour
+  function rankOf(sorted, v) {
+    if (v == null || !sorted.length) return 0;
+    let lo = 0, hi = sorted.length;
+    while (lo < hi) { const mid = (lo + hi) >> 1; if (sorted[mid] <= v) lo = mid + 1; else hi = mid; }
+    return (lo / sorted.length) * 100;
+  }
+
+  function rebuildRanks() {
+    ranks = {};
+    const keys = new Set((summary?.metrics || []).map((m) => metricKey(m.id)));
+    keys.add("w");
+    for (const key of keys) {
+      const vals = cells.map((c) => c[key]).filter((v) => v != null).sort((a, b) => a - b);
+      ranks[key] = vals;
+      // wealth_index already carries a state-wide percentile from the model;
+      // everything else is ranked over the cells currently loaded.
+      if (key !== "w") for (const c of cells) c["r_" + key] = rankOf(vals, c[key]);
+    }
+  }
+
+  const RAMP = ["#081d58", "#225ea8", "#41b6c4", "#c7e9b4", "#ffffcc"];
+  function colorExpr(id) {
+    const key = metricKey(id);
+    if (!isAbs()) {
+      const prop = key === "w" ? "w" : "r_" + key;
+      const stops = key === "w" ? [0, 25, 50, 75, 100] : [0, 25, 50, 75, 100];
+      const expr = ["interpolate", ["linear"], ["coalesce", ["get", prop], 0]];
+      stops.forEach((s, i) => expr.push(s, RAMP[i]));
+      return expr;
+    }
+    const vals = ranks[key] || [];
+    if (vals.length < 2) return RAMP[0];
+    const q = (t) => vals[Math.min(vals.length - 1, Math.floor(t * (vals.length - 1)))];
+    const cuts = [q(0.02), q(0.3), q(0.6), q(0.85), q(0.99)];
+    const expr = ["interpolate", ["linear"], ["coalesce", ["get", key], 0]];
+    let last = -Infinity;
+    cuts.forEach((c, i) => { const v = c <= last ? last + 1e-9 : c; last = v; expr.push(v, RAMP[i]); });
+    return expr;
+  }
+
+  function toGeoJSON() {
+    return {
+      type: "FeatureCollection",
+      features: cells.map((p) => {
+        const ring = h3.cellToBoundary(p.h).map(([lat, lng]) => [lng, lat]);
+        if (ring[0][0] !== ring.at(-1)[0] || ring[0][1] !== ring.at(-1)[1]) ring.push(ring[0]);
+        return { type: "Feature", properties: p, geometry: { type: "Polygon", coordinates: [ring] } };
+      }),
+    };
+  }
+
+  function filterExpr() {
+    const popMin = Number($("popMin").value);
+    const district = $("district").value;
+    const metro = $("metro").value;
+    const f = ["all", [">=", ["coalesce", ["get", "p"], 0], popMin]];
+    // At R7 the loaded file is already one district, so only metro needs filtering.
+    if (scope === "state") {
+      if (district) f.push(["==", ["get", "d"], district]);
+      else if (metro && summary.metros[metro]) f.push(["in", ["get", "d"], ["literal", summary.metros[metro]]]);
+    }
+    return f;
+  }
+
+  function ensureLayers(map, gj) {
+    if (map.getSource("h3")) { map.getSource("h3").setData(gj); return; }
+    map.addSource("h3", { type: "geojson", data: gj, promoteId: "h" });
+    map.addLayer({ id: "h3-fill", type: "fill", source: "h3", paint: { "fill-color": RAMP[0], "fill-opacity": 0.72 } });
+    map.addLayer({ id: "h3-line", type: "line", source: "h3", paint: { "line-color": "#0b1016", "line-width": 0.3, "line-opacity": 0.3 } });
+    map.addLayer({ id: "h3-sel", type: "line", source: "h3", filter: ["==", ["get", "h"], ""], paint: { "line-color": "#ffffff", "line-width": 2 } });
+    bindPointer(map);
+  }
+
+  function repaint() {
+    const gj = toGeoJSON();
+    for (const m of [mapL, mapR]) {
+      if (!m.isStyleLoaded()) continue;
+      ensureLayers(m, gj);
+    }
+    paintOnly();
+  }
+
+  function paintOnly() {
+    const f = filterExpr();
+    const pairs = [[mapL, metricOf("metricL")], [mapR, metricOf("metricR")]];
+    for (const [m, id] of pairs) {
+      if (!m.getLayer("h3-fill")) continue;
+      m.setPaintProperty("h3-fill", "fill-color", colorExpr(id));
+      m.setFilter("h3-fill", f);
+      m.setFilter("h3-line", f);
+    }
+    updateChrome();
+  }
+
+  // ---------------------------------------------------------------- chrome
+  function updateChrome() {
+    const idL = metricOf("metricL"), idR = metricOf("metricR");
+    const dL = metricDef(idL), dR = metricDef(idR);
+    $("tagL").textContent = dL.label + (dL.units ? ` · ${dL.units}` : "");
+    $("tagR").textContent = dR.label + (dR.units ? ` · ${dR.units}` : "");
+    $("legendTitle").innerHTML = `<b>${dL.label}</b>`;
+    const key = metricKey(idL);
+    const vals = ranks[key] || [];
+    if (isAbs() && vals.length) {
+      const q = (t) => vals[Math.min(vals.length - 1, Math.floor(t * (vals.length - 1)))];
+      $("legLow").textContent = show(key, q(0.02));
+      $("legHigh").textContent = show(key, q(0.99)) + (dL.units ? ` ${dL.units}` : "");
+    } else {
+      $("legLow").textContent = "0th pct";
+      $("legHigh").textContent = "100th pct";
+    }
+    const scopeText = key === "w"
+      ? "Wealth index is a within-state percentile computed over all R7 cells."
+      : (scope === "state"
+          ? `Percentile ranked across this state's ${cells.length.toLocaleString("en-IN")} overview cells.`
+          : `Percentile ranked across the ${cells.length.toLocaleString("en-IN")} R7 cells of ${$("district").value}.`);
+    $("legScope").textContent = isAbs() ? `Native units: ${dL.units || "—"}.` : scopeText;
+    const w = $("absWarn");
+    w.className = "warn" + (isAbs() ? " on" : "");
+    w.textContent = catalog.copy.absolute_warning;
+    $("resNote").textContent = scope === "state" ? "R6 overview" : "R7 detail";
+  }
+
+  function sourceLine(s) {
+    const basis = s.price_basis ? `${s.price_basis} prices${s.base_year ? " (base " + s.base_year + ")" : ""}` : "";
+    return [s.gddp_year ? `FY ${s.gddp_year}` : null, basis].filter(Boolean).join(", ");
+  }
+
+  function updateSourceCopy() {
+    const s = summary.source;
+    $("yearBadge").innerHTML = `GDDP <b>${s.gddp_year || "?"}</b>${s.price_basis ? " · " + s.price_basis : ""}`;
+    $("yearBadge").title = "Each state uses its own official GDDP release, so reference years differ.";
+    const total = s.total_crore ? `₹${Number(s.total_crore).toLocaleString("en-IN", { maximumFractionDigits: 0 })} crore` : "—";
+    $("srcNote").innerHTML = `
+      <b>Official GDDP:</b> ${sourceLine(s)}; state total ${total}.
+      ${s.page ? `<a href="${s.page}" target="_blank" rel="noopener">source</a>.` : ""}<br>
+      <b>Population:</b> ${s.population_product || "—"}${s.total_population ? ` (${(s.total_population / 1e6).toFixed(1)}M in grid)` : ""}.<br>
+      <b>Night lights:</b> ${s.nightlights_used ? `${s.nightlights_product || "VIIRS average_masked"} ${s.nightlights_year || ""} — in the model` : "not available for this state — excluded from the model"}.<br>
+      <b>OSM:</b> ${s.osm}.
+      ${(s.notes || []).map((n) => `<br>· ${n}`).join("")}`;
+    const ev = summary.evaluation || {};
+    const holdout = ev.holdout && ev.holdout.pre_scale_holdout_mape != null
+      ? ` Spatial hold-out MAPE on district sums before scaling: ${(ev.holdout.pre_scale_holdout_mape * 100).toFixed(1)}% over ${ev.holdout.n_holdout_districts} held-out districts.`
+      : (ev.holdout && ev.holdout.skipped ? ` Spatial hold-out skipped: ${ev.holdout.reason}.` : "");
+    $("methodNote").innerHTML = `
+      Official district GDDP is disaggregated to H3 R7 cells (~5 km²) by a hierarchical
+      GNN (GraphSAGE + GCNII initial residual over R7/R6/R5), then rescaled so cells sum
+      exactly to each district's published total.<br><br>
+      ${catalog.copy.allocation}<br>${catalog.copy.dhs}<br>${catalog.copy.ensemble}<br>
+      ${catalog.copy.years}<br><br>
+      Post-scale district reconstruction error is conservation, not accuracy${
+        ev.max_abs_rel_recon_error != null ? ` (max ${(ev.max_abs_rel_recon_error * 100).toExponential(1)}%)` : ""}.
+      ${holdout}`;
+  }
+
+  // ---------------------------------------------------------------- pointer
+  function tipHtml(p) {
+    const rng = (a, b, k) => (a == null || b == null) ? "" : ` <span style="color:#93a2b1">(${show(k, a)}–${show(k, b)})</span>`;
+    const rows = [
+      ["Wealth index", show("w", p.w) + rng(p.wmin, p.wmax, "w")],
+      ["GDDP / capita", show("g", p.g) + rng(p.gmin, p.gmax, "g")],
+      ["Population", show("p", p.p)],
+    ];
+    const id = metricOf("metricL"), key = metricKey(id);
+    if (!["w", "g", "p"].includes(key)) rows.push([metricDef(id).label, show(key, p[key])]);
+    return `<b>${p.d || ""}</b>${rows.map(([a, b]) => `${a}: ${b}`).join("<br>")}
+            <br><span style="color:#93a2b1">click for all details</span>`;
+  }
+
+  function bindPointer(map) {
+    map.on("mousemove", "h3-fill", (e) => {
+      const f = e.features && e.features[0];
+      if (!f) return;
+      tooltip.style.display = "block";
+      tooltip.style.left = Math.min(e.originalEvent.clientX + 14, window.innerWidth - 275) + "px";
+      tooltip.style.top = e.originalEvent.clientY + 14 + "px";
+      tooltip.innerHTML = tipHtml(f.properties);
+      map.getCanvas().style.cursor = "pointer";
+      highlight(f.properties.h);
+    });
+    map.on("mouseleave", "h3-fill", () => {
+      tooltip.style.display = "none";
+      map.getCanvas().style.cursor = "";
+      highlight(selected ? selected.h : "");
+    });
+    map.on("click", "h3-fill", (e) => {
+      const f = e.features && e.features[0];
+      if (f) openDetail(f.properties);
+    });
+  }
+
+  function highlight(hid) {
+    for (const m of [mapL, mapR]) if (m.getLayer("h3-sel")) m.setFilter("h3-sel", ["==", ["get", "h"], hid || ""]);
+  }
+
+  function openDetail(props) {
+    selected = props;
+    highlight(props.h);
+    document.body.classList.add("has-detail");
+    $("detailTitle").textContent = props.d || "Cell";
+    $("detailSub").innerHTML = `H3 R${h3.getResolution(props.h)} · <code>${props.h}</code>`;
+    const groups = [
+      ["Model output", ["w", "g", "c", "sr", "zr", "s", "y"]],
+      ["Inputs", ["p", "ar", "nl", "rd", "poi", "bldg", "bcnt", "bsh"]],
+    ];
+    let html = "";
+    for (const [title, keys] of groups) {
+      const rows = keys.filter((k) => props[k] != null).map((k) => {
+        let extra = "";
+        if (k === "w" && props.wmin != null) extra = `<div class="note">seeds ${show("w", props.wmin)}–${show("w", props.wmax)}</div>`;
+        if (k === "g" && props.gmin != null) extra = `<div class="note">seeds ${show("g", props.gmin)}–${show("g", props.gmax)}</div>`;
+        return `<tr><td>${LABEL[k]}${UNIT[k] ? `<div class="note">${UNIT[k]}</div>` : ""}</td>
+                    <td>${show(k, props[k])}${extra}</td></tr>`;
+      });
+      if (rows.length) html += `<h2>${title}</h2><table class="kv">${rows.join("")}</table>`;
+    }
+    const lu = Object.entries(props).filter(([k, v]) => k.startsWith("lu_") && v);
+    if (lu.length) {
+      html += `<h2>Landuse share</h2><table class="kv">` + lu.map(([k, v]) =>
+        `<tr><td>${k.slice(3)}</td><td>${(v * 100).toFixed(2)}%</td></tr>`).join("") + "</table>";
+    }
+    const pg = Object.entries(props).filter(([k, v]) => k.startsWith("pg_") && v);
+    if (pg.length) {
+      const names = {};
+      for (const m of (summary.metrics || [])) if (m.id.startsWith("poi_")) names[metricKey(m.id)] = m.label;
+      html += `<h2>POI classes present</h2><table class="kv">` + pg
+        .sort((a, b) => b[1] - a[1])
+        .map(([k, v]) => `<tr><td>${names[k] || k.slice(3)}</td><td>${show("poi", v)}</td></tr>`).join("") + "</table>";
+    }
+    html += `<div class="rowbtns"><button id="walkThis">Walk the GNN through this cell →</button></div>`;
+    html += `<p class="note">${catalog.copy.allocation}</p>`;
+    $("detailBody").innerHTML = html;
+    $("walkThis").onclick = () => {
+      const q = new URLSearchParams({ state: $("state").value, h: props.h });
+      if (props.d) q.set("d", props.d);
+      location.href = `explainer.html?${q}`;
+    };
+  }
+
+  // ---------------------------------------------------------------- loading
+  function fillSelect(id, items, blank) {
+    const el = $(id);
+    const prev = el.value;
+    el.innerHTML = (blank ? `<option value="">${blank}</option>` : "") +
+      items.map(([v, t, g]) => ({ v, t, g })).reduce((acc, o) => {
+        if (o.g && acc.last !== o.g) { acc.html += `<optgroup label="${o.g}">`; acc.last = o.g; }
+        acc.html += `<option value="${o.v}">${o.t}</option>`;
+        return acc;
+      }, { html: "", last: null }).html;
+    if ([...el.options].some((o) => o.value === prev)) el.value = prev;
+  }
+
+  const spin = (on) => $("spinner").classList.toggle("on", on);
+
+  async function loadScope() {
+    const code = $("state").value;
+    const district = $("district").value;
+    spin(true);
+    try {
+      if (district && summary.district_files[district]) {
+        const payload = await fetch(`data/${code}/${summary.district_files[district]}`).then((r) => r.json());
+        cells = expand(payload);
+        scope = "district";
+      } else {
+        const payload = await fetch(`data/${code}/cells_r6.json`).then((r) => r.json());
+        cells = expand(payload);
+        scope = "state";
+      }
+      rebuildRanks();
+      repaint();
+      if (scope === "district") {
+        const lats = cells.map((c) => h3.cellToLatLng(c.h));
+        const b = lats.reduce((acc, [la, lo]) => [Math.min(acc[0], lo), Math.min(acc[1], la), Math.max(acc[2], lo), Math.max(acc[3], la)],
+          [180, 90, -180, -90]);
+        for (const m of maps()) m.fitBounds([[b[0], b[1]], [b[2], b[3]]], { padding: 60, duration: 600 });
+      }
+    } finally { spin(false); }
+  }
+
+  async function loadState(code) {
+    spin(true);
+    try {
+      summary = await fetch(`data/${code}/summary.json`).then((r) => r.json());
+      fillSelect("metricL", summary.metrics.map((m) => [m.id, m.label, m.group]));
+      fillSelect("metricR", summary.metrics.map((m) => [m.id, m.label, m.group]));
+      if (![...$("metricL").options].some((o) => o.value === $("metricL").value)) $("metricL").value = "wealth_index";
+      if (!$("metricR").value || ![...$("metricR").options].some((o) => o.value === $("metricR").value)) {
+        $("metricR").value = summary.metrics.some((m) => m.id === "night_lights") ? "night_lights" : "population";
+      }
+      fillSelect("metro", Object.keys(summary.metros || {}).map((m) => [m, m]), "Whole state");
+      cascadeDistricts();
+      $("district").value = "";
+      updateSourceCopy();
+      for (const m of [mapL, mapR]) m.jumpTo({ center: summary.center, zoom: summary.zoom });
+      await loadScope();
+    } finally { spin(false); }
+  }
+
+  function cascadeDistricts() {
+    const metro = $("metro").value;
+    let list = summary.districts.slice();
+    if (metro && summary.metros[metro]) list = summary.metros[metro].slice();
+    fillSelect("district", list.map((d) => [d, d]), "All districts (overview grid)");
+  }
+
+  function syncPair(a, b) {
+    const copy = (src, dst) => {
+      if (syncing || !document.body.classList.contains("split")) return;
+      syncing = true;
+      dst.jumpTo({ center: src.getCenter(), zoom: src.getZoom(), bearing: src.getBearing(), pitch: src.getPitch() });
+      syncing = false;
+    };
+    a.on("move", () => copy(a, b));
+    b.on("move", () => copy(b, a));
+  }
+
+  // ---------------------------------------------------------------- wiring
+  Promise.all([
+    fetch("data/catalog.json").then((r) => r.json()),
+    new Promise((res) => mapL.on("load", res)),
+    new Promise((res) => mapR.on("load", res)),
+  ]).then(async ([cat]) => {
+    catalog = cat;
+    fillSelect("state", cat.states.map((s) => [s.state, `${s.name} — FY ${s.gddp_year || "?"}`]));
+    syncPair(mapL, mapR);
+    await loadState(cat.states[0].state);
+  }).catch((err) => {
+    $("spinner").classList.add("on");
+    $("spinner").textContent = "Could not load web/data — run python web/prepare_data.py";
+    console.error(err);
+  });
+
+  $("state").addEventListener("change", (e) => loadState(e.target.value));
+  $("metro").addEventListener("change", () => { cascadeDistricts(); loadScope(); });
+  $("district").addEventListener("change", loadScope);
+  $("metricL").addEventListener("change", paintOnly);
+  $("metricR").addEventListener("change", paintOnly);
+  $("scale").addEventListener("change", paintOnly);
+  $("popMin").addEventListener("input", (e) => { $("popLabel").textContent = Number(e.target.value).toLocaleString("en-IN"); paintOnly(); });
+  $("splitToggle").addEventListener("change", (e) => {
+    document.body.classList.toggle("split", e.target.checked);
+    $("rightMetricWrap").style.display = e.target.checked ? "" : "none";
+    setTimeout(() => { mapR.resize(); mapL.resize(); if (e.target.checked) repaint(); }, 60);
+  });
+  $("detailClose").addEventListener("click", () => {
+    document.body.classList.remove("has-detail");
+    selected = null; highlight("");
+  });
+  // The plain CSV exists after a local build; only the gzip is committed for Pages.
+  $("dlCsv").addEventListener("click", async () => {
+    const base = `data/${$("state").value}/cells.csv`;
+    const plain = await fetch(base, { method: "HEAD" }).then((r) => r.ok).catch(() => false);
+    location.href = plain ? base : `${base}.gz`;
+  });
+  $("dlDict").addEventListener("click", () => { location.href = `data/${$("state").value}/DATA_DICTIONARY.md`; });
+  $("goWalk").addEventListener("click", () => { location.href = `explainer.html?state=${$("state").value}`; });
+  </script>
+</body>
+</html>

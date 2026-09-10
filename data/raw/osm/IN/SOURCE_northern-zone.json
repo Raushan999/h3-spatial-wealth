@@ -1,0 +1,17 @@
+{
+  "url": "https://download.geofabrik.de/asia/india/northern-zone-latest.osm.pbf",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T15:01:32.894874+00:00",
+  "license": "ODbL 1.0 (OpenStreetMap contributors, via Geofabrik)",
+  "units": "OSM objects (roads, building footprints, landuse polygons, POI nodes/ways)",
+  "status": "ok",
+  "zone": "northern-zone",
+  "page": "https://download.geofabrik.de/asia/india.html",
+  "path": "D:\\CursorProjects\\spatialdisintegration\\data\\raw\\osm\\IN\\northern-zone-latest.osm.pbf",
+  "size_bytes": 222883986,
+  "used_by_states": [
+    "DL",
+    "RJ"
+  ],
+  "reason": "state-wide building footprints are not retrievable from Overpass without timeouts"
+}

@@ -1,0 +1,5 @@
+{
+  "ok": false,
+  "reason": "HTTPSConnectionPool(host='state.bihar.gov.in', port=443): Max retries exceeded with url: /finance/cache/12/07-Mar-25/SHOW_DOCS/Economic%20Survey%20Final%2022.02.2025%20%20English_11zon.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))",
+  "url": "https://state.bihar.gov.in/finance/cache/12/07-Mar-25/SHOW_DOCS/Economic%20Survey%20Final%2022.02.2025%20%20English_11zon.pdf"
+}

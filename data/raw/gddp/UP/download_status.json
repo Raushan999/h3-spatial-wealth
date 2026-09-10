@@ -1,0 +1,5 @@
+{
+  "ok": false,
+  "reason": "HTTPSConnectionPool(host='updes.up.nic.in', port=443): Max retries exceeded with url: /updes/data/dist_domestic_product/dist_domestic_product_2020_21.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))",
+  "url": "https://updes.up.nic.in/updes/data/dist_domestic_product/dist_domestic_product_2020_21.pdf"
+}

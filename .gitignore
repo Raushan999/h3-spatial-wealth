@@ -1,0 +1,26 @@
+__pycache__/
+.venv/
+*.pt
+.DS_Store
+*.tif
+*.tiff
+*.tif.gz
+*.gpkg
+*.gpkg.gz
+*.pmtiles
+*.osm.pbf
+data/raw/osm/**/tile_*.json
+data/raw/osm/IN/*.pbf
+data/raw/nightlights/**/*.tif*
+data/raw/population/**/*.tif*
+data/raw/population/IN/*.gpkg*
+data/processed/**/*.parquet
+# The gzipped copy is committed so the map's download button works on GitHub
+# Pages; the uncompressed twin is a local build artefact.
+web/data/**/cells.csv
+
+data/raw/osm/maharashtra_bbox_osm.json
+data/raw/osm/tiles_complete.json
+
+data/output/
+data/processed/

@@ -1,0 +1,190 @@
+﻿
+== DL Delhi (NCT) ==
+{'gddp': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\gddp\\DL\\gddp.json', 'population': 
+'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\population\\kontur_population_india.gpkg', 'nightlights': 
+'D:\\CursorProjects\\spatialdisintegration\\data\\processed\\h3_nightlights_2025.parquet', 'osm': 
+'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\osm\\IN\\northern-zone-latest.osm.pbf'}
+== 2. District polygons + GDDP targets ==
+boundary units=1  gddp units=1
+districts: ['Delhi']
+== 3. H3 R7 index ==
+System.Management.Automation.RemoteException
+H3 polyfill:   0%|          | 0/1 [00:00<?, ?it/s]
+H3 polyfill: 100%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê| 1/1 [00:00<00:00, 35.31it/s]
+R7 cells=276
+== 4. Features ==
+DL Kontur population after R7 join: 19,981,639 (20.0M; sanity range 16ΓÇô25M)
+night lights: 100.0% of R7 cells lit, mean=30.026 max=106.0 nW/cm┬▓/sr
+OSM aggregate cache hit: D:\CursorProjects\spatialdisintegration\data\processed\DL\osm_r7_aggregate.json
+OSM joined: roads>0 in 271 cells, buildings>0 in 255, POIs>0 in 215 of 276 cells
+features: ['population_exists_z', 'population_log_z', 'night_lights_exists_z', 'night_lights_log_z', 
+'road_km_exists_z', 'road_km_log_z', 'poi_count_exists_z', 'poi_count_log_z', 'building_area_m2_exists_z', 
+'building_area_m2_log_z', 'building_count_exists_z', 'building_count_log_z', 'poi_amenity_restaurant_exists_z', 
+'poi_amenity_restaurant_log_z', 'poi_amenity_cafe_exists_z', 'poi_amenity_cafe_log_z', 'poi_amenity_bar_exists_z', 
+'poi_amenity_bar_log_z', 'poi_amenity_pub_exists_z', 'poi_amenity_pub_log_z', 'poi_amenity_cinema_exists_z', 
+'poi_amenity_cinema_log_z', 'poi_amenity_theatre_exists_z', 'poi_amenity_theatre_log_z', 
+'poi_amenity_nightclub_exists_z', 'poi_amenity_nightclub_log_z', 'poi_amenity_university_exists_z', 
+'poi_amenity_university_log_z', 'poi_amenity_hospital_exists_z', 'poi_amenity_hospital_log_z', 
+'poi_amenity_bank_exists_z', 'poi_amenity_bank_log_z', 'poi_shop_mall_exists_z', 'poi_shop_mall_log_z', 
+'poi_shop_luxury_exists_z', 'poi_shop_luxury_log_z', 'poi_shop_supermarket_exists_z', 'poi_shop_supermarket_log_z', 
+'poi_shop_convenience_exists_z', 'poi_shop_convenience_log_z', 'poi_tourism_hotel_exists_z', 
+'poi_tourism_hotel_log_z', 'poi_tourism_guest_house_exists_z', 'poi_tourism_guest_house_log_z', 
+'poi_leisure_exists_z', 'poi_leisure_log_z', 'poi_office_exists_z', 'poi_office_log_z', 
+'poi_amenity_restaurant_density_exists_z', 'poi_amenity_restaurant_density_log_z', 
+'poi_amenity_cafe_density_exists_z', 'poi_amenity_cafe_density_log_z', 'poi_amenity_bar_density_exists_z', 
+'poi_amenity_bar_density_log_z', 'poi_amenity_pub_density_exists_z', 'poi_amenity_pub_density_log_z', 
+'poi_amenity_cinema_density_exists_z', 'poi_amenity_cinema_density_log_z', 'poi_amenity_theatre_density_exists_z', 
+'poi_amenity_theatre_density_log_z', 'poi_amenity_nightclub_density_exists_z', 'poi_amenity_nightclub_density_log_z', 
+'poi_amenity_university_density_exists_z', 'poi_amenity_university_density_log_z', 
+'poi_amenity_hospital_density_exists_z', 'poi_amenity_hospital_density_log_z', 'poi_amenity_bank_density_exists_z', 
+'poi_amenity_bank_density_log_z', 'poi_shop_mall_density_exists_z', 'poi_shop_mall_density_log_z', 
+'poi_shop_luxury_density_exists_z', 'poi_shop_luxury_density_log_z', 'poi_shop_supermarket_density_exists_z', 
+'poi_shop_supermarket_density_log_z', 'poi_shop_convenience_density_exists_z', 'poi_shop_convenience_density_log_z', 
+'poi_tourism_hotel_density_exists_z', 'poi_tourism_hotel_density_log_z', 'poi_tourism_guest_house_density_exists_z', 
+'poi_tourism_guest_house_density_log_z', 'poi_leisure_density_exists_z', 'poi_leisure_density_log_z', 
+'poi_office_density_exists_z', 'poi_office_density_log_z', 'landuse_residential_z', 'landuse_residential_exists_z', 
+'landuse_commercial_z', 'landuse_commercial_exists_z', 'landuse_industrial_z', 'landuse_industrial_exists_z', 
+'landuse_retail_z', 'landuse_retail_exists_z', 'building_share_z', 'building_share_exists_z']
+          population     road_km   poi_count  building_area_m2  night_lights
+count     276.000000  276.000000  276.000000      2.760000e+02    276.000000
+mean    72397.242754   16.986279   47.163043      2.256354e+05     30.026145
+std     64905.791274   10.687180   78.782731      2.658700e+05     19.070851
+min       329.000000    0.000000    0.000000      0.000000e+00      3.504889
+25%     20292.500000    8.318494    1.000000      2.030504e+03     12.927068
+50%     47981.000000   14.924704   14.000000      1.229994e+05     29.066184
+75%    117874.750000   24.565214   61.000000      3.774419e+05     43.952302
+max    247597.000000   48.214159  504.000000      1.180215e+06    105.956679
+== 5. Train 5-seed hierarchical GNN ==
+[ensemble seed=0] epoch 001  loss=32.23924  L_agg=32.23493
+[ensemble seed=0] epoch 005  loss=11.04702  L_agg=11.04702
+[ensemble seed=0] epoch 010  loss=0.54620  L_agg=0.54620
+[ensemble seed=0] epoch 015  loss=0.37879  L_agg=0.37879
+[ensemble seed=0] epoch 020  loss=0.77519  L_agg=0.77519
+[ensemble seed=0] epoch 025  loss=0.51612  L_agg=0.51612
+[ensemble seed=0] epoch 030  loss=0.26755  L_agg=0.26755
+[ensemble seed=0] epoch 035  loss=0.13964  L_agg=0.13964
+[ensemble seed=0] epoch 040  loss=0.08451  L_agg=0.08451
+[ensemble seed=0] epoch 045  loss=0.06449  L_agg=0.06449
+[ensemble seed=0] epoch 050  loss=0.05913  L_agg=0.05913
+[ensemble seed=1] epoch 001  loss=32.32564  L_agg=32.32096
+[ensemble seed=1] epoch 005  loss=12.52080  L_agg=12.52080
+[ensemble seed=1] epoch 010  loss=0.95288  L_agg=0.95288
+[ensemble seed=1] epoch 015  loss=0.17312  L_agg=0.17312
+[ensemble seed=1] epoch 020  loss=0.67114  L_agg=0.67114
+[ensemble seed=1] epoch 025  loss=0.52939  L_agg=0.52939
+[ensemble seed=1] epoch 030  loss=0.26086  L_agg=0.26086
+[ensemble seed=1] epoch 035  loss=0.10422  L_agg=0.10422
+[ensemble seed=1] epoch 040  loss=0.05340  L_agg=0.05340
+[ensemble seed=1] epoch 045  loss=0.03717  L_agg=0.03717
+[ensemble seed=1] epoch 050  loss=0.03296  L_agg=0.03296
+[ensemble seed=2] epoch 001  loss=32.20546  L_agg=32.20130
+[ensemble seed=2] epoch 005  loss=12.40880  L_agg=12.40880
+[ensemble seed=2] epoch 010  loss=1.16738  L_agg=1.16738
+[ensemble seed=2] epoch 015  loss=0.06428  L_agg=0.06428
+[ensemble seed=2] epoch 020  loss=0.52831  L_agg=0.52831
+[ensemble seed=2] epoch 025  loss=0.50953  L_agg=0.50953
+[ensemble seed=2] epoch 030  loss=0.34386  L_agg=0.34386
+[ensemble seed=2] epoch 035  loss=0.22555  L_agg=0.22555
+[ensemble seed=2] epoch 040  loss=0.16408  L_agg=0.16408
+[ensemble seed=2] epoch 045  loss=0.13853  L_agg=0.13853
+[ensemble seed=2] epoch 050  loss=0.13105  L_agg=0.13105
+[ensemble seed=3] epoch 001  loss=32.24234  L_agg=32.23802
+[ensemble seed=3] epoch 005  loss=10.90381  L_agg=10.90381
+[ensemble seed=3] epoch 010  loss=0.61404  L_agg=0.61404
+[ensemble seed=3] epoch 015  loss=0.24162  L_agg=0.24162
+[ensemble seed=3] epoch 020  loss=0.68568  L_agg=0.68568
+[ensemble seed=3] epoch 025  loss=0.54118  L_agg=0.54118
+[ensemble seed=3] epoch 030  loss=0.31947  L_agg=0.31947
+[ensemble seed=3] epoch 035  loss=0.18238  L_agg=0.18238
+[ensemble seed=3] epoch 040  loss=0.11679  L_agg=0.11679
+[ensemble seed=3] epoch 045  loss=0.09160  L_agg=0.09160
+[ensemble seed=3] epoch 050  loss=0.08453  L_agg=0.08453
+[ensemble seed=4] epoch 001  loss=32.60188  L_agg=32.59599
+[ensemble seed=4] epoch 005  loss=13.10989  L_agg=13.10989
+[ensemble seed=4] epoch 010  loss=0.95498  L_agg=0.95498
+[ensemble seed=4] epoch 015  loss=0.24115  L_agg=0.24115
+[ensemble seed=4] epoch 020  loss=0.77763  L_agg=0.77763
+[ensemble seed=4] epoch 025  loss=0.60148  L_agg=0.60148
+[ensemble seed=4] epoch 030  loss=0.33635  L_agg=0.33635
+[ensemble seed=4] epoch 035  loss=0.18263  L_agg=0.18263
+[ensemble seed=4] epoch 040  loss=0.11374  L_agg=0.11374
+[ensemble seed=4] epoch 045  loss=0.08821  L_agg=0.08821
+[ensemble seed=4] epoch 050  loss=0.08130  L_agg=0.08130
+== 6. Evaluation ==
+[ablation_with_ntl seed=0] epoch 001  loss=32.23924  L_agg=32.23493
+[ablation_with_ntl seed=0] epoch 005  loss=11.04702  L_agg=11.04702
+[ablation_with_ntl seed=0] epoch 010  loss=0.54620  L_agg=0.54620
+[ablation_with_ntl seed=0] epoch 015  loss=0.37879  L_agg=0.37879
+[ablation_with_ntl seed=0] epoch 020  loss=0.77519  L_agg=0.77519
+[ablation_with_ntl seed=0] epoch 025  loss=0.51612  L_agg=0.51612
+[ablation_with_ntl seed=0] epoch 030  loss=0.26755  L_agg=0.26755
+[ablation_with_ntl seed=0] epoch 035  loss=0.13964  L_agg=0.13964
+[ablation_with_ntl seed=0] epoch 040  loss=0.08451  L_agg=0.08451
+[ablation_with_ntl seed=0] epoch 045  loss=0.06449  L_agg=0.06449
+[ablation_with_ntl seed=0] epoch 050  loss=0.05913  L_agg=0.05913
+[ablation_without_ntl seed=0] epoch 001  loss=31.87293  L_agg=31.87007
+[ablation_without_ntl seed=0] epoch 005  loss=11.28024  L_agg=11.28024
+[ablation_without_ntl seed=0] epoch 010  loss=0.72046  L_agg=0.72046
+[ablation_without_ntl seed=0] epoch 015  loss=0.21346  L_agg=0.21346
+[ablation_without_ntl seed=0] epoch 020  loss=0.66566  L_agg=0.66566
+[ablation_without_ntl seed=0] epoch 025  loss=0.52848  L_agg=0.52848
+[ablation_without_ntl seed=0] epoch 030  loss=0.32076  L_agg=0.32076
+[ablation_without_ntl seed=0] epoch 035  loss=0.19458  L_agg=0.19458
+[ablation_without_ntl seed=0] epoch 040  loss=0.13363  L_agg=0.13363
+[ablation_without_ntl seed=0] epoch 045  loss=0.10943  L_agg=0.10943
+[ablation_without_ntl seed=0] epoch 050  loss=0.10254  L_agg=0.10254
+{
+  "ensemble": {
+    "n_seeds": 5,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "pre_scale_district_log_loss": 0.07113580976509534,
+    "caption": "ensemble range across seeds, not a calibrated probability of error."
+  },
+  "holdout": {
+    "skipped": true,
+    "reason": "only 1 reporting unit(s); a spatial hold-out needs at least 5 so the training split still constrains 
+the loss",
+    "n_districts": 1
+  },
+  "ablation_ntl": {
+    "runs": [
+      {
+        "tag": "with_ntl",
+        "n_features": 94,
+        "pre_scale_district_log_loss": 0.05203962761667178,
+        "final_train_loss": 0.05913296439163408
+      },
+      {
+        "tag": "without_ntl",
+        "n_features": 92,
+        "pre_scale_district_log_loss": 0.08123967497187,
+        "final_train_loss": 0.10253619736550386
+      }
+    ],
+    "note": "Ablation compares pre-scale district log-loss with and without night_lights features. NTL is in the model 
+when the raster is present."
+  },
+  "spearman": {
+    "wealth_index_vs_night_lights": 0.8207856623050471,
+    "wealth_index_vs_road_km": 0.6285710208813169,
+    "wealth_index_vs_poi_count": 0.8242963616494376,
+    "gdp_per_capita_vs_night_lights": 0.8207856623050471,
+    "note": "Spearman vs NTL/roads/POIs is a sanity check, not truth. wealth_index is not a DHS score."
+  }
+}
+== 7. Export ==
+{
+  "n_cells": 276,
+  "n_districts": 1,
+  "max_abs_rel_recon_error": 0.0,
+  "caption": "ensemble range across seeds, not a calibrated probability of error."
+}
+wrote D:\CursorProjects\spatialdisintegration\data\output\DL\dl_h3_r7_wealth.csv
+
+

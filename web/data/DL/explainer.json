@@ -1,0 +1,3805 @@
+{
+  "presets": {
+    "rich_urban": "873da1145ffffff",
+    "poor_rural": "873da1840ffffff"
+  },
+  "preset_rules": {
+    "rich_urban": "highest wealth_index among cells with population above the 80th percentile",
+    "poor_rural": "lowest wealth_index among cells with population between the 20th and 60th percentiles and below-median road_km"
+  },
+  "cells": {
+    "rich_urban": {
+      "h3_r7": "873da1145ffffff",
+      "h3_r6": "863da1147ffffff",
+      "h3_r5": "853da117fffffff",
+      "district": "Delhi",
+      "lat": 28.645870168427095,
+      "lon": 77.22508651868539,
+      "inputs": {
+        "population": 193614.0,
+        "night_lights": 72.02559043621194,
+        "road_km": 30.19105719993523,
+        "poi_count": 200.0,
+        "building_area_m2": 433387.6504552879,
+        "poi_amenity_restaurant": 47.0,
+        "poi_amenity_cafe": 13.0,
+        "poi_amenity_bar": 1.0,
+        "poi_amenity_pub": 0.0,
+        "poi_amenity_cinema": 2.0,
+        "poi_amenity_theatre": 0.0,
+        "poi_amenity_nightclub": 1.0,
+        "poi_amenity_university": 0.0,
+        "poi_amenity_hospital": 8.0,
+        "poi_amenity_bank": 18.0,
+        "poi_shop_mall": 0.0,
+        "poi_shop_luxury": 2.0,
+        "poi_shop_supermarket": 1.0,
+        "poi_shop_convenience": 4.0,
+        "poi_tourism_hotel": 68.0,
+        "poi_tourism_guest_house": 8.0,
+        "poi_leisure": 16.0,
+        "poi_office": 11.0,
+        "landuse_residential": 0.4632290005683899,
+        "landuse_commercial": 0.022192666307091713,
+        "landuse_industrial": 0.0,
+        "landuse_retail": 0.0
+      },
+      "features_z": {
+        "population_exists_z": 0.0,
+        "population_log_z": 1.2642196416854858,
+        "night_lights_exists_z": 0.0,
+        "night_lights_log_z": 1.4438116550445557,
+        "road_km_exists_z": 0.13583141565322876,
+        "road_km_log_z": 0.997346818447113,
+        "poi_count_exists_z": 0.5326545834541321,
+        "poi_count_log_z": 1.5032987594604492,
+        "building_area_m2_exists_z": 0.28697195649147034,
+        "building_area_m2_log_z": 0.7745059132575989,
+        "building_count_exists_z": 0.28697195649147034,
+        "building_count_log_z": 0.765762984752655,
+        "poi_amenity_restaurant_exists_z": 1.2100766897201538,
+        "poi_amenity_restaurant_log_z": 3.158721446990967,
+        "poi_amenity_cafe_exists_z": 1.4616304636001587,
+        "poi_amenity_cafe_log_z": 2.66817045211792,
+        "poi_amenity_bar_exists_z": 2.918431520462036,
+        "poi_amenity_bar_log_z": -0.1936645209789276,
+        "poi_amenity_pub_exists_z": -0.18359699845314026,
+        "poi_amenity_pub_log_z": -0.060302264988422394,
+        "poi_amenity_cinema_exists_z": 2.5026302337646484,
+        "poi_amenity_cinema_log_z": 3.0825178623199463,
+        "poi_amenity_theatre_exists_z": -0.3810881972312927,
+        "poi_amenity_theatre_log_z": -0.2380964457988739,
+        "poi_amenity_nightclub_exists_z": 5.7879180908203125,
+        "poi_amenity_nightclub_log_z": 0.0,
+        "poi_amenity_university_exists_z": -0.279508501291275,
+        "poi_amenity_university_log_z": -0.138016939163208,
+        "poi_amenity_hospital_exists_z": 0.9504989981651306,
+        "poi_amenity_hospital_log_z": 1.6882884502410889,
+        "poi_amenity_bank_exists_z": 1.247219204902649,
+        "poi_amenity_bank_log_z": 2.325002670288086,
+        "poi_shop_mall_exists_z": -0.44721364974975586,
+        "poi_shop_mall_log_z": -0.2740616500377655,
+        "poi_shop_luxury_exists_z": 2.1004199981689453,
+        "poi_shop_luxury_log_z": 0.6435561776161194,
+        "poi_shop_supermarket_exists_z": 1.6992127895355225,
+        "poi_shop_supermarket_log_z": -0.3638594448566437,
+        "poi_shop_convenience_exists_z": 1.6370705366134644,
+        "poi_shop_convenience_log_z": 1.1762633323669434,
+        "poi_tourism_hotel_exists_z": 1.5652475357055664,
+        "poi_tourism_hotel_log_z": 5.744120121002197,
+        "poi_tourism_guest_house_exists_z": 2.3603873252868652,
+        "poi_tourism_guest_house_log_z": 7.861999034881592,
+        "poi_leisure_exists_z": 0.6898809671401978,
+        "poi_leisure_log_z": 0.5273496508598328,
+        "poi_office_exists_z": 0.9784921407699585,
+        "poi_office_log_z": 1.383830189704895,
+        "poi_amenity_restaurant_density_exists_z": 1.2100766897201538,
+        "poi_amenity_restaurant_density_log_z": 2.8863577842712402,
+        "poi_amenity_cafe_density_exists_z": 1.4616304636001587,
+        "poi_amenity_cafe_density_log_z": 1.623321294784546,
+        "poi_amenity_bar_density_exists_z": 2.918431520462036,
+        "poi_amenity_bar_density_log_z": -3.6714069843292236,
+        "poi_amenity_pub_density_exists_z": -0.18359699845314026,
+        "poi_amenity_pub_density_log_z": 0.17909051477909088,
+        "poi_amenity_cinema_density_exists_z": 2.5026302337646484,
+        "poi_amenity_cinema_density_log_z": -1.6041666269302368,
+        "poi_amenity_theatre_density_exists_z": -0.3810881972312927,
+        "poi_amenity_theatre_density_log_z": 0.3328102231025696,
+        "poi_amenity_nightclub_density_exists_z": 5.7879180908203125,
+        "poi_amenity_nightclub_density_log_z": -5.7892889976501465,
+        "poi_amenity_university_density_exists_z": -0.279508501291275,
+        "poi_amenity_university_density_log_z": 0.2666974663734436,
+        "poi_amenity_hospital_density_exists_z": 0.9504989981651306,
+        "poi_amenity_hospital_density_log_z": 0.9790802597999573,
+        "poi_amenity_bank_density_exists_z": 1.247219204902649,
+        "poi_amenity_bank_density_log_z": 1.8420871496200562,
+        "poi_shop_mall_density_exists_z": -0.44721364974975586,
+        "poi_shop_mall_density_log_z": 0.3689078390598297,
+        "poi_shop_luxury_density_exists_z": 2.1004199981689453,
+        "poi_shop_luxury_density_log_z": -1.7857558727264404,
+        "poi_shop_supermarket_density_exists_z": 1.6992127895355225,
+        "poi_shop_supermarket_density_log_z": -2.433121919631958,
+        "poi_shop_convenience_density_exists_z": 1.6370705366134644,
+        "poi_shop_convenience_density_log_z": -0.28748422861099243,
+        "poi_tourism_hotel_density_exists_z": 1.5652475357055664,
+        "poi_tourism_hotel_density_log_z": 4.268256664276123,
+        "poi_tourism_guest_house_density_exists_z": 2.3603873252868652,
+        "poi_tourism_guest_house_density_log_z": 1.1278249025344849,
+        "poi_leisure_density_exists_z": 0.6898809671401978,
+        "poi_leisure_density_log_z": 0.2943423092365265,
+        "poi_office_density_exists_z": 0.9784921407699585,
+        "poi_office_density_log_z": 0.8899387717247009,
+        "landuse_residential_z": 2.7859113216400146,
+        "landuse_residential_exists_z": 0.7419984936714172,
+        "landuse_commercial_z": 0.674827516078949,
+        "landuse_commercial_exists_z": 1.3914631605148315,
+        "landuse_industrial_z": -0.35988789796829224,
+        "landuse_industrial_exists_z": -0.7537783980369568,
+        "landuse_retail_z": -0.3195737898349762,
+        "landuse_retail_exists_z": -0.5214301943778992,
+        "building_share_z": 0.7821087837219238,
+        "building_share_exists_z": 0.28697195649147034
+      },
+      "neighbors": [
+        {
+          "h3_r7": "873da1141ffffff",
+          "population": 107365.0,
+          "night_lights": 71.61644077301025,
+          "road_km": 35.85703950307745,
+          "poi_count": 71.0,
+          "wealth_index": 95.28985507246377
+        },
+        {
+          "h3_r7": "873da116effffff",
+          "population": 120193.0,
+          "night_lights": 55.61592324574789,
+          "road_km": 38.565005533057445,
+          "poi_count": 67.0,
+          "wealth_index": 84.42028985507247
+        },
+        {
+          "h3_r7": "873da116affffff",
+          "population": 128041.0,
+          "night_lights": 38.776013209902004,
+          "road_km": 35.46375603379599,
+          "poi_count": 33.0,
+          "wealth_index": 83.33333333333334
+        },
+        {
+          "h3_r7": "873da1163ffffff",
+          "population": 187092.0,
+          "night_lights": 57.3512129948057,
+          "road_km": 44.49917127651907,
+          "poi_count": 46.0,
+          "wealth_index": 93.47826086956522
+        },
+        {
+          "h3_r7": "873da1144ffffff",
+          "population": 110813.0,
+          "night_lights": 53.98080585621022,
+          "road_km": 37.447987127787286,
+          "poi_count": 233.0,
+          "wealth_index": 97.10144927536231
+        },
+        {
+          "h3_r7": "873da1140ffffff",
+          "population": 23406.0,
+          "night_lights": 90.23292751969963,
+          "road_km": 44.17808314325915,
+          "poi_count": 504.0,
+          "wealth_index": 98.18840579710145
+        }
+      ],
+      "parents": {
+        "h3_r6": "863da1147ffffff",
+        "h3_r5": "853da117fffffff"
+      },
+      "s_i": 1420127.25,
+      "s_i_min": 1273521.375,
+      "s_i_max": 1660502.875,
+      "population": 193614.0,
+      "z_i": 274956517381.5,
+      "district_sum_raw": 12423439386451.848,
+      "Y_g": 6722470000000.0,
+      "dasymetric_scale": 0.5411118282857375,
+      "gdp_inr": 148782223819.3826,
+      "gdp_per_capita_inr": 768447.6526458964,
+      "gdp_per_capita_inr_min": 750935.3879343641,
+      "gdp_per_capita_inr_max": 789664.1274370875,
+      "wealth_index": 96.37681159420289,
+      "wealth_index_min": 96.01449275362319,
+      "wealth_index_max": 96.37681159420289,
+      "logged_values": {
+        "population_exists": 1.0,
+        "population_log": 5.2869367599487305,
+        "night_lights_exists": 1.0,
+        "night_lights_log": 1.8574868440628052,
+        "road_km_exists": 1.0,
+        "road_km_log": 1.479878306388855,
+        "poi_count_exists": 1.0,
+        "poi_count_log": 2.301029920578003,
+        "building_area_m2_exists": 1.0,
+        "building_area_m2_log": 5.636876583099365,
+        "building_count_exists": 1.0,
+        "building_count_log": 3.044931650161743,
+        "poi_amenity_restaurant_exists": 1.0,
+        "poi_amenity_restaurant_log": 1.6720978021621704,
+        "poi_amenity_cafe_exists": 1.0,
+        "poi_amenity_cafe_log": 1.113943338394165,
+        "poi_amenity_bar_exists": 1.0,
+        "poi_amenity_bar_log": 0.0,
+        "poi_amenity_pub_exists": 0.0,
+        "poi_amenity_pub_log": 0.0,
+        "poi_amenity_cinema_exists": 1.0,
+        "poi_amenity_cinema_log": 0.3010300099849701,
+        "poi_amenity_theatre_exists": 0.0,
+        "poi_amenity_theatre_log": 0.0,
+        "poi_amenity_nightclub_exists": 1.0,
+        "poi_amenity_nightclub_log": 0.0,
+        "poi_amenity_university_exists": 0.0,
+        "poi_amenity_university_log": 0.0,
+        "poi_amenity_hospital_exists": 1.0,
+        "poi_amenity_hospital_log": 0.9030900001525879,
+        "poi_amenity_bank_exists": 1.0,
+        "poi_amenity_bank_log": 1.2552725076675415,
+        "poi_shop_mall_exists": 0.0,
+        "poi_shop_mall_log": 0.0,
+        "poi_shop_luxury_exists": 1.0,
+        "poi_shop_luxury_log": 0.3010300099849701,
+        "poi_shop_supermarket_exists": 1.0,
+        "poi_shop_supermarket_log": 0.0,
+        "poi_shop_convenience_exists": 1.0,
+        "poi_shop_convenience_log": 0.6020600199699402,
+        "poi_tourism_hotel_exists": 1.0,
+        "poi_tourism_hotel_log": 1.83250892162323,
+        "poi_tourism_guest_house_exists": 1.0,
+        "poi_tourism_guest_house_log": 0.9030900001525879,
+        "poi_leisure_exists": 1.0,
+        "poi_leisure_log": 1.2041200399398804,
+        "poi_office_exists": 1.0,
+        "poi_office_log": 1.0413926839828491,
+        "poi_amenity_restaurant_density_exists": 1.0,
+        "poi_amenity_restaurant_density_log": 0.942901074886322,
+        "poi_amenity_cafe_density_exists": 1.0,
+        "poi_amenity_cafe_density_log": 0.3847465515136719,
+        "poi_amenity_bar_density_exists": 1.0,
+        "poi_amenity_bar_density_log": -0.7291967868804932,
+        "poi_amenity_pub_density_exists": 0.0,
+        "poi_amenity_pub_density_log": 0.0,
+        "poi_amenity_cinema_density_exists": 1.0,
+        "poi_amenity_cinema_density_log": -0.42816680669784546,
+        "poi_amenity_theatre_density_exists": 0.0,
+        "poi_amenity_theatre_density_log": 0.0,
+        "poi_amenity_nightclub_density_exists": 1.0,
+        "poi_amenity_nightclub_density_log": -0.7291967868804932,
+        "poi_amenity_university_density_exists": 0.0,
+        "poi_amenity_university_density_log": 0.0,
+        "poi_amenity_hospital_density_exists": 1.0,
+        "poi_amenity_hospital_density_log": 0.17389319837093353,
+        "poi_amenity_bank_density_exists": 1.0,
+        "poi_amenity_bank_density_log": 0.5260757207870483,
+        "poi_shop_mall_density_exists": 0.0,
+        "poi_shop_mall_density_log": 0.0,
+        "poi_shop_luxury_density_exists": 1.0,
+        "poi_shop_luxury_density_log": -0.42816680669784546,
+        "poi_shop_supermarket_density_exists": 1.0,
+        "poi_shop_supermarket_density_log": -0.7291967868804932,
+        "poi_shop_convenience_density_exists": 1.0,
+        "poi_shop_convenience_density_log": -0.12713679671287537,
+        "poi_tourism_hotel_density_exists": 1.0,
+        "poi_tourism_hotel_density_log": 1.1033121347427368,
+        "poi_tourism_guest_house_density_exists": 1.0,
+        "poi_tourism_guest_house_density_log": 0.17389319837093353,
+        "poi_leisure_density_exists": 1.0,
+        "poi_leisure_density_log": 0.47492319345474243,
+        "poi_office_density_exists": 1.0,
+        "poi_office_density_log": 0.31219589710235596,
+        "landuse_residential_exists": 1.0,
+        "landuse_commercial_exists": 1.0,
+        "landuse_industrial_exists": 0.0,
+        "landuse_retail_exists": 0.0,
+        "building_share_exists": 1.0
+      },
+      "top_features": [
+        {
+          "feature": "poi_tourism_guest_house_log_z",
+          "z": 7.862
+        },
+        {
+          "feature": "poi_amenity_nightclub_density_log_z",
+          "z": -5.7893
+        },
+        {
+          "feature": "poi_amenity_nightclub_exists_z",
+          "z": 5.7879
+        },
+        {
+          "feature": "poi_amenity_nightclub_density_exists_z",
+          "z": 5.7879
+        },
+        {
+          "feature": "poi_tourism_hotel_log_z",
+          "z": 5.7441
+        },
+        {
+          "feature": "poi_tourism_hotel_density_log_z",
+          "z": 4.2683
+        },
+        {
+          "feature": "poi_amenity_bar_density_log_z",
+          "z": -3.6714
+        },
+        {
+          "feature": "poi_amenity_restaurant_log_z",
+          "z": 3.1587
+        },
+        {
+          "feature": "poi_amenity_cinema_log_z",
+          "z": 3.0825
+        },
+        {
+          "feature": "poi_amenity_bar_exists_z",
+          "z": 2.9184
+        }
+      ],
+      "district_context": {
+        "district": "Delhi",
+        "n_cells": 276,
+        "Y_g_inr": 6722470000000.0,
+        "Y_g_crore": 672247.0,
+        "district_sum_raw_inr": 12423439386451.848,
+        "dasymetric_scale": 0.5411118282857375,
+        "population": 19981639.0,
+        "gdp_inr_after_scale": 6722469999999.999
+      },
+      "trace": {
+        "input_embedding": {
+          "head": [
+            -0.8548,
+            -0.7798,
+            9.9962,
+            7.6343,
+            11.9274,
+            -0.9525,
+            11.6477,
+            10.44,
+            11.3095,
+            1.191,
+            9.0298,
+            -0.9995
+          ],
+          "norm": 60.584,
+          "mean": 4.9388,
+          "active": 35,
+          "dim": 64
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "neighbour_conv": {
+              "head": [
+                58.5057,
+                65.6306,
+                -1.0,
+                -0.9999,
+                -1.0,
+                -1.0,
+                -1.0,
+                48.6913,
+                -1.0,
+                -1.0,
+                46.5471,
+                55.4098
+              ],
+              "norm": 292.2122,
+              "mean": 23.8941,
+              "active": 30,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                -0.9531,
+                13.8117,
+                20.6559,
+                24.429,
+                14.5556,
+                7.0352,
+                -10.5513,
+                -14.589,
+                23.346,
+                -10.7318,
+                -24.4639,
+                20.1458
+              ],
+              "norm": 158.5238,
+              "mean": 3.9895,
+              "active": 38,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                81.9557,
+                -1.0,
+                86.7591,
+                57.6719,
+                77.6764,
+                -1.0,
+                233.6243,
+                199.7502,
+                177.0637,
+                -1.0,
+                185.3421,
+                -1.0
+              ],
+              "norm": 980.7741,
+              "mean": 92.6876,
+              "active": 43,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                73.6746,
+                -0.978,
+                79.0828,
+                52.6681,
+                71.1015,
+                -0.9952,
+                211.4267,
+                180.8192,
+                160.4883,
+                -0.7809,
+                167.7109,
+                -0.9999
+              ],
+              "norm": 887.6418,
+              "mean": 83.9127,
+              "active": 44,
+              "dim": 64
+            },
+            "alpha": 0.1
+          },
+          {
+            "layer": 2,
+            "neighbour_conv": {
+              "head": [
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                779.0461,
+                599.613,
+                782.903,
+                650.4049,
+                -1.0
+              ],
+              "norm": 3257.2424,
+              "mean": 255.3384,
+              "active": 27,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                138.5125,
+                -22.3761,
+                -218.9342,
+                126.0266,
+                153.3765,
+                158.2349,
+                -176.1525,
+                39.6195,
+                138.4903,
+                128.6299,
+                -185.5223,
+                123.0772
+              ],
+              "norm": 1115.3534,
+              "mean": 24.4444,
+              "active": 38,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                -1.0,
+                -1.0,
+                1529.9951,
+                1715.9116,
+                2101.6487,
+                124.276,
+                1232.9237,
+                2132.0586,
+                2171.4314,
+                1353.0968,
+                1163.22,
+                -1.0
+              ],
+              "norm": 9593.4141,
+              "mean": 935.3523,
+              "active": 50,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                -0.9855,
+                -0.978,
+                1377.9952,
+                1545.0839,
+                1892.6765,
+                111.7532,
+                1110.7961,
+                1919.8966,
+                1955.4192,
+                1217.9062,
+                1047.8009,
+                -0.9999
+              ],
+              "norm": 8639.167,
+              "mean": 842.3109,
+              "active": 50,
+              "dim": 64
+            },
+            "alpha": 0.1
+          },
+          {
+            "layer": 3,
+            "neighbour_conv": {
+              "head": [
+                8034.4629,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                5166.2686,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0
+              ],
+              "norm": 33858.4766,
+              "mean": 2812.1636,
+              "active": 31,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                -156.0948,
+                -1012.5411,
+                -261.9153,
+                1748.6909,
+                2034.7588,
+                -1476.6622,
+                979.2882,
+                -1351.4906,
+                1385.1738,
+                619.0532,
+                1455.5907,
+                1548.1123
+              ],
+              "norm": 10315.2412,
+              "mean": 65.7271,
+              "active": 31,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                10715.5967,
+                -1.0,
+                1267.8567,
+                -1.0,
+                9493.8271,
+                22042.0371,
+                -1.0,
+                13437.498,
+                3360.6848,
+                17787.0078,
+                -1.0,
+                13832.001
+              ],
+              "norm": 84752.0,
+              "mean": 7585.5137,
+              "active": 45,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                9643.9512,
+                -0.978,
+                1142.0707,
+                -0.1366,
+                8545.6367,
+                19837.7363,
+                0.2648,
+                12094.792,
+                3025.7471,
+                16008.4258,
+                0.003,
+                12448.7012
+              ],
+              "norm": 76278.5156,
+              "mean": 6827.4561,
+              "active": 53,
+              "dim": 64
+            },
+            "alpha": 0.1
+          },
+          {
+            "layer": 4,
+            "neighbour_conv": {
+              "head": [
+                -1.0,
+                -1.0,
+                87206.8438,
+                67562.7109,
+                -1.0,
+                -1.0,
+                -1.0,
+                40198.5898,
+                79964.9688,
+                62685.3867,
+                79739.4297,
+                -1.0
+              ],
+              "norm": 356173.4688,
+              "mean": 29520.459,
+              "active": 30,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                16872.832,
+                17831.6777,
+                -19794.3672,
+                -5725.2729,
+                19727.2891,
+                17179.8008,
+                -19806.9023,
+                -20234.2871,
+                -6001.0649,
+                13767.0156,
+                -19006.832,
+                15467.7939
+              ],
+              "norm": 140225.1406,
+              "mean": 443.3097,
+              "active": 33,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                -1.0,
+                -1.0,
+                260801.6562,
+                232173.8594,
+                267904.4375,
+                -1.0,
+                297806.3438,
+                264530.2812,
+                321735.5938,
+                -1.0,
+                230976.4219,
+                -1.0
+              ],
+              "norm": 1587310.875,
+              "mean": 147439.7344,
+              "active": 37,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                -0.9855,
+                -0.978,
+                234722.4844,
+                208957.2344,
+                241115.1719,
+                -0.9952,
+                268026.8438,
+                238078.2969,
+                289563.1562,
+                -0.7809,
+                207879.6875,
+                -0.9999
+              ],
+              "norm": 1428585.125,
+              "mean": 132696.25,
+              "active": 38,
+              "dim": 64
+            },
+            "alpha": 0.1
+          }
+        ],
+        "neighbour_message_layer1": {
+          "head": [
+            -0.6898,
+            -0.7169,
+            7.4285,
+            4.354,
+            7.6792,
+            -0.8907,
+            8.2218,
+            6.7939,
+            8.6269,
+            1.5967,
+            7.5771,
+            -0.9496
+          ],
+          "norm": 43.0177,
+          "mean": 3.465,
+          "active": 36,
+          "dim": 64
+        },
+        "n_neighbours": 6,
+        "readout": {
+          "final_embedding": {
+            "head": [
+              -0.9855,
+              -0.978,
+              234722.4844,
+              208957.2344,
+              241115.1719,
+              -0.9952,
+              268026.8438,
+              238078.2969,
+              289563.1562,
+              -0.7809,
+              207879.6875,
+              -0.9999
+            ],
+            "norm": 1428585.125,
+            "mean": 132696.25,
+            "active": 38,
+            "dim": 64
+          },
+          "bias": 0.03388,
+          "logit": 1319718.625,
+          "s_i": 1319718.625,
+          "top_units": [
+            {
+              "unit": 63,
+              "activation": 293767.2812,
+              "weight": 0.2255,
+              "contribution": 66235.7031
+            },
+            {
+              "unit": 30,
+              "activation": 268777.4688,
+              "weight": 0.2003,
+              "contribution": 53831.1523
+            },
+            {
+              "unit": 15,
+              "activation": 264948.7812,
+              "weight": 0.2027,
+              "contribution": 53708.5898
+            },
+            {
+              "unit": 23,
+              "activation": 267570.7188,
+              "weight": 0.1835,
+              "contribution": 49086.8867
+            },
+            {
+              "unit": 41,
+              "activation": 265022.375,
+              "weight": 0.1848,
+              "contribution": 48968.7656
+            },
+            {
+              "unit": 56,
+              "activation": 278180.0625,
+              "weight": 0.1734,
+              "contribution": 48245.1719
+            },
+            {
+              "unit": 4,
+              "activation": 241115.1719,
+              "weight": 0.1991,
+              "contribution": 47997.9922
+            },
+            {
+              "unit": 60,
+              "activation": 246987.5,
+              "weight": 0.1937,
+              "contribution": 47850.043
+            },
+            {
+              "unit": 8,
+              "activation": 289563.1562,
+              "weight": 0.1632,
+              "contribution": 47259.4219
+            },
+            {
+              "unit": 53,
+              "activation": 236437.7188,
+              "weight": 0.1984,
+              "contribution": 46916.9844
+            },
+            {
+              "unit": 16,
+              "activation": 261349.2344,
+              "weight": 0.1789,
+              "contribution": 46759.4805
+            },
+            {
+              "unit": 14,
+              "activation": 246380.125,
+              "weight": 0.1837,
+              "contribution": 45257.4922
+            }
+          ]
+        }
+      }
+    },
+    "poor_rural": {
+      "h3_r7": "873da1840ffffff",
+      "h3_r6": "863da1847ffffff",
+      "h3_r5": "853da187fffffff",
+      "district": "Delhi",
+      "lat": 28.86620993248889,
+      "lon": 77.09793405094207,
+      "inputs": {
+        "population": 31153.0,
+        "night_lights": 18.245463141079608,
+        "road_km": 14.81008662788091,
+        "poi_count": 4.0,
+        "building_area_m2": 5158.888384635764,
+        "poi_amenity_restaurant": 0.0,
+        "poi_amenity_cafe": 0.0,
+        "poi_amenity_bar": 0.0,
+        "poi_amenity_pub": 0.0,
+        "poi_amenity_cinema": 0.0,
+        "poi_amenity_theatre": 0.0,
+        "poi_amenity_nightclub": 0.0,
+        "poi_amenity_university": 0.0,
+        "poi_amenity_hospital": 1.0,
+        "poi_amenity_bank": 0.0,
+        "poi_shop_mall": 0.0,
+        "poi_shop_luxury": 0.0,
+        "poi_shop_supermarket": 0.0,
+        "poi_shop_convenience": 0.0,
+        "poi_tourism_hotel": 0.0,
+        "poi_tourism_guest_house": 0.0,
+        "poi_leisure": 3.0,
+        "poi_office": 0.0,
+        "landuse_residential": 0.004878102336078882,
+        "landuse_commercial": 0.0,
+        "landuse_industrial": 0.44563794136047363,
+        "landuse_retail": 0.0
+      },
+      "features_z": {
+        "population_exists_z": 0.0,
+        "population_log_z": -0.26310813426971436,
+        "night_lights_exists_z": 0.0,
+        "night_lights_log_z": -0.308799147605896,
+        "road_km_exists_z": 0.13583141565322876,
+        "road_km_log_z": 0.15804854035377502,
+        "poi_count_exists_z": 0.5326545834541321,
+        "poi_count_log_z": -0.49031856656074524,
+        "building_area_m2_exists_z": 0.28697195649147034,
+        "building_area_m2_log_z": -0.3616141974925995,
+        "building_count_exists_z": 0.28697195649147034,
+        "building_count_log_z": -1.0006141662597656,
+        "poi_amenity_restaurant_exists_z": -0.8263938426971436,
+        "poi_amenity_restaurant_log_z": -0.5465251207351685,
+        "poi_amenity_cafe_exists_z": -0.6841675043106079,
+        "poi_amenity_cafe_log_z": -0.46565160155296326,
+        "poi_amenity_bar_exists_z": -0.34264981746673584,
+        "poi_amenity_bar_log_z": -0.1936645209789276,
+        "poi_amenity_pub_exists_z": -0.18359699845314026,
+        "poi_amenity_pub_log_z": -0.060302264988422394,
+        "poi_amenity_cinema_exists_z": -0.39957958459854126,
+        "poi_amenity_cinema_log_z": -0.21409866213798523,
+        "poi_amenity_theatre_exists_z": -0.3810881972312927,
+        "poi_amenity_theatre_log_z": -0.2380964457988739,
+        "poi_amenity_nightclub_exists_z": -0.17277367413043976,
+        "poi_amenity_nightclub_log_z": 0.0,
+        "poi_amenity_university_exists_z": -0.279508501291275,
+        "poi_amenity_university_log_z": -0.138016939163208,
+        "poi_amenity_hospital_exists_z": 0.9504989981651306,
+        "poi_amenity_hospital_log_z": -0.7228795886039734,
+        "poi_amenity_bank_exists_z": -0.8017838001251221,
+        "poi_amenity_bank_log_z": -0.5744458436965942,
+        "poi_shop_mall_exists_z": -0.44721364974975586,
+        "poi_shop_mall_log_z": -0.2740616500377655,
+        "poi_shop_luxury_exists_z": -0.47609519958496094,
+        "poi_shop_luxury_log_z": -0.34106770157814026,
+        "poi_shop_supermarket_exists_z": -0.5885078310966492,
+        "poi_shop_supermarket_log_z": -0.3638594448566437,
+        "poi_shop_convenience_exists_z": -0.6108471751213074,
+        "poi_shop_convenience_log_z": -0.40744054317474365,
+        "poi_tourism_hotel_exists_z": -0.6388764977455139,
+        "poi_tourism_hotel_log_z": -0.387273371219635,
+        "poi_tourism_guest_house_exists_z": -0.42365923523902893,
+        "poi_tourism_guest_house_log_z": -0.19216063618659973,
+        "poi_leisure_exists_z": 0.6898809671401978,
+        "poi_leisure_log_z": -0.43245062232017517,
+        "poi_office_exists_z": -1.0219806432724,
+        "poi_office_log_z": -0.6567165851593018,
+        "poi_amenity_restaurant_density_exists_z": -0.8263938426971436,
+        "poi_amenity_restaurant_density_log_z": 0.14313457906246185,
+        "poi_amenity_cafe_density_exists_z": -0.6841675043106079,
+        "poi_amenity_cafe_density_log_z": 0.24052728712558746,
+        "poi_amenity_bar_density_exists_z": -0.34264981746673584,
+        "poi_amenity_bar_density_log_z": 0.2827308177947998,
+        "poi_amenity_pub_density_exists_z": -0.18359699845314026,
+        "poi_amenity_pub_density_log_z": 0.17909051477909088,
+        "poi_amenity_cinema_density_exists_z": -0.39957958459854126,
+        "poi_amenity_cinema_density_log_z": 0.3733662962913513,
+        "poi_amenity_theatre_density_exists_z": -0.3810881972312927,
+        "poi_amenity_theatre_density_log_z": 0.3328102231025696,
+        "poi_amenity_nightclub_density_exists_z": -0.17277367413043976,
+        "poi_amenity_nightclub_density_log_z": 0.17277362942695618,
+        "poi_amenity_university_density_exists_z": -0.279508501291275,
+        "poi_amenity_university_density_log_z": 0.2666974663734436,
+        "poi_amenity_hospital_density_exists_z": 0.9504989981651306,
+        "poi_amenity_hospital_density_log_z": -2.1156914234161377,
+        "poi_amenity_bank_density_exists_z": -0.8017838001251221,
+        "poi_amenity_bank_density_log_z": 0.11976012587547302,
+        "poi_shop_mall_density_exists_z": -0.44721364974975586,
+        "poi_shop_mall_density_log_z": 0.3689078390598297,
+        "poi_shop_luxury_density_exists_z": -0.47609519958496094,
+        "poi_shop_luxury_density_log_z": 0.1367092877626419,
+        "poi_shop_supermarket_density_exists_z": -0.5885078310966492,
+        "poi_shop_supermarket_density_log_z": 0.4759660065174103,
+        "poi_shop_convenience_density_exists_z": -0.6108471751213074,
+        "poi_shop_convenience_density_log_z": 0.14805346727371216,
+        "poi_tourism_hotel_density_exists_z": -0.6388764977455139,
+        "poi_tourism_hotel_density_log_z": 0.34021732211112976,
+        "poi_tourism_guest_house_density_exists_z": -0.42365923523902893,
+        "poi_tourism_guest_house_density_log_z": 0.3828737437725067,
+        "poi_leisure_density_exists_z": 0.6898809671401978,
+        "poi_leisure_density_log_z": -1.0112296342849731,
+        "poi_office_density_exists_z": -1.0219806432724,
+        "poi_office_density_log_z": 0.09507090598344803,
+        "landuse_residential_z": -0.5472098588943481,
+        "landuse_residential_exists_z": 0.7419984936714172,
+        "landuse_commercial_z": -0.274333655834198,
+        "landuse_commercial_exists_z": -0.7186678647994995,
+        "landuse_industrial_z": 5.381875991821289,
+        "landuse_industrial_exists_z": 1.3266499042510986,
+        "landuse_retail_z": -0.3195737898349762,
+        "landuse_retail_exists_z": -0.5214301943778992,
+        "building_share_z": -0.8307391405105591,
+        "building_share_exists_z": 0.28697195649147034
+      },
+      "neighbors": [
+        {
+          "h3_r7": "873da1846ffffff",
+          "population": 33254.0,
+          "night_lights": 12.946624074663434,
+          "road_km": 9.246324382528632,
+          "poi_count": 4.0,
+          "wealth_index": 1.4492753623188406
+        },
+        {
+          "h3_r7": "873da1842ffffff",
+          "population": 47153.0,
+          "night_lights": 28.835039664959087,
+          "road_km": 22.773280777558636,
+          "poi_count": 16.0,
+          "wealth_index": 1.0869565217391304
+        },
+        {
+          "h3_r7": "873da1843ffffff",
+          "population": 38293.0,
+          "night_lights": 29.631196566990443,
+          "road_km": 13.87885241320597,
+          "poi_count": 3.0,
+          "wealth_index": 0.7246376811594203
+        }
+      ],
+      "parents": {
+        "h3_r6": "863da1847ffffff",
+        "h3_r5": "853da187fffffff"
+      },
+      "s_i": 56079.2421875,
+      "s_i_min": 27508.365234375,
+      "s_i_max": 113499.734375,
+      "population": 31153.0,
+      "z_i": 1747036631.8671875,
+      "district_sum_raw": 12423439386451.848,
+      "Y_g": 6722470000000.0,
+      "dasymetric_scale": 0.5411118282857375,
+      "gdp_inr": 945342185.9518107,
+      "gdp_per_capita_inr": 30345.141268956784,
+      "gdp_per_capita_inr_min": 15404.779757771728,
+      "gdp_per_capita_inr_max": 63307.518138052095,
+      "wealth_index": 0.36231884057971014,
+      "wealth_index_min": 0.36231884057971014,
+      "wealth_index_max": 0.36231884057971014,
+      "logged_values": {
+        "population_exists": 1.0,
+        "population_log": 4.493499755859375,
+        "night_lights_exists": 1.0,
+        "night_lights_log": 1.2611548900604248,
+        "road_km_exists": 1.0,
+        "road_km_log": 1.1705576181411743,
+        "poi_count_exists": 1.0,
+        "poi_count_log": 0.6020600199699402,
+        "building_area_m2_exists": 1.0,
+        "building_area_m2_log": 3.7125561237335205,
+        "building_count_exists": 1.0,
+        "building_count_log": 0.778151273727417,
+        "poi_amenity_restaurant_exists": 0.0,
+        "poi_amenity_restaurant_log": 0.0,
+        "poi_amenity_cafe_exists": 0.0,
+        "poi_amenity_cafe_log": 0.0,
+        "poi_amenity_bar_exists": 0.0,
+        "poi_amenity_bar_log": 0.0,
+        "poi_amenity_pub_exists": 0.0,
+        "poi_amenity_pub_log": 0.0,
+        "poi_amenity_cinema_exists": 0.0,
+        "poi_amenity_cinema_log": 0.0,
+        "poi_amenity_theatre_exists": 0.0,
+        "poi_amenity_theatre_log": 0.0,
+        "poi_amenity_nightclub_exists": 0.0,
+        "poi_amenity_nightclub_log": 0.0,
+        "poi_amenity_university_exists": 0.0,
+        "poi_amenity_university_log": 0.0,
+        "poi_amenity_hospital_exists": 1.0,
+        "poi_amenity_hospital_log": 0.0,
+        "poi_amenity_bank_exists": 0.0,
+        "poi_amenity_bank_log": 0.0,
+        "poi_shop_mall_exists": 0.0,
+        "poi_shop_mall_log": 0.0,
+        "poi_shop_luxury_exists": 0.0,
+        "poi_shop_luxury_log": 0.0,
+        "poi_shop_supermarket_exists": 0.0,
+        "poi_shop_supermarket_log": 0.0,
+        "poi_shop_convenience_exists": 0.0,
+        "poi_shop_convenience_log": 0.0,
+        "poi_tourism_hotel_exists": 0.0,
+        "poi_tourism_hotel_log": 0.0,
+        "poi_tourism_guest_house_exists": 0.0,
+        "poi_tourism_guest_house_log": 0.0,
+        "poi_leisure_exists": 1.0,
+        "poi_leisure_log": 0.4771212637424469,
+        "poi_office_exists": 0.0,
+        "poi_office_log": 0.0,
+        "poi_amenity_restaurant_density_exists": 0.0,
+        "poi_amenity_restaurant_density_log": 0.0,
+        "poi_amenity_cafe_density_exists": 0.0,
+        "poi_amenity_cafe_density_log": 0.0,
+        "poi_amenity_bar_density_exists": 0.0,
+        "poi_amenity_bar_density_log": 0.0,
+        "poi_amenity_pub_density_exists": 0.0,
+        "poi_amenity_pub_density_log": 0.0,
+        "poi_amenity_cinema_density_exists": 0.0,
+        "poi_amenity_cinema_density_log": 0.0,
+        "poi_amenity_theatre_density_exists": 0.0,
+        "poi_amenity_theatre_density_log": 0.0,
+        "poi_amenity_nightclub_density_exists": 0.0,
+        "poi_amenity_nightclub_density_log": 0.0,
+        "poi_amenity_university_density_exists": 0.0,
+        "poi_amenity_university_density_log": 0.0,
+        "poi_amenity_hospital_density_exists": 1.0,
+        "poi_amenity_hospital_density_log": -0.7309507727622986,
+        "poi_amenity_bank_density_exists": 0.0,
+        "poi_amenity_bank_density_log": 0.0,
+        "poi_shop_mall_density_exists": 0.0,
+        "poi_shop_mall_density_log": 0.0,
+        "poi_shop_luxury_density_exists": 0.0,
+        "poi_shop_luxury_density_log": 0.0,
+        "poi_shop_supermarket_density_exists": 0.0,
+        "poi_shop_supermarket_density_log": 0.0,
+        "poi_shop_convenience_density_exists": 0.0,
+        "poi_shop_convenience_density_log": 0.0,
+        "poi_tourism_hotel_density_exists": 0.0,
+        "poi_tourism_hotel_density_log": 0.0,
+        "poi_tourism_guest_house_density_exists": 0.0,
+        "poi_tourism_guest_house_density_log": 0.0,
+        "poi_leisure_density_exists": 1.0,
+        "poi_leisure_density_log": -0.2538295090198517,
+        "poi_office_density_exists": 0.0,
+        "poi_office_density_log": 0.0,
+        "landuse_residential_exists": 1.0,
+        "landuse_commercial_exists": 0.0,
+        "landuse_industrial_exists": 1.0,
+        "landuse_retail_exists": 0.0,
+        "building_share_exists": 1.0
+      },
+      "top_features": [
+        {
+          "feature": "landuse_industrial_z",
+          "z": 5.3819
+        },
+        {
+          "feature": "poi_amenity_hospital_density_log_z",
+          "z": -2.1157
+        },
+        {
+          "feature": "landuse_industrial_exists_z",
+          "z": 1.3266
+        },
+        {
+          "feature": "poi_office_exists_z",
+          "z": -1.022
+        },
+        {
+          "feature": "poi_office_density_exists_z",
+          "z": -1.022
+        },
+        {
+          "feature": "poi_leisure_density_log_z",
+          "z": -1.0112
+        },
+        {
+          "feature": "building_count_log_z",
+          "z": -1.0006
+        },
+        {
+          "feature": "poi_amenity_hospital_exists_z",
+          "z": 0.9505
+        },
+        {
+          "feature": "poi_amenity_hospital_density_exists_z",
+          "z": 0.9505
+        },
+        {
+          "feature": "building_share_z",
+          "z": -0.8307
+        }
+      ],
+      "district_context": {
+        "district": "Delhi",
+        "n_cells": 276,
+        "Y_g_inr": 6722470000000.0,
+        "Y_g_crore": 672247.0,
+        "district_sum_raw_inr": 12423439386451.848,
+        "dasymetric_scale": 0.5411118282857375,
+        "population": 19981639.0,
+        "gdp_inr_after_scale": 6722469999999.999
+      },
+      "trace": {
+        "input_embedding": {
+          "head": [
+            -0.0513,
+            -0.2309,
+            -0.8558,
+            -0.8697,
+            -0.8356,
+            0.1662,
+            -0.8964,
+            -0.8807,
+            -0.9502,
+            -0.0458,
+            -0.8986,
+            1.702
+          ],
+          "norm": 11.3409,
+          "mean": 0.2531,
+          "active": 27,
+          "dim": 64
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "neighbour_conv": {
+              "head": [
+                -0.9997,
+                -0.9839,
+                0.3986,
+                -0.9928,
+                -0.9301,
+                -0.9546,
+                -0.9821,
+                -0.9996,
+                8.0083,
+                -0.7967,
+                -0.4801,
+                -0.9948
+              ],
+              "norm": 23.099,
+              "mean": 0.4808,
+              "active": 16,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                -2.275,
+                -0.9536,
+                -5.4067,
+                -3.622,
+                -3.7169,
+                1.167,
+                3.7334,
+                1.4926,
+                -2.5187,
+                -0.2408,
+                2.6349,
+                -5.2979
+              ],
+              "norm": 29.3917,
+              "mean": -0.8684,
+              "active": 24,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                -0.9994,
+                -0.2293,
+                0.0441,
+                -0.9792,
+                -0.9917,
+                -0.997,
+                -0.9999,
+                -1.0,
+                -0.9974,
+                2.0076,
+                -0.9997,
+                2.0172
+              ],
+              "norm": 9.7326,
+              "mean": -0.5829,
+              "active": 8,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                -0.9046,
+                -0.2294,
+                -0.0459,
+                -0.9683,
+                -0.9761,
+                -0.8807,
+                -0.9896,
+                -0.9881,
+                -0.9927,
+                1.8023,
+                -0.9896,
+                1.9856
+              ],
+              "norm": 8.9062,
+              "mean": -0.4993,
+              "active": 7,
+              "dim": 64
+            },
+            "alpha": 0.1
+          },
+          {
+            "layer": 2,
+            "neighbour_conv": {
+              "head": [
+                -0.6426,
+                -0.6517,
+                2.6162,
+                -0.5519,
+                -0.2026,
+                -0.5361,
+                -0.7657,
+                -0.9746,
+                -0.8295,
+                -0.8706,
+                -0.9805,
+                -0.6907
+              ],
+              "norm": 8.8697,
+              "mean": -0.1871,
+              "active": 16,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                1.1491,
+                -6.7069,
+                -4.314,
+                4.2576,
+                11.1711,
+                9.169,
+                -8.3231,
+                2.777,
+                10.2726,
+                6.2248,
+                -13.0548,
+                10.3125
+              ],
+              "norm": 61.5944,
+              "mean": 1.4501,
+              "active": 41,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                -0.9987,
+                -1.0,
+                18.1729,
+                21.9578,
+                24.9203,
+                -0.6965,
+                18.6209,
+                33.6104,
+                25.1094,
+                9.3692,
+                18.4571,
+                -0.9942
+              ],
+              "norm": 131.2434,
+              "mean": 11.9921,
+              "active": 43,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                -0.904,
+                -0.9231,
+                16.27,
+                19.675,
+                22.3447,
+                -0.6102,
+                16.6691,
+                30.1612,
+                22.5034,
+                8.4277,
+                16.5215,
+                -0.7246
+              ],
+              "norm": 117.7993,
+              "mean": 10.8182,
+              "active": 43,
+              "dim": 64
+            },
+            "alpha": 0.1
+          },
+          {
+            "layer": 3,
+            "neighbour_conv": {
+              "head": [
+                113.1809,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                74.4744,
+                -0.9992,
+                -1.0,
+                -1.0,
+                -1.0
+              ],
+              "norm": 481.1261,
+              "mean": 39.6313,
+              "active": 31,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                4.3805,
+                -28.1589,
+                -7.9736,
+                35.1676,
+                47.875,
+                -35.0772,
+                21.4537,
+                -34.1724,
+                32.8213,
+                15.432,
+                37.0904,
+                38.2479
+              ],
+              "norm": 248.6877,
+              "mean": 2.0029,
+              "active": 32,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                181.7202,
+                -1.0,
+                -0.9942,
+                -1.0,
+                143.1311,
+                378.5211,
+                -1.0,
+                209.9324,
+                30.2019,
+                307.1844,
+                -1.0,
+                239.9968
+              ],
+              "norm": 1423.1223,
+              "mean": 123.1363,
+              "active": 44,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                163.543,
+                -0.9231,
+                -0.9804,
+                -0.987,
+                128.7344,
+                340.6856,
+                -0.9896,
+                188.851,
+                27.0866,
+                276.4614,
+                -0.9899,
+                216.1673
+              ],
+              "norm": 1281.188,
+              "mean": 110.848,
+              "active": 44,
+              "dim": 64
+            },
+            "alpha": 0.1
+          },
+          {
+            "layer": 4,
+            "neighbour_conv": {
+              "head": [
+                -1.0,
+                -1.0,
+                1514.9531,
+                1176.3196,
+                -1.0,
+                -1.0,
+                -1.0,
+                692.5021,
+                1404.2209,
+                1101.6011,
+                1360.5178,
+                -1.0
+              ],
+              "norm": 6210.2236,
+              "mean": 514.5669,
+              "active": 30,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                463.3192,
+                487.7329,
+                -546.7684,
+                -158.2131,
+                531.3143,
+                455.7573,
+                -533.7009,
+                -542.1448,
+                -163.8851,
+                375.7964,
+                -529.2128,
+                429.3166
+              ],
+              "norm": 3843.6326,
+              "mean": 11.8474,
+              "active": 33,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                -1.0,
+                -1.0,
+                5370.6401,
+                4909.9185,
+                5514.189,
+                -1.0,
+                6243.4053,
+                5537.7729,
+                6647.2202,
+                -1.0,
+                4952.9878,
+                -1.0
+              ],
+              "norm": 33069.9492,
+              "mean": 3071.2319,
+              "active": 36,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                -0.9051,
+                -0.9231,
+                4833.4907,
+                4418.8394,
+                4962.6865,
+                -0.8834,
+                5618.9746,
+                4983.9077,
+                5982.4028,
+                -0.9046,
+                4457.5991,
+                -0.7298
+              ],
+              "norm": 29762.5957,
+              "mean": 2764.1343,
+              "active": 36,
+              "dim": 64
+            },
+            "alpha": 0.1
+          }
+        ],
+        "neighbour_message_layer1": {
+          "head": [
+            -0.0657,
+            -0.1913,
+            -0.8832,
+            -0.7077,
+            -0.8613,
+            0.244,
+            -0.8931,
+            -0.8695,
+            -0.8974,
+            -0.3561,
+            -0.8549,
+            1.8212
+          ],
+          "norm": 10.1587,
+          "mean": 0.2047,
+          "active": 27,
+          "dim": 64
+        },
+        "n_neighbours": 3,
+        "readout": {
+          "final_embedding": {
+            "head": [
+              -0.9051,
+              -0.9231,
+              4833.4907,
+              4418.8394,
+              4962.6865,
+              -0.8834,
+              5618.9746,
+              4983.9077,
+              5982.4028,
+              -0.9046,
+              4457.5991,
+              -0.7298
+            ],
+            "norm": 29762.5957,
+            "mean": 2764.1343,
+            "active": 36,
+            "dim": 64
+          },
+          "bias": 0.03388,
+          "logit": 27508.36523,
+          "s_i": 27508.365234,
+          "top_units": [
+            {
+              "unit": 63,
+              "activation": 6061.3594,
+              "weight": 0.2255,
+              "contribution": 1366.6547
+            },
+            {
+              "unit": 15,
+              "activation": 5544.7559,
+              "weight": 0.2027,
+              "contribution": 1123.9946
+            },
+            {
+              "unit": 30,
+              "activation": 5582.5024,
+              "weight": 0.2003,
+              "contribution": 1118.0719
+            },
+            {
+              "unit": 41,
+              "activation": 5499.3979,
+              "weight": 0.1848,
+              "contribution": 1016.1358
+            },
+            {
+              "unit": 23,
+              "activation": 5504.1772,
+              "weight": 0.1835,
+              "contribution": 1009.7627
+            },
+            {
+              "unit": 56,
+              "activation": 5741.4097,
+              "weight": 0.1734,
+              "contribution": 995.741
+            },
+            {
+              "unit": 4,
+              "activation": 4962.6865,
+              "weight": 0.1991,
+              "contribution": 987.9055
+            },
+            {
+              "unit": 53,
+              "activation": 4973.6729,
+              "weight": 0.1984,
+              "contribution": 986.9396
+            },
+            {
+              "unit": 60,
+              "activation": 5088.1665,
+              "weight": 0.1937,
+              "contribution": 985.7543
+            },
+            {
+              "unit": 8,
+              "activation": 5982.4028,
+              "weight": 0.1632,
+              "contribution": 976.3843
+            },
+            {
+              "unit": 16,
+              "activation": 5385.8823,
+              "weight": 0.1789,
+              "contribution": 963.6189
+            },
+            {
+              "unit": 14,
+              "activation": 5175.5176,
+              "weight": 0.1837,
+              "contribution": 950.6893
+            }
+          ]
+        }
+      }
+    }
+  },
+  "feature_cols": [
+    "population_exists_z",
+    "population_log_z",
+    "night_lights_exists_z",
+    "night_lights_log_z",
+    "road_km_exists_z",
+    "road_km_log_z",
+    "poi_count_exists_z",
+    "poi_count_log_z",
+    "building_area_m2_exists_z",
+    "building_area_m2_log_z",
+    "building_count_exists_z",
+    "building_count_log_z",
+    "poi_amenity_restaurant_exists_z",
+    "poi_amenity_restaurant_log_z",
+    "poi_amenity_cafe_exists_z",
+    "poi_amenity_cafe_log_z",
+    "poi_amenity_bar_exists_z",
+    "poi_amenity_bar_log_z",
+    "poi_amenity_pub_exists_z",
+    "poi_amenity_pub_log_z",
+    "poi_amenity_cinema_exists_z",
+    "poi_amenity_cinema_log_z",
+    "poi_amenity_theatre_exists_z",
+    "poi_amenity_theatre_log_z",
+    "poi_amenity_nightclub_exists_z",
+    "poi_amenity_nightclub_log_z",
+    "poi_amenity_university_exists_z",
+    "poi_amenity_university_log_z",
+    "poi_amenity_hospital_exists_z",
+    "poi_amenity_hospital_log_z",
+    "poi_amenity_bank_exists_z",
+    "poi_amenity_bank_log_z",
+    "poi_shop_mall_exists_z",
+    "poi_shop_mall_log_z",
+    "poi_shop_luxury_exists_z",
+    "poi_shop_luxury_log_z",
+    "poi_shop_supermarket_exists_z",
+    "poi_shop_supermarket_log_z",
+    "poi_shop_convenience_exists_z",
+    "poi_shop_convenience_log_z",
+    "poi_tourism_hotel_exists_z",
+    "poi_tourism_hotel_log_z",
+    "poi_tourism_guest_house_exists_z",
+    "poi_tourism_guest_house_log_z",
+    "poi_leisure_exists_z",
+    "poi_leisure_log_z",
+    "poi_office_exists_z",
+    "poi_office_log_z",
+    "poi_amenity_restaurant_density_exists_z",
+    "poi_amenity_restaurant_density_log_z",
+    "poi_amenity_cafe_density_exists_z",
+    "poi_amenity_cafe_density_log_z",
+    "poi_amenity_bar_density_exists_z",
+    "poi_amenity_bar_density_log_z",
+    "poi_amenity_pub_density_exists_z",
+    "poi_amenity_pub_density_log_z",
+    "poi_amenity_cinema_density_exists_z",
+    "poi_amenity_cinema_density_log_z",
+    "poi_amenity_theatre_density_exists_z",
+    "poi_amenity_theatre_density_log_z",
+    "poi_amenity_nightclub_density_exists_z",
+    "poi_amenity_nightclub_density_log_z",
+    "poi_amenity_university_density_exists_z",
+    "poi_amenity_university_density_log_z",
+    "poi_amenity_hospital_density_exists_z",
+    "poi_amenity_hospital_density_log_z",
+    "poi_amenity_bank_density_exists_z",
+    "poi_amenity_bank_density_log_z",
+    "poi_shop_mall_density_exists_z",
+    "poi_shop_mall_density_log_z",
+    "poi_shop_luxury_density_exists_z",
+    "poi_shop_luxury_density_log_z",
+    "poi_shop_supermarket_density_exists_z",
+    "poi_shop_supermarket_density_log_z",
+    "poi_shop_convenience_density_exists_z",
+    "poi_shop_convenience_density_log_z",
+    "poi_tourism_hotel_density_exists_z",
+    "poi_tourism_hotel_density_log_z",
+    "poi_tourism_guest_house_density_exists_z",
+    "poi_tourism_guest_house_density_log_z",
+    "poi_leisure_density_exists_z",
+    "poi_leisure_density_log_z",
+    "poi_office_density_exists_z",
+    "poi_office_density_log_z",
+    "landuse_residential_z",
+    "landuse_residential_exists_z",
+    "landuse_commercial_z",
+    "landuse_commercial_exists_z",
+    "landuse_industrial_z",
+    "landuse_industrial_exists_z",
+    "landuse_retail_z",
+    "landuse_retail_exists_z",
+    "building_share_z",
+    "building_share_exists_z"
+  ],
+  "loss_curve": [
+    [
+      {
+        "epoch": 1,
+        "loss": 32.23924025214478,
+        "L_agg": 32.23493190641716,
+        "L_floor": 0.08616691082715988,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 2,
+        "loss": 28.37361865573558,
+        "L_agg": 28.37361865573558,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 3,
+        "loss": 21.36502577065728,
+        "L_agg": 21.36502577065728,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 4,
+        "loss": 15.749667776217455,
+        "L_agg": 15.749667776217455,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 5,
+        "loss": 11.047020078811006,
+        "L_agg": 11.047020078811006,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 6,
+        "loss": 7.343691667694628,
+        "L_agg": 7.343691667694628,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 7,
+        "loss": 4.583424915591764,
+        "L_agg": 4.583424915591764,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 8,
+        "loss": 2.637794320032374,
+        "L_agg": 2.637794320032374,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 9,
+        "loss": 1.340336635233755,
+        "L_agg": 1.340336635233755,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 10,
+        "loss": 0.5461956145059665,
+        "L_agg": 0.5461956145059665,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 11,
+        "loss": 0.13480216402513778,
+        "L_agg": 0.13480216402513778,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 12,
+        "loss": 0.001941170478538074,
+        "L_agg": 0.001941170478538074,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 13,
+        "loss": 0.0520396280537526,
+        "L_agg": 0.0520396280537526,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 14,
+        "loss": 0.20031757720132665,
+        "L_agg": 0.20031757720132665,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 15,
+        "loss": 0.3787872080836465,
+        "L_agg": 0.3787872080836465,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 16,
+        "loss": 0.5419375512990947,
+        "L_agg": 0.5419375512990947,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 17,
+        "loss": 0.6660051775529321,
+        "L_agg": 0.6660051775529321,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 18,
+        "loss": 0.7435533858515797,
+        "L_agg": 0.7435533858515797,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 19,
+        "loss": 0.7772517417897161,
+        "L_agg": 0.7772517417897161,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 20,
+        "loss": 0.775192597264156,
+        "L_agg": 0.775192597264156,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 21,
+        "loss": 0.7458802955121479,
+        "L_agg": 0.7458802955121479,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 22,
+        "loss": 0.6983534769206292,
+        "L_agg": 0.6983534769206292,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 23,
+        "loss": 0.6406591962390793,
+        "L_agg": 0.6406591962390793,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 24,
+        "loss": 0.5784463168555118,
+        "L_agg": 0.5784463168555118,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 25,
+        "loss": 0.5161213469506798,
+        "L_agg": 0.5161213469506798,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 26,
+        "loss": 0.4564803587504054,
+        "L_agg": 0.4564803587504054,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 27,
+        "loss": 0.4011564392427431,
+        "L_agg": 0.4011564392427431,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 28,
+        "loss": 0.3510404538906095,
+        "L_agg": 0.3510404538906095,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 29,
+        "loss": 0.3065564985147437,
+        "L_agg": 0.3065564985147437,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 30,
+        "loss": 0.2675488524913197,
+        "L_agg": 0.2675488524913197,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 31,
+        "loss": 0.23363781223982535,
+        "L_agg": 0.23363781223982535,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 32,
+        "loss": 0.2043751137379351,
+        "L_agg": 0.2043751137379351,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 33,
+        "loss": 0.17926137403807904,
+        "L_agg": 0.17926137403807904,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 34,
+        "loss": 0.1578278840241436,
+        "L_agg": 0.1578278840241436,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 35,
+        "loss": 0.1396397331935405,
+        "L_agg": 0.1396397331935405,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 36,
+        "loss": 0.12429032350543984,
+        "L_agg": 0.12429032350543984,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 37,
+        "loss": 0.11141569788157937,
+        "L_agg": 0.11141569788157937,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 38,
+        "loss": 0.10068875338211007,
+        "L_agg": 0.10068875338211007,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 39,
+        "loss": 0.09180926960915678,
+        "L_agg": 0.09180926960915678,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 40,
+        "loss": 0.08450815614950742,
+        "L_agg": 0.08450815614950742,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 41,
+        "loss": 0.07855015369603481,
+        "L_agg": 0.07855015369603481,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 42,
+        "loss": 0.07373493505868697,
+        "L_agg": 0.07373493505868697,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 43,
+        "loss": 0.06988549885515367,
+        "L_agg": 0.06988549885515367,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 44,
+        "loss": 0.06684848775014397,
+        "L_agg": 0.06684848775014397,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 45,
+        "loss": 0.06448992960770349,
+        "L_agg": 0.06448992960770349,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 46,
+        "loss": 0.06269162485367276,
+        "L_agg": 0.06269162485367276,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 47,
+        "loss": 0.06134804857712086,
+        "L_agg": 0.06134804857712086,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 48,
+        "loss": 0.06036425976278576,
+        "L_agg": 0.06036425976278576,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 49,
+        "loss": 0.05965303667858766,
+        "L_agg": 0.05965303667858766,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 50,
+        "loss": 0.05913296409756593,
+        "L_agg": 0.05913296409756593,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      }
+    ],
+    [
+      {
+        "epoch": 1,
+        "loss": 32.32563735921666,
+        "L_agg": 32.3209613510853,
+        "L_floor": 0.0935201570391655,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 2,
+        "loss": 29.14191652731271,
+        "L_agg": 29.141912280056125,
+        "L_floor": 8.494513167534024e-05,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 3,
+        "loss": 22.71261843919639,
+        "L_agg": 22.71261843919639,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 4,
+        "loss": 17.311234658469175,
+        "L_agg": 17.311234658469175,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 5,
+        "loss": 12.52080345638382,
+        "L_agg": 12.52080345638382,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 6,
+        "loss": 8.605611925623451,
+        "L_agg": 8.605611925623451,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 7,
+        "loss": 5.616336201562857,
+        "L_agg": 5.616336201562857,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 8,
+        "loss": 3.4401974074476565,
+        "L_agg": 3.4401974074476565,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 9,
+        "loss": 1.934419533163897,
+        "L_agg": 1.934419533163897,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 10,
+        "loss": 0.9528847449304914,
+        "L_agg": 0.9528847449304914,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 11,
+        "loss": 0.3702683332773144,
+        "L_agg": 0.3702683332773144,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 12,
+        "loss": 0.08189387797644798,
+        "L_agg": 0.08189387797644798,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 13,
+        "loss": 6.353897082509607e-05,
+        "L_agg": 6.353897082509607e-05,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 14,
+        "loss": 0.05105151637491618,
+        "L_agg": 0.05105151637491618,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 15,
+        "loss": 0.17311823496186057,
+        "L_agg": 0.17311823496186057,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 16,
+        "loss": 0.3181231619842744,
+        "L_agg": 0.3181231619842744,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 17,
+        "loss": 0.4532344049628161,
+        "L_agg": 0.4532344049628161,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 18,
+        "loss": 0.5607641219743431,
+        "L_agg": 0.5607641219743431,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 19,
+        "loss": 0.6332842336312442,
+        "L_agg": 0.6332842336312442,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 20,
+        "loss": 0.6711379547279642,
+        "L_agg": 0.6711379547279642,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 21,
+        "loss": 0.6787994009420683,
+        "L_agg": 0.6787994009420683,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 22,
+        "loss": 0.6624035520202767,
+        "L_agg": 0.6624035520202767,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 23,
+        "loss": 0.6283762873483638,
+        "L_agg": 0.6283762873483638,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 24,
+        "loss": 0.582463107857516,
+        "L_agg": 0.582463107857516,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 25,
+        "loss": 0.5293916016674461,
+        "L_agg": 0.5293916016674461,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 26,
+        "loss": 0.47312313436117687,
+        "L_agg": 0.47312313436117687,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 27,
+        "loss": 0.41620444559937947,
+        "L_agg": 0.41620444559937947,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 28,
+        "loss": 0.36080966825130506,
+        "L_agg": 0.36080966825130506,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 29,
+        "loss": 0.3085802006175728,
+        "L_agg": 0.3085802006175728,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 30,
+        "loss": 0.2608551924635905,
+        "L_agg": 0.2608551924635905,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 31,
+        "loss": 0.21794220667236644,
+        "L_agg": 0.21794220667236644,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 32,
+        "loss": 0.18051582502553717,
+        "L_agg": 0.18051582502553717,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 33,
+        "loss": 0.14907112204577325,
+        "L_agg": 0.14907112204577325,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 34,
+        "loss": 0.12386010654671889,
+        "L_agg": 0.12386010654671889,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 35,
+        "loss": 0.10422275232852311,
+        "L_agg": 0.10422275232852311,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 36,
+        "loss": 0.08875530815518443,
+        "L_agg": 0.08875530815518443,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 37,
+        "loss": 0.07663281870509162,
+        "L_agg": 0.07663281870509162,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 38,
+        "loss": 0.06712129243517923,
+        "L_agg": 0.06712129243517923,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 39,
+        "loss": 0.059517493473478775,
+        "L_agg": 0.059517493473478775,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 40,
+        "loss": 0.053403037381771094,
+        "L_agg": 0.053403037381771094,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 41,
+        "loss": 0.04849525454794129,
+        "L_agg": 0.04849525454794129,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 42,
+        "loss": 0.044576630130136005,
+        "L_agg": 0.044576630130136005,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 43,
+        "loss": 0.04147451750868451,
+        "L_agg": 0.04147451750868451,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 44,
+        "loss": 0.03904420070733505,
+        "L_agg": 0.03904420070733505,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 45,
+        "loss": 0.03716801324472414,
+        "L_agg": 0.03716801324472414,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 46,
+        "loss": 0.0357454238412734,
+        "L_agg": 0.0357454238412734,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 47,
+        "loss": 0.0346882946013925,
+        "L_agg": 0.0346882946013925,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 48,
+        "loss": 0.03391791447467383,
+        "L_agg": 0.03391791447467383,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 49,
+        "loss": 0.0333631110223543,
+        "L_agg": 0.0333631110223543,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 50,
+        "loss": 0.032959043557415746,
+        "L_agg": 0.032959043557415746,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      }
+    ],
+    [
+      {
+        "epoch": 1,
+        "loss": 32.205460153468664,
+        "L_agg": 32.20129558485445,
+        "L_floor": 0.08329137414693832,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 2,
+        "loss": 29.099267142512858,
+        "L_agg": 29.09925286728138,
+        "L_floor": 0.0002855046186596155,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 3,
+        "loss": 22.5846893272599,
+        "L_agg": 22.5846893272599,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 4,
+        "loss": 17.130229776373394,
+        "L_agg": 17.130229776373394,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 5,
+        "loss": 12.40879733887425,
+        "L_agg": 12.40879733887425,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 6,
+        "loss": 8.604334225447095,
+        "L_agg": 8.604334225447095,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 7,
+        "loss": 5.7093430623719,
+        "L_agg": 5.7093430623719,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 8,
+        "loss": 3.611850291997371,
+        "L_agg": 3.611850291997371,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 9,
+        "loss": 2.1496976783999373,
+        "L_agg": 2.1496976783999373,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 10,
+        "loss": 1.1673757029502263,
+        "L_agg": 1.1673757029502263,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 11,
+        "loss": 0.5447066612081788,
+        "L_agg": 0.5447066612081788,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 12,
+        "loss": 0.18955403808930926,
+        "L_agg": 0.18955403808930926,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 13,
+        "loss": 0.02877852736410919,
+        "L_agg": 0.02877852736410919,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 14,
+        "loss": 0.0035898217330624844,
+        "L_agg": 0.0035898217330624844,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 15,
+        "loss": 0.06428230700246246,
+        "L_agg": 0.06428230700246246,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 16,
+        "loss": 0.16903869245227343,
+        "L_agg": 0.16903869245227343,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 17,
+        "loss": 0.28503969634086723,
+        "L_agg": 0.28503969634086723,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 18,
+        "loss": 0.3902130928532787,
+        "L_agg": 0.3902130928532787,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 19,
+        "loss": 0.4726300163802733,
+        "L_agg": 0.4726300163802733,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 20,
+        "loss": 0.5283081476839355,
+        "L_agg": 0.5283081476839355,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 21,
+        "loss": 0.5584078825586075,
+        "L_agg": 0.5584078825586075,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 22,
+        "loss": 0.5667905047968297,
+        "L_agg": 0.5667905047968297,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 23,
+        "loss": 0.5583156455264756,
+        "L_agg": 0.5583156455264756,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 24,
+        "loss": 0.5377976652624534,
+        "L_agg": 0.5377976652624534,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 25,
+        "loss": 0.5095261829358514,
+        "L_agg": 0.5095261829358514,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 26,
+        "loss": 0.47698610132541014,
+        "L_agg": 0.47698610132541014,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 27,
+        "loss": 0.44261142022850886,
+        "L_agg": 0.44261142022850886,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 28,
+        "loss": 0.40826278939374383,
+        "L_agg": 0.40826278939374383,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 29,
+        "loss": 0.3750841574742651,
+        "L_agg": 0.3750841574742651,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 30,
+        "loss": 0.343863354850654,
+        "L_agg": 0.343863354850654,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 31,
+        "loss": 0.31501040283893755,
+        "L_agg": 0.31501040283893755,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 32,
+        "loss": 0.28873987391722145,
+        "L_agg": 0.28873987391722145,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 33,
+        "loss": 0.2651145394615177,
+        "L_agg": 0.2651145394615177,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 34,
+        "loss": 0.24408971096302923,
+        "L_agg": 0.24408971096302923,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 35,
+        "loss": 0.22555145592782225,
+        "L_agg": 0.22555145592782225,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 36,
+        "loss": 0.2093398594855904,
+        "L_agg": 0.2093398594855904,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 37,
+        "loss": 0.19527299781136828,
+        "L_agg": 0.19527299781136828,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 38,
+        "loss": 0.18316371095301767,
+        "L_agg": 0.18316371095301767,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 39,
+        "loss": 0.1728250089924742,
+        "L_agg": 0.1728250089924742,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 40,
+        "loss": 0.16407590936114672,
+        "L_agg": 0.16407590936114672,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 41,
+        "loss": 0.15674441391692007,
+        "L_agg": 0.15674441391692007,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 42,
+        "loss": 0.1506692324598733,
+        "L_agg": 0.1506692324598733,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 43,
+        "loss": 0.1456997279412118,
+        "L_agg": 0.1456997279412118,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 44,
+        "loss": 0.1416955675790996,
+        "L_agg": 0.1416955675790996,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 45,
+        "loss": 0.13852548370953513,
+        "L_agg": 0.13852548370953513,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 46,
+        "loss": 0.13606600995846124,
+        "L_agg": 0.13606600995846124,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 47,
+        "loss": 0.1341999113904615,
+        "L_agg": 0.1341999113904615,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 48,
+        "loss": 0.13281466373958303,
+        "L_agg": 0.13281466373958303,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 49,
+        "loss": 0.13180100367305103,
+        "L_agg": 0.13180100367305103,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 50,
+        "loss": 0.1310517808437512,
+        "L_agg": 0.1310517808437512,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      }
+    ],
+    [
+      {
+        "epoch": 1,
+        "loss": 32.24233860085788,
+        "L_agg": 32.23801904060947,
+        "L_floor": 0.08639120310544968,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 2,
+        "loss": 28.943711234074055,
+        "L_agg": 28.943711234074055,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 3,
+        "loss": 21.632195138931433,
+        "L_agg": 21.63216686903304,
+        "L_floor": 0.0005653979605995119,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 4,
+        "loss": 15.735420023804298,
+        "L_agg": 15.735389794519623,
+        "L_floor": 0.0006045856862328947,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 5,
+        "loss": 10.903806453819,
+        "L_agg": 10.903806453819,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 6,
+        "loss": 7.193336903306431,
+        "L_agg": 7.193336903306431,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 7,
+        "loss": 4.493870465230576,
+        "L_agg": 4.493870465230576,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 8,
+        "loss": 2.621880004298576,
+        "L_agg": 2.621880004298576,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 9,
+        "loss": 1.3812729895289373,
+        "L_agg": 1.3812729895289373,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 10,
+        "loss": 0.6140405002989691,
+        "L_agg": 0.6140405002989691,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 11,
+        "loss": 0.1937977517320311,
+        "L_agg": 0.1937977517320311,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 12,
+        "loss": 0.02024116379156213,
+        "L_agg": 0.02024116379156213,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 13,
+        "loss": 0.012496311953223408,
+        "L_agg": 0.012496311953223408,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 14,
+        "loss": 0.1041980470204419,
+        "L_agg": 0.1041980470204419,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 15,
+        "loss": 0.24161824349383976,
+        "L_agg": 0.24161824349383976,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 16,
+        "loss": 0.38495856368079556,
+        "L_agg": 0.38495856368079556,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 17,
+        "loss": 0.5090816910995226,
+        "L_agg": 0.5090816910995226,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 18,
+        "loss": 0.6016383673392686,
+        "L_agg": 0.6016383673392686,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 19,
+        "loss": 0.659619237674482,
+        "L_agg": 0.659619237674482,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 20,
+        "loss": 0.6856835488616229,
+        "L_agg": 0.6856835488616229,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 21,
+        "loss": 0.6853308749285876,
+        "L_agg": 0.6853308749285876,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 22,
+        "loss": 0.6650511472329517,
+        "L_agg": 0.6650511472329517,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 23,
+        "loss": 0.6309395471679472,
+        "L_agg": 0.6309395471679472,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 24,
+        "loss": 0.5882587179122633,
+        "L_agg": 0.5882587179122633,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 25,
+        "loss": 0.5411785468043128,
+        "L_agg": 0.5411785468043128,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 26,
+        "loss": 0.49278458263282376,
+        "L_agg": 0.49278458263282376,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 27,
+        "loss": 0.4452606391059049,
+        "L_agg": 0.4452606391059049,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 28,
+        "loss": 0.400010271559315,
+        "L_agg": 0.400010271559315,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 29,
+        "loss": 0.3579231184986843,
+        "L_agg": 0.3579231184986843,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 30,
+        "loss": 0.319473224057862,
+        "L_agg": 0.319473224057862,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 31,
+        "loss": 0.28484754495161385,
+        "L_agg": 0.28484754495161385,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 32,
+        "loss": 0.2540223442689875,
+        "L_agg": 0.2540223442689875,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 33,
+        "loss": 0.22683601386509306,
+        "L_agg": 0.22683601386509306,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 34,
+        "loss": 0.20304202279211253,
+        "L_agg": 0.20304202279211253,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 35,
+        "loss": 0.1823772969861052,
+        "L_agg": 0.1823772969861052,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 36,
+        "loss": 0.16458414911733962,
+        "L_agg": 0.16458414911733962,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 37,
+        "loss": 0.1493839739608263,
+        "L_agg": 0.1493839739608263,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 38,
+        "loss": 0.1365097307110586,
+        "L_agg": 0.1365097307110586,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 39,
+        "loss": 0.12573780281136102,
+        "L_agg": 0.12573780281136102,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 40,
+        "loss": 0.1167886342373264,
+        "L_agg": 0.1167886342373264,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 41,
+        "loss": 0.10941069793565394,
+        "L_agg": 0.10941069793565394,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 42,
+        "loss": 0.10338350761889605,
+        "L_agg": 0.10338350761889605,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 43,
+        "loss": 0.09851723974589871,
+        "L_agg": 0.09851723974589871,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 44,
+        "loss": 0.09464213691394167,
+        "L_agg": 0.09464213691394167,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 45,
+        "loss": 0.0916002237032477,
+        "L_agg": 0.0916002237032477,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 46,
+        "loss": 0.08925620741756506,
+        "L_agg": 0.08925620741756506,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 47,
+        "loss": 0.08748809139789576,
+        "L_agg": 0.08748809139789576,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 48,
+        "loss": 0.08618233087414164,
+        "L_agg": 0.08618233087414164,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 49,
+        "loss": 0.08523120576070022,
+        "L_agg": 0.08523120576070022,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 50,
+        "loss": 0.08453105659705165,
+        "L_agg": 0.08453105659705165,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      }
+    ],
+    [
+      {
+        "epoch": 1,
+        "loss": 32.60187528621327,
+        "L_agg": 32.59598831752237,
+        "L_floor": 0.11773937195539474,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 2,
+        "loss": 29.64813930440973,
+        "L_agg": 29.648138270225466,
+        "L_floor": 2.068368485197425e-05,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 3,
+        "loss": 23.382498250826796,
+        "L_agg": 23.382498250826796,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 4,
+        "loss": 17.937090916378637,
+        "L_agg": 17.937090916378637,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 5,
+        "loss": 13.109894463884492,
+        "L_agg": 13.109894463884492,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 6,
+        "loss": 9.083515047943655,
+        "L_agg": 9.083515047943655,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 7,
+        "loss": 5.940568553018636,
+        "L_agg": 5.940568553018636,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 8,
+        "loss": 3.618994763741109,
+        "L_agg": 3.618994763741109,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 9,
+        "loss": 2.003952724853348,
+        "L_agg": 2.003952724853348,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 10,
+        "loss": 0.9549796610663602,
+        "L_agg": 0.9549796610663602,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 11,
+        "loss": 0.3443891999406136,
+        "L_agg": 0.3443891999406136,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 12,
+        "loss": 0.05986426894861767,
+        "L_agg": 0.05986426894861767,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 13,
+        "loss": 0.00244390769914739,
+        "L_agg": 0.00244390769914739,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 14,
+        "loss": 0.08686955505109133,
+        "L_agg": 0.08686955505109133,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 15,
+        "loss": 0.24115388449793104,
+        "L_agg": 0.24115388449793104,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 16,
+        "loss": 0.41077857841918053,
+        "L_agg": 0.41077857841918053,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 17,
+        "loss": 0.5607338392115486,
+        "L_agg": 0.5607338392115486,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 18,
+        "loss": 0.6737840040261117,
+        "L_agg": 0.6737840040261117,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 19,
+        "loss": 0.7451319275650296,
+        "L_agg": 0.7451319275650296,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 20,
+        "loss": 0.777628573402978,
+        "L_agg": 0.777628573402978,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 21,
+        "loss": 0.777820679292645,
+        "L_agg": 0.777820679292645,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 22,
+        "loss": 0.7532026589257695,
+        "L_agg": 0.7532026589257695,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 23,
+        "loss": 0.711399620224005,
+        "L_agg": 0.711399620224005,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 24,
+        "loss": 0.6591179065029401,
+        "L_agg": 0.6591179065029401,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 25,
+        "loss": 0.6014792270696723,
+        "L_agg": 0.6014792270696723,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 26,
+        "loss": 0.542472293517346,
+        "L_agg": 0.542472293517346,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 27,
+        "loss": 0.48494058020069614,
+        "L_agg": 0.48494058020069614,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 28,
+        "loss": 0.4308233848461379,
+        "L_agg": 0.4308233848461379,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 29,
+        "loss": 0.3811441708996455,
+        "L_agg": 0.3811441708996455,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 30,
+        "loss": 0.3363458691328941,
+        "L_agg": 0.3363458691328941,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 31,
+        "loss": 0.2965290081568284,
+        "L_agg": 0.2965290081568284,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 32,
+        "loss": 0.2614901349648824,
+        "L_agg": 0.2614901349648824,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 33,
+        "loss": 0.23111779377590003,
+        "L_agg": 0.23111779377590003,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 34,
+        "loss": 0.2049985245932462,
+        "L_agg": 0.2049985245932462,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 35,
+        "loss": 0.18263228058093398,
+        "L_agg": 0.18263228058093398,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 36,
+        "loss": 0.1636350321207415,
+        "L_agg": 0.1636350321207415,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 37,
+        "loss": 0.14760154191487287,
+        "L_agg": 0.14760154191487287,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 38,
+        "loss": 0.13416153227767755,
+        "L_agg": 0.13416153227767755,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 39,
+        "loss": 0.12297592895731532,
+        "L_agg": 0.12297592895731532,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 40,
+        "loss": 0.11373951715204175,
+        "L_agg": 0.11373951715204175,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 41,
+        "loss": 0.10617659644256598,
+        "L_agg": 0.10617659644256598,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 42,
+        "loss": 0.10004500905779687,
+        "L_agg": 0.10004500905779687,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 43,
+        "loss": 0.09512953559540886,
+        "L_agg": 0.09512953559540886,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 44,
+        "loss": 0.09124063243534128,
+        "L_agg": 0.09124063243534128,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 45,
+        "loss": 0.08821237392947788,
+        "L_agg": 0.08821237392947788,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 46,
+        "loss": 0.08589757479509873,
+        "L_agg": 0.08589757479509873,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 47,
+        "loss": 0.08416450164881421,
+        "L_agg": 0.08416450164881421,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 48,
+        "loss": 0.08289325702049025,
+        "L_agg": 0.08289325702049025,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 49,
+        "loss": 0.0819729006053249,
+        "L_agg": 0.0819729006053249,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 50,
+        "loss": 0.08129910458380396,
+        "L_agg": 0.08129910458380396,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      }
+    ]
+  ],
+  "steps": [
+    {
+      "id": "district",
+      "title": "Official district GDP",
+      "body": "Every district has one published GDDP total, Y_g. That number is the only monetary truth in the pipeline; the model never changes it."
+    },
+    {
+      "id": "cells",
+      "title": "Split the district into H3 cells",
+      "body": "The district polygon is filled with H3 resolution-7 hexagons (~5 km\u00b2 each). Each hexagon becomes one node."
+    },
+    {
+      "id": "features",
+      "title": "Attach features to each cell",
+      "body": "Population (Kontur), night lights (VIIRS average_masked), OSM road km, building footprint area, landuse shares and POI counts by tag group. Magnitudes are split into an exists flag plus log10 value, then z-scored."
+    },
+    {
+      "id": "graph",
+      "title": "Wire the graph",
+      "body": "Each cell links to its 6 immediate H3 neighbours, and upward to its R6 and R5 parents. Economic activity spills across hexagon borders, so a cell is described partly by its surroundings."
+    },
+    {
+      "id": "message",
+      "title": "Message passing",
+      "body": "GraphSAGE averages neighbour embeddings and mixes them with the cell's own embedding; parent cells pool their children and broadcast context back down. A GCNII initial residual keeps the original features in play at every layer."
+    },
+    {
+      "id": "embedding",
+      "title": "Node embedding",
+      "body": "After 4 rounds the cell holds a 64-dimensional embedding that encodes both its own features and its neighbourhood."
+    },
+    {
+      "id": "score",
+      "title": "Economic intensity",
+      "body": "A linear readout plus softplus turns the embedding into s_i \u2265 0: an unitless per-person intensity, not rupees."
+    },
+    {
+      "id": "share",
+      "title": "Normalised share",
+      "body": "Weight the intensity by population, z_i = s_i \u00d7 pop_i, and sum inside the district: Z_g. The dasymetric factor is scale_g = Y_g / Z_g."
+    },
+    {
+      "id": "final",
+      "title": "Final cell GDP and wealth",
+      "body": "gdp_i = z_i \u00d7 scale_g, so cells in a district sum exactly to the official Y_g. Dividing by population gives \u20b9/person, and its within-state percentile rank is wealth_index."
+    }
+  ],
+  "formulas": [
+    "s_i = softplus(GNN(x_i, neighbors, parents))  # intensity \u2265 0",
+    "z_i = s_i * population_i",
+    "Z_g = sum_{i in district g} z_i",
+    "scale_g = Y_g / Z_g",
+    "gdp_i = z_i * scale_g   # allocated \u20b9, not a measurement"
+  ],
+  "training": {
+    "loss": "mean over districts of (log10 \u03a3_i s_i\u00b7pop_i \u2212 log10 Y_g)\u00b2 + 0.05 \u00b7 population-weighted floor hinge",
+    "note": "The loss only ever sees district totals. Individual cell values are unidentified, which is why the range across seeds matters."
+  },
+  "disclaimer": "Cell GDP is an allocation of official district GDP, not a measurement. Ensemble range is across random seeds, not a calibrated probability of error. wealth_index is not a DHS score. NTL is in the model when the average_masked composite is present."
+}

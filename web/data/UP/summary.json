@@ -1,0 +1,978 @@
+{
+  "state": "UP",
+  "name": "Uttar Pradesh",
+  "n_r7": 46723,
+  "n_r6": 6978,
+  "districts": [
+    "Agra",
+    "Aligarh",
+    "Ambedkar Nagar",
+    "Amethi",
+    "Amroha",
+    "Auraiya",
+    "Ayodhya",
+    "Azamgarh",
+    "Baghpat",
+    "Bahraich",
+    "Ballia",
+    "Balrampur",
+    "Banda",
+    "Barabanki",
+    "Bareilly",
+    "Basti",
+    "Bhadohi",
+    "Bijnor",
+    "Budaun",
+    "Bulandshahr",
+    "Chandauli",
+    "Chitrakoot",
+    "Deoria",
+    "Etah",
+    "Etawah",
+    "Farrukhabad",
+    "Fatehpur",
+    "Firozabad",
+    "Gautam Buddha Nagar",
+    "Ghaziabad",
+    "Ghazipur",
+    "Gonda",
+    "Gorakhpur",
+    "Hamirpur",
+    "Hapur",
+    "Hardoi",
+    "Hathras",
+    "Jalaun",
+    "Jaunpur",
+    "Jhansi",
+    "Kannauj",
+    "Kanpur Dehat",
+    "Kanpur Nagar",
+    "Kasganj",
+    "Kaushambi",
+    "Kushinagar",
+    "Lakhimpur Kheri",
+    "Lalitpur",
+    "Lucknow",
+    "Mahoba",
+    "Mahrajganj",
+    "Mainpuri",
+    "Mathura",
+    "Mau",
+    "Meerut",
+    "Mirzapur",
+    "Moradabad",
+    "Muzaffarnagar",
+    "Pilibhit",
+    "Pratapgarh",
+    "Prayagraj",
+    "Rae Bareli",
+    "Rampur",
+    "Saharanpur",
+    "Sambhal",
+    "Sant Kabir Nagar",
+    "Shahjahanpur",
+    "Shamli",
+    "Shrawasti",
+    "Siddharthnagar",
+    "Sitapur",
+    "Sonbhadra",
+    "Sultanpur",
+    "Unnao",
+    "Varanasi"
+  ],
+  "district_files": {
+    "Agra": "r7/agra.json",
+    "Aligarh": "r7/aligarh.json",
+    "Ambedkar Nagar": "r7/ambedkar-nagar.json",
+    "Amethi": "r7/amethi.json",
+    "Amroha": "r7/amroha.json",
+    "Auraiya": "r7/auraiya.json",
+    "Ayodhya": "r7/ayodhya.json",
+    "Azamgarh": "r7/azamgarh.json",
+    "Baghpat": "r7/baghpat.json",
+    "Bahraich": "r7/bahraich.json",
+    "Ballia": "r7/ballia.json",
+    "Balrampur": "r7/balrampur.json",
+    "Banda": "r7/banda.json",
+    "Barabanki": "r7/barabanki.json",
+    "Bareilly": "r7/bareilly.json",
+    "Basti": "r7/basti.json",
+    "Bhadohi": "r7/bhadohi.json",
+    "Bijnor": "r7/bijnor.json",
+    "Budaun": "r7/budaun.json",
+    "Bulandshahr": "r7/bulandshahr.json",
+    "Chandauli": "r7/chandauli.json",
+    "Chitrakoot": "r7/chitrakoot.json",
+    "Deoria": "r7/deoria.json",
+    "Etah": "r7/etah.json",
+    "Etawah": "r7/etawah.json",
+    "Farrukhabad": "r7/farrukhabad.json",
+    "Fatehpur": "r7/fatehpur.json",
+    "Firozabad": "r7/firozabad.json",
+    "Gautam Buddha Nagar": "r7/gautam-buddha-nagar.json",
+    "Ghaziabad": "r7/ghaziabad.json",
+    "Ghazipur": "r7/ghazipur.json",
+    "Gonda": "r7/gonda.json",
+    "Gorakhpur": "r7/gorakhpur.json",
+    "Hamirpur": "r7/hamirpur.json",
+    "Hapur": "r7/hapur.json",
+    "Hardoi": "r7/hardoi.json",
+    "Hathras": "r7/hathras.json",
+    "Jalaun": "r7/jalaun.json",
+    "Jaunpur": "r7/jaunpur.json",
+    "Jhansi": "r7/jhansi.json",
+    "Kannauj": "r7/kannauj.json",
+    "Kanpur Dehat": "r7/kanpur-dehat.json",
+    "Kanpur Nagar": "r7/kanpur-nagar.json",
+    "Kasganj": "r7/kasganj.json",
+    "Kaushambi": "r7/kaushambi.json",
+    "Kushinagar": "r7/kushinagar.json",
+    "Lakhimpur Kheri": "r7/lakhimpur-kheri.json",
+    "Lalitpur": "r7/lalitpur.json",
+    "Lucknow": "r7/lucknow.json",
+    "Mahoba": "r7/mahoba.json",
+    "Mahrajganj": "r7/mahrajganj.json",
+    "Mainpuri": "r7/mainpuri.json",
+    "Mathura": "r7/mathura.json",
+    "Mau": "r7/mau.json",
+    "Meerut": "r7/meerut.json",
+    "Mirzapur": "r7/mirzapur.json",
+    "Moradabad": "r7/moradabad.json",
+    "Muzaffarnagar": "r7/muzaffarnagar.json",
+    "Pilibhit": "r7/pilibhit.json",
+    "Pratapgarh": "r7/pratapgarh.json",
+    "Prayagraj": "r7/prayagraj.json",
+    "Rae Bareli": "r7/rae-bareli.json",
+    "Rampur": "r7/rampur.json",
+    "Saharanpur": "r7/saharanpur.json",
+    "Sambhal": "r7/sambhal.json",
+    "Sant Kabir Nagar": "r7/sant-kabir-nagar.json",
+    "Shahjahanpur": "r7/shahjahanpur.json",
+    "Shamli": "r7/shamli.json",
+    "Shrawasti": "r7/shrawasti.json",
+    "Siddharthnagar": "r7/siddharthnagar.json",
+    "Sitapur": "r7/sitapur.json",
+    "Sonbhadra": "r7/sonbhadra.json",
+    "Sultanpur": "r7/sultanpur.json",
+    "Unnao": "r7/unnao.json",
+    "Varanasi": "r7/varanasi.json"
+  },
+  "district_table": [
+    {
+      "district": "Gautam Buddha Nagar",
+      "n_cells": 221,
+      "population": 2439170.0,
+      "y_crore": 110278.7346191287,
+      "gdp_crore": 110278.7346191287,
+      "median_gdp_per_capita_inr": 80649.56524786337
+    },
+    {
+      "district": "Lucknow",
+      "n_cells": 505,
+      "population": 5920860.0,
+      "y_crore": 48865.96937337202,
+      "gdp_crore": 48865.96937337202,
+      "median_gdp_per_capita_inr": 9238.434234727018
+    },
+    {
+      "district": "Agra",
+      "n_cells": 780,
+      "population": 5402117.0,
+      "y_crore": 41501.227998089154,
+      "gdp_crore": 41501.227998089154,
+      "median_gdp_per_capita_inr": 11500.43447870334
+    },
+    {
+      "district": "Prayagraj",
+      "n_cells": 1074,
+      "population": 7233296.0,
+      "y_crore": 39771.737815195665,
+      "gdp_crore": 39771.737815195665,
+      "median_gdp_per_capita_inr": 12693.077399760507
+    },
+    {
+      "district": "Meerut",
+      "n_cells": 486,
+      "population": 3951642.0,
+      "y_crore": 37742.83292696431,
+      "gdp_crore": 37742.83292696431,
+      "median_gdp_per_capita_inr": 21594.00719244423
+    },
+    {
+      "district": "Ghaziabad",
+      "n_cells": 179,
+      "population": 4798444.0,
+      "y_crore": 36568.60796404618,
+      "gdp_crore": 36568.60796404618,
+      "median_gdp_per_capita_inr": 20282.31959172998
+    },
+    {
+      "district": "Kanpur Nagar",
+      "n_cells": 574,
+      "population": 4953774.0,
+      "y_crore": 34644.69015391185,
+      "gdp_crore": 34644.690153911855,
+      "median_gdp_per_capita_inr": 10997.792133354178
+    },
+    {
+      "district": "Bareilly",
+      "n_cells": 721,
+      "population": 5179680.0,
+      "y_crore": 31609.350558681857,
+      "gdp_crore": 31609.350558681865,
+      "median_gdp_per_capita_inr": 26124.66295332084
+    },
+    {
+      "district": "Bijnor",
+      "n_cells": 816,
+      "population": 4250067.0,
+      "y_crore": 24737.847689351205,
+      "gdp_crore": 24737.84768935121,
+      "median_gdp_per_capita_inr": 42906.224349605065
+    },
+    {
+      "district": "Bulandshahr",
+      "n_cells": 713,
+      "population": 4294205.0,
+      "y_crore": 22837.016094818606,
+      "gdp_crore": 22837.016094818606,
+      "median_gdp_per_capita_inr": 44451.65078179611
+    },
+    {
+      "district": "Moradabad",
+      "n_cells": 436,
+      "population": 3829885.0,
+      "y_crore": 22030.4190160645,
+      "gdp_crore": 22030.4190160645,
+      "median_gdp_per_capita_inr": 37531.72446672075
+    },
+    {
+      "district": "Varanasi",
+      "n_cells": 298,
+      "population": 4415112.0,
+      "y_crore": 21593.39591821367,
+      "gdp_crore": 21593.395918213675,
+      "median_gdp_per_capita_inr": 10268.641207554287
+    },
+    {
+      "district": "Saharanpur",
+      "n_cells": 684,
+      "population": 4142866.0,
+      "y_crore": 21481.047708168142,
+      "gdp_crore": 21481.047708168142,
+      "median_gdp_per_capita_inr": 23942.319147317525
+    },
+    {
+      "district": "Lakhimpur Kheri",
+      "n_cells": 1479,
+      "population": 4916489.0,
+      "y_crore": 20779.854333664032,
+      "gdp_crore": 20779.854333664036,
+      "median_gdp_per_capita_inr": 38639.43332532717
+    },
+    {
+      "district": "Sitapur",
+      "n_cells": 1123,
+      "population": 5499851.0,
+      "y_crore": 20538.89510686898,
+      "gdp_crore": 20538.89510686898,
+      "median_gdp_per_capita_inr": 31378.167311531477
+    },
+    {
+      "district": "Gorakhpur",
+      "n_cells": 650,
+      "population": 5133703.0,
+      "y_crore": 20116.28681622085,
+      "gdp_crore": 20116.28681622085,
+      "median_gdp_per_capita_inr": 17445.850265176683
+    },
+    {
+      "district": "Aligarh",
+      "n_cells": 671,
+      "population": 4330794.0,
+      "y_crore": 19970.784147251205,
+      "gdp_crore": 19970.78414725121,
+      "median_gdp_per_capita_inr": 19139.356522410024
+    },
+    {
+      "district": "Muzaffarnagar",
+      "n_cells": 504,
+      "population": 3392157.0,
+      "y_crore": 19376.234644445114,
+      "gdp_crore": 19376.234644445114,
+      "median_gdp_per_capita_inr": 27541.493395599937
+    },
+    {
+      "district": "Sonbhadra",
+      "n_cells": 1307,
+      "population": 2313708.0,
+      "y_crore": 16495.762011211526,
+      "gdp_crore": 16495.762011211526,
+      "median_gdp_per_capita_inr": 41402.6951367225
+    },
+    {
+      "district": "Hardoi",
+      "n_cells": 1166,
+      "population": 4869408.0,
+      "y_crore": 15835.371015561801,
+      "gdp_crore": 15835.371015561801,
+      "median_gdp_per_capita_inr": 28098.815544762077
+    },
+    {
+      "district": "Barabanki",
+      "n_cells": 751,
+      "population": 3839764.0,
+      "y_crore": 15755.699799588205,
+      "gdp_crore": 15755.699799588205,
+      "median_gdp_per_capita_inr": 36628.49677797669
+    },
+    {
+      "district": "Amroha",
+      "n_cells": 426,
+      "population": 2323587.0,
+      "y_crore": 15490.103617766694,
+      "gdp_crore": 15490.103617766696,
+      "median_gdp_per_capita_inr": 58079.82773510816
+    },
+    {
+      "district": "Unnao",
+      "n_cells": 899,
+      "population": 3661355.0,
+      "y_crore": 14895.165602610541,
+      "gdp_crore": 14895.165602610541,
+      "median_gdp_per_capita_inr": 31509.626814808315
+    },
+    {
+      "district": "Budaun",
+      "n_cells": 803,
+      "population": 3706955.0,
+      "y_crore": 14846.097480259998,
+      "gdp_crore": 14846.097480259998,
+      "median_gdp_per_capita_inr": 35592.7088094158
+    },
+    {
+      "district": "Shahjahanpur",
+      "n_cells": 856,
+      "population": 3655689.0,
+      "y_crore": 14842.345257688055,
+      "gdp_crore": 14842.345257688055,
+      "median_gdp_per_capita_inr": 27636.68455564572
+    },
+    {
+      "district": "Rampur",
+      "n_cells": 465,
+      "population": 2878002.0,
+      "y_crore": 14819.85296194971,
+      "gdp_crore": 14819.852961949713,
+      "median_gdp_per_capita_inr": 29349.803174260665
+    },
+    {
+      "district": "Azamgarh",
+      "n_cells": 852,
+      "population": 5405324.0,
+      "y_crore": 14781.394673605733,
+      "gdp_crore": 14781.394673605733,
+      "median_gdp_per_capita_inr": 22265.48155212416
+    },
+    {
+      "district": "Firozabad",
+      "n_cells": 463,
+      "population": 2942465.0,
+      "y_crore": 14190.342512920977,
+      "gdp_crore": 14190.342512920977,
+      "median_gdp_per_capita_inr": 30349.172983753528
+    },
+    {
+      "district": "Mathura",
+      "n_cells": 638,
+      "population": 3129271.0,
+      "y_crore": 13656.47062249287,
+      "gdp_crore": 13656.47062249287,
+      "median_gdp_per_capita_inr": 21441.5864158351
+    },
+    {
+      "district": "Kushinagar",
+      "n_cells": 564,
+      "population": 4369967.0,
+      "y_crore": 13606.45377194065,
+      "gdp_crore": 13606.45377194065,
+      "median_gdp_per_capita_inr": 23671.256550728092
+    },
+    {
+      "district": "Fatehpur",
+      "n_cells": 831,
+      "population": 3003640.0,
+      "y_crore": 13552.045598482126,
+      "gdp_crore": 13552.045598482126,
+      "median_gdp_per_capita_inr": 32247.942520339435
+    },
+    {
+      "district": "Jhansi",
+      "n_cells": 1016,
+      "population": 2236307.0,
+      "y_crore": 13535.488334448508,
+      "gdp_crore": 13535.488334448508,
+      "median_gdp_per_capita_inr": 15525.283035133796
+    },
+    {
+      "district": "Jaunpur",
+      "n_cells": 792,
+      "population": 5091497.0,
+      "y_crore": 12999.66696060459,
+      "gdp_crore": 12999.666960604593,
+      "median_gdp_per_capita_inr": 23254.481990773562
+    },
+    {
+      "district": "Gonda",
+      "n_cells": 796,
+      "population": 4169792.0,
+      "y_crore": 12037.723099999348,
+      "gdp_crore": 12037.723099999348,
+      "median_gdp_per_capita_inr": 24231.085626859527
+    },
+    {
+      "district": "Ghazipur",
+      "n_cells": 654,
+      "population": 4217208.0,
+      "y_crore": 11926.318630944257,
+      "gdp_crore": 11926.318630944257,
+      "median_gdp_per_capita_inr": 23655.959157928737
+    },
+    {
+      "district": "Pilibhit",
+      "n_cells": 712,
+      "population": 2505194.0,
+      "y_crore": 11667.330551980456,
+      "gdp_crore": 11667.330551980456,
+      "median_gdp_per_capita_inr": 41337.70503470069
+    },
+    {
+      "district": "Mirzapur",
+      "n_cells": 863,
+      "population": 3099414.0,
+      "y_crore": 11594.28245612813,
+      "gdp_crore": 11594.28245612813,
+      "median_gdp_per_capita_inr": 23125.690190104437
+    },
+    {
+      "district": "Rae Bareli",
+      "n_cells": 780,
+      "population": 3438825.0,
+      "y_crore": 11346.617810031927,
+      "gdp_crore": 11346.617810031927,
+      "median_gdp_per_capita_inr": 22557.675573178047
+    },
+    {
+      "district": "Ayodhya",
+      "n_cells": 527,
+      "population": 3198938.0,
+      "y_crore": 11081.235969750107,
+      "gdp_crore": 11081.235969750107,
+      "median_gdp_per_capita_inr": 22263.65228826319
+    },
+    {
+      "district": "Banda",
+      "n_cells": 909,
+      "population": 2159680.0,
+      "y_crore": 11053.147693861438,
+      "gdp_crore": 11053.14769386144,
+      "median_gdp_per_capita_inr": 36979.14931337258
+    },
+    {
+      "district": "Hathras",
+      "n_cells": 334,
+      "population": 1757013.0,
+      "y_crore": 10947.291515343504,
+      "gdp_crore": 10947.291515343504,
+      "median_gdp_per_capita_inr": 46428.18840071531
+    },
+    {
+      "district": "Bahraich",
+      "n_cells": 947,
+      "population": 4170921.0,
+      "y_crore": 10646.06627043694,
+      "gdp_crore": 10646.066270436939,
+      "median_gdp_per_capita_inr": 25491.732443841596
+    },
+    {
+      "district": "Hamirpur",
+      "n_cells": 827,
+      "population": 1346375.0,
+      "y_crore": 10602.449337885962,
+      "gdp_crore": 10602.449337885962,
+      "median_gdp_per_capita_inr": 68423.18691069377
+    },
+    {
+      "district": "Sambhal",
+      "n_cells": 466,
+      "population": 2910678.0,
+      "y_crore": 10224.369910832918,
+      "gdp_crore": 10224.369910832917,
+      "median_gdp_per_capita_inr": 32184.961591071755
+    },
+    {
+      "district": "Hapur",
+      "n_cells": 198,
+      "population": 1722677.0,
+      "y_crore": 10144.400315537123,
+      "gdp_crore": 10144.400315537125,
+      "median_gdp_per_capita_inr": 40166.27294529639
+    },
+    {
+      "district": "Sultanpur",
+      "n_cells": 481,
+      "population": 2509645.0,
+      "y_crore": 10063.046844627148,
+      "gdp_crore": 10063.046844627148,
+      "median_gdp_per_capita_inr": 28204.023359829782
+    },
+    {
+      "district": "Jalaun",
+      "n_cells": 884,
+      "population": 1910145.0,
+      "y_crore": 9713.115172496715,
+      "gdp_crore": 9713.115172496715,
+      "median_gdp_per_capita_inr": 31829.63292671983
+    },
+    {
+      "district": "Ballia",
+      "n_cells": 571,
+      "population": 3699622.0,
+      "y_crore": 9683.381683590156,
+      "gdp_crore": 9683.381683590158,
+      "median_gdp_per_capita_inr": 23842.74196720799
+    },
+    {
+      "district": "Pratapgarh",
+      "n_cells": 734,
+      "population": 3880175.0,
+      "y_crore": 9450.072374939075,
+      "gdp_crore": 9450.072374939075,
+      "median_gdp_per_capita_inr": 23144.970767496503
+    },
+    {
+      "district": "Basti",
+      "n_cells": 540,
+      "population": 2684486.0,
+      "y_crore": 9427.61632952466,
+      "gdp_crore": 9427.616329524662,
+      "median_gdp_per_capita_inr": 23853.097485605183
+    },
+    {
+      "district": "Deoria",
+      "n_cells": 498,
+      "population": 3329057.0,
+      "y_crore": 9377.750365541033,
+      "gdp_crore": 9377.750365541033,
+      "median_gdp_per_capita_inr": 23403.211629767757
+    },
+    {
+      "district": "Mau",
+      "n_cells": 307,
+      "population": 2349817.0,
+      "y_crore": 9364.051498930292,
+      "gdp_crore": 9364.051498930294,
+      "median_gdp_per_capita_inr": 31420.504014789003
+    },
+    {
+      "district": "Kanpur Dehat",
+      "n_cells": 625,
+      "population": 2049366.0,
+      "y_crore": 9187.526113198139,
+      "gdp_crore": 9187.526113198139,
+      "median_gdp_per_capita_inr": 41184.10025275702
+    },
+    {
+      "district": "Mahrajganj",
+      "n_cells": 580,
+      "population": 3388127.0,
+      "y_crore": 8950.120599592947,
+      "gdp_crore": 8950.120599592949,
+      "median_gdp_per_capita_inr": 23869.725568789898
+    },
+    {
+      "district": "Kannauj",
+      "n_cells": 401,
+      "population": 1960456.0,
+      "y_crore": 8851.508415906113,
+      "gdp_crore": 8851.508415906113,
+      "median_gdp_per_capita_inr": 42368.93079351642
+    },
+    {
+      "district": "Ambedkar Nagar",
+      "n_cells": 466,
+      "population": 2961205.0,
+      "y_crore": 8822.162639700158,
+      "gdp_crore": 8822.16263970016,
+      "median_gdp_per_capita_inr": 25330.127164102014
+    },
+    {
+      "district": "Etawah",
+      "n_cells": 461,
+      "population": 1893097.0,
+      "y_crore": 8727.187804070705,
+      "gdp_crore": 8727.187804070705,
+      "median_gdp_per_capita_inr": 31979.032514685423
+    },
+    {
+      "district": "Etah",
+      "n_cells": 472,
+      "population": 2140716.0,
+      "y_crore": 8528.912236279437,
+      "gdp_crore": 8528.912236279437,
+      "median_gdp_per_capita_inr": 32536.403697404847
+    },
+    {
+      "district": "Baghpat",
+      "n_cells": 250,
+      "population": 1434156.0,
+      "y_crore": 8379.143657753375,
+      "gdp_crore": 8379.143657753375,
+      "median_gdp_per_capita_inr": 51574.83512828467
+    },
+    {
+      "district": "Siddharthnagar",
+      "n_cells": 571,
+      "population": 3422745.0,
+      "y_crore": 8049.660466436365,
+      "gdp_crore": 8049.660466436364,
+      "median_gdp_per_capita_inr": 19832.886023581515
+    },
+    {
+      "district": "Farrukhabad",
+      "n_cells": 415,
+      "population": 2194212.0,
+      "y_crore": 8005.7357259831,
+      "gdp_crore": 8005.7357259831,
+      "median_gdp_per_capita_inr": 27443.530395957754
+    },
+    {
+      "district": "Shamli",
+      "n_cells": 248,
+      "population": 1496136.0,
+      "y_crore": 7751.98068975636,
+      "gdp_crore": 7751.980689756359,
+      "median_gdp_per_capita_inr": 49646.65804034831
+    },
+    {
+      "district": "Mainpuri",
+      "n_cells": 511,
+      "population": 2147035.0,
+      "y_crore": 7652.871315941998,
+      "gdp_crore": 7652.871315941999,
+      "median_gdp_per_capita_inr": 30978.2194627434
+    },
+    {
+      "district": "Amethi",
+      "n_cells": 522,
+      "population": 2566301.0,
+      "y_crore": 7536.115375624839,
+      "gdp_crore": 7536.115375624839,
+      "median_gdp_per_capita_inr": 27163.343712013437
+    },
+    {
+      "district": "Mahoba",
+      "n_cells": 621,
+      "population": 1052277.0,
+      "y_crore": 7451.5838180086685,
+      "gdp_crore": 7451.583818008669,
+      "median_gdp_per_capita_inr": 57829.78084799713
+    },
+    {
+      "district": "Kaushambi",
+      "n_cells": 354,
+      "population": 1979020.0,
+      "y_crore": 7355.4171838304155,
+      "gdp_crore": 7355.4171838304155,
+      "median_gdp_per_capita_inr": 31919.404381706277
+    },
+    {
+      "district": "Lalitpur",
+      "n_cells": 1015,
+      "population": 1521665.0,
+      "y_crore": 7128.952243302162,
+      "gdp_crore": 7128.952243302163,
+      "median_gdp_per_capita_inr": 34127.36928485772
+    },
+    {
+      "district": "Kasganj",
+      "n_cells": 385,
+      "population": 1665655.0,
+      "y_crore": 7024.998633121771,
+      "gdp_crore": 7024.9986331217715,
+      "median_gdp_per_capita_inr": 36018.644540457026
+    },
+    {
+      "district": "Bhadohi",
+      "n_cells": 197,
+      "population": 1889052.0,
+      "y_crore": 6708.101633628518,
+      "gdp_crore": 6708.101633628519,
+      "median_gdp_per_capita_inr": 30811.04072562005
+    },
+    {
+      "district": "Chandauli",
+      "n_cells": 493,
+      "population": 2224676.0,
+      "y_crore": 6437.904259461513,
+      "gdp_crore": 6437.904259461513,
+      "median_gdp_per_capita_inr": 17503.833898516714
+    },
+    {
+      "district": "Balrampur",
+      "n_cells": 628,
+      "population": 2491771.0,
+      "y_crore": 5760.411533906513,
+      "gdp_crore": 5760.411533906514,
+      "median_gdp_per_capita_inr": 21086.894975837007
+    },
+    {
+      "district": "Auraiya",
+      "n_cells": 395,
+      "population": 1642820.0,
+      "y_crore": 5452.567755254836,
+      "gdp_crore": 5452.567755254836,
+      "median_gdp_per_capita_inr": 29633.491456804582
+    },
+    {
+      "district": "Sant Kabir Nagar",
+      "n_cells": 348,
+      "population": 2152820.0,
+      "y_crore": 5111.68419721264,
+      "gdp_crore": 5111.68419721264,
+      "median_gdp_per_capita_inr": 22356.027053943195
+    },
+    {
+      "district": "Shrawasti",
+      "n_cells": 374,
+      "population": 1427033.0,
+      "y_crore": 4331.932669579423,
+      "gdp_crore": 4331.932669579423,
+      "median_gdp_per_capita_inr": 28886.549411313103
+    },
+    {
+      "district": "Chitrakoot",
+      "n_cells": 620,
+      "population": 1261082.0,
+      "y_crore": 4057.3737852248005,
+      "gdp_crore": 4057.3737852247996,
+      "median_gdp_per_capita_inr": 23997.322813058774
+    }
+  ],
+  "metros": {
+    "NCR (UP districts)": [
+      "Gautam Buddha Nagar",
+      "Ghaziabad",
+      "Meerut",
+      "Bulandshahr",
+      "Hapur",
+      "Baghpat"
+    ]
+  },
+  "center": [
+    80.9,
+    26.85
+  ],
+  "zoom": 6.0,
+  "metrics": [
+    {
+      "id": "wealth_index",
+      "label": "Wealth index",
+      "units": "percentile 0\u00e2\u20ac\u201c100",
+      "group": "Model output",
+      "default": true
+    },
+    {
+      "id": "gdp_per_capita_inr",
+      "label": "Allocated GDDP per capita",
+      "units": "\u00e2\u201a\u00b9/person",
+      "group": "Model output"
+    },
+    {
+      "id": "gdp_crore",
+      "label": "Allocated cell GDDP",
+      "units": "\u00e2\u201a\u00b9 crore",
+      "group": "Model output"
+    },
+    {
+      "id": "intensity_raw",
+      "label": "Economic intensity s_i (pre-scale)",
+      "units": "index",
+      "group": "Model output"
+    },
+    {
+      "id": "population",
+      "label": "Population",
+      "units": "people",
+      "group": "Input"
+    },
+    {
+      "id": "night_lights",
+      "label": "Night lights",
+      "units": "nW/cm\u00c2\u00b2/sr",
+      "group": "Input"
+    },
+    {
+      "id": "road_km",
+      "label": "Road length",
+      "units": "km",
+      "group": "Input"
+    },
+    {
+      "id": "poi_count",
+      "label": "OSM POIs (all groups)",
+      "units": "count",
+      "group": "Input"
+    },
+    {
+      "id": "building_area_m2",
+      "label": "Building footprint area",
+      "units": "m\u00c2\u00b2",
+      "group": "Input"
+    },
+    {
+      "id": "building_count",
+      "label": "Building count",
+      "units": "buildings",
+      "group": "Input"
+    },
+    {
+      "id": "building_share",
+      "label": "Built-up share of cell",
+      "units": "share 0\u00e2\u20ac\u201c1",
+      "group": "Input"
+    },
+    {
+      "id": "landuse_residential",
+      "label": "Landuse: residential",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_commercial",
+      "label": "Landuse: commercial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_industrial",
+      "label": "Landuse: industrial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "poi_amenity_restaurant",
+      "label": "Restaurants",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_hospital",
+      "label": "Hospitals",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_bank",
+      "label": "Banks",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_leisure",
+      "label": "Leisure sites",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_office",
+      "label": "Offices",
+      "units": "count",
+      "group": "POI class"
+    }
+  ],
+  "source": {
+    "gddp_year": "2021-22",
+    "price_basis": "constant",
+    "base_year": "2011-12",
+    "units": "INR crore",
+    "page": "https://updes.up.nic.in/updes/dist_domestic_product.html",
+    "notes": [
+      "DES Uttar Pradesh, Gross District Domestic Product by economic activity 2021-22 (tentative), base 2011-12, constant prices, \u20b9 crore.",
+      "Row used is 'GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)'. The four regional aggregates and the state total are dropped.",
+      "A 'GDDP Current.xlsx' sits beside it; the constant-price sheet is used so the series is real."
+    ],
+    "total_crore": 1181361.313690744,
+    "population_product": "Kontur Population India 2023 (H3 R8 summed to R7)",
+    "total_population": 239532136.0,
+    "nightlights_product": "VIIRS VNL v2.2 average_masked (annual mean radiance)",
+    "nightlights_year": "2025",
+    "nightlights_used": true,
+    "osm": "OpenStreetMap via Geofabrik extract (ODbL)"
+  },
+  "evaluation": {
+    "max_abs_rel_recon_error": 1.880377538552882e-16,
+    "ensemble": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pre_scale_district_log_loss": 0.11258101947555849,
+      "caption": "ensemble range across seeds, not a calibrated probability of error."
+    },
+    "holdout": {
+      "holdout_districts": [
+        "Aligarh",
+        "Ambedkar Nagar",
+        "Auraiya",
+        "Banda",
+        "Bijnor",
+        "Chandauli",
+        "Gorakhpur",
+        "Hathras",
+        "Jhansi",
+        "Kaushambi",
+        "Lakhimpur Kheri",
+        "Mainpuri",
+        "Moradabad",
+        "Sant Kabir Nagar",
+        "Sultanpur"
+      ],
+      "n_train_districts": 60,
+      "n_holdout_districts": 15,
+      "pre_scale_holdout_mape": 0.9844307332958385,
+      "final_loss": 0.18836582443623778,
+      "note": "MAPE is on district sums BEFORE dasymetric scale. Post-scale reconstruction \u2248 0 is conservation, not accuracy."
+    },
+    "ablation_ntl": {
+      "runs": [
+        {
+          "tag": "with_ntl",
+          "n_features": 94,
+          "pre_scale_district_log_loss": 0.12839643175383827,
+          "final_train_loss": 0.15461143451889708
+        },
+        {
+          "tag": "without_ntl",
+          "n_features": 92,
+          "pre_scale_district_log_loss": 0.1477909747895138,
+          "final_train_loss": 0.15373004628608655
+        }
+      ],
+      "note": "Ablation compares pre-scale district log-loss with and without night_lights features. NTL is in the model when the raster is present."
+    },
+    "spearman": {
+      "wealth_index_vs_night_lights": 0.17300154012061048,
+      "wealth_index_vs_road_km": 0.17754347752513325,
+      "wealth_index_vs_poi_count": 0.20914275785138783,
+      "gdp_per_capita_vs_night_lights": 0.17300154012061048,
+      "note": "Spearman vs NTL/roads/POIs is a sanity check, not truth. wealth_index is not a DHS score."
+    }
+  },
+  "caption": "ensemble range across seeds, not a calibrated probability of error.",
+  "disclaimer": "Cell GDP is an allocation of official district GDP, not a measurement. wealth_index is not a DHS score."
+}

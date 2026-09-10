@@ -1,0 +1,27 @@
+{
+  "url": "https://desddp.rajasthan.gov.in/PDF/Publication_12102024%20102450%20AM.pdf",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T15:01:32.884591+00:00",
+  "license": "State DES / official statistical publication (open government data)",
+  "units": "INR crore",
+  "status": "ok",
+  "kind": "pdf_table",
+  "year": "2023-24",
+  "price_basis": "constant",
+  "base_year": "2011-12",
+  "source_file": "rajasthan_ddp_2023_24.pdf",
+  "provenance": {
+    "parser": "pdf_table",
+    "table": "Table 3: Gross District Domestic Product of Rajasthan at Constant (2011-12) Prices",
+    "year_column": "2023-24",
+    "pages": [
+      37
+    ],
+    "published_units": "INR lakh (rescaled to crore)",
+    "n_districts": 33
+  },
+  "notes": [
+    "DES Rajasthan, 'Estimates of District Domestic Product of Rajasthan 2011-12 to 2023-24' (Nov 2024), Table 3: GDDP at constant 2011-12 prices, ₹ lakh, 2023-24 (provisional).",
+    "The publication uses the 33-district structure, which matches the geoBoundaries ADM2 layer one-to-one."
+  ]
+}

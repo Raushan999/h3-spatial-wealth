@@ -1,0 +1,538 @@
+{
+  "state": "KA",
+  "name": "Karnataka",
+  "n_r7": 37430,
+  "n_r6": 5583,
+  "districts": [
+    "Bagalkote",
+    "Ballari",
+    "Belagavi",
+    "Bengaluru Rural",
+    "Bengaluru Urban",
+    "Bidar",
+    "Chamarajanagar",
+    "Chikkaballapura",
+    "Chikkamagaluru",
+    "Chitradurga",
+    "Dakshina Kannada",
+    "Davanagere",
+    "Dharwad",
+    "Gadag",
+    "Hassan",
+    "Haveri",
+    "Kalaburagi",
+    "Kodagu",
+    "Kolar",
+    "Koppal",
+    "Mandya",
+    "Mysuru",
+    "Raichur",
+    "Ramanagara",
+    "Shivamogga",
+    "Tumakuru",
+    "Udupi",
+    "Uttara Kannada",
+    "Vijayapura",
+    "Yadgir"
+  ],
+  "district_files": {
+    "Bagalkote": "r7/bagalkote.json",
+    "Ballari": "r7/ballari.json",
+    "Belagavi": "r7/belagavi.json",
+    "Bengaluru Rural": "r7/bengaluru-rural.json",
+    "Bengaluru Urban": "r7/bengaluru-urban.json",
+    "Bidar": "r7/bidar.json",
+    "Chamarajanagar": "r7/chamarajanagar.json",
+    "Chikkaballapura": "r7/chikkaballapura.json",
+    "Chikkamagaluru": "r7/chikkamagaluru.json",
+    "Chitradurga": "r7/chitradurga.json",
+    "Dakshina Kannada": "r7/dakshina-kannada.json",
+    "Davanagere": "r7/davanagere.json",
+    "Dharwad": "r7/dharwad.json",
+    "Gadag": "r7/gadag.json",
+    "Hassan": "r7/hassan.json",
+    "Haveri": "r7/haveri.json",
+    "Kalaburagi": "r7/kalaburagi.json",
+    "Kodagu": "r7/kodagu.json",
+    "Kolar": "r7/kolar.json",
+    "Koppal": "r7/koppal.json",
+    "Mandya": "r7/mandya.json",
+    "Mysuru": "r7/mysuru.json",
+    "Raichur": "r7/raichur.json",
+    "Ramanagara": "r7/ramanagara.json",
+    "Shivamogga": "r7/shivamogga.json",
+    "Tumakuru": "r7/tumakuru.json",
+    "Udupi": "r7/udupi.json",
+    "Uttara Kannada": "r7/uttara-kannada.json",
+    "Vijayapura": "r7/vijayapura.json",
+    "Yadgir": "r7/yadgir.json"
+  },
+  "district_table": [
+    {
+      "district": "Bengaluru Urban",
+      "n_cells": 393,
+      "population": 13501654.0,
+      "y_crore": 635380.0,
+      "gdp_crore": 635380.0,
+      "median_gdp_per_capita_inr": 260230.12847117975
+    },
+    {
+      "district": "Dakshina Kannada",
+      "n_cells": 1024,
+      "population": 2447425.0,
+      "y_crore": 91011.0,
+      "gdp_crore": 91011.0,
+      "median_gdp_per_capita_inr": 118237.47443451146
+    },
+    {
+      "district": "Belagavi",
+      "n_cells": 2684,
+      "population": 5535985.0,
+      "y_crore": 61133.0,
+      "gdp_crore": 61133.0,
+      "median_gdp_per_capita_inr": 74926.26164625437
+    },
+    {
+      "district": "Tumakuru",
+      "n_cells": 2031,
+      "population": 2831835.0,
+      "y_crore": 56518.0,
+      "gdp_crore": 56518.0,
+      "median_gdp_per_capita_inr": 137116.42635408908
+    },
+    {
+      "district": "Ballari",
+      "n_cells": 1622,
+      "population": 2967849.0,
+      "y_crore": 54605.0,
+      "gdp_crore": 54605.0,
+      "median_gdp_per_capita_inr": 95525.82116412006
+    },
+    {
+      "district": "Mysuru",
+      "n_cells": 1229,
+      "population": 3537573.0,
+      "y_crore": 53757.0,
+      "gdp_crore": 53757.0,
+      "median_gdp_per_capita_inr": 56898.709716308265
+    },
+    {
+      "district": "Udupi",
+      "n_cells": 713,
+      "population": 1091208.0,
+      "y_crore": 43057.0,
+      "gdp_crore": 43057.0,
+      "median_gdp_per_capita_inr": 196808.80211568516
+    },
+    {
+      "district": "Shivamogga",
+      "n_cells": 1660,
+      "population": 1929231.0,
+      "y_crore": 41523.0,
+      "gdp_crore": 41523.0,
+      "median_gdp_per_capita_inr": 104732.87027197529
+    },
+    {
+      "district": "Dharwad",
+      "n_cells": 840,
+      "population": 2064041.0,
+      "y_crore": 38164.0,
+      "gdp_crore": 38164.0,
+      "median_gdp_per_capita_inr": 64966.14699275762
+    },
+    {
+      "district": "Mandya",
+      "n_cells": 945,
+      "population": 1723798.0,
+      "y_crore": 37556.0,
+      "gdp_crore": 37556.0,
+      "median_gdp_per_capita_inr": 160530.8243965931
+    },
+    {
+      "district": "Bagalkote",
+      "n_cells": 1324,
+      "population": 2103908.0,
+      "y_crore": 37049.0,
+      "gdp_crore": 37049.0,
+      "median_gdp_per_capita_inr": 132743.99286510292
+    },
+    {
+      "district": "Hassan",
+      "n_cells": 1312,
+      "population": 1871955.0,
+      "y_crore": 36257.0,
+      "gdp_crore": 36257.0,
+      "median_gdp_per_capita_inr": 142258.83240700886
+    },
+    {
+      "district": "Chikkamagaluru",
+      "n_cells": 1363,
+      "population": 1182089.0,
+      "y_crore": 33976.0,
+      "gdp_crore": 33976.0,
+      "median_gdp_per_capita_inr": 233019.49094821437
+    },
+    {
+      "district": "Vijayapura",
+      "n_cells": 2065,
+      "population": 2652729.0,
+      "y_crore": 28949.0,
+      "gdp_crore": 28949.0,
+      "median_gdp_per_capita_inr": 75513.46423763914
+    },
+    {
+      "district": "Kalaburagi",
+      "n_cells": 2123,
+      "population": 2937401.0,
+      "y_crore": 28204.0,
+      "gdp_crore": 28204.0,
+      "median_gdp_per_capita_inr": 48822.82281493156
+    },
+    {
+      "district": "Uttara Kannada",
+      "n_cells": 2076,
+      "population": 1564987.0,
+      "y_crore": 26692.0,
+      "gdp_crore": 26692.0,
+      "median_gdp_per_capita_inr": 79533.88103379212
+    },
+    {
+      "district": "Kolar",
+      "n_cells": 768,
+      "population": 1684918.0,
+      "y_crore": 25472.0,
+      "gdp_crore": 25472.0,
+      "median_gdp_per_capita_inr": 118353.27029051044
+    },
+    {
+      "district": "Raichur",
+      "n_cells": 1636,
+      "population": 2166779.0,
+      "y_crore": 25151.0,
+      "gdp_crore": 25151.0,
+      "median_gdp_per_capita_inr": 80750.8995598917
+    },
+    {
+      "district": "Davanagere",
+      "n_cells": 1159,
+      "population": 2136400.0,
+      "y_crore": 24954.0,
+      "gdp_crore": 24953.999999999996,
+      "median_gdp_per_capita_inr": 60760.707935660685
+    },
+    {
+      "district": "Bengaluru Rural",
+      "n_cells": 440,
+      "population": 1459622.0,
+      "y_crore": 24393.0,
+      "gdp_crore": 24392.999999999996,
+      "median_gdp_per_capita_inr": 128634.60048662967
+    },
+    {
+      "district": "Ramanagara",
+      "n_cells": 661,
+      "population": 1158036.0,
+      "y_crore": 24371.0,
+      "gdp_crore": 24371.0,
+      "median_gdp_per_capita_inr": 168583.14406860838
+    },
+    {
+      "district": "Chitradurga",
+      "n_cells": 1624,
+      "population": 1818882.0,
+      "y_crore": 23604.0,
+      "gdp_crore": 23604.0,
+      "median_gdp_per_capita_inr": 100221.30443425913
+    },
+    {
+      "district": "Bidar",
+      "n_cells": 1056,
+      "population": 1894576.0,
+      "y_crore": 21778.0,
+      "gdp_crore": 21778.0,
+      "median_gdp_per_capita_inr": 72037.38782062086
+    },
+    {
+      "district": "Haveri",
+      "n_cells": 953,
+      "population": 1621301.0,
+      "y_crore": 21541.0,
+      "gdp_crore": 21541.0,
+      "median_gdp_per_capita_inr": 122619.49472911922
+    },
+    {
+      "district": "Chikkaballapura",
+      "n_cells": 796,
+      "population": 1326455.0,
+      "y_crore": 20400.0,
+      "gdp_crore": 20400.0,
+      "median_gdp_per_capita_inr": 117138.2740364455
+    },
+    {
+      "district": "Chamarajanagar",
+      "n_cells": 1097,
+      "population": 1098591.0,
+      "y_crore": 19092.0,
+      "gdp_crore": 19092.0,
+      "median_gdp_per_capita_inr": 154609.0491883866
+    },
+    {
+      "district": "Koppal",
+      "n_cells": 1102,
+      "population": 1589687.0,
+      "y_crore": 17699.0,
+      "gdp_crore": 17699.0,
+      "median_gdp_per_capita_inr": 78856.23100372977
+    },
+    {
+      "district": "Gadag",
+      "n_cells": 909,
+      "population": 1217904.0,
+      "y_crore": 15813.0,
+      "gdp_crore": 15813.0,
+      "median_gdp_per_capita_inr": 67315.09690656312
+    },
+    {
+      "district": "Yadgir",
+      "n_cells": 1021,
+      "population": 1386127.0,
+      "y_crore": 14860.0,
+      "gdp_crore": 14860.000000000002,
+      "median_gdp_per_capita_inr": 78559.2258253876
+    },
+    {
+      "district": "Kodagu",
+      "n_cells": 804,
+      "population": 587633.0,
+      "y_crore": 11257.0,
+      "gdp_crore": 11257.0,
+      "median_gdp_per_capita_inr": 137969.90160076707
+    }
+  ],
+  "metros": {
+    "Bengaluru metro": [
+      "Bengaluru Urban",
+      "Bengaluru Rural"
+    ]
+  },
+  "center": [
+    76.5,
+    15.0
+  ],
+  "zoom": 6.2,
+  "metrics": [
+    {
+      "id": "wealth_index",
+      "label": "Wealth index",
+      "units": "percentile 0\u00e2\u20ac\u201c100",
+      "group": "Model output",
+      "default": true
+    },
+    {
+      "id": "gdp_per_capita_inr",
+      "label": "Allocated GDDP per capita",
+      "units": "\u00e2\u201a\u00b9/person",
+      "group": "Model output"
+    },
+    {
+      "id": "gdp_crore",
+      "label": "Allocated cell GDDP",
+      "units": "\u00e2\u201a\u00b9 crore",
+      "group": "Model output"
+    },
+    {
+      "id": "intensity_raw",
+      "label": "Economic intensity s_i (pre-scale)",
+      "units": "index",
+      "group": "Model output"
+    },
+    {
+      "id": "population",
+      "label": "Population",
+      "units": "people",
+      "group": "Input"
+    },
+    {
+      "id": "night_lights",
+      "label": "Night lights",
+      "units": "nW/cm\u00c2\u00b2/sr",
+      "group": "Input"
+    },
+    {
+      "id": "road_km",
+      "label": "Road length",
+      "units": "km",
+      "group": "Input"
+    },
+    {
+      "id": "poi_count",
+      "label": "OSM POIs (all groups)",
+      "units": "count",
+      "group": "Input"
+    },
+    {
+      "id": "building_area_m2",
+      "label": "Building footprint area",
+      "units": "m\u00c2\u00b2",
+      "group": "Input"
+    },
+    {
+      "id": "building_count",
+      "label": "Building count",
+      "units": "buildings",
+      "group": "Input"
+    },
+    {
+      "id": "building_share",
+      "label": "Built-up share of cell",
+      "units": "share 0\u00e2\u20ac\u201c1",
+      "group": "Input"
+    },
+    {
+      "id": "landuse_residential",
+      "label": "Landuse: residential",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_commercial",
+      "label": "Landuse: commercial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_industrial",
+      "label": "Landuse: industrial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "poi_amenity_restaurant",
+      "label": "Restaurants",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_cafe",
+      "label": "Caf\u00c3\u00a9s",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_hospital",
+      "label": "Hospitals",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_bank",
+      "label": "Banks",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_supermarket",
+      "label": "Supermarkets",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_convenience",
+      "label": "Convenience stores",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_tourism_hotel",
+      "label": "Hotels",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_leisure",
+      "label": "Leisure sites",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_office",
+      "label": "Offices",
+      "units": "count",
+      "group": "POI class"
+    }
+  ],
+  "source": {
+    "gddp_year": "2024-25",
+    "price_basis": "constant",
+    "base_year": "2011-12",
+    "units": "INR crore",
+    "page": "https://data.opencity.in/dataset/economic-survey-of-karnataka-2025-26",
+    "notes": [
+      "DES Karnataka via OpenCity, Economic Survey 2025-26 district GDDP (constant prices).",
+      "geoBoundaries 2021 has no Bengaluru South or Vijayanagara polygons: those GDDP rows are merged into Bengaluru Urban and Ballari. Ramanagara has no GDDP row in this table so those ADM2 cells are dropped."
+    ],
+    "total_crore": 1594216.0,
+    "population_product": "Kontur Population India 2023 (H3 R8 summed to R7)",
+    "total_population": 71090579.0,
+    "nightlights_product": "VIIRS VNL v2.2 average_masked (annual mean radiance)",
+    "nightlights_year": "2025",
+    "nightlights_used": true,
+    "osm": "OpenStreetMap via Geofabrik extract (ODbL)"
+  },
+  "evaluation": {
+    "max_abs_rel_recon_error": 1.5984484666352398e-16,
+    "ensemble": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pre_scale_district_log_loss": 0.0678408170888771,
+      "caption": "ensemble range across seeds, not a calibrated probability of error."
+    },
+    "holdout": {
+      "holdout_districts": [
+        "Ballari",
+        "Chikkaballapura",
+        "Chikkamagaluru",
+        "Gadag",
+        "Kalaburagi",
+        "Mysuru"
+      ],
+      "n_train_districts": 24,
+      "n_holdout_districts": 6,
+      "pre_scale_holdout_mape": 1.694550800617818,
+      "final_loss": 0.06555246262544126,
+      "note": "MAPE is on district sums BEFORE dasymetric scale. Post-scale reconstruction \u2248 0 is conservation, not accuracy."
+    },
+    "ablation_ntl": {
+      "runs": [
+        {
+          "tag": "with_ntl",
+          "n_features": 94,
+          "pre_scale_district_log_loss": 0.13982922360245953,
+          "final_train_loss": 0.06837235175104131
+        },
+        {
+          "tag": "without_ntl",
+          "n_features": 92,
+          "pre_scale_district_log_loss": 0.16841834467435177,
+          "final_train_loss": 0.08724642928743918
+        }
+      ],
+      "note": "Ablation compares pre-scale district log-loss with and without night_lights features. NTL is in the model when the raster is present."
+    },
+    "spearman": {
+      "wealth_index_vs_night_lights": 0.4841725376138383,
+      "wealth_index_vs_road_km": 0.37334643081110225,
+      "wealth_index_vs_poi_count": 0.2619304639032442,
+      "gdp_per_capita_vs_night_lights": 0.4841725376138383,
+      "note": "Spearman vs NTL/roads/POIs is a sanity check, not truth. wealth_index is not a DHS score."
+    }
+  },
+  "caption": "ensemble range across seeds, not a calibrated probability of error.",
+  "disclaimer": "Cell GDP is an allocation of official district GDP, not a measurement. wealth_index is not a DHS score."
+}

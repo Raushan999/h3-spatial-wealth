@@ -1,0 +1,16 @@
+{
+  "url": "https://download.geofabrik.de/asia/india/central-zone-latest.osm.pbf",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T14:37:43.297939+00:00",
+  "license": "ODbL 1.0 (OpenStreetMap contributors, via Geofabrik)",
+  "units": "OSM objects (roads, building footprints, landuse polygons, POI nodes/ways)",
+  "status": "ok",
+  "zone": "central-zone",
+  "page": "https://download.geofabrik.de/asia/india.html",
+  "path": "D:\\CursorProjects\\spatialdisintegration\\data\\raw\\osm\\IN\\central-zone-latest.osm.pbf",
+  "size_bytes": 350979237,
+  "used_by_states": [
+    "UP"
+  ],
+  "reason": "state-wide building footprints are not retrievable from Overpass without timeouts"
+}

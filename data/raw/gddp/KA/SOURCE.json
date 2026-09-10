@@ -1,0 +1,17 @@
+{
+  "url": "https://data.opencity.in/api/3/action/datastore_search?resource_id=27684453-1635-4571-b5f1-94c706303037&limit=200",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T14:47:16.877934+00:00",
+  "license": "OpenCity public-domain extract of state Economic Survey / DES table",
+  "units": "INR crore",
+  "status": "ok",
+  "page": "https://data.opencity.in/dataset/economic-survey-of-karnataka-2025-26",
+  "year": "2024-25",
+  "price_basis": "constant",
+  "base_year": "2011-12",
+  "value_field": "GDDP Constant Prices (Rs. Cr)",
+  "notes": [
+    "DES Karnataka via OpenCity, Economic Survey 2025-26 district GDDP (constant prices).",
+    "geoBoundaries 2021 has no Bengaluru South or Vijayanagara polygons: those GDDP rows are merged into Bengaluru Urban and Ballari. Ramanagara has no GDDP row in this table so those ADM2 cells are dropped."
+  ]
+}

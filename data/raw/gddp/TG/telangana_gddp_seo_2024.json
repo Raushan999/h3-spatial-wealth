@@ -1,0 +1,235 @@
+{
+  "help": "https://data.opencity.in/api/3/action/help_show?name=datastore_search",
+  "success": true,
+  "result": {
+    "include_total": true,
+    "limit": 200,
+    "records_format": "objects",
+    "resource_id": "9acd8282-8081-4a46-af8b-dbd1ba57adac",
+    "total_estimation_threshold": null,
+    "records": [
+      {
+        "_id": 1,
+        "District": "Adilabad",
+        "GDDP (Cr) at Current Prices 2022-23": "17,190",
+        "PCI (Rs.) Current Prices 2022-23": "2,03,283"
+      },
+      {
+        "_id": 2,
+        "District": "Bhadradri",
+        "GDDP (Cr) at Current Prices 2022-23": "34,215",
+        "PCI (Rs.) Current Prices 2022-23": "2,64,408"
+      },
+      {
+        "_id": 3,
+        "District": "Hanumakonda",
+        "GDDP (Cr) at Current Prices 2022-23": "23,869",
+        "PCI (Rs.) Current Prices 2022-23": "1,86,784"
+      },
+      {
+        "_id": 4,
+        "District": "Hyderabad",
+        "GDDP (Cr) at Current Prices 2022-23": "2,28,623",
+        "PCI (Rs.) Current Prices 2022-23": "4,94,033"
+      },
+      {
+        "_id": 5,
+        "District": "Jagtial",
+        "GDDP (Cr) at Current Prices 2022-23": "21,217",
+        "PCI (Rs.) Current Prices 2022-23": "1,83,094"
+      },
+      {
+        "_id": 6,
+        "District": "Jangaon",
+        "GDDP (Cr) at Current Prices 2022-23": "13,593",
+        "PCI (Rs.) Current Prices 2022-23": "2,17,277"
+      },
+      {
+        "_id": 7,
+        "District": "Jayashankar",
+        "GDDP (Cr) at Current Prices 2022-23": "13,809",
+        "PCI (Rs.) Current Prices 2022-23": "2,71,555"
+      },
+      {
+        "_id": 8,
+        "District": "Jogulamba Gadwal",
+        "GDDP (Cr) at Current Prices 2022-23": "14,219",
+        "PCI (Rs.) Current Prices 2022-23": "1,98,553"
+      },
+      {
+        "_id": 9,
+        "District": "Kamareddy",
+        "GDDP (Cr) at Current Prices 2022-23": "22,053",
+        "PCI (Rs.) Current Prices 2022-23": "1,92,329"
+      },
+      {
+        "_id": 10,
+        "District": "Karimnagar",
+        "GDDP (Cr) at Current Prices 2022-23": "26,603",
+        "PCI (Rs.) Current Prices 2022-23": "2,22,628"
+      },
+      {
+        "_id": 11,
+        "District": "Khammam",
+        "GDDP (Cr) at Current Prices 2022-23": "40,803",
+        "PCI (Rs.) Current Prices 2022-23": "2,44,647"
+      },
+      {
+        "_id": 12,
+        "District": "Kumuram Bheem",
+        "GDDP (Cr) at Current Prices 2022-23": "11,136",
+        "PCI (Rs.) Current Prices 2022-23": "1,81,825"
+      },
+      {
+        "_id": 13,
+        "District": "Mahabubabad",
+        "GDDP (Cr) at Current Prices 2022-23": "18,172",
+        "PCI (Rs.) Current Prices 2022-23": "1,99,588"
+      },
+      {
+        "_id": 14,
+        "District": "Mahabubnagar",
+        "GDDP (Cr) at Current Prices 2022-23": "28,960",
+        "PCI (Rs.) Current Prices 2022-23": "2,61,346"
+      },
+      {
+        "_id": 15,
+        "District": "Mancherial",
+        "GDDP (Cr) at Current Prices 2022-23": "21,395",
+        "PCI (Rs.) Current Prices 2022-23": "2,19,601"
+      },
+      {
+        "_id": 16,
+        "District": "Medak",
+        "GDDP (Cr) at Current Prices 2022-23": "23,558",
+        "PCI (Rs.) Current Prices 2022-23": "2,55,263"
+      },
+      {
+        "_id": 17,
+        "District": "Medchal-Malkajgiri",
+        "GDDP (Cr) at Current Prices 2022-23": "88,867",
+        "PCI (Rs.) Current Prices 2022-23": "2,95,514"
+      },
+      {
+        "_id": 18,
+        "District": "Mulugu",
+        "GDDP (Cr) at Current Prices 2022-23": "6,914",
+        "PCI (Rs.) Current Prices 2022-23": "1,97,539"
+      },
+      {
+        "_id": 19,
+        "District": "Nagarkurnool",
+        "GDDP (Cr) at Current Prices 2022-23": "21,277",
+        "PCI (Rs.) Current Prices 2022-23": "2,10,915"
+      },
+      {
+        "_id": 20,
+        "District": "Nalgonda",
+        "GDDP (Cr) at Current Prices 2022-23": "50,616",
+        "PCI (Rs.) Current Prices 2022-23": "2,62,330"
+      },
+      {
+        "_id": 21,
+        "District": "Narayanpet",
+        "GDDP (Cr) at Current Prices 2022-23": "12,980",
+        "PCI (Rs.) Current Prices 2022-23": "1,97,020"
+      },
+      {
+        "_id": 22,
+        "District": "Nirmal",
+        "GDDP (Cr) at Current Prices 2022-23": "16,956",
+        "PCI (Rs.) Current Prices 2022-23": "2,03,326"
+      },
+      {
+        "_id": 23,
+        "District": "Nizamabad",
+        "GDDP (Cr) at Current Prices 2022-23": "36,536",
+        "PCI (Rs.) Current Prices 2022-23": "1,96,898"
+      },
+      {
+        "_id": 24,
+        "District": "Peddapalli",
+        "GDDP (Cr) at Current Prices 2022-23": "22,353",
+        "PCI (Rs.) Current Prices 2022-23": "2,31,766"
+      },
+      {
+        "_id": 25,
+        "District": "Rajanna Sircilla",
+        "GDDP (Cr) at Current Prices 2022-23": "12,778",
+        "PCI (Rs.) Current Prices 2022-23": "1,95,479"
+      },
+      {
+        "_id": 26,
+        "District": "Rangareddy",
+        "GDDP (Cr) at Current Prices 2022-23": "2,83,419",
+        "PCI (Rs.) Current Prices 2022-23": "9,46,862"
+      },
+      {
+        "_id": 27,
+        "District": "Sangareddy",
+        "GDDP (Cr) at Current Prices 2022-23": "60,401",
+        "PCI (Rs.) Current Prices 2022-23": "3,22,394"
+      },
+      {
+        "_id": 28,
+        "District": "Siddipet",
+        "GDDP (Cr) at Current Prices 2022-23": "28,030",
+        "PCI (Rs.) Current Prices 2022-23": "2,35,218"
+      },
+      {
+        "_id": 29,
+        "District": "Suryapet",
+        "GDDP (Cr) at Current Prices 2022-23": "30,003",
+        "PCI (Rs.) Current Prices 2022-23": "2,31,041"
+      },
+      {
+        "_id": 30,
+        "District": "Vikarabad",
+        "GDDP (Cr) at Current Prices 2022-23": "19,840",
+        "PCI (Rs.) Current Prices 2022-23": "1,80,241"
+      },
+      {
+        "_id": 31,
+        "District": "Wanaparthy",
+        "GDDP (Cr) at Current Prices 2022-23": "14,151",
+        "PCI (Rs.) Current Prices 2022-23": "2,09,390"
+      },
+      {
+        "_id": 32,
+        "District": "Warangal",
+        "GDDP (Cr) at Current Prices 2022-23": "18,887",
+        "PCI (Rs.) Current Prices 2022-23": "2,22,640"
+      },
+      {
+        "_id": 33,
+        "District": "Yadadri",
+        "GDDP (Cr) at Current Prices 2022-23": "24,611",
+        "PCI (Rs.) Current Prices 2022-23": "2,67,605"
+      }
+    ],
+    "fields": [
+      {
+        "id": "_id",
+        "type": "int"
+      },
+      {
+        "id": "District",
+        "type": "text"
+      },
+      {
+        "id": "GDDP (Cr) at Current Prices 2022-23",
+        "type": "text"
+      },
+      {
+        "id": "PCI (Rs.) Current Prices 2022-23",
+        "type": "text"
+      }
+    ],
+    "_links": {
+      "start": "/api/3/action/datastore_search?resource_id=9acd8282-8081-4a46-af8b-dbd1ba57adac&limit=200",
+      "next": "/api/3/action/datastore_search?resource_id=9acd8282-8081-4a46-af8b-dbd1ba57adac&limit=200&offset=200"
+    },
+    "total": 33,
+    "total_was_estimated": false
+  }
+}

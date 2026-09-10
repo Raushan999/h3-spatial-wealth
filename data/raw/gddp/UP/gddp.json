@@ -1,0 +1,399 @@
+{
+  "records": [
+    {
+      "district": "Saharanpur",
+      "y_crore": 21481.047708168142,
+      "source_name": "Saharanpur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Muzaffar Nagar",
+      "y_crore": 19376.234644445114,
+      "source_name": "Muzaffar Nagar — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Shamli",
+      "y_crore": 7751.98068975636,
+      "source_name": "Shamli — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Bijnor",
+      "y_crore": 24737.847689351205,
+      "source_name": "Bijnor — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Moradabad",
+      "y_crore": 22030.4190160645,
+      "source_name": "Moradabad — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Sambhal",
+      "y_crore": 10224.369910832918,
+      "source_name": "Sambhal — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Rampur",
+      "y_crore": 14819.85296194971,
+      "source_name": "Rampur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Amroha",
+      "y_crore": 15490.103617766694,
+      "source_name": "Amroha — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Meerut",
+      "y_crore": 37742.83292696431,
+      "source_name": "Meerut — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Baghpat",
+      "y_crore": 8379.143657753375,
+      "source_name": "Baghpat — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Ghaziabad",
+      "y_crore": 36568.60796404618,
+      "source_name": "Ghaziabad — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Hapur",
+      "y_crore": 10144.400315537123,
+      "source_name": "Hapur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Gautambudh Nagar",
+      "y_crore": 110278.7346191287,
+      "source_name": "Gautambudh Nagar — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Buland Shahar",
+      "y_crore": 22837.016094818606,
+      "source_name": "Buland Shahar — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Aligarh",
+      "y_crore": 19970.784147251205,
+      "source_name": "Aligarh — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Hathras",
+      "y_crore": 10947.291515343504,
+      "source_name": "Hathras — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Mathura",
+      "y_crore": 13656.47062249287,
+      "source_name": "Mathura — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Agra",
+      "y_crore": 41501.227998089154,
+      "source_name": "Agra — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Firozabad",
+      "y_crore": 14190.342512920977,
+      "source_name": "Firozabad — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Etah",
+      "y_crore": 8528.912236279437,
+      "source_name": "Etah — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Kasganj",
+      "y_crore": 7024.998633121771,
+      "source_name": "Kasganj — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Mainpuri",
+      "y_crore": 7652.871315941998,
+      "source_name": "Mainpuri — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Badaun",
+      "y_crore": 14846.097480259998,
+      "source_name": "Badaun — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Bareilly",
+      "y_crore": 31609.350558681857,
+      "source_name": "Bareilly — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Pilibhit",
+      "y_crore": 11667.330551980456,
+      "source_name": "Pilibhit — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Shahjahanpur",
+      "y_crore": 14842.345257688055,
+      "source_name": "Shahjahanpur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Farrukhabad",
+      "y_crore": 8005.7357259831,
+      "source_name": "Farrukhabad — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Kannauj",
+      "y_crore": 8851.508415906113,
+      "source_name": "Kannauj — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Etawah",
+      "y_crore": 8727.187804070705,
+      "source_name": "Etawah — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Auraiyya",
+      "y_crore": 5452.567755254836,
+      "source_name": "Auraiyya — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Kheri",
+      "y_crore": 20779.854333664032,
+      "source_name": "Kheri — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Sitapur",
+      "y_crore": 20538.89510686898,
+      "source_name": "Sitapur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Hardoi",
+      "y_crore": 15835.371015561801,
+      "source_name": "Hardoi — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Unnao",
+      "y_crore": 14895.165602610541,
+      "source_name": "Unnao — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Lucknow",
+      "y_crore": 48865.96937337202,
+      "source_name": "Lucknow — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Raebareilly",
+      "y_crore": 11346.617810031927,
+      "source_name": "Raebareilly — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Kanpur Dehat",
+      "y_crore": 9187.526113198139,
+      "source_name": "Kanpur Dehat — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Kanpur Nagar",
+      "y_crore": 34644.69015391185,
+      "source_name": "Kanpur Nagar — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Fatehpur",
+      "y_crore": 13552.045598482126,
+      "source_name": "Fatehpur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Barabanki",
+      "y_crore": 15755.699799588205,
+      "source_name": "Barabanki — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Jalaun",
+      "y_crore": 9713.115172496715,
+      "source_name": "Jalaun — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Jhansi",
+      "y_crore": 13535.488334448508,
+      "source_name": "Jhansi — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Lalitpur",
+      "y_crore": 7128.952243302162,
+      "source_name": "Lalitpur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Hamirpur",
+      "y_crore": 10602.449337885962,
+      "source_name": "Hamirpur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Mahoba",
+      "y_crore": 7451.5838180086685,
+      "source_name": "Mahoba — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Banda",
+      "y_crore": 11053.147693861438,
+      "source_name": "Banda — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Chitrakoot",
+      "y_crore": 4057.3737852248005,
+      "source_name": "Chitrakoot — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Pratapgarh",
+      "y_crore": 9450.072374939075,
+      "source_name": "Pratapgarh — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Kaushambi",
+      "y_crore": 7355.4171838304155,
+      "source_name": "Kaushambi — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Prayagraj",
+      "y_crore": 39771.737815195665,
+      "source_name": "Prayagraj — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Ayodhya",
+      "y_crore": 11081.235969750107,
+      "source_name": "Ayodhya — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Ambedkar Nagar",
+      "y_crore": 8822.162639700158,
+      "source_name": "Ambedkar Nagar — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Sultanpur",
+      "y_crore": 10063.046844627148,
+      "source_name": "Sultanpur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Amethi",
+      "y_crore": 7536.115375624839,
+      "source_name": "Amethi — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Bahraich",
+      "y_crore": 10646.06627043694,
+      "source_name": "Bahraich — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Shravasti",
+      "y_crore": 4331.932669579423,
+      "source_name": "Shravasti — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Balrampur",
+      "y_crore": 5760.411533906513,
+      "source_name": "Balrampur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Gonda",
+      "y_crore": 12037.723099999348,
+      "source_name": "Gonda — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Siddharth Nagar",
+      "y_crore": 8049.660466436365,
+      "source_name": "Siddharth Nagar — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Basti",
+      "y_crore": 9427.61632952466,
+      "source_name": "Basti — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Sant Kabeer Nagar",
+      "y_crore": 5111.68419721264,
+      "source_name": "Sant Kabeer Nagar — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Maharajganj",
+      "y_crore": 8950.120599592947,
+      "source_name": "Maharajganj — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Gorakhpur",
+      "y_crore": 20116.28681622085,
+      "source_name": "Gorakhpur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Kushi Nagar",
+      "y_crore": 13606.45377194065,
+      "source_name": "Kushi Nagar — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Deoria",
+      "y_crore": 9377.750365541033,
+      "source_name": "Deoria — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Azamgarh",
+      "y_crore": 14781.394673605733,
+      "source_name": "Azamgarh — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Mau",
+      "y_crore": 9364.051498930292,
+      "source_name": "Mau — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Ballia",
+      "y_crore": 9683.381683590156,
+      "source_name": "Ballia — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Jaunpur",
+      "y_crore": 12999.66696060459,
+      "source_name": "Jaunpur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Ghazipur",
+      "y_crore": 11926.318630944257,
+      "source_name": "Ghazipur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Chandauli",
+      "y_crore": 6437.904259461513,
+      "source_name": "Chandauli — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Varanasi",
+      "y_crore": 21593.39591821367,
+      "source_name": "Varanasi — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Bhadohi",
+      "y_crore": 6708.101633628518,
+      "source_name": "Bhadohi — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Mirzapur",
+      "y_crore": 11594.28245612813,
+      "source_name": "Mirzapur — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    },
+    {
+      "district": "Sonbhadra",
+      "y_crore": 16495.762011211526,
+      "source_name": "Sonbhadra — GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)"
+    }
+  ],
+  "source_file": "GDDP Constant.xlsx",
+  "source_url": "",
+  "page": "https://updes.up.nic.in/updes/dist_domestic_product.html",
+  "year": "2021-22",
+  "price_basis": "constant",
+  "base_year": "2011-12",
+  "units": "INR crore",
+  "provenance": {
+    "parser": "xlsx_matrix",
+    "sheet": "GDDP Constant",
+    "header_row": 2,
+    "value_row": 28,
+    "value_row_label": "GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)",
+    "n_districts": 75
+  },
+  "notes": [
+    "DES Uttar Pradesh, Gross District Domestic Product by economic activity 2021-22 (tentative), base 2011-12, constant prices, ₹ crore.",
+    "Row used is 'GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)'. The four regional aggregates and the state total are dropped.",
+    "A 'GDDP Current.xlsx' sits beside it; the constant-price sheet is used so the series is real."
+  ]
+}

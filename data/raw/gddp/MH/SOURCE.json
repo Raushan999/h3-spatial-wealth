@@ -1,0 +1,18 @@
+{
+  "url": "https://data.opencity.in/api/3/action/datastore_search?resource_id=4ea748f2-308b-42fa-a736-0fccc4707597&limit=100",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T14:35:27.926875+00:00",
+  "license": "OpenCity public-domain extract of state Economic Survey / DES table",
+  "units": "INR crore",
+  "status": "ok",
+  "page": "https://data.opencity.in/dataset/economic-survey-of-maharashtra-2024-25",
+  "year": "2023-24",
+  "price_basis": "constant",
+  "base_year": "2011-12",
+  "value_field": "Real GDDP 2023-24 (Constant prices from 2011-12)",
+  "notes": [
+    "Mumbai# = Mumbai City + Mumbai Suburban",
+    "Thane$ = Thane + Palghar",
+    "Source: DES Maharashtra via OpenCity CKAN (public domain extract of Economic Survey 2024-25)"
+  ]
+}

@@ -1,0 +1,3813 @@
+{
+  "presets": {
+    "rich_urban": "873da1060ffffff",
+    "poor_rural": "873ca5640ffffff"
+  },
+  "preset_rules": {
+    "rich_urban": "highest wealth_index among cells with population above the 80th percentile",
+    "poor_rural": "lowest wealth_index among cells with population between the 20th and 60th percentiles and below-median road_km"
+  },
+  "cells": {
+    "rich_urban": {
+      "h3_r7": "873da1060ffffff",
+      "h3_r6": "863da1067ffffff",
+      "h3_r5": "853da107fffffff",
+      "district": "Gautam Buddha Nagar",
+      "lat": 28.58194050077517,
+      "lon": 77.32910612954969,
+      "inputs": {
+        "population": 56026.0,
+        "night_lights": 62.809800641290074,
+        "road_km": 39.685313856408285,
+        "poi_count": 106.0,
+        "building_area_m2": 909368.7319580627,
+        "poi_amenity_restaurant": 1.0,
+        "poi_amenity_cafe": 2.0,
+        "poi_amenity_bar": 0.0,
+        "poi_amenity_pub": 0.0,
+        "poi_amenity_cinema": 0.0,
+        "poi_amenity_theatre": 0.0,
+        "poi_amenity_nightclub": 0.0,
+        "poi_amenity_university": 0.0,
+        "poi_amenity_hospital": 10.0,
+        "poi_amenity_bank": 3.0,
+        "poi_shop_mall": 3.0,
+        "poi_shop_luxury": 0.0,
+        "poi_shop_supermarket": 0.0,
+        "poi_shop_convenience": 1.0,
+        "poi_tourism_hotel": 0.0,
+        "poi_tourism_guest_house": 0.0,
+        "poi_leisure": 76.0,
+        "poi_office": 10.0,
+        "landuse_residential": 0.5984656810760498,
+        "landuse_commercial": 4.614903446054086e-05,
+        "landuse_industrial": 0.2947916090488434,
+        "landuse_retail": 0.01178736798465252
+      },
+      "features_z": {
+        "population_exists_z": 0.19561654329299927,
+        "population_log_z": 1.6350419521331787,
+        "night_lights_exists_z": 0.17097268998622894,
+        "night_lights_log_z": 4.07358455657959,
+        "road_km_exists_z": 0.7897695899009705,
+        "road_km_log_z": 3.796095848083496,
+        "poi_count_exists_z": 4.916708946228027,
+        "poi_count_log_z": 14.75650405883789,
+        "building_area_m2_exists_z": 1.9841668605804443,
+        "building_area_m2_log_z": 3.891613483428955,
+        "building_count_exists_z": 1.9841668605804443,
+        "building_count_log_z": 5.179861545562744,
+        "poi_amenity_restaurant_exists_z": 11.911498069763184,
+        "poi_amenity_restaurant_log_z": -0.05128812417387962,
+        "poi_amenity_cafe_exists_z": 17.446462631225586,
+        "poi_amenity_cafe_log_z": 13.848565101623535,
+        "poi_amenity_bar_exists_z": -0.02927188202738762,
+        "poi_amenity_bar_log_z": -0.012870639562606812,
+        "poi_amenity_pub_exists_z": -0.0046263583935797215,
+        "poi_amenity_pub_log_z": -0.004626358859241009,
+        "poi_amenity_cinema_exists_z": -0.034015953540802,
+        "poi_amenity_cinema_log_z": -0.016278330236673355,
+        "poi_amenity_theatre_exists_z": -0.022192461416125298,
+        "poi_amenity_theatre_log_z": -0.008856321685016155,
+        "poi_amenity_nightclub_exists_z": -0.009253013879060745,
+        "poi_amenity_nightclub_log_z": -0.004626358859241009,
+        "poi_amenity_university_exists_z": -0.03982856497168541,
+        "poi_amenity_university_log_z": -0.013807560317218304,
+        "poi_amenity_hospital_exists_z": 6.443143844604492,
+        "poi_amenity_hospital_log_z": 13.829081535339355,
+        "poi_amenity_bank_exists_z": 13.499164581298828,
+        "poi_amenity_bank_log_z": 14.617477416992188,
+        "poi_shop_mall_exists_z": 22.27225112915039,
+        "poi_shop_mall_log_z": 46.53768539428711,
+        "poi_shop_luxury_exists_z": -0.03585826978087425,
+        "poi_shop_luxury_log_z": -0.020139696076512337,
+        "poi_shop_supermarket_exists_z": -0.05200035497546196,
+        "poi_shop_supermarket_log_z": -0.02963775396347046,
+        "poi_shop_convenience_exists_z": 25.633384704589844,
+        "poi_shop_convenience_log_z": -0.022276150062680244,
+        "poi_tourism_hotel_exists_z": -0.06799162179231644,
+        "poi_tourism_hotel_log_z": -0.037420377135276794,
+        "poi_tourism_guest_house_exists_z": -0.04417521506547928,
+        "poi_tourism_guest_house_log_z": -0.01982676424086094,
+        "poi_leisure_exists_z": 7.377307891845703,
+        "poi_leisure_log_z": 19.73243522644043,
+        "poi_office_exists_z": 11.192782402038574,
+        "poi_office_log_z": 25.356412887573242,
+        "poi_amenity_restaurant_density_exists_z": 11.911498069763184,
+        "poi_amenity_restaurant_density_log_z": -15.258222579956055,
+        "poi_amenity_cafe_density_exists_z": 17.446462631225586,
+        "poi_amenity_cafe_density_log_z": -12.485946655273438,
+        "poi_amenity_bar_density_exists_z": -0.02927188202738762,
+        "poi_amenity_bar_density_log_z": 0.027811940759420395,
+        "poi_amenity_pub_density_exists_z": -0.0046263583935797215,
+        "poi_amenity_pub_density_log_z": 0.004626358859241009,
+        "poi_amenity_cinema_density_exists_z": -0.034015953540802,
+        "poi_amenity_cinema_density_log_z": 0.032344505190849304,
+        "poi_amenity_theatre_density_exists_z": -0.022192461416125298,
+        "poi_amenity_theatre_density_log_z": 0.02147560380399227,
+        "poi_amenity_nightclub_density_exists_z": -0.009253013879060745,
+        "poi_amenity_nightclub_density_log_z": 0.00877511315047741,
+        "poi_amenity_university_density_exists_z": -0.03982856497168541,
+        "poi_amenity_university_density_log_z": 0.03618362173438072,
+        "poi_amenity_hospital_density_exists_z": 6.443143844604492,
+        "poi_amenity_hospital_density_log_z": 3.097177267074585,
+        "poi_amenity_bank_density_exists_z": 13.499164581298828,
+        "poi_amenity_bank_density_log_z": -6.042626857757568,
+        "poi_shop_mall_density_exists_z": 22.27225112915039,
+        "poi_shop_mall_density_log_z": -8.889921188354492,
+        "poi_shop_luxury_density_exists_z": -0.03585826978087425,
+        "poi_shop_luxury_density_log_z": 0.027177216485142708,
+        "poi_shop_supermarket_density_exists_z": -0.05200035497546196,
+        "poi_shop_supermarket_density_log_z": 0.04453973099589348,
+        "poi_shop_convenience_density_exists_z": 25.633384704589844,
+        "poi_shop_convenience_density_log_z": -31.2259464263916,
+        "poi_tourism_hotel_density_exists_z": -0.06799162179231644,
+        "poi_tourism_hotel_density_log_z": 0.05615245923399925,
+        "poi_tourism_guest_house_density_exists_z": -0.04417521506547928,
+        "poi_tourism_guest_house_density_log_z": 0.038809917867183685,
+        "poi_leisure_density_exists_z": 7.377307891845703,
+        "poi_leisure_density_log_z": 14.830060958862305,
+        "poi_office_density_exists_z": 11.192782402038574,
+        "poi_office_density_log_z": 5.448371410369873,
+        "landuse_residential_z": 7.70468282699585,
+        "landuse_residential_exists_z": 1.6093274354934692,
+        "landuse_commercial_z": -0.02592598833143711,
+        "landuse_commercial_exists_z": 12.06097412109375,
+        "landuse_industrial_z": 12.138949394226074,
+        "landuse_industrial_exists_z": 5.689777851104736,
+        "landuse_retail_z": 38.83353042602539,
+        "landuse_retail_exists_z": 34.16248321533203,
+        "building_share_z": 28.467472076416016,
+        "building_share_exists_z": 1.9841668605804443
+      },
+      "neighbors": [
+        {
+          "h3_r7": "873da1061ffffff",
+          "population": 24963.0,
+          "night_lights": 54.81499930790493,
+          "road_km": 40.89763608864915,
+          "poi_count": 88.0,
+          "wealth_index": 99.99111130863758
+        },
+        {
+          "h3_r7": "873da1063ffffff",
+          "population": 21973.0,
+          "night_lights": 54.744446690877275,
+          "road_km": 33.91553645291626,
+          "poi_count": 57.0,
+          "wealth_index": 99.99555565431879
+        },
+        {
+          "h3_r7": "873da1066ffffff",
+          "population": 17980.0,
+          "night_lights": 38.353985436757405,
+          "road_km": 18.250954085378837,
+          "poi_count": 32.0,
+          "wealth_index": 99.98888913579698
+        },
+        {
+          "h3_r7": "873da1062ffffff",
+          "population": 7812.0,
+          "night_lights": 62.84137140909831,
+          "road_km": 43.68352468238842,
+          "poi_count": 143.0,
+          "wealth_index": 99.9977778271594
+        }
+      ],
+      "parents": {
+        "h3_r6": "863da1067ffffff",
+        "h3_r5": "853da107fffffff"
+      },
+      "s_i": 1644584.875,
+      "s_i_min": 1284905.625,
+      "s_i_max": 2150883.5,
+      "population": 56026.0,
+      "z_i": 92139512206.75,
+      "district_sum_raw": 1702545999243.2422,
+      "Y_g": 1102787346191.287,
+      "dasymetric_scale": 0.6477283707350407,
+      "gdp_inr": 59681376121.99957,
+      "gdp_per_capita_inr": 1065244.2816192405,
+      "gdp_per_capita_inr_min": 956571.0774441245,
+      "gdp_per_capita_inr_max": 1126707.9180560738,
+      "wealth_index": 100.0,
+      "wealth_index_min": 99.99555565431879,
+      "wealth_index_max": 100.0,
+      "logged_values": {
+        "population_exists": 1.0,
+        "population_log": 4.748389720916748,
+        "night_lights_exists": 1.0,
+        "night_lights_log": 1.7980273962020874,
+        "road_km_exists": 1.0,
+        "road_km_log": 1.5986298322677612,
+        "poi_count_exists": 1.0,
+        "poi_count_log": 2.02530574798584,
+        "building_area_m2_exists": 1.0,
+        "building_area_m2_log": 5.958740234375,
+        "building_count_exists": 1.0,
+        "building_count_log": 3.446070909500122,
+        "poi_amenity_restaurant_exists": 1.0,
+        "poi_amenity_restaurant_log": 0.0,
+        "poi_amenity_cafe_exists": 1.0,
+        "poi_amenity_cafe_log": 0.3010300099849701,
+        "poi_amenity_bar_exists": 0.0,
+        "poi_amenity_bar_log": 0.0,
+        "poi_amenity_pub_exists": 0.0,
+        "poi_amenity_pub_log": 0.0,
+        "poi_amenity_cinema_exists": 0.0,
+        "poi_amenity_cinema_log": 0.0,
+        "poi_amenity_theatre_exists": 0.0,
+        "poi_amenity_theatre_log": 0.0,
+        "poi_amenity_nightclub_exists": 0.0,
+        "poi_amenity_nightclub_log": 0.0,
+        "poi_amenity_university_exists": 0.0,
+        "poi_amenity_university_log": 0.0,
+        "poi_amenity_hospital_exists": 1.0,
+        "poi_amenity_hospital_log": 1.0,
+        "poi_amenity_bank_exists": 1.0,
+        "poi_amenity_bank_log": 0.4771212637424469,
+        "poi_shop_mall_exists": 1.0,
+        "poi_shop_mall_log": 0.4771212637424469,
+        "poi_shop_luxury_exists": 0.0,
+        "poi_shop_luxury_log": 0.0,
+        "poi_shop_supermarket_exists": 0.0,
+        "poi_shop_supermarket_log": 0.0,
+        "poi_shop_convenience_exists": 1.0,
+        "poi_shop_convenience_log": 0.0,
+        "poi_tourism_hotel_exists": 0.0,
+        "poi_tourism_hotel_log": 0.0,
+        "poi_tourism_guest_house_exists": 0.0,
+        "poi_tourism_guest_house_log": 0.0,
+        "poi_leisure_exists": 1.0,
+        "poi_leisure_log": 1.8808135986328125,
+        "poi_office_exists": 1.0,
+        "poi_office_log": 1.0,
+        "poi_amenity_restaurant_density_exists": 1.0,
+        "poi_amenity_restaurant_density_log": -0.7285845875740051,
+        "poi_amenity_cafe_density_exists": 1.0,
+        "poi_amenity_cafe_density_log": -0.42755457758903503,
+        "poi_amenity_bar_density_exists": 0.0,
+        "poi_amenity_bar_density_log": 0.0,
+        "poi_amenity_pub_density_exists": 0.0,
+        "poi_amenity_pub_density_log": 0.0,
+        "poi_amenity_cinema_density_exists": 0.0,
+        "poi_amenity_cinema_density_log": 0.0,
+        "poi_amenity_theatre_density_exists": 0.0,
+        "poi_amenity_theatre_density_log": 0.0,
+        "poi_amenity_nightclub_density_exists": 0.0,
+        "poi_amenity_nightclub_density_log": 0.0,
+        "poi_amenity_university_density_exists": 0.0,
+        "poi_amenity_university_density_log": 0.0,
+        "poi_amenity_hospital_density_exists": 1.0,
+        "poi_amenity_hospital_density_log": 0.2714154124259949,
+        "poi_amenity_bank_density_exists": 1.0,
+        "poi_amenity_bank_density_log": -0.2514633238315582,
+        "poi_shop_mall_density_exists": 1.0,
+        "poi_shop_mall_density_log": -0.2514633238315582,
+        "poi_shop_luxury_density_exists": 0.0,
+        "poi_shop_luxury_density_log": 0.0,
+        "poi_shop_supermarket_density_exists": 0.0,
+        "poi_shop_supermarket_density_log": 0.0,
+        "poi_shop_convenience_density_exists": 1.0,
+        "poi_shop_convenience_density_log": -0.7285845875740051,
+        "poi_tourism_hotel_density_exists": 0.0,
+        "poi_tourism_hotel_density_log": 0.0,
+        "poi_tourism_guest_house_density_exists": 0.0,
+        "poi_tourism_guest_house_density_log": 0.0,
+        "poi_leisure_density_exists": 1.0,
+        "poi_leisure_density_log": 1.1522289514541626,
+        "poi_office_density_exists": 1.0,
+        "poi_office_density_log": 0.2714154124259949,
+        "landuse_residential_exists": 1.0,
+        "landuse_commercial_exists": 1.0,
+        "landuse_industrial_exists": 1.0,
+        "landuse_retail_exists": 1.0,
+        "building_share_exists": 1.0
+      },
+      "top_features": [
+        {
+          "feature": "poi_shop_mall_log_z",
+          "z": 46.5377
+        },
+        {
+          "feature": "landuse_retail_z",
+          "z": 38.8335
+        },
+        {
+          "feature": "landuse_retail_exists_z",
+          "z": 34.1625
+        },
+        {
+          "feature": "poi_shop_convenience_density_log_z",
+          "z": -31.2259
+        },
+        {
+          "feature": "building_share_z",
+          "z": 28.4675
+        },
+        {
+          "feature": "poi_shop_convenience_exists_z",
+          "z": 25.6334
+        },
+        {
+          "feature": "poi_shop_convenience_density_exists_z",
+          "z": 25.6334
+        },
+        {
+          "feature": "poi_office_log_z",
+          "z": 25.3564
+        },
+        {
+          "feature": "poi_shop_mall_exists_z",
+          "z": 22.2723
+        },
+        {
+          "feature": "poi_shop_mall_density_exists_z",
+          "z": 22.2723
+        }
+      ],
+      "district_context": {
+        "district": "Gautam Buddha Nagar",
+        "n_cells": 221,
+        "Y_g_inr": 1102787346191.287,
+        "Y_g_crore": 110278.7346191287,
+        "district_sum_raw_inr": 1702545999243.2422,
+        "dasymetric_scale": 0.6477283707350407,
+        "population": 2439170.0,
+        "gdp_inr_after_scale": 1102787346191.287
+      },
+      "trace": {
+        "input_embedding": {
+          "head": [
+            -0.2518,
+            -0.9564,
+            45.0867,
+            -1.0,
+            39.8475,
+            7.9944,
+            48.2559,
+            35.3483,
+            38.0301,
+            -1.0,
+            18.6489,
+            -1.0
+          ],
+          "norm": 233.9009,
+          "mean": 19.8609,
+          "active": 35,
+          "dim": 64
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "neighbour_conv": {
+              "head": [
+                195.4159,
+                199.0382,
+                -1.0,
+                -1.0,
+                -1.0,
+                4.0142,
+                -0.4337,
+                52.1028,
+                -1.0,
+                -1.0,
+                190.0511,
+                221.4375
+              ],
+              "norm": 1028.3048,
+              "mean": 84.4701,
+              "active": 35,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                40.8632,
+                8.8909,
+                81.8604,
+                100.5663,
+                49.5083,
+                -0.587,
+                -20.202,
+                39.6724,
+                61.6776,
+                25.5112,
+                -67.4886,
+                44.2624
+              ],
+              "norm": 554.7448,
+              "mean": 16.3644,
+              "active": 41,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                237.4993,
+                -1.0,
+                116.9565,
+                123.2467,
+                209.4327,
+                -1.0,
+                579.7592,
+                558.7193,
+                415.601,
+                26.0061,
+                440.8629,
+                -1.0
+              ],
+              "norm": 2463.3318,
+              "mean": 231.0421,
+              "active": 44,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                213.7242,
+                -0.9956,
+                109.7695,
+                110.8221,
+                192.4742,
+                -0.1006,
+                526.6088,
+                506.3822,
+                377.8438,
+                23.3055,
+                398.6415,
+                -1.0
+              ],
+              "norm": 2236.0266,
+              "mean": 209.924,
+              "active": 45,
+              "dim": 64
+            },
+            "alpha": 0.1
+          },
+          {
+            "layer": 2,
+            "neighbour_conv": {
+              "head": [
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                1903.6802,
+                1422.4189,
+                1940.7935,
+                1439.1733,
+                -1.0
+              ],
+              "norm": 7438.7993,
+              "mean": 578.7955,
+              "active": 29,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                329.2761,
+                34.658,
+                -554.6115,
+                369.4855,
+                414.8055,
+                487.4092,
+                -476.0263,
+                247.8407,
+                282.0196,
+                317.2287,
+                -380.0557,
+                334.1898
+              ],
+              "norm": 2822.458,
+              "mean": 76.1296,
+              "active": 41,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                -1.0,
+                -1.0,
+                3555.8091,
+                3590.616,
+                4605.4272,
+                -1.0,
+                2309.3628,
+                3953.042,
+                4757.5083,
+                2180.457,
+                2194.3364,
+                -1.0
+              ],
+              "norm": 20411.4707,
+              "mean": 1944.5769,
+              "active": 44,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                -0.9252,
+                -0.9956,
+                3204.7366,
+                3231.4541,
+                4148.8691,
+                -0.1006,
+                2083.2522,
+                3561.2727,
+                4285.5605,
+                1962.3113,
+                1976.7676,
+                -1.0
+              ],
+              "norm": 18389.8613,
+              "mean": 1752.1052,
+              "active": 46,
+              "dim": 64
+            },
+            "alpha": 0.1
+          },
+          {
+            "layer": 3,
+            "neighbour_conv": {
+              "head": [
+                16865.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                5498.2412,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0
+              ],
+              "norm": 65419.9922,
+              "mean": 5221.7559,
+              "active": 29,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                2729.3264,
+                -1705.9197,
+                -336.5174,
+                2984.978,
+                4244.9941,
+                -2913.3481,
+                288.2074,
+                -2568.6746,
+                2754.9539,
+                1256.6115,
+                2522.5496,
+                3169.1155
+              ],
+              "norm": 19855.5605,
+              "mean": 287.4821,
+              "active": 33,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                16010.6084,
+                -1.0,
+                -1.0,
+                -1.0,
+                14633.6572,
+                38339.582,
+                -1.0,
+                21981.1445,
+                2003.0939,
+                29730.2734,
+                -1.0,
+                22942.2168
+              ],
+              "norm": 143418.4375,
+              "mean": 12131.2207,
+              "active": 42,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                14409.5215,
+                -0.9956,
+                3.6087,
+                -1.0,
+                13174.2754,
+                34506.4219,
+                3.9256,
+                19786.5645,
+                1806.5874,
+                26757.1465,
+                0.9649,
+                20647.8945
+              ],
+              "norm": 129082.3984,
+              "mean": 10920.084,
+              "active": 57,
+              "dim": 64
+            },
+            "alpha": 0.1
+          },
+          {
+            "layer": 4,
+            "neighbour_conv": {
+              "head": [
+                -1.0,
+                -1.0,
+                137362.625,
+                100410.3281,
+                -1.0,
+                -1.0,
+                -1.0,
+                57711.0586,
+                125845.6719,
+                94156.125,
+                118978.3281,
+                -1.0
+              ],
+              "norm": 548121.4375,
+              "mean": 45105.2852,
+              "active": 30,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                32753.6094,
+                29850.9707,
+                -29895.168,
+                -7660.8672,
+                31405.3965,
+                27846.7051,
+                -35645.957,
+                -34566.2656,
+                -8860.5283,
+                29043.1973,
+                -32838.2695,
+                28186.9004
+              ],
+              "norm": 242501.5938,
+              "mean": 213.9441,
+              "active": 31,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                -1.0,
+                -1.0,
+                358254.0938,
+                338181.5,
+                386747.125,
+                -1.0,
+                431114.2188,
+                380876.4062,
+                468388.4062,
+                -1.0,
+                318799.0938,
+                -1.0
+              ],
+              "norm": 2294483.5,
+              "mean": 211391.3125,
+              "active": 36,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                -0.9252,
+                -0.9956,
+                322433.1875,
+                304363.25,
+                348076.4062,
+                -0.1006,
+                388007.5938,
+                342792.2812,
+                421553.375,
+                -1.0,
+                286921.0625,
+                -1.0
+              ],
+              "norm": 2065056.5,
+              "mean": 190254.1719,
+              "active": 38,
+              "dim": 64
+            },
+            "alpha": 0.1
+          }
+        ],
+        "neighbour_message_layer1": {
+          "head": [
+            14.2394,
+            9.6203,
+            66.8703,
+            -1.0,
+            33.3012,
+            14.4762,
+            74.1177,
+            71.7961,
+            59.2755,
+            -1.0,
+            49.5555,
+            -1.0
+          ],
+          "norm": 309.5896,
+          "mean": 26.5897,
+          "active": 42,
+          "dim": 64
+        },
+        "n_neighbours": 4,
+        "readout": {
+          "final_embedding": {
+            "head": [
+              -0.9252,
+              -0.9956,
+              322433.1875,
+              304363.25,
+              348076.4062,
+              -0.1006,
+              388007.5938,
+              342792.2812,
+              421553.375,
+              -1.0,
+              286921.0625,
+              -1.0
+            ],
+            "norm": 2065056.5,
+            "mean": 190254.1719,
+            "active": 38,
+            "dim": 64
+          },
+          "bias": 0.03289,
+          "logit": 1822355.375,
+          "s_i": 1822355.375,
+          "top_units": [
+            {
+              "unit": 63,
+              "activation": 422907.4375,
+              "weight": 0.2168,
+              "contribution": 91680.0547
+            },
+            {
+              "unit": 15,
+              "activation": 400762.125,
+              "weight": 0.1941,
+              "contribution": 77785.6719
+            },
+            {
+              "unit": 60,
+              "activation": 373108.5312,
+              "weight": 0.2056,
+              "contribution": 76707.6719
+            },
+            {
+              "unit": 30,
+              "activation": 387490.8125,
+              "weight": 0.1916,
+              "contribution": 74256.3828
+            },
+            {
+              "unit": 23,
+              "activation": 400992.6875,
+              "weight": 0.1743,
+              "contribution": 69899.625
+            },
+            {
+              "unit": 4,
+              "activation": 348076.4062,
+              "weight": 0.1922,
+              "contribution": 66912.6484
+            },
+            {
+              "unit": 41,
+              "activation": 380635.0938,
+              "weight": 0.1756,
+              "contribution": 66840.1172
+            },
+            {
+              "unit": 53,
+              "activation": 347257.75,
+              "weight": 0.1899,
+              "contribution": 65945.9609
+            },
+            {
+              "unit": 8,
+              "activation": 421553.375,
+              "weight": 0.1539,
+              "contribution": 64876.6602
+            },
+            {
+              "unit": 56,
+              "activation": 393482.0312,
+              "weight": 0.1638,
+              "contribution": 64470.1953
+            },
+            {
+              "unit": 16,
+              "activation": 377999.1875,
+              "weight": 0.1699,
+              "contribution": 64233.9805
+            },
+            {
+              "unit": 14,
+              "activation": 358793.5,
+              "weight": 0.1751,
+              "contribution": 62810.0078
+            }
+          ]
+        }
+      }
+    },
+    "poor_rural": {
+      "h3_r7": "873ca5640ffffff",
+      "h3_r6": "863ca5647ffffff",
+      "h3_r5": "853ca567fffffff",
+      "district": "Sonbhadra",
+      "lat": 24.323405013189465,
+      "lon": 83.22370245016107,
+      "inputs": {
+        "population": 2041.0,
+        "night_lights": 0.035097049815314155,
+        "road_km": 0.0,
+        "poi_count": 0.0,
+        "building_area_m2": 0.0,
+        "poi_amenity_restaurant": 0.0,
+        "poi_amenity_cafe": 0.0,
+        "poi_amenity_bar": 0.0,
+        "poi_amenity_pub": 0.0,
+        "poi_amenity_cinema": 0.0,
+        "poi_amenity_theatre": 0.0,
+        "poi_amenity_nightclub": 0.0,
+        "poi_amenity_university": 0.0,
+        "poi_amenity_hospital": 0.0,
+        "poi_amenity_bank": 0.0,
+        "poi_shop_mall": 0.0,
+        "poi_shop_luxury": 0.0,
+        "poi_shop_supermarket": 0.0,
+        "poi_shop_convenience": 0.0,
+        "poi_tourism_hotel": 0.0,
+        "poi_tourism_guest_house": 0.0,
+        "poi_leisure": 0.0,
+        "poi_office": 0.0,
+        "landuse_residential": 0.0,
+        "landuse_commercial": 0.0,
+        "landuse_industrial": 0.0,
+        "landuse_retail": 0.0
+      },
+      "features_z": {
+        "population_exists_z": 0.19561654329299927,
+        "population_log_z": -0.07340867072343826,
+        "night_lights_exists_z": 0.17097268998622894,
+        "night_lights_log_z": -3.726332187652588,
+        "road_km_exists_z": -1.2661921977996826,
+        "road_km_log_z": -0.7477304339408875,
+        "poi_count_exists_z": -0.203388050198555,
+        "poi_count_log_z": -0.12107306718826294,
+        "building_area_m2_exists_z": -0.5039898157119751,
+        "building_area_m2_log_z": -0.47088736295700073,
+        "building_count_exists_z": -0.5039898157119751,
+        "building_count_log_z": -0.30448171496391296,
+        "poi_amenity_restaurant_exists_z": -0.08395250141620636,
+        "poi_amenity_restaurant_log_z": -0.05128812417387962,
+        "poi_amenity_cafe_exists_z": -0.057318203151226044,
+        "poi_amenity_cafe_log_z": -0.03176848217844963,
+        "poi_amenity_bar_exists_z": -0.02927188202738762,
+        "poi_amenity_bar_log_z": -0.012870639562606812,
+        "poi_amenity_pub_exists_z": -0.0046263583935797215,
+        "poi_amenity_pub_log_z": -0.004626358859241009,
+        "poi_amenity_cinema_exists_z": -0.034015953540802,
+        "poi_amenity_cinema_log_z": -0.016278330236673355,
+        "poi_amenity_theatre_exists_z": -0.022192461416125298,
+        "poi_amenity_theatre_log_z": -0.008856321685016155,
+        "poi_amenity_nightclub_exists_z": -0.009253013879060745,
+        "poi_amenity_nightclub_log_z": -0.004626358859241009,
+        "poi_amenity_university_exists_z": -0.03982856497168541,
+        "poi_amenity_university_log_z": -0.013807560317218304,
+        "poi_amenity_hospital_exists_z": -0.15520372986793518,
+        "poi_amenity_hospital_log_z": -0.085899718105793,
+        "poi_amenity_bank_exists_z": -0.07407865673303604,
+        "poi_amenity_bank_log_z": -0.04609647020697594,
+        "poi_shop_mall_exists_z": -0.04489891976118088,
+        "poi_shop_mall_log_z": -0.023632436990737915,
+        "poi_shop_luxury_exists_z": -0.03585826978087425,
+        "poi_shop_luxury_log_z": -0.020139696076512337,
+        "poi_shop_supermarket_exists_z": -0.05200035497546196,
+        "poi_shop_supermarket_log_z": -0.02963775396347046,
+        "poi_shop_convenience_exists_z": -0.039011623710393906,
+        "poi_shop_convenience_log_z": -0.022276150062680244,
+        "poi_tourism_hotel_exists_z": -0.06799162179231644,
+        "poi_tourism_hotel_log_z": -0.037420377135276794,
+        "poi_tourism_guest_house_exists_z": -0.04417521506547928,
+        "poi_tourism_guest_house_log_z": -0.01982676424086094,
+        "poi_leisure_exists_z": -0.13555079698562622,
+        "poi_leisure_log_z": -0.0896943137049675,
+        "poi_office_exists_z": -0.08934328705072403,
+        "poi_office_log_z": -0.05414485186338425,
+        "poi_amenity_restaurant_density_exists_z": -0.08395250141620636,
+        "poi_amenity_restaurant_density_log_z": 0.06111171469092369,
+        "poi_amenity_cafe_density_exists_z": -0.057318203151226044,
+        "poi_amenity_cafe_density_log_z": 0.04856392741203308,
+        "poi_amenity_bar_density_exists_z": -0.02927188202738762,
+        "poi_amenity_bar_density_log_z": 0.027811940759420395,
+        "poi_amenity_pub_density_exists_z": -0.0046263583935797215,
+        "poi_amenity_pub_density_log_z": 0.004626358859241009,
+        "poi_amenity_cinema_density_exists_z": -0.034015953540802,
+        "poi_amenity_cinema_density_log_z": 0.032344505190849304,
+        "poi_amenity_theatre_density_exists_z": -0.022192461416125298,
+        "poi_amenity_theatre_density_log_z": 0.02147560380399227,
+        "poi_amenity_nightclub_density_exists_z": -0.009253013879060745,
+        "poi_amenity_nightclub_density_log_z": 0.00877511315047741,
+        "poi_amenity_university_density_exists_z": -0.03982856497168541,
+        "poi_amenity_university_density_log_z": 0.03618362173438072,
+        "poi_amenity_hospital_density_exists_z": -0.15520372986793518,
+        "poi_amenity_hospital_density_log_z": 0.11696241050958633,
+        "poi_amenity_bank_density_exists_z": -0.07407865673303604,
+        "poi_amenity_bank_density_log_z": 0.058338627219200134,
+        "poi_shop_mall_density_exists_z": -0.04489891976118088,
+        "poi_shop_mall_density_log_z": 0.042678993195295334,
+        "poi_shop_luxury_density_exists_z": -0.03585826978087425,
+        "poi_shop_luxury_density_log_z": 0.027177216485142708,
+        "poi_shop_supermarket_density_exists_z": -0.05200035497546196,
+        "poi_shop_supermarket_density_log_z": 0.04453973099589348,
+        "poi_shop_convenience_density_exists_z": -0.039011623710393906,
+        "poi_shop_convenience_density_log_z": 0.03569227457046509,
+        "poi_tourism_hotel_density_exists_z": -0.06799162179231644,
+        "poi_tourism_hotel_density_log_z": 0.05615245923399925,
+        "poi_tourism_guest_house_density_exists_z": -0.04417521506547928,
+        "poi_tourism_guest_house_density_log_z": 0.038809917867183685,
+        "poi_leisure_density_exists_z": -0.13555079698562622,
+        "poi_leisure_density_log_z": 0.056288834661245346,
+        "poi_office_density_exists_z": -0.08934328705072403,
+        "poi_office_density_log_z": 0.07005144655704498,
+        "landuse_residential_z": -0.2194724828004837,
+        "landuse_residential_exists_z": -0.6213775873184204,
+        "landuse_commercial_z": -0.04301398620009422,
+        "landuse_commercial_exists_z": -0.08291205018758774,
+        "landuse_industrial_z": -0.0589870922267437,
+        "landuse_industrial_exists_z": -0.17575378715991974,
+        "landuse_retail_z": -0.013239520601928234,
+        "landuse_retail_exists_z": -0.02927188202738762,
+        "building_share_z": -0.1256452053785324,
+        "building_share_exists_z": -0.5039898157119751
+      },
+      "neighbors": [
+        {
+          "h3_r7": "873ca5641ffffff",
+          "population": 0.0,
+          "night_lights": 0.0,
+          "road_km": 0.0,
+          "poi_count": 0.0,
+          "wealth_index": 0.0
+        },
+        {
+          "h3_r7": "873ca5642ffffff",
+          "population": 4924.0,
+          "night_lights": 0.0,
+          "road_km": 0.0,
+          "poi_count": 0.0,
+          "wealth_index": 0.10110886424746117
+        },
+        {
+          "h3_r7": "873ca5643ffffff",
+          "population": 0.0,
+          "night_lights": 0.0,
+          "road_km": 0.0,
+          "poi_count": 0.0,
+          "wealth_index": 0.0
+        },
+        {
+          "h3_r7": "873ca5644ffffff",
+          "population": 0.0,
+          "night_lights": 0.0,
+          "road_km": 0.0,
+          "poi_count": 0.0,
+          "wealth_index": 0.0
+        },
+        {
+          "h3_r7": "873ca5645ffffff",
+          "population": 0.0,
+          "night_lights": 0.0,
+          "road_km": 1.7788182442334728,
+          "poi_count": 0.0,
+          "wealth_index": 0.0
+        },
+        {
+          "h3_r7": "873ca5646ffffff",
+          "population": 0.0,
+          "night_lights": 0.0,
+          "road_km": 0.0,
+          "poi_count": 0.0,
+          "wealth_index": 0.0
+        }
+      ],
+      "parents": {
+        "h3_r6": "863ca5647ffffff",
+        "h3_r5": "853ca567fffffff"
+      },
+      "s_i": 0.0,
+      "s_i_min": 0.0,
+      "s_i_max": 0.0,
+      "population": 2041.0,
+      "z_i": 0.0,
+      "district_sum_raw": 77116231386.9309,
+      "Y_g": 164957620112.11526,
+      "dasymetric_scale": 2.1390778198747804,
+      "gdp_inr": 0.0,
+      "gdp_per_capita_inr": 0.0,
+      "gdp_per_capita_inr_min": 0.0,
+      "gdp_per_capita_inr_max": 0.0,
+      "wealth_index": 0.10110886424746117,
+      "wealth_index_min": 0.11777516055198774,
+      "wealth_index_max": 0.2266616297415613,
+      "logged_values": {
+        "population_exists": 1.0,
+        "population_log": 3.309843063354492,
+        "night_lights_exists": 1.0,
+        "night_lights_log": -1.454729437828064,
+        "road_km_exists": 0.0,
+        "road_km_log": 0.0,
+        "poi_count_exists": 0.0,
+        "poi_count_log": 0.0,
+        "building_area_m2_exists": 0.0,
+        "building_area_m2_log": 0.0,
+        "building_count_exists": 0.0,
+        "building_count_log": 0.0,
+        "poi_amenity_restaurant_exists": 0.0,
+        "poi_amenity_restaurant_log": 0.0,
+        "poi_amenity_cafe_exists": 0.0,
+        "poi_amenity_cafe_log": 0.0,
+        "poi_amenity_bar_exists": 0.0,
+        "poi_amenity_bar_log": 0.0,
+        "poi_amenity_pub_exists": 0.0,
+        "poi_amenity_pub_log": 0.0,
+        "poi_amenity_cinema_exists": 0.0,
+        "poi_amenity_cinema_log": 0.0,
+        "poi_amenity_theatre_exists": 0.0,
+        "poi_amenity_theatre_log": 0.0,
+        "poi_amenity_nightclub_exists": 0.0,
+        "poi_amenity_nightclub_log": 0.0,
+        "poi_amenity_university_exists": 0.0,
+        "poi_amenity_university_log": 0.0,
+        "poi_amenity_hospital_exists": 0.0,
+        "poi_amenity_hospital_log": 0.0,
+        "poi_amenity_bank_exists": 0.0,
+        "poi_amenity_bank_log": 0.0,
+        "poi_shop_mall_exists": 0.0,
+        "poi_shop_mall_log": 0.0,
+        "poi_shop_luxury_exists": 0.0,
+        "poi_shop_luxury_log": 0.0,
+        "poi_shop_supermarket_exists": 0.0,
+        "poi_shop_supermarket_log": 0.0,
+        "poi_shop_convenience_exists": 0.0,
+        "poi_shop_convenience_log": 0.0,
+        "poi_tourism_hotel_exists": 0.0,
+        "poi_tourism_hotel_log": 0.0,
+        "poi_tourism_guest_house_exists": 0.0,
+        "poi_tourism_guest_house_log": 0.0,
+        "poi_leisure_exists": 0.0,
+        "poi_leisure_log": 0.0,
+        "poi_office_exists": 0.0,
+        "poi_office_log": 0.0,
+        "poi_amenity_restaurant_density_exists": 0.0,
+        "poi_amenity_restaurant_density_log": 0.0,
+        "poi_amenity_cafe_density_exists": 0.0,
+        "poi_amenity_cafe_density_log": 0.0,
+        "poi_amenity_bar_density_exists": 0.0,
+        "poi_amenity_bar_density_log": 0.0,
+        "poi_amenity_pub_density_exists": 0.0,
+        "poi_amenity_pub_density_log": 0.0,
+        "poi_amenity_cinema_density_exists": 0.0,
+        "poi_amenity_cinema_density_log": 0.0,
+        "poi_amenity_theatre_density_exists": 0.0,
+        "poi_amenity_theatre_density_log": 0.0,
+        "poi_amenity_nightclub_density_exists": 0.0,
+        "poi_amenity_nightclub_density_log": 0.0,
+        "poi_amenity_university_density_exists": 0.0,
+        "poi_amenity_university_density_log": 0.0,
+        "poi_amenity_hospital_density_exists": 0.0,
+        "poi_amenity_hospital_density_log": 0.0,
+        "poi_amenity_bank_density_exists": 0.0,
+        "poi_amenity_bank_density_log": 0.0,
+        "poi_shop_mall_density_exists": 0.0,
+        "poi_shop_mall_density_log": 0.0,
+        "poi_shop_luxury_density_exists": 0.0,
+        "poi_shop_luxury_density_log": 0.0,
+        "poi_shop_supermarket_density_exists": 0.0,
+        "poi_shop_supermarket_density_log": 0.0,
+        "poi_shop_convenience_density_exists": 0.0,
+        "poi_shop_convenience_density_log": 0.0,
+        "poi_tourism_hotel_density_exists": 0.0,
+        "poi_tourism_hotel_density_log": 0.0,
+        "poi_tourism_guest_house_density_exists": 0.0,
+        "poi_tourism_guest_house_density_log": 0.0,
+        "poi_leisure_density_exists": 0.0,
+        "poi_leisure_density_log": 0.0,
+        "poi_office_density_exists": 0.0,
+        "poi_office_density_log": 0.0,
+        "landuse_residential_exists": 0.0,
+        "landuse_commercial_exists": 0.0,
+        "landuse_industrial_exists": 0.0,
+        "landuse_retail_exists": 0.0,
+        "building_share_exists": 0.0
+      },
+      "top_features": [
+        {
+          "feature": "night_lights_log_z",
+          "z": -3.7263
+        },
+        {
+          "feature": "road_km_exists_z",
+          "z": -1.2662
+        },
+        {
+          "feature": "road_km_log_z",
+          "z": -0.7477
+        },
+        {
+          "feature": "landuse_residential_exists_z",
+          "z": -0.6214
+        },
+        {
+          "feature": "building_area_m2_exists_z",
+          "z": -0.504
+        },
+        {
+          "feature": "building_count_exists_z",
+          "z": -0.504
+        },
+        {
+          "feature": "building_share_exists_z",
+          "z": -0.504
+        },
+        {
+          "feature": "building_area_m2_log_z",
+          "z": -0.4709
+        },
+        {
+          "feature": "building_count_log_z",
+          "z": -0.3045
+        },
+        {
+          "feature": "landuse_residential_z",
+          "z": -0.2195
+        }
+      ],
+      "district_context": {
+        "district": "Sonbhadra",
+        "n_cells": 1307,
+        "Y_g_inr": 164957620112.11526,
+        "Y_g_crore": 16495.762011211526,
+        "district_sum_raw_inr": 77116231386.9309,
+        "dasymetric_scale": 2.1390778198747804,
+        "population": 2313708.0,
+        "gdp_inr_after_scale": 164957620112.11523
+      },
+      "trace": {
+        "input_embedding": {
+          "head": [
+            0.3783,
+            0.0709,
+            -0.6488,
+            -0.19,
+            -0.757,
+            0.0337,
+            -0.6979,
+            -0.565,
+            -0.5263,
+            0.5658,
+            -0.4117,
+            1.2824
+          ],
+          "norm": 5.0659,
+          "mean": -0.0398,
+          "active": 29,
+          "dim": 64
+        },
+        "layers": [
+          {
+            "layer": 1,
+            "neighbour_conv": {
+              "head": [
+                -0.9355,
+                -0.852,
+                0.8803,
+                0.0855,
+                0.0444,
+                -0.6844,
+                -0.7085,
+                -0.601,
+                4.6286,
+                -0.4005,
+                -0.8776,
+                -0.9046
+              ],
+              "norm": 11.6306,
+              "mean": -0.044,
+              "active": 17,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                -0.4223,
+                -0.0962,
+                -1.7215,
+                -1.8913,
+                -2.169,
+                -0.9579,
+                -0.11,
+                -0.0843,
+                -1.9446,
+                -0.6476,
+                2.6052,
+                -1.8513
+              ],
+              "norm": 14.8434,
+              "mean": -0.3536,
+              "active": 24,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                -0.9267,
+                1.5676,
+                -0.7923,
+                -0.899,
+                -0.5863,
+                -0.031,
+                -0.9985,
+                -0.9987,
+                -0.9762,
+                2.6736,
+                -0.9925,
+                2.3611
+              ],
+              "norm": 11.442,
+              "mean": -0.061,
+              "active": 19,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                -0.7962,
+                1.4179,
+                -0.7779,
+                -0.8281,
+                -0.6034,
+                -0.0245,
+                -0.9684,
+                -0.9553,
+                -0.9312,
+                2.4629,
+                -0.9344,
+                2.2532
+              ],
+              "norm": 10.6372,
+              "mean": -0.0588,
+              "active": 19,
+              "dim": 64
+            },
+            "alpha": 0.1
+          },
+          {
+            "layer": 2,
+            "neighbour_conv": {
+              "head": [
+                3.5625,
+                3.3756,
+                0.8155,
+                3.7992,
+                3.9679,
+                4.7421,
+                3.7175,
+                -0.9997,
+                -0.9984,
+                -0.9991,
+                -0.9983,
+                4.1985
+              ],
+              "norm": 23.2853,
+              "mean": 1.5422,
+              "active": 36,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                -1.5293,
+                -0.5301,
+                4.1019,
+                -3.1106,
+                -1.6851,
+                -0.8042,
+                2.0044,
+                -0.536,
+                -1.8924,
+                -0.1924,
+                0.8947,
+                -0.9991
+              ],
+              "norm": 14.8962,
+              "mean": -0.3125,
+              "active": 23,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                8.6859,
+                8.5527,
+                -1.0,
+                -1.0,
+                -1.0,
+                2.9079,
+                -0.9999,
+                -1.0,
+                -1.0,
+                -0.9105,
+                -1.0,
+                5.065
+              ],
+              "norm": 37.0773,
+              "mean": 1.8447,
+              "active": 22,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                7.8551,
+                7.7046,
+                -0.9649,
+                -0.919,
+                -0.9757,
+                2.6205,
+                -0.9697,
+                -0.9565,
+                -0.9526,
+                -0.7629,
+                -0.9412,
+                4.6867
+              ],
+              "norm": 33.679,
+              "mean": 1.6562,
+              "active": 22,
+              "dim": 64
+            },
+            "alpha": 0.1
+          },
+          {
+            "layer": 3,
+            "neighbour_conv": {
+              "head": [
+                -1.0,
+                9.7719,
+                1.4153,
+                16.83,
+                6.8938,
+                14.2112,
+                18.9061,
+                -0.0573,
+                5.1414,
+                16.6285,
+                1.3544,
+                21.762
+              ],
+              "norm": 86.1829,
+              "mean": 6.6455,
+              "active": 34,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                -6.2336,
+                3.9662,
+                2.6365,
+                -6.1062,
+                -7.8569,
+                7.5639,
+                -0.9876,
+                3.8715,
+                -6.2735,
+                -2.6516,
+                -5.939,
+                -8.3309
+              ],
+              "norm": 43.749,
+              "mean": -0.4762,
+              "active": 31,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                -0.9999,
+                10.627,
+                17.4897,
+                8.3706,
+                -1.0,
+                -1.0,
+                22.2198,
+                -1.0,
+                16.5757,
+                -1.0,
+                12.2275,
+                -1.0
+              ],
+              "norm": 83.1109,
+              "mean": 5.5372,
+              "active": 30,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                -0.8621,
+                9.5714,
+                15.6758,
+                7.5146,
+                -0.9757,
+                -0.8966,
+                19.928,
+                -0.9565,
+                14.8655,
+                -0.8434,
+                10.9635,
+                -0.7718
+              ],
+              "norm": 74.6499,
+              "mean": 4.9795,
+              "active": 30,
+              "dim": 64
+            },
+            "alpha": 0.1
+          },
+          {
+            "layer": 4,
+            "neighbour_conv": {
+              "head": [
+                38.7519,
+                21.4593,
+                -1.0,
+                -1.0,
+                41.0512,
+                13.177,
+                21.1965,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                15.4353
+              ],
+              "norm": 165.9084,
+              "mean": 13.4628,
+              "active": 33,
+              "dim": 64
+            },
+            "from_parent_r6": {
+              "head": [
+                -9.9548,
+                -15.6144,
+                11.9314,
+                5.3696,
+                -16.2896,
+                -9.1694,
+                16.5275,
+                15.0516,
+                1.0408,
+                -7.1679,
+                8.0234,
+                -15.1459
+              ],
+              "norm": 106.0022,
+              "mean": 0.1676,
+              "active": 32,
+              "dim": 64
+            },
+            "mixed": {
+              "head": [
+                101.161,
+                74.2644,
+                -1.0,
+                -1.0,
+                -1.0,
+                61.7625,
+                -1.0,
+                -1.0,
+                -1.0,
+                60.7666,
+                -1.0,
+                76.4002
+              ],
+              "norm": 383.7634,
+              "mean": 29.9683,
+              "active": 29,
+              "dim": 64
+            },
+            "after_initial_residual": {
+              "head": [
+                91.0827,
+                66.8451,
+                -0.9649,
+                -0.919,
+                -0.9757,
+                55.5896,
+                -0.9698,
+                -0.9565,
+                -0.9526,
+                54.7465,
+                -0.9412,
+                68.8884
+              ],
+              "norm": 345.694,
+              "mean": 26.9675,
+              "active": 29,
+              "dim": 64
+            },
+            "alpha": 0.1
+          }
+        ],
+        "neighbour_message_layer1": {
+          "head": [
+            1.4926,
+            1.4767,
+            -0.8543,
+            -0.5854,
+            -0.9443,
+            0.1864,
+            -0.859,
+            -0.5232,
+            -0.8753,
+            -0.2563,
+            -0.6647,
+            1.2936
+          ],
+          "norm": 6.8884,
+          "mean": -0.1186,
+          "active": 25,
+          "dim": 64
+        },
+        "n_neighbours": 6,
+        "readout": {
+          "final_embedding": {
+            "head": [
+              91.0827,
+              66.8451,
+              -0.9649,
+              -0.919,
+              -0.9757,
+              55.5896,
+              -0.9698,
+              -0.9565,
+              -0.9526,
+              54.7465,
+              -0.9412,
+              68.8884
+            ],
+            "norm": 345.694,
+            "mean": 26.9675,
+            "active": 29,
+            "dim": 64
+          },
+          "bias": 0.03289,
+          "logit": -218.89064,
+          "s_i": 0.0,
+          "top_units": [
+            {
+              "unit": 0,
+              "activation": 91.0827,
+              "weight": -0.185,
+              "contribution": -16.8539
+            },
+            {
+              "unit": 51,
+              "activation": 83.706,
+              "weight": -0.18,
+              "contribution": -15.0679
+            },
+            {
+              "unit": 33,
+              "activation": 76.2213,
+              "weight": -0.1855,
+              "contribution": -14.1354
+            },
+            {
+              "unit": 13,
+              "activation": 92.0368,
+              "weight": -0.1491,
+              "contribution": -13.72
+            },
+            {
+              "unit": 45,
+              "activation": 66.4188,
+              "weight": -0.1955,
+              "contribution": -12.9828
+            },
+            {
+              "unit": 42,
+              "activation": 82.2367,
+              "weight": -0.1512,
+              "contribution": -12.4308
+            },
+            {
+              "unit": 24,
+              "activation": 76.9189,
+              "weight": -0.1589,
+              "contribution": -12.2193
+            },
+            {
+              "unit": 57,
+              "activation": 70.7037,
+              "weight": -0.1688,
+              "contribution": -11.9331
+            },
+            {
+              "unit": 17,
+              "activation": 65.5432,
+              "weight": -0.1757,
+              "contribution": -11.5154
+            },
+            {
+              "unit": 36,
+              "activation": 74.3904,
+              "weight": -0.1406,
+              "contribution": -10.4583
+            },
+            {
+              "unit": 31,
+              "activation": 67.0099,
+              "weight": -0.1499,
+              "contribution": -10.0421
+            },
+            {
+              "unit": 18,
+              "activation": 82.231,
+              "weight": -0.1045,
+              "contribution": -8.5921
+            }
+          ]
+        }
+      }
+    }
+  },
+  "feature_cols": [
+    "population_exists_z",
+    "population_log_z",
+    "night_lights_exists_z",
+    "night_lights_log_z",
+    "road_km_exists_z",
+    "road_km_log_z",
+    "poi_count_exists_z",
+    "poi_count_log_z",
+    "building_area_m2_exists_z",
+    "building_area_m2_log_z",
+    "building_count_exists_z",
+    "building_count_log_z",
+    "poi_amenity_restaurant_exists_z",
+    "poi_amenity_restaurant_log_z",
+    "poi_amenity_cafe_exists_z",
+    "poi_amenity_cafe_log_z",
+    "poi_amenity_bar_exists_z",
+    "poi_amenity_bar_log_z",
+    "poi_amenity_pub_exists_z",
+    "poi_amenity_pub_log_z",
+    "poi_amenity_cinema_exists_z",
+    "poi_amenity_cinema_log_z",
+    "poi_amenity_theatre_exists_z",
+    "poi_amenity_theatre_log_z",
+    "poi_amenity_nightclub_exists_z",
+    "poi_amenity_nightclub_log_z",
+    "poi_amenity_university_exists_z",
+    "poi_amenity_university_log_z",
+    "poi_amenity_hospital_exists_z",
+    "poi_amenity_hospital_log_z",
+    "poi_amenity_bank_exists_z",
+    "poi_amenity_bank_log_z",
+    "poi_shop_mall_exists_z",
+    "poi_shop_mall_log_z",
+    "poi_shop_luxury_exists_z",
+    "poi_shop_luxury_log_z",
+    "poi_shop_supermarket_exists_z",
+    "poi_shop_supermarket_log_z",
+    "poi_shop_convenience_exists_z",
+    "poi_shop_convenience_log_z",
+    "poi_tourism_hotel_exists_z",
+    "poi_tourism_hotel_log_z",
+    "poi_tourism_guest_house_exists_z",
+    "poi_tourism_guest_house_log_z",
+    "poi_leisure_exists_z",
+    "poi_leisure_log_z",
+    "poi_office_exists_z",
+    "poi_office_log_z",
+    "poi_amenity_restaurant_density_exists_z",
+    "poi_amenity_restaurant_density_log_z",
+    "poi_amenity_cafe_density_exists_z",
+    "poi_amenity_cafe_density_log_z",
+    "poi_amenity_bar_density_exists_z",
+    "poi_amenity_bar_density_log_z",
+    "poi_amenity_pub_density_exists_z",
+    "poi_amenity_pub_density_log_z",
+    "poi_amenity_cinema_density_exists_z",
+    "poi_amenity_cinema_density_log_z",
+    "poi_amenity_theatre_density_exists_z",
+    "poi_amenity_theatre_density_log_z",
+    "poi_amenity_nightclub_density_exists_z",
+    "poi_amenity_nightclub_density_log_z",
+    "poi_amenity_university_density_exists_z",
+    "poi_amenity_university_density_log_z",
+    "poi_amenity_hospital_density_exists_z",
+    "poi_amenity_hospital_density_log_z",
+    "poi_amenity_bank_density_exists_z",
+    "poi_amenity_bank_density_log_z",
+    "poi_shop_mall_density_exists_z",
+    "poi_shop_mall_density_log_z",
+    "poi_shop_luxury_density_exists_z",
+    "poi_shop_luxury_density_log_z",
+    "poi_shop_supermarket_density_exists_z",
+    "poi_shop_supermarket_density_log_z",
+    "poi_shop_convenience_density_exists_z",
+    "poi_shop_convenience_density_log_z",
+    "poi_tourism_hotel_density_exists_z",
+    "poi_tourism_hotel_density_log_z",
+    "poi_tourism_guest_house_density_exists_z",
+    "poi_tourism_guest_house_density_log_z",
+    "poi_leisure_density_exists_z",
+    "poi_leisure_density_log_z",
+    "poi_office_density_exists_z",
+    "poi_office_density_log_z",
+    "landuse_residential_z",
+    "landuse_residential_exists_z",
+    "landuse_commercial_z",
+    "landuse_commercial_exists_z",
+    "landuse_industrial_z",
+    "landuse_industrial_exists_z",
+    "landuse_retail_z",
+    "landuse_retail_exists_z",
+    "building_share_z",
+    "building_share_exists_z"
+  ],
+  "loss_curve": [
+    [
+      {
+        "epoch": 1,
+        "loss": 22.974760599496236,
+        "L_agg": 22.970419745954146,
+        "L_floor": 0.08681707084178925,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 2,
+        "loss": 19.658657747022378,
+        "L_agg": 19.658657747022378,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 3,
+        "loss": 14.052557195722436,
+        "L_agg": 14.052557195722436,
+        "L_floor": 0.0,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 4,
+        "loss": 9.915796303209722,
+        "L_agg": 9.915796303184552,
+        "L_floor": 5.034086481003897e-10,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 5,
+        "loss": 6.6581541645528315,
+        "L_agg": 6.658144315443712,
+        "L_floor": 0.00019698217511177063,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 6,
+        "loss": 4.189471205686494,
+        "L_agg": 4.189441899866359,
+        "L_floor": 0.0005861163954250515,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 7,
+        "loss": 2.426493795625727,
+        "L_agg": 2.426448855797214,
+        "L_floor": 0.0008987965411506593,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 8,
+        "loss": 1.2452650773933125,
+        "L_agg": 1.2452218943593176,
+        "L_floor": 0.000863660650793463,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 9,
+        "loss": 0.5229593985534383,
+        "L_agg": 0.5229213258537574,
+        "L_floor": 0.0007614539936184883,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 10,
+        "loss": 0.15689284989876662,
+        "L_agg": 0.15685988786809368,
+        "L_floor": 0.0006592405843548477,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 11,
+        "loss": 0.05558052200489965,
+        "L_agg": 0.05555386536638889,
+        "L_floor": 0.0005331327556632459,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 12,
+        "loss": 0.1284147571597231,
+        "L_agg": 0.12839643039219198,
+        "L_floor": 0.0003665353578981012,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 13,
+        "loss": 0.2846887936682565,
+        "L_agg": 0.2846755561966079,
+        "L_floor": 0.0002647494256962091,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 14,
+        "loss": 0.4487135294226974,
+        "L_agg": 0.44870321577551664,
+        "L_floor": 0.00020627294725272804,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 15,
+        "loss": 0.5750710776024832,
+        "L_agg": 0.5750645794324598,
+        "L_floor": 0.00012996340228710324,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 16,
+        "loss": 0.6469857659621313,
+        "L_agg": 0.6469795845368255,
+        "L_floor": 0.00012362850247882307,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 17,
+        "loss": 0.6654056415587939,
+        "L_agg": 0.6653997185541294,
+        "L_floor": 0.0001184600914712064,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 18,
+        "loss": 0.6385371836731234,
+        "L_agg": 0.6385313007467072,
+        "L_floor": 0.00011765852832468227,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 19,
+        "loss": 0.5758625774278021,
+        "L_agg": 0.5758583364526435,
+        "L_floor": 8.481950499117374e-05,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 20,
+        "loss": 0.4915892089280713,
+        "L_agg": 0.49148985378416893,
+        "L_floor": 0.001987102907150984,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 21,
+        "loss": 0.4234131236765501,
+        "L_agg": 0.4218245252007586,
+        "L_floor": 0.03177196905016899,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 22,
+        "loss": 0.3758595818890393,
+        "L_agg": 0.3721163464015484,
+        "L_floor": 0.0748647078871727,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 23,
+        "loss": 0.3440084533807746,
+        "L_agg": 0.3392044782680384,
+        "L_floor": 0.0960794985294342,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 24,
+        "loss": 0.32310512607532604,
+        "L_agg": 0.31719975491601093,
+        "L_floor": 0.11810742318630219,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 25,
+        "loss": 0.3039822520395847,
+        "L_agg": 0.2972586916467281,
+        "L_floor": 0.13447120785713196,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 26,
+        "loss": 0.28392281832749505,
+        "L_agg": 0.2768694519309189,
+        "L_floor": 0.14106732606887817,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 27,
+        "loss": 0.26524608429354923,
+        "L_agg": 0.2579503086006393,
+        "L_floor": 0.14591550827026367,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 28,
+        "loss": 0.24894005520348841,
+        "L_agg": 0.24144602654581362,
+        "L_floor": 0.1498805731534958,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 29,
+        "loss": 0.23504185475219036,
+        "L_agg": 0.22733485404212023,
+        "L_floor": 0.15414001047611237,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 30,
+        "loss": 0.22322172694690537,
+        "L_agg": 0.21545100980289292,
+        "L_floor": 0.15541434288024902,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 31,
+        "loss": 0.21324506293735376,
+        "L_agg": 0.20543526796377173,
+        "L_floor": 0.15619589388370514,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 32,
+        "loss": 0.20431220220134705,
+        "L_agg": 0.19662584472180455,
+        "L_floor": 0.15372714400291443,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 33,
+        "loss": 0.19658479084784233,
+        "L_agg": 0.188987488761191,
+        "L_floor": 0.1519460380077362,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 34,
+        "loss": 0.18984302104509973,
+        "L_agg": 0.18235815334193015,
+        "L_floor": 0.14969734847545624,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 35,
+        "loss": 0.1838765213392418,
+        "L_agg": 0.17646876528260522,
+        "L_floor": 0.1481551229953766,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 36,
+        "loss": 0.17858008506221784,
+        "L_agg": 0.17128327606691135,
+        "L_floor": 0.14593617618083954,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 37,
+        "loss": 0.1739519624123232,
+        "L_agg": 0.16678146776648922,
+        "L_floor": 0.14340989291667938,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 38,
+        "loss": 0.1699784265482276,
+        "L_agg": 0.16288245307518534,
+        "L_floor": 0.14191946387290955,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 39,
+        "loss": 0.1665058699147841,
+        "L_agg": 0.1594765213960847,
+        "L_floor": 0.1405869722366333,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 40,
+        "loss": 0.16347339152662616,
+        "L_agg": 0.1564881807130442,
+        "L_floor": 0.13970421254634857,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 41,
+        "loss": 0.16076222558620523,
+        "L_agg": 0.1538463373028035,
+        "L_floor": 0.1383177638053894,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 42,
+        "loss": 0.1583619092917144,
+        "L_agg": 0.15155211075675484,
+        "L_floor": 0.13619597256183624,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 43,
+        "loss": 0.15626881340164103,
+        "L_agg": 0.14954724510777154,
+        "L_floor": 0.1344313621520996,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 44,
+        "loss": 0.154555893900436,
+        "L_agg": 0.1478878761889456,
+        "L_floor": 0.133360356092453,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 45,
+        "loss": 0.15315916371836777,
+        "L_agg": 0.14652532694234963,
+        "L_floor": 0.13267673552036285,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 46,
+        "loss": 0.1520508429285467,
+        "L_agg": 0.14545160664882067,
+        "L_floor": 0.13198472559452057,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 47,
+        "loss": 0.15120335530893608,
+        "L_agg": 0.14463179467649862,
+        "L_floor": 0.1314312070608139,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 48,
+        "loss": 0.1505853702239019,
+        "L_agg": 0.14401644337170544,
+        "L_floor": 0.13137853145599365,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 49,
+        "loss": 0.1500930220232999,
+        "L_agg": 0.1435593215161657,
+        "L_floor": 0.13067400455474854,
+        "seed": 0,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 50,
+        "loss": 0.1497243916569616,
+        "L_agg": 0.1432040314143862,
+        "L_floor": 0.1304071992635727,
+        "seed": 0,
+        "tag": "ensemble"
+      }
+    ],
+    [
+      {
+        "epoch": 1,
+        "loss": 23.04155881217662,
+        "L_agg": 23.036855988940037,
+        "L_floor": 0.09405646473169327,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 2,
+        "loss": 20.295891315793394,
+        "L_agg": 20.295891315793394,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 3,
+        "loss": 15.172000842604156,
+        "L_agg": 15.172000842604156,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 4,
+        "loss": 11.111935833842692,
+        "L_agg": 11.111935833842692,
+        "L_floor": 0.0,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 5,
+        "loss": 7.70175579539852,
+        "L_agg": 7.701753708230506,
+        "L_floor": 4.1743358451640233e-05,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 6,
+        "loss": 4.971608068052425,
+        "L_agg": 4.9715881136386235,
+        "L_floor": 0.0003990882833022624,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 7,
+        "loss": 2.9532976527979016,
+        "L_agg": 2.9532411372518808,
+        "L_floor": 0.0011303109349682927,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 8,
+        "loss": 1.5748654539139422,
+        "L_agg": 1.5747997737063157,
+        "L_floor": 0.0013136041816323996,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 9,
+        "loss": 0.7140153549496326,
+        "L_agg": 0.7139516975382585,
+        "L_floor": 0.0012731482274830341,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 10,
+        "loss": 0.24746019216180193,
+        "L_agg": 0.24740098893888407,
+        "L_floor": 0.0011840644292533398,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 11,
+        "loss": 0.06596996654679674,
+        "L_agg": 0.06592147409737367,
+        "L_floor": 0.0009698489448055625,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 12,
+        "loss": 0.07456759251984756,
+        "L_agg": 0.0745276642981799,
+        "L_floor": 0.0007985644042491913,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 13,
+        "loss": 0.19046980045685868,
+        "L_agg": 0.19043675976580798,
+        "L_floor": 0.0006608138210140169,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 14,
+        "loss": 0.34527430436219453,
+        "L_agg": 0.3452518403614727,
+        "L_floor": 0.0004492799926083535,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 15,
+        "loss": 0.4904993155180267,
+        "L_agg": 0.49048013172818117,
+        "L_floor": 0.0003836757969111204,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 16,
+        "loss": 0.5990492879863709,
+        "L_agg": 0.5990328077150011,
+        "L_floor": 0.00032960542012006044,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 17,
+        "loss": 0.6606239969591017,
+        "L_agg": 0.6606092749256178,
+        "L_floor": 0.00029444065876305103,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 18,
+        "loss": 0.6752466276839165,
+        "L_agg": 0.6752352078156015,
+        "L_floor": 0.00022839735902380198,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 19,
+        "loss": 0.6477660753723788,
+        "L_agg": 0.6477534439825425,
+        "L_floor": 0.0002526277967263013,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 20,
+        "loss": 0.5866955937977562,
+        "L_agg": 0.5865708049110051,
+        "L_floor": 0.0024957775603979826,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 21,
+        "loss": 0.5176407347593183,
+        "L_agg": 0.5164148931784281,
+        "L_floor": 0.02451683022081852,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 22,
+        "loss": 0.45976157089514386,
+        "L_agg": 0.45635556731192123,
+        "L_floor": 0.0681200698018074,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 23,
+        "loss": 0.41567422210381205,
+        "L_agg": 0.41095257870063956,
+        "L_floor": 0.09443286806344986,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 24,
+        "loss": 0.38461476613105056,
+        "L_agg": 0.3787258668084514,
+        "L_floor": 0.117777980864048,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 25,
+        "loss": 0.3509781035980028,
+        "L_agg": 0.3444405944471997,
+        "L_floor": 0.13075017929077148,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 26,
+        "loss": 0.315694909384482,
+        "L_agg": 0.308771625002854,
+        "L_floor": 0.13846568763256073,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 27,
+        "loss": 0.2848525225752481,
+        "L_agg": 0.2777373117031046,
+        "L_floor": 0.1423042118549347,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 28,
+        "loss": 0.25946870254534893,
+        "L_agg": 0.2521818014252525,
+        "L_floor": 0.14573802053928375,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 29,
+        "loss": 0.23889309203495088,
+        "L_agg": 0.23143604805935922,
+        "L_floor": 0.1491408795118332,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 30,
+        "loss": 0.2223811804501552,
+        "L_agg": 0.21482896136103458,
+        "L_floor": 0.15104438364505768,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 31,
+        "loss": 0.209758186938638,
+        "L_agg": 0.2021546221733337,
+        "L_floor": 0.1520712971687317,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 32,
+        "loss": 0.19979253962920515,
+        "L_agg": 0.19214239895628302,
+        "L_floor": 0.1530028134584427,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 33,
+        "loss": 0.19128143810360257,
+        "L_agg": 0.18360959901167576,
+        "L_floor": 0.1534367799758911,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 34,
+        "loss": 0.1838596062167822,
+        "L_agg": 0.1761768594748615,
+        "L_floor": 0.15365493297576904,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 35,
+        "loss": 0.1775167534187123,
+        "L_agg": 0.16982897474092093,
+        "L_floor": 0.1537555754184723,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 36,
+        "loss": 0.17202512426135338,
+        "L_agg": 0.16439176462424196,
+        "L_floor": 0.15266719460487366,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 37,
+        "loss": 0.16730526310687216,
+        "L_agg": 0.1597526603128508,
+        "L_floor": 0.1510520577430725,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 38,
+        "loss": 0.16326517587743639,
+        "L_agg": 0.1558176723702991,
+        "L_floor": 0.14895007014274597,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 39,
+        "loss": 0.1598276251511117,
+        "L_agg": 0.15241020755408607,
+        "L_floor": 0.1483483463525772,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 40,
+        "loss": 0.15683615489126876,
+        "L_agg": 0.14946857050256565,
+        "L_floor": 0.1473516821861267,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 41,
+        "loss": 0.15428870234539885,
+        "L_agg": 0.1469782881242611,
+        "L_floor": 0.1462082862854004,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 42,
+        "loss": 0.1521276490578839,
+        "L_agg": 0.14488224627472845,
+        "L_floor": 0.14490805566310883,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 43,
+        "loss": 0.15037586986751278,
+        "L_agg": 0.1431655430208238,
+        "L_floor": 0.14420653879642487,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 44,
+        "loss": 0.1489563207047305,
+        "L_agg": 0.14177961367166256,
+        "L_floor": 0.14353413879871368,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 45,
+        "loss": 0.14782228279825738,
+        "L_agg": 0.14066323457252672,
+        "L_floor": 0.1431809663772583,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 46,
+        "loss": 0.14692509672127643,
+        "L_agg": 0.1397944589563457,
+        "L_floor": 0.1426127552986145,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 47,
+        "loss": 0.14623220305882684,
+        "L_agg": 0.1391253177448391,
+        "L_floor": 0.14213770627975464,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 48,
+        "loss": 0.1457188650816062,
+        "L_agg": 0.1386240855641046,
+        "L_floor": 0.141895592212677,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 49,
+        "loss": 0.1453336416406542,
+        "L_agg": 0.1382566056808442,
+        "L_floor": 0.14154072105884552,
+        "seed": 1,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 50,
+        "loss": 0.14505228052410923,
+        "L_agg": 0.13798480412486636,
+        "L_floor": 0.14134952425956726,
+        "seed": 1,
+        "tag": "ensemble"
+      }
+    ],
+    [
+      {
+        "epoch": 1,
+        "loss": 22.94634674300188,
+        "L_agg": 22.942180009062678,
+        "L_floor": 0.08333467692136765,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 2,
+        "loss": 20.387077048471305,
+        "L_agg": 20.387077048471305,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 3,
+        "loss": 15.296131018748213,
+        "L_agg": 15.296131018748213,
+        "L_floor": 0.0,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 4,
+        "loss": 11.263211611458916,
+        "L_agg": 11.263211611316233,
+        "L_floor": 2.853662195434481e-09,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 5,
+        "loss": 7.893355476363842,
+        "L_agg": 7.893346361048691,
+        "L_floor": 0.00018230629211757332,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 6,
+        "loss": 5.203514205667274,
+        "L_agg": 5.203474691083796,
+        "L_floor": 0.0007902916404418647,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 7,
+        "loss": 3.196209944012404,
+        "L_agg": 3.1961450927764563,
+        "L_floor": 0.001297024660743773,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 8,
+        "loss": 1.799166898966147,
+        "L_agg": 1.7990968873009172,
+        "L_floor": 0.0014002332463860512,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 9,
+        "loss": 0.8928382216168252,
+        "L_agg": 0.8927761767686612,
+        "L_floor": 0.0012408969923853874,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 10,
+        "loss": 0.36037867530385476,
+        "L_agg": 0.36032479649211374,
+        "L_floor": 0.0010775761911645532,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 11,
+        "loss": 0.10491001610418456,
+        "L_agg": 0.10486426821509516,
+        "L_floor": 0.0009149577817879617,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 12,
+        "loss": 0.044709260468862054,
+        "L_agg": 0.0446714425004572,
+        "L_floor": 0.0007563593680970371,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 13,
+        "loss": 0.10775958349327001,
+        "L_agg": 0.10772976004150141,
+        "L_floor": 0.000596469035372138,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 14,
+        "loss": 0.23226509391168443,
+        "L_agg": 0.23224296431397456,
+        "L_floor": 0.00044259196147322655,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 15,
+        "loss": 0.36917487828121504,
+        "L_agg": 0.3691569913289508,
+        "L_floor": 0.00035773904528468847,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 16,
+        "loss": 0.48638559515586954,
+        "L_agg": 0.48637026067865796,
+        "L_floor": 0.00030668952967971563,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 17,
+        "loss": 0.5682574464921951,
+        "L_agg": 0.5682452932173571,
+        "L_floor": 0.0002430655003990978,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 18,
+        "loss": 0.611130716075403,
+        "L_agg": 0.6111222017689023,
+        "L_floor": 0.00017028611910063773,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 19,
+        "loss": 0.6179627958516661,
+        "L_agg": 0.6179570801258464,
+        "L_floor": 0.00011431451275711879,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 20,
+        "loss": 0.5936665783504446,
+        "L_agg": 0.5936627283452304,
+        "L_floor": 7.700010610278696e-05,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 21,
+        "loss": 0.5440981274325082,
+        "L_agg": 0.5440946832181367,
+        "L_floor": 6.888428470119834e-05,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 22,
+        "loss": 0.48044746193937565,
+        "L_agg": 0.48041344604444997,
+        "L_floor": 0.0006803178694099188,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 23,
+        "loss": 0.42876587499278,
+        "L_agg": 0.42742619191641323,
+        "L_floor": 0.02679366059601307,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 24,
+        "loss": 0.3883258535525092,
+        "L_agg": 0.3852016451301315,
+        "L_floor": 0.06248416751623154,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 25,
+        "loss": 0.35204472658606034,
+        "L_agg": 0.3480046674181686,
+        "L_floor": 0.08080118149518967,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 26,
+        "loss": 0.32129535038501306,
+        "L_agg": 0.31650604220584316,
+        "L_floor": 0.09578616172075272,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 27,
+        "loss": 0.2951262536739563,
+        "L_agg": 0.28954065072365154,
+        "L_floor": 0.11171205341815948,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 28,
+        "loss": 0.2729579423158815,
+        "L_agg": 0.266952725925987,
+        "L_floor": 0.12010432779788971,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 29,
+        "loss": 0.2547107379203467,
+        "L_agg": 0.24833640253821296,
+        "L_floor": 0.1274867057800293,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 30,
+        "loss": 0.23939213171147297,
+        "L_agg": 0.23262978406169008,
+        "L_floor": 0.13524694740772247,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 31,
+        "loss": 0.2260972887698504,
+        "L_agg": 0.219134027366707,
+        "L_floor": 0.13926522433757782,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 32,
+        "loss": 0.21430272246750717,
+        "L_agg": 0.2072111159660173,
+        "L_floor": 0.1418321281671524,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 33,
+        "loss": 0.20378493843635204,
+        "L_agg": 0.19662194326555016,
+        "L_floor": 0.1432598978281021,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 34,
+        "loss": 0.19429821435697736,
+        "L_agg": 0.18711560041047992,
+        "L_floor": 0.1436522752046585,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 35,
+        "loss": 0.18581347266129575,
+        "L_agg": 0.17861857131041012,
+        "L_floor": 0.14389802515506744,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 36,
+        "loss": 0.1782803894356176,
+        "L_agg": 0.1711228071116194,
+        "L_floor": 0.1431516408920288,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 37,
+        "loss": 0.17161248731860637,
+        "L_agg": 0.16449610018605113,
+        "L_floor": 0.14232774078845978,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 38,
+        "loss": 0.1658007894639401,
+        "L_agg": 0.15876038940590903,
+        "L_floor": 0.14080800116062164,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 39,
+        "loss": 0.1608915106123403,
+        "L_agg": 0.1539090504599825,
+        "L_floor": 0.1396491974592209,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 40,
+        "loss": 0.15653037236870432,
+        "L_agg": 0.14968479242042804,
+        "L_floor": 0.13691160082817078,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 41,
+        "loss": 0.15283180311004677,
+        "L_agg": 0.14608749936948576,
+        "L_floor": 0.13488607108592987,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 42,
+        "loss": 0.14970831482038244,
+        "L_agg": 0.14301691998094662,
+        "L_floor": 0.13382789492607117,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 43,
+        "loss": 0.14714314557314706,
+        "L_agg": 0.1404851018607695,
+        "L_floor": 0.13316087424755096,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 44,
+        "loss": 0.1450201438497025,
+        "L_agg": 0.13841803816512407,
+        "L_floor": 0.13204210996627808,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 45,
+        "loss": 0.14331215485796264,
+        "L_agg": 0.13677313091099194,
+        "L_floor": 0.13078047335147858,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 46,
+        "loss": 0.14198174766350632,
+        "L_agg": 0.1354887943816567,
+        "L_floor": 0.129859060049057,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 47,
+        "loss": 0.14097181226618483,
+        "L_agg": 0.13451281128011539,
+        "L_floor": 0.12918001413345337,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 48,
+        "loss": 0.14021934969836206,
+        "L_agg": 0.13378551491090387,
+        "L_floor": 0.12867669761180878,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 49,
+        "loss": 0.1396757948472496,
+        "L_agg": 0.13325118527555427,
+        "L_floor": 0.12849219143390656,
+        "seed": 2,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 50,
+        "loss": 0.13925613958039829,
+        "L_agg": 0.1328553462552423,
+        "L_floor": 0.12801586091518402,
+        "seed": 2,
+        "tag": "ensemble"
+      }
+    ],
+    [
+      {
+        "epoch": 1,
+        "loss": 22.95188410240529,
+        "L_agg": 22.94766082181899,
+        "L_floor": 0.08446560800075531,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 2,
+        "loss": 20.020910180370667,
+        "L_agg": 20.020910180370667,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 3,
+        "loss": 14.315393508581085,
+        "L_agg": 14.315393508581085,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 4,
+        "loss": 10.051802857954794,
+        "L_agg": 10.051802857954794,
+        "L_floor": 0.0,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 5,
+        "loss": 6.720336256098356,
+        "L_agg": 6.720336098620145,
+        "L_floor": 3.1495642360823695e-06,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 6,
+        "loss": 4.2134635419877045,
+        "L_agg": 4.213452939590508,
+        "L_floor": 0.00021204794757068157,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 7,
+        "loss": 2.440198197447092,
+        "L_agg": 2.4401713603739275,
+        "L_floor": 0.0005367414560168982,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 8,
+        "loss": 1.2619536611688995,
+        "L_agg": 1.261917029476262,
+        "L_floor": 0.0007326338090933859,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 9,
+        "loss": 0.5452994336330409,
+        "L_agg": 0.5452620269345022,
+        "L_floor": 0.0007481339271180332,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 10,
+        "loss": 0.17554880281048857,
+        "L_agg": 0.17551706991097338,
+        "L_floor": 0.0006346579757519066,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 11,
+        "loss": 0.05458632584446757,
+        "L_agg": 0.0545588106320444,
+        "L_floor": 0.0005503042484633625,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 12,
+        "loss": 0.09692444596614923,
+        "L_agg": 0.09690487939181157,
+        "L_floor": 0.00039133147220127285,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 13,
+        "loss": 0.22579150154869662,
+        "L_agg": 0.22577702436937638,
+        "L_floor": 0.0002895435900427401,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 14,
+        "loss": 0.3778268914058607,
+        "L_agg": 0.3778147880722862,
+        "L_floor": 0.00024206667148973793,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 15,
+        "loss": 0.5105169997666738,
+        "L_agg": 0.5105065318946574,
+        "L_floor": 0.00020935744396410882,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 16,
+        "loss": 0.6026911389803267,
+        "L_agg": 0.6026828901917092,
+        "L_floor": 0.0001649757759878412,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 17,
+        "loss": 0.6490584130541828,
+        "L_agg": 0.6490503124713649,
+        "L_floor": 0.00016201165271922946,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 18,
+        "loss": 0.6532881826863326,
+        "L_agg": 0.6532797049096866,
+        "L_floor": 0.00016955552564468235,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 19,
+        "loss": 0.6214188641144688,
+        "L_agg": 0.6214101085044718,
+        "L_floor": 0.0001751122035784647,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 20,
+        "loss": 0.5585159974142118,
+        "L_agg": 0.5585021474979259,
+        "L_floor": 0.00027699832571670413,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 21,
+        "loss": 0.47508294219006275,
+        "L_agg": 0.4750637514462207,
+        "L_floor": 0.00038381488411687315,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 22,
+        "loss": 0.39949509586715104,
+        "L_agg": 0.3989668341613837,
+        "L_floor": 0.010565233416855335,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 23,
+        "loss": 0.3553460801253006,
+        "L_agg": 0.3525554181309328,
+        "L_floor": 0.05581323802471161,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 24,
+        "loss": 0.3228394643535209,
+        "L_agg": 0.31861306756188396,
+        "L_floor": 0.08452793210744858,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 25,
+        "loss": 0.29787630698166545,
+        "L_agg": 0.2927738667324906,
+        "L_floor": 0.10204879939556122,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 26,
+        "loss": 0.27009263954135787,
+        "L_agg": 0.2642552842666508,
+        "L_floor": 0.11674710363149643,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 27,
+        "loss": 0.24534262511382313,
+        "L_agg": 0.23918902249509902,
+        "L_floor": 0.123072050511837,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 28,
+        "loss": 0.22570677220855767,
+        "L_agg": 0.21940426694263632,
+        "L_floor": 0.12605009973049164,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 29,
+        "loss": 0.21047798383339858,
+        "L_agg": 0.20404032829507804,
+        "L_floor": 0.12875311076641083,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 30,
+        "loss": 0.19774063640844253,
+        "L_agg": 0.19127457413461235,
+        "L_floor": 0.12932124733924866,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 31,
+        "loss": 0.18676854945956542,
+        "L_agg": 0.1802248772816248,
+        "L_floor": 0.130873441696167,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 32,
+        "loss": 0.1769312690918664,
+        "L_agg": 0.17039311313753525,
+        "L_floor": 0.13076311349868774,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 33,
+        "loss": 0.16811329827917143,
+        "L_agg": 0.16160868856397792,
+        "L_floor": 0.13009218871593475,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 34,
+        "loss": 0.16015589235018524,
+        "L_agg": 0.15373234215791853,
+        "L_floor": 0.1284710019826889,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 35,
+        "loss": 0.1528821967518557,
+        "L_agg": 0.1465394639386464,
+        "L_floor": 0.12685465812683105,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 36,
+        "loss": 0.146399951393244,
+        "L_agg": 0.14014015099265906,
+        "L_floor": 0.12519600987434387,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 37,
+        "loss": 0.14063941794792,
+        "L_agg": 0.13448304650718157,
+        "L_floor": 0.12312742322683334,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 38,
+        "loss": 0.1356265843126608,
+        "L_agg": 0.12957480784763228,
+        "L_floor": 0.12103552371263504,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 39,
+        "loss": 0.13132134057556827,
+        "L_agg": 0.1253464690034612,
+        "L_floor": 0.11949743330478668,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 40,
+        "loss": 0.1276025304305647,
+        "L_agg": 0.12173249597803694,
+        "L_floor": 0.11740069091320038,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 41,
+        "loss": 0.12411757311776649,
+        "L_agg": 0.11835789945900808,
+        "L_floor": 0.11519347131252289,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 42,
+        "loss": 0.12083747725787283,
+        "L_agg": 0.11527418646814944,
+        "L_floor": 0.11126581579446793,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 43,
+        "loss": 0.11797916808030351,
+        "L_agg": 0.11253878998434885,
+        "L_floor": 0.10880755633115768,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 44,
+        "loss": 0.11532172506338209,
+        "L_agg": 0.1100716813620016,
+        "L_floor": 0.10500086843967438,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 45,
+        "loss": 0.113078292160122,
+        "L_agg": 0.10790329629444917,
+        "L_floor": 0.10349991172552109,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 46,
+        "loss": 0.11115081040504605,
+        "L_agg": 0.10612845737803013,
+        "L_floor": 0.10044705867767334,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 47,
+        "loss": 0.1096648122225705,
+        "L_agg": 0.10468891123726996,
+        "L_floor": 0.09951801598072052,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 48,
+        "loss": 0.10846770368606302,
+        "L_agg": 0.10358989378527257,
+        "L_floor": 0.09755619615316391,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 49,
+        "loss": 0.10736073792181045,
+        "L_agg": 0.10254191054231554,
+        "L_floor": 0.09637654572725296,
+        "seed": 3,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 50,
+        "loss": 0.10656123889705972,
+        "L_agg": 0.10177301570868925,
+        "L_floor": 0.09576445817947388,
+        "seed": 3,
+        "tag": "ensemble"
+      }
+    ],
+    [
+      {
+        "epoch": 1,
+        "loss": 23.276908617788514,
+        "L_agg": 23.271056250059566,
+        "L_floor": 0.11704735457897186,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 2,
+        "loss": 20.72185347129595,
+        "L_agg": 20.72185347129595,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 3,
+        "loss": 15.752916934585626,
+        "L_agg": 15.752916934585626,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 4,
+        "loss": 11.617706679206377,
+        "L_agg": 11.617706679206377,
+        "L_floor": 0.0,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 5,
+        "loss": 8.197875059965083,
+        "L_agg": 8.197867665397082,
+        "L_floor": 0.0001478913618484512,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 6,
+        "loss": 5.4322310350145235,
+        "L_agg": 5.432202420599537,
+        "L_floor": 0.0005722882924601436,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 7,
+        "loss": 3.3389973249308893,
+        "L_agg": 3.3389564666490257,
+        "L_floor": 0.0008171655936166644,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 8,
+        "loss": 1.858430555786809,
+        "L_agg": 1.858390553637774,
+        "L_floor": 0.0008000429952517152,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 9,
+        "loss": 0.8908256517660368,
+        "L_agg": 0.8907875763342338,
+        "L_floor": 0.0007615085924044251,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 10,
+        "loss": 0.3322172896357717,
+        "L_agg": 0.33218286775332506,
+        "L_floor": 0.0006884376634843647,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 11,
+        "loss": 0.08525037875253245,
+        "L_agg": 0.08522090255493593,
+        "L_floor": 0.0005895239301025867,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 12,
+        "loss": 0.058799966309506665,
+        "L_agg": 0.05877582958613824,
+        "L_floor": 0.00048273446736857295,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 13,
+        "loss": 0.16495210879509947,
+        "L_agg": 0.16493455053785844,
+        "L_floor": 0.0003511651302687824,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 14,
+        "loss": 0.3236569587881824,
+        "L_agg": 0.3236426832511135,
+        "L_floor": 0.00028551073046401143,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 15,
+        "loss": 0.4749630524375637,
+        "L_agg": 0.47494994876804714,
+        "L_floor": 0.0002620733866933733,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 16,
+        "loss": 0.584953579292593,
+        "L_agg": 0.5849450242816568,
+        "L_floor": 0.0001711002114461735,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 17,
+        "loss": 0.6408175452635719,
+        "L_agg": 0.6408107639187351,
+        "L_floor": 0.0001356268912786618,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 18,
+        "loss": 0.6426309276834731,
+        "L_agg": 0.6426245254110258,
+        "L_floor": 0.00012804544530808926,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 19,
+        "loss": 0.5972701114926985,
+        "L_agg": 0.5972636180011158,
+        "L_floor": 0.00012986983347218484,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 20,
+        "loss": 0.5286365746737802,
+        "L_agg": 0.5277072419280531,
+        "L_floor": 0.0185866542160511,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 21,
+        "loss": 0.4753728674417429,
+        "L_agg": 0.4716045754188739,
+        "L_floor": 0.07536584138870239,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 22,
+        "loss": 0.43345777424837706,
+        "L_agg": 0.42817248836945054,
+        "L_floor": 0.10570571571588516,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 23,
+        "loss": 0.40740051060069116,
+        "L_agg": 0.4006611475263885,
+        "L_floor": 0.13478726148605347,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 24,
+        "loss": 0.38179254034945437,
+        "L_agg": 0.3743160955276496,
+        "L_floor": 0.1495288908481598,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 25,
+        "loss": 0.35061831637449264,
+        "L_agg": 0.34268430299289226,
+        "L_floor": 0.158680260181427,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 26,
+        "loss": 0.3205762975287924,
+        "L_agg": 0.3123127766323576,
+        "L_floor": 0.16527041792869568,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 27,
+        "loss": 0.29454286602665986,
+        "L_agg": 0.2860951267309984,
+        "L_floor": 0.1689547896385193,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 28,
+        "loss": 0.27268624937029445,
+        "L_agg": 0.2640372885191616,
+        "L_floor": 0.1729792058467865,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 29,
+        "loss": 0.2541644276550038,
+        "L_agg": 0.24538236125018428,
+        "L_floor": 0.17564132809638977,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 30,
+        "loss": 0.2384706360249511,
+        "L_agg": 0.2295720956249825,
+        "L_floor": 0.1779707968235016,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 31,
+        "loss": 0.22524319425958989,
+        "L_agg": 0.216223672263211,
+        "L_floor": 0.18039043247699738,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 32,
+        "loss": 0.21408070155909337,
+        "L_agg": 0.20498599668523348,
+        "L_floor": 0.18189409375190735,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 33,
+        "loss": 0.20471145705039953,
+        "L_agg": 0.1955385303934977,
+        "L_floor": 0.18345853686332703,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 34,
+        "loss": 0.19678876512257795,
+        "L_agg": 0.1875853618657444,
+        "L_floor": 0.18406805396080017,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 35,
+        "loss": 0.19006557751063446,
+        "L_agg": 0.18084453221026997,
+        "L_floor": 0.1844208985567093,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 36,
+        "loss": 0.1843131776265086,
+        "L_agg": 0.1750933206937493,
+        "L_floor": 0.1843971312046051,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 37,
+        "loss": 0.17930599601561412,
+        "L_agg": 0.1700965894534646,
+        "L_floor": 0.1841881275177002,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 38,
+        "loss": 0.17497356383222024,
+        "L_agg": 0.16579038890170733,
+        "L_floor": 0.1836634874343872,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 39,
+        "loss": 0.17111309709477127,
+        "L_agg": 0.16198491862493455,
+        "L_floor": 0.18256355822086334,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 40,
+        "loss": 0.167788914634,
+        "L_agg": 0.15872614574254626,
+        "L_floor": 0.18125537037849426,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 41,
+        "loss": 0.1649824476418043,
+        "L_agg": 0.15595986811341295,
+        "L_floor": 0.18045158684253693,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 42,
+        "loss": 0.16259564447231223,
+        "L_agg": 0.15363480231739213,
+        "L_floor": 0.17921684682369232,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 43,
+        "loss": 0.16060129271172718,
+        "L_agg": 0.1516955634328051,
+        "L_floor": 0.17811457812786102,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 44,
+        "loss": 0.15899142870393665,
+        "L_agg": 0.1501250096195665,
+        "L_floor": 0.17732837796211243,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 45,
+        "loss": 0.15771644376611366,
+        "L_agg": 0.1488758651578988,
+        "L_floor": 0.1768115609884262,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 46,
+        "loss": 0.1567262563231159,
+        "L_agg": 0.14790337656910904,
+        "L_floor": 0.17645758390426636,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 47,
+        "loss": 0.15596629774415038,
+        "L_agg": 0.14716570826464437,
+        "L_floor": 0.17601178586483002,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 48,
+        "loss": 0.15539114056886066,
+        "L_agg": 0.14661596874506105,
+        "L_floor": 0.1755034327507019,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 49,
+        "loss": 0.15497023710675073,
+        "L_agg": 0.14620928005940748,
+        "L_floor": 0.17521913349628448,
+        "seed": 4,
+        "tag": "ensemble"
+      },
+      {
+        "epoch": 50,
+        "loss": 0.15465171410864467,
+        "L_agg": 0.1459066808146822,
+        "L_floor": 0.17490066587924957,
+        "seed": 4,
+        "tag": "ensemble"
+      }
+    ]
+  ],
+  "steps": [
+    {
+      "id": "district",
+      "title": "Official district GDP",
+      "body": "Every district has one published GDDP total, Y_g. That number is the only monetary truth in the pipeline; the model never changes it."
+    },
+    {
+      "id": "cells",
+      "title": "Split the district into H3 cells",
+      "body": "The district polygon is filled with H3 resolution-7 hexagons (~5 km\u00b2 each). Each hexagon becomes one node."
+    },
+    {
+      "id": "features",
+      "title": "Attach features to each cell",
+      "body": "Population (Kontur), night lights (VIIRS average_masked), OSM road km, building footprint area, landuse shares and POI counts by tag group. Magnitudes are split into an exists flag plus log10 value, then z-scored."
+    },
+    {
+      "id": "graph",
+      "title": "Wire the graph",
+      "body": "Each cell links to its 6 immediate H3 neighbours, and upward to its R6 and R5 parents. Economic activity spills across hexagon borders, so a cell is described partly by its surroundings."
+    },
+    {
+      "id": "message",
+      "title": "Message passing",
+      "body": "GraphSAGE averages neighbour embeddings and mixes them with the cell's own embedding; parent cells pool their children and broadcast context back down. A GCNII initial residual keeps the original features in play at every layer."
+    },
+    {
+      "id": "embedding",
+      "title": "Node embedding",
+      "body": "After 4 rounds the cell holds a 64-dimensional embedding that encodes both its own features and its neighbourhood."
+    },
+    {
+      "id": "score",
+      "title": "Economic intensity",
+      "body": "A linear readout plus softplus turns the embedding into s_i \u2265 0: an unitless per-person intensity, not rupees."
+    },
+    {
+      "id": "share",
+      "title": "Normalised share",
+      "body": "Weight the intensity by population, z_i = s_i \u00d7 pop_i, and sum inside the district: Z_g. The dasymetric factor is scale_g = Y_g / Z_g."
+    },
+    {
+      "id": "final",
+      "title": "Final cell GDP and wealth",
+      "body": "gdp_i = z_i \u00d7 scale_g, so cells in a district sum exactly to the official Y_g. Dividing by population gives \u20b9/person, and its within-state percentile rank is wealth_index."
+    }
+  ],
+  "formulas": [
+    "s_i = softplus(GNN(x_i, neighbors, parents))  # intensity \u2265 0",
+    "z_i = s_i * population_i",
+    "Z_g = sum_{i in district g} z_i",
+    "scale_g = Y_g / Z_g",
+    "gdp_i = z_i * scale_g   # allocated \u20b9, not a measurement"
+  ],
+  "training": {
+    "loss": "mean over districts of (log10 \u03a3_i s_i\u00b7pop_i \u2212 log10 Y_g)\u00b2 + 0.05 \u00b7 population-weighted floor hinge",
+    "note": "The loss only ever sees district totals. Individual cell values are unidentified, which is why the range across seeds matters."
+  },
+  "disclaimer": "Cell GDP is an allocation of official district GDP, not a measurement. Ensemble range is across random seeds, not a calibrated probability of error. wealth_index is not a DHS score. NTL is in the model when the average_masked composite is present."
+}

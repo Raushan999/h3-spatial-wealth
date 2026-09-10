@@ -1,0 +1,16 @@
+{
+  "url": "https://download.geofabrik.de/asia/india/western-zone-latest.osm.pbf",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T14:35:27.976232+00:00",
+  "license": "ODbL 1.0 (OpenStreetMap contributors, via Geofabrik)",
+  "units": "OSM objects (roads, building footprints, landuse polygons, POI nodes/ways)",
+  "status": "ok",
+  "zone": "western-zone",
+  "page": "https://download.geofabrik.de/asia/india.html",
+  "path": "D:\\CursorProjects\\spatialdisintegration\\data\\raw\\osm\\IN\\western-zone-latest.osm.pbf",
+  "size_bytes": 220697276,
+  "used_by_states": [
+    "MH"
+  ],
+  "reason": "state-wide building footprints are not retrievable from Overpass without timeouts"
+}

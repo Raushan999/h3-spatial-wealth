@@ -1,0 +1,585 @@
+{
+  "state": "BR",
+  "name": "Bihar",
+  "n_r7": 17829,
+  "n_r6": 2695,
+  "districts": [
+    "Araria",
+    "Arwal",
+    "Aurangabad",
+    "Banka",
+    "Begusarai",
+    "Bhagalpur",
+    "Bhojpur",
+    "Buxar",
+    "Darbhanga",
+    "East Champaran",
+    "Gaya",
+    "Gopalganj",
+    "Jamui",
+    "Jehanabad",
+    "Kaimur",
+    "Katihar",
+    "Khagaria",
+    "Kishanganj",
+    "Lakhisarai",
+    "Madhepura",
+    "Madhubani",
+    "Munger",
+    "Muzaffarpur",
+    "Nalanda",
+    "Nawada",
+    "Patna",
+    "Purnia",
+    "Rohtas",
+    "Saharsa",
+    "Samastipur",
+    "Saran",
+    "Sheikhpura",
+    "Sheohar",
+    "Sitamarhi",
+    "Siwan",
+    "Supaul",
+    "Vaishali",
+    "West Champaran"
+  ],
+  "district_files": {
+    "Araria": "r7/araria.json",
+    "Arwal": "r7/arwal.json",
+    "Aurangabad": "r7/aurangabad.json",
+    "Banka": "r7/banka.json",
+    "Begusarai": "r7/begusarai.json",
+    "Bhagalpur": "r7/bhagalpur.json",
+    "Bhojpur": "r7/bhojpur.json",
+    "Buxar": "r7/buxar.json",
+    "Darbhanga": "r7/darbhanga.json",
+    "East Champaran": "r7/east-champaran.json",
+    "Gaya": "r7/gaya.json",
+    "Gopalganj": "r7/gopalganj.json",
+    "Jamui": "r7/jamui.json",
+    "Jehanabad": "r7/jehanabad.json",
+    "Kaimur": "r7/kaimur.json",
+    "Katihar": "r7/katihar.json",
+    "Khagaria": "r7/khagaria.json",
+    "Kishanganj": "r7/kishanganj.json",
+    "Lakhisarai": "r7/lakhisarai.json",
+    "Madhepura": "r7/madhepura.json",
+    "Madhubani": "r7/madhubani.json",
+    "Munger": "r7/munger.json",
+    "Muzaffarpur": "r7/muzaffarpur.json",
+    "Nalanda": "r7/nalanda.json",
+    "Nawada": "r7/nawada.json",
+    "Patna": "r7/patna.json",
+    "Purnia": "r7/purnia.json",
+    "Rohtas": "r7/rohtas.json",
+    "Saharsa": "r7/saharsa.json",
+    "Samastipur": "r7/samastipur.json",
+    "Saran": "r7/saran.json",
+    "Sheikhpura": "r7/sheikhpura.json",
+    "Sheohar": "r7/sheohar.json",
+    "Sitamarhi": "r7/sitamarhi.json",
+    "Siwan": "r7/siwan.json",
+    "Supaul": "r7/supaul.json",
+    "Vaishali": "r7/vaishali.json",
+    "West Champaran": "r7/west-champaran.json"
+  },
+  "district_table": [
+    {
+      "district": "Patna",
+      "n_cells": 628,
+      "population": 6969159.0,
+      "y_crore": 169836.0,
+      "gdp_crore": 169836.0,
+      "median_gdp_per_capita_inr": 43079.89302679302
+    },
+    {
+      "district": "Muzaffarpur",
+      "n_cells": 603,
+      "population": 6151150.0,
+      "y_crore": 43004.0,
+      "gdp_crore": 43004.0,
+      "median_gdp_per_capita_inr": 43770.280218280604
+    },
+    {
+      "district": "Begusarai",
+      "n_cells": 390,
+      "population": 4139868.0,
+      "y_crore": 38873.0,
+      "gdp_crore": 38873.0,
+      "median_gdp_per_capita_inr": 64402.50504267117
+    },
+    {
+      "district": "Gaya",
+      "n_cells": 944,
+      "population": 5643871.0,
+      "y_crore": 36593.0,
+      "gdp_crore": 36593.0,
+      "median_gdp_per_capita_inr": 36238.67404242894
+    },
+    {
+      "district": "Bhagalpur",
+      "n_cells": 483,
+      "population": 3720041.0,
+      "y_crore": 32203.0,
+      "gdp_crore": 32203.0,
+      "median_gdp_per_capita_inr": 70360.17394570191
+    },
+    {
+      "district": "East Champaran",
+      "n_cells": 803,
+      "population": 6686056.0,
+      "y_crore": 29281.0,
+      "gdp_crore": 29281.0,
+      "median_gdp_per_capita_inr": 34526.90519640368
+    },
+    {
+      "district": "Darbhanga",
+      "n_cells": 469,
+      "population": 4655114.0,
+      "y_crore": 28601.0,
+      "gdp_crore": 28601.0,
+      "median_gdp_per_capita_inr": 46100.33486797288
+    },
+    {
+      "district": "Samastipur",
+      "n_cells": 518,
+      "population": 5498466.0,
+      "y_crore": 27759.0,
+      "gdp_crore": 27759.0,
+      "median_gdp_per_capita_inr": 45721.64738882742
+    },
+    {
+      "district": "Rohtas",
+      "n_cells": 743,
+      "population": 3620502.0,
+      "y_crore": 25299.0,
+      "gdp_crore": 25299.0,
+      "median_gdp_per_capita_inr": 49141.674146812795
+    },
+    {
+      "district": "Vaishali",
+      "n_cells": 385,
+      "population": 4734955.0,
+      "y_crore": 25208.0,
+      "gdp_crore": 25208.0,
+      "median_gdp_per_capita_inr": 39316.03504470262
+    },
+    {
+      "district": "West Champaran",
+      "n_cells": 1022,
+      "population": 4895454.0,
+      "y_crore": 24850.0,
+      "gdp_crore": 24850.0,
+      "median_gdp_per_capita_inr": 37017.169421125436
+    },
+    {
+      "district": "Madhubani",
+      "n_cells": 672,
+      "population": 5214795.0,
+      "y_crore": 24234.0,
+      "gdp_crore": 24234.0,
+      "median_gdp_per_capita_inr": 42063.01713138675
+    },
+    {
+      "district": "Saran",
+      "n_cells": 494,
+      "population": 4801700.0,
+      "y_crore": 23971.0,
+      "gdp_crore": 23971.0,
+      "median_gdp_per_capita_inr": 39085.80836267845
+    },
+    {
+      "district": "Purnia",
+      "n_cells": 593,
+      "population": 4170765.0,
+      "y_crore": 23085.0,
+      "gdp_crore": 23085.0,
+      "median_gdp_per_capita_inr": 42663.30737948254
+    },
+    {
+      "district": "Siwan",
+      "n_cells": 374,
+      "population": 3567407.0,
+      "y_crore": 22437.0,
+      "gdp_crore": 22437.0,
+      "median_gdp_per_capita_inr": 51832.93445419366
+    },
+    {
+      "district": "Nalanda",
+      "n_cells": 399,
+      "population": 3453448.0,
+      "y_crore": 21652.0,
+      "gdp_crore": 21652.0,
+      "median_gdp_per_capita_inr": 49030.99659389719
+    },
+    {
+      "district": "Bhojpur",
+      "n_cells": 497,
+      "population": 3481073.0,
+      "y_crore": 21576.0,
+      "gdp_crore": 21576.0,
+      "median_gdp_per_capita_inr": 54379.82318306315
+    },
+    {
+      "district": "Katihar",
+      "n_cells": 567,
+      "population": 3812227.0,
+      "y_crore": 21209.0,
+      "gdp_crore": 21209.0,
+      "median_gdp_per_capita_inr": 44650.68473429634
+    },
+    {
+      "district": "Aurangabad",
+      "n_cells": 652,
+      "population": 3311660.0,
+      "y_crore": 20514.0,
+      "gdp_crore": 20514.0,
+      "median_gdp_per_capita_inr": 56055.72627156514
+    },
+    {
+      "district": "Sitamarhi",
+      "n_cells": 409,
+      "population": 4113510.0,
+      "y_crore": 17853.0,
+      "gdp_crore": 17853.0,
+      "median_gdp_per_capita_inr": 37900.22609356518
+    },
+    {
+      "district": "Araria",
+      "n_cells": 520,
+      "population": 3533392.0,
+      "y_crore": 15962.0,
+      "gdp_crore": 15962.0,
+      "median_gdp_per_capita_inr": 37660.19290051871
+    },
+    {
+      "district": "Munger",
+      "n_cells": 273,
+      "population": 1644374.0,
+      "y_crore": 14939.0,
+      "gdp_crore": 14938.999999999998,
+      "median_gdp_per_capita_inr": 41652.57667195305
+    },
+    {
+      "district": "Gopalganj",
+      "n_cells": 395,
+      "population": 3093869.0,
+      "y_crore": 14120.0,
+      "gdp_crore": 14120.0,
+      "median_gdp_per_capita_inr": 43367.44055306578
+    },
+    {
+      "district": "Banka",
+      "n_cells": 575,
+      "population": 2789912.0,
+      "y_crore": 14088.0,
+      "gdp_crore": 14088.0,
+      "median_gdp_per_capita_inr": 36745.261650852844
+    },
+    {
+      "district": "Supaul",
+      "n_cells": 456,
+      "population": 2931815.0,
+      "y_crore": 13558.0,
+      "gdp_crore": 13558.0,
+      "median_gdp_per_capita_inr": 43513.339344520544
+    },
+    {
+      "district": "Buxar",
+      "n_cells": 299,
+      "population": 1907681.0,
+      "y_crore": 13279.0,
+      "gdp_crore": 13279.0,
+      "median_gdp_per_capita_inr": 63349.15237737833
+    },
+    {
+      "district": "Kaimur",
+      "n_cells": 631,
+      "population": 1957872.0,
+      "y_crore": 13194.0,
+      "gdp_crore": 13194.0,
+      "median_gdp_per_capita_inr": 67923.9125479702
+    },
+    {
+      "district": "Saharsa",
+      "n_cells": 299,
+      "population": 2362421.0,
+      "y_crore": 12985.0,
+      "gdp_crore": 12984.999999999998,
+      "median_gdp_per_capita_inr": 48399.07239208154
+    },
+    {
+      "district": "Madhepura",
+      "n_cells": 388,
+      "population": 2853471.0,
+      "y_crore": 12742.0,
+      "gdp_crore": 12742.000000000002,
+      "median_gdp_per_capita_inr": 36303.44090193237
+    },
+    {
+      "district": "Nawada",
+      "n_cells": 469,
+      "population": 2835416.0,
+      "y_crore": 12211.0,
+      "gdp_crore": 12211.0,
+      "median_gdp_per_capita_inr": 42062.67733954946
+    },
+    {
+      "district": "Khagaria",
+      "n_cells": 279,
+      "population": 2121983.0,
+      "y_crore": 11971.0,
+      "gdp_crore": 11971.0,
+      "median_gdp_per_capita_inr": 43217.28849603159
+    },
+    {
+      "district": "Kishanganj",
+      "n_cells": 364,
+      "population": 2218384.0,
+      "y_crore": 11702.0,
+      "gdp_crore": 11702.0,
+      "median_gdp_per_capita_inr": 48528.60472503666
+    },
+    {
+      "district": "Jamui",
+      "n_cells": 562,
+      "population": 2197152.0,
+      "y_crore": 11486.0,
+      "gdp_crore": 11486.000000000002,
+      "median_gdp_per_capita_inr": 34233.912811984024
+    },
+    {
+      "district": "Jehanabad",
+      "n_cells": 155,
+      "population": 1274806.0,
+      "y_crore": 8275.0,
+      "gdp_crore": 8275.0,
+      "median_gdp_per_capita_inr": 56938.421473192764
+    },
+    {
+      "district": "Lakhisarai",
+      "n_cells": 216,
+      "population": 1212167.0,
+      "y_crore": 7718.0,
+      "gdp_crore": 7718.0,
+      "median_gdp_per_capita_inr": 60802.28699889113
+    },
+    {
+      "district": "Arwal",
+      "n_cells": 121,
+      "population": 737963.0,
+      "y_crore": 3910.0,
+      "gdp_crore": 3910.0000000000005,
+      "median_gdp_per_capita_inr": 51484.499960721674
+    },
+    {
+      "district": "Sheikhpura",
+      "n_cells": 96,
+      "population": 624341.0,
+      "y_crore": 3889.0,
+      "gdp_crore": 3889.0000000000005,
+      "median_gdp_per_capita_inr": 55615.04277815726
+    },
+    {
+      "district": "Sheohar",
+      "n_cells": 86,
+      "population": 787001.0,
+      "y_crore": 3131.0,
+      "gdp_crore": 3131.0,
+      "median_gdp_per_capita_inr": 38959.99659733057
+    }
+  ],
+  "metros": {},
+  "center": [
+    85.5,
+    25.6
+  ],
+  "zoom": 6.4,
+  "metrics": [
+    {
+      "id": "wealth_index",
+      "label": "Wealth index",
+      "units": "percentile 0\u00e2\u20ac\u201c100",
+      "group": "Model output",
+      "default": true
+    },
+    {
+      "id": "gdp_per_capita_inr",
+      "label": "Allocated GDDP per capita",
+      "units": "\u00e2\u201a\u00b9/person",
+      "group": "Model output"
+    },
+    {
+      "id": "gdp_crore",
+      "label": "Allocated cell GDDP",
+      "units": "\u00e2\u201a\u00b9 crore",
+      "group": "Model output"
+    },
+    {
+      "id": "intensity_raw",
+      "label": "Economic intensity s_i (pre-scale)",
+      "units": "index",
+      "group": "Model output"
+    },
+    {
+      "id": "population",
+      "label": "Population",
+      "units": "people",
+      "group": "Input"
+    },
+    {
+      "id": "night_lights",
+      "label": "Night lights",
+      "units": "nW/cm\u00c2\u00b2/sr",
+      "group": "Input"
+    },
+    {
+      "id": "road_km",
+      "label": "Road length",
+      "units": "km",
+      "group": "Input"
+    },
+    {
+      "id": "poi_count",
+      "label": "OSM POIs (all groups)",
+      "units": "count",
+      "group": "Input"
+    },
+    {
+      "id": "building_area_m2",
+      "label": "Building footprint area",
+      "units": "m\u00c2\u00b2",
+      "group": "Input"
+    },
+    {
+      "id": "building_count",
+      "label": "Building count",
+      "units": "buildings",
+      "group": "Input"
+    },
+    {
+      "id": "building_share",
+      "label": "Built-up share of cell",
+      "units": "share 0\u00e2\u20ac\u201c1",
+      "group": "Input"
+    },
+    {
+      "id": "landuse_residential",
+      "label": "Landuse: residential",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_industrial",
+      "label": "Landuse: industrial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "poi_amenity_restaurant",
+      "label": "Restaurants",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_hospital",
+      "label": "Hospitals",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_bank",
+      "label": "Banks",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_leisure",
+      "label": "Leisure sites",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_office",
+      "label": "Offices",
+      "units": "count",
+      "group": "POI class"
+    }
+  ],
+  "source": {
+    "gddp_year": "2023-24",
+    "price_basis": "current",
+    "base_year": null,
+    "units": "INR crore",
+    "page": "https://state.bihar.gov.in/finance/CitizenHome.html",
+    "notes": [
+      "Bihar district income estimates 2023-24, nominal (current-price) district GDP in \u20b9 crore, as compiled from the Bihar Economic Survey district income series.",
+      "Current prices: do not compare levels against constant-price states without deflating."
+    ],
+    "total_crore": 877198.0,
+    "population_product": "Kontur Population India 2023 (H3 R8 summed to R7)",
+    "total_population": 129725241.0,
+    "nightlights_product": "VIIRS VNL v2.2 average_masked (annual mean radiance)",
+    "nightlights_year": "2025",
+    "nightlights_used": true,
+    "osm": "OpenStreetMap via Geofabrik extract (ODbL)"
+  },
+  "evaluation": {
+    "max_abs_rel_recon_error": 1.437508096045597e-16,
+    "ensemble": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pre_scale_district_log_loss": 0.07183797507597811,
+      "caption": "ensemble range across seeds, not a calibrated probability of error."
+    },
+    "holdout": {
+      "holdout_districts": [
+        "Araria",
+        "Arwal",
+        "Aurangabad",
+        "East Champaran",
+        "Gaya",
+        "Khagaria",
+        "Madhubani",
+        "Purnia"
+      ],
+      "n_train_districts": 30,
+      "n_holdout_districts": 8,
+      "pre_scale_holdout_mape": 1.3501013817445675,
+      "final_loss": 0.047731782064012414,
+      "note": "MAPE is on district sums BEFORE dasymetric scale. Post-scale reconstruction \u2248 0 is conservation, not accuracy."
+    },
+    "ablation_ntl": {
+      "runs": [
+        {
+          "tag": "with_ntl",
+          "n_features": 94,
+          "pre_scale_district_log_loss": 0.1333694856699068,
+          "final_train_loss": 0.046389200246272244
+        },
+        {
+          "tag": "without_ntl",
+          "n_features": 92,
+          "pre_scale_district_log_loss": 0.03873057473911024,
+          "final_train_loss": 0.052833229631433616
+        }
+      ],
+      "note": "Ablation compares pre-scale district log-loss with and without night_lights features. NTL is in the model when the raster is present."
+    },
+    "spearman": {
+      "wealth_index_vs_night_lights": 0.5331743816593338,
+      "wealth_index_vs_road_km": 0.23868160326979274,
+      "wealth_index_vs_poi_count": 0.22238614654865252,
+      "gdp_per_capita_vs_night_lights": 0.5331743816593338,
+      "note": "Spearman vs NTL/roads/POIs is a sanity check, not truth. wealth_index is not a DHS score."
+    }
+  },
+  "caption": "ensemble range across seeds, not a calibrated probability of error.",
+  "disclaimer": "Cell GDP is an allocation of official district GDP, not a measurement. wealth_index is not a DHS score."
+}

@@ -1,0 +1,297 @@
+{
+  "state": "DL",
+  "name": "Delhi (NCT)",
+  "n_r7": 276,
+  "n_r6": 54,
+  "districts": [
+    "Delhi"
+  ],
+  "district_files": {
+    "Delhi": "r7/delhi.json"
+  },
+  "district_table": [
+    {
+      "district": "Delhi",
+      "n_cells": 276,
+      "population": 19981639.0,
+      "y_crore": 672247.0,
+      "gdp_crore": 672246.9999999999,
+      "median_gdp_per_capita_inr": 146458.0630177093
+    }
+  ],
+  "metros": {
+    "Delhi NCT": [
+      "Delhi"
+    ]
+  },
+  "center": [
+    77.1,
+    28.65
+  ],
+  "zoom": 9.4,
+  "metrics": [
+    {
+      "id": "wealth_index",
+      "label": "Wealth index",
+      "units": "percentile 0\u00e2\u20ac\u201c100",
+      "group": "Model output",
+      "default": true
+    },
+    {
+      "id": "gdp_per_capita_inr",
+      "label": "Allocated GDDP per capita",
+      "units": "\u00e2\u201a\u00b9/person",
+      "group": "Model output"
+    },
+    {
+      "id": "gdp_crore",
+      "label": "Allocated cell GDDP",
+      "units": "\u00e2\u201a\u00b9 crore",
+      "group": "Model output"
+    },
+    {
+      "id": "intensity_raw",
+      "label": "Economic intensity s_i (pre-scale)",
+      "units": "index",
+      "group": "Model output"
+    },
+    {
+      "id": "population",
+      "label": "Population",
+      "units": "people",
+      "group": "Input"
+    },
+    {
+      "id": "night_lights",
+      "label": "Night lights",
+      "units": "nW/cm\u00c2\u00b2/sr",
+      "group": "Input"
+    },
+    {
+      "id": "road_km",
+      "label": "Road length",
+      "units": "km",
+      "group": "Input"
+    },
+    {
+      "id": "poi_count",
+      "label": "OSM POIs (all groups)",
+      "units": "count",
+      "group": "Input"
+    },
+    {
+      "id": "building_area_m2",
+      "label": "Building footprint area",
+      "units": "m\u00c2\u00b2",
+      "group": "Input"
+    },
+    {
+      "id": "building_count",
+      "label": "Building count",
+      "units": "buildings",
+      "group": "Input"
+    },
+    {
+      "id": "building_share",
+      "label": "Built-up share of cell",
+      "units": "share 0\u00e2\u20ac\u201c1",
+      "group": "Input"
+    },
+    {
+      "id": "landuse_residential",
+      "label": "Landuse: residential",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_commercial",
+      "label": "Landuse: commercial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_industrial",
+      "label": "Landuse: industrial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_retail",
+      "label": "Landuse: retail",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "poi_amenity_restaurant",
+      "label": "Restaurants",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_cafe",
+      "label": "Caf\u00c3\u00a9s",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_bar",
+      "label": "Bars",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_pub",
+      "label": "Pubs",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_cinema",
+      "label": "Cinemas",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_theatre",
+      "label": "Theatres",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_nightclub",
+      "label": "Nightclubs",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_university",
+      "label": "Universities",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_hospital",
+      "label": "Hospitals",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_amenity_bank",
+      "label": "Banks",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_mall",
+      "label": "Malls / department stores",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_luxury",
+      "label": "Jewellery & boutiques",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_supermarket",
+      "label": "Supermarkets",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_shop_convenience",
+      "label": "Convenience stores",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_tourism_hotel",
+      "label": "Hotels",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_tourism_guest_house",
+      "label": "Guest houses",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_leisure",
+      "label": "Leisure sites",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_office",
+      "label": "Offices",
+      "units": "count",
+      "group": "POI class"
+    }
+  ],
+  "source": {
+    "gddp_year": "2023-24",
+    "price_basis": "constant",
+    "base_year": "2011-12",
+    "units": "INR crore",
+    "page": "https://des.delhi.gov.in/",
+    "notes": [
+      "Figure is **Delhi / NCT** only, not NCR. Source: Statistical Abstract of Delhi 2024 (DES, Govt of NCT of Delhi), Executive Summary A: 'GSDP at constant (2011-12) prices ... \u20b9672247 Crore in 2023-24'.",
+      "DES Delhi does not publish district GDDP, so the 11 NCT revenue districts form a single Y_g reporting unit. No NCR super-district is invented."
+    ],
+    "total_crore": 672247.0,
+    "population_product": "Kontur Population India 2023 (H3 R8 summed to R7)",
+    "total_population": 19981639.0,
+    "nightlights_product": "VIIRS VNL v2.2 average_masked (annual mean radiance)",
+    "nightlights_year": "2025",
+    "nightlights_used": true,
+    "osm": "OpenStreetMap via Geofabrik extract (ODbL)"
+  },
+  "evaluation": {
+    "max_abs_rel_recon_error": 0.0,
+    "ensemble": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pre_scale_district_log_loss": 0.07113580976509534,
+      "caption": "ensemble range across seeds, not a calibrated probability of error."
+    },
+    "holdout": {
+      "skipped": true,
+      "reason": "only 1 reporting unit(s); a spatial hold-out needs at least 5 so the training split still constrains the loss",
+      "n_districts": 1
+    },
+    "ablation_ntl": {
+      "runs": [
+        {
+          "tag": "with_ntl",
+          "n_features": 94,
+          "pre_scale_district_log_loss": 0.05203962761667178,
+          "final_train_loss": 0.05913296439163408
+        },
+        {
+          "tag": "without_ntl",
+          "n_features": 92,
+          "pre_scale_district_log_loss": 0.08123967497187,
+          "final_train_loss": 0.10253619736550386
+        }
+      ],
+      "note": "Ablation compares pre-scale district log-loss with and without night_lights features. NTL is in the model when the raster is present."
+    },
+    "spearman": {
+      "wealth_index_vs_night_lights": 0.8207856623050471,
+      "wealth_index_vs_road_km": 0.6285710208813169,
+      "wealth_index_vs_poi_count": 0.8242963616494376,
+      "gdp_per_capita_vs_night_lights": 0.8207856623050471,
+      "note": "Spearman vs NTL/roads/POIs is a sanity check, not truth. wealth_index is not a DHS score."
+    }
+  },
+  "caption": "ensemble range across seeds, not a calibrated probability of error.",
+  "disclaimer": "Cell GDP is an allocation of official district GDP, not a measurement. wealth_index is not a DHS score."
+}

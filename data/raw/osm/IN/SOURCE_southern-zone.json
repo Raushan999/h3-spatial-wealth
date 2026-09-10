@@ -1,0 +1,17 @@
+{
+  "url": "https://download.geofabrik.de/asia/india/southern-zone-latest.osm.pbf",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T15:03:40.296965+00:00",
+  "license": "ODbL 1.0 (OpenStreetMap contributors, via Geofabrik)",
+  "units": "OSM objects (roads, building footprints, landuse polygons, POI nodes/ways)",
+  "status": "ok",
+  "zone": "southern-zone",
+  "page": "https://download.geofabrik.de/asia/india.html",
+  "path": "D:\\CursorProjects\\spatialdisintegration\\data\\raw\\osm\\IN\\southern-zone-latest.osm.pbf",
+  "size_bytes": 558731987,
+  "used_by_states": [
+    "KA",
+    "TG"
+  ],
+  "reason": "state-wide building footprints are not retrievable from Overpass without timeouts"
+}

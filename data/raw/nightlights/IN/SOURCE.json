@@ -1,0 +1,17 @@
+{
+  "url": "https://eogdata.mines.edu/nighttime_light/annual/v22/2023/",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T15:03:40.294656+00:00",
+  "license": "EOG / Payne Institute VNL v2.2",
+  "units": "nW/cm²/sr (annual mean radiance, average_masked)",
+  "status": "ok",
+  "product_used": "VIIRS VNL v2.2 average_masked (annual mean radiance)",
+  "year": "2025",
+  "path": "D:\\CursorProjects\\spatialdisintegration\\data\\processed\\h3_nightlights_2025.parquet",
+  "value_column": "nightlight_mean",
+  "native_h3_res": 8,
+  "raw_composites_on_disk": [
+    "D:\\CursorProjects\\spatialdisintegration\\data\\raw\\nightlights\\VNL_npp_2025_global_vcmslcfg_v2_c202604011200.average_masked.dat.tif",
+    "D:\\CursorProjects\\spatialdisintegration\\data\\raw\\nightlights\\VNL_npp_2025_global_vcmslcfg_v2_c202604011200.median_masked.dat.tif"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://data.opencity.in/api/3/action/datastore_search?resource_id=9acd8282-8081-4a46-af8b-dbd1ba57adac&limit=200",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T15:03:40.287490+00:00",
+  "license": "OpenCity public-domain extract of state Economic Survey / DES table",
+  "units": "INR crore",
+  "status": "ok",
+  "page": "https://data.opencity.in/dataset/telangana-socio-economic-outlook-2024",
+  "year": "2022-23",
+  "price_basis": "current",
+  "base_year": null,
+  "value_field": "GDDP (Cr) at Current Prices 2022-23",
+  "notes": [
+    "DES Telangana via OpenCity, Socio-Economic Outlook 2024. Latest free table is current-price GDDP 2022-23 (no constant-price column in the CSV)."
+  ]
+}

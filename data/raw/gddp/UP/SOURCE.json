@@ -1,0 +1,26 @@
+{
+  "url": "https://updes.up.nic.in/updes/dist_domestic_product.html",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T14:37:43.288097+00:00",
+  "license": "State DES / official statistical publication (open government data)",
+  "units": "INR crore",
+  "status": "ok",
+  "kind": "xlsx_matrix",
+  "year": "2021-22",
+  "price_basis": "constant",
+  "base_year": "2011-12",
+  "source_file": "GDDP Constant.xlsx",
+  "provenance": {
+    "parser": "xlsx_matrix",
+    "sheet": "GDDP Constant",
+    "header_row": 2,
+    "value_row": 28,
+    "value_row_label": "GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)",
+    "n_districts": 75
+  },
+  "notes": [
+    "DES Uttar Pradesh, Gross District Domestic Product by economic activity 2021-22 (tentative), base 2011-12, constant prices, ₹ crore.",
+    "Row used is 'GROSS DISTRICT DOMESTIC PRODUCT (At Market Prices)'. The four regional aggregates and the state total are dropped.",
+    "A 'GDDP Current.xlsx' sits beside it; the constant-price sheet is used so the series is real."
+  ]
+}

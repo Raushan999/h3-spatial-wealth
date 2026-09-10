@@ -1,0 +1,520 @@
+{
+  "state": "RJ",
+  "name": "Rajasthan",
+  "n_r7": 65948,
+  "n_r6": 9713,
+  "districts": [
+    "Ajmer",
+    "Alwar",
+    "Banswara",
+    "Baran",
+    "Barmer",
+    "Bharatpur",
+    "Bhilwara",
+    "Bikaner",
+    "Bundi",
+    "Chittaurgarh",
+    "Churu",
+    "Dausa",
+    "Dhaulpur",
+    "Dungarpur",
+    "Ganganagar",
+    "Hanumangarh",
+    "Jaipur",
+    "Jaisalmer",
+    "Jalor",
+    "Jhalawar",
+    "Jhunjhunun",
+    "Jodhpur",
+    "Karauli",
+    "Kota",
+    "Nagaur",
+    "Pali",
+    "Pratapgarh",
+    "Rajsamand",
+    "Sawai Madhopur",
+    "Sikar",
+    "Sirohi",
+    "Tonk",
+    "Udaipur"
+  ],
+  "district_files": {
+    "Ajmer": "r7/ajmer.json",
+    "Alwar": "r7/alwar.json",
+    "Banswara": "r7/banswara.json",
+    "Baran": "r7/baran.json",
+    "Barmer": "r7/barmer.json",
+    "Bharatpur": "r7/bharatpur.json",
+    "Bhilwara": "r7/bhilwara.json",
+    "Bikaner": "r7/bikaner.json",
+    "Bundi": "r7/bundi.json",
+    "Chittaurgarh": "r7/chittaurgarh.json",
+    "Churu": "r7/churu.json",
+    "Dausa": "r7/dausa.json",
+    "Dhaulpur": "r7/dhaulpur.json",
+    "Dungarpur": "r7/dungarpur.json",
+    "Ganganagar": "r7/ganganagar.json",
+    "Hanumangarh": "r7/hanumangarh.json",
+    "Jaipur": "r7/jaipur.json",
+    "Jaisalmer": "r7/jaisalmer.json",
+    "Jalor": "r7/jalor.json",
+    "Jhalawar": "r7/jhalawar.json",
+    "Jhunjhunun": "r7/jhunjhunun.json",
+    "Jodhpur": "r7/jodhpur.json",
+    "Karauli": "r7/karauli.json",
+    "Kota": "r7/kota.json",
+    "Nagaur": "r7/nagaur.json",
+    "Pali": "r7/pali.json",
+    "Pratapgarh": "r7/pratapgarh.json",
+    "Rajsamand": "r7/rajsamand.json",
+    "Sawai Madhopur": "r7/sawai-madhopur.json",
+    "Sikar": "r7/sikar.json",
+    "Sirohi": "r7/sirohi.json",
+    "Tonk": "r7/tonk.json",
+    "Udaipur": "r7/udaipur.json"
+  },
+  "district_table": [
+    {
+      "district": "Jaipur",
+      "n_cells": 2156,
+      "population": 8298978.0,
+      "y_crore": 123420.59,
+      "gdp_crore": 123420.59,
+      "median_gdp_per_capita_inr": 133199.12986449696
+    },
+    {
+      "district": "Alwar",
+      "n_cells": 1577,
+      "population": 4512622.0,
+      "y_crore": 74782.47,
+      "gdp_crore": 74782.46999999999,
+      "median_gdp_per_capita_inr": 155870.90271695377
+    },
+    {
+      "district": "Jodhpur",
+      "n_cells": 4380,
+      "population": 4694410.0,
+      "y_crore": 44973.98,
+      "gdp_crore": 44973.979999999996,
+      "median_gdp_per_capita_inr": 61111.44645991286
+    },
+    {
+      "district": "Ajmer",
+      "n_cells": 1643,
+      "population": 2995759.0,
+      "y_crore": 37792.22,
+      "gdp_crore": 37792.22,
+      "median_gdp_per_capita_inr": 105539.72494179494
+    },
+    {
+      "district": "Bhilwara",
+      "n_cells": 2064,
+      "population": 2856366.0,
+      "y_crore": 37016.03,
+      "gdp_crore": 37016.03,
+      "median_gdp_per_capita_inr": 113327.49171991702
+    },
+    {
+      "district": "Udaipur",
+      "n_cells": 2410,
+      "population": 3727544.0,
+      "y_crore": 35490.3,
+      "gdp_crore": 35490.299999999996,
+      "median_gdp_per_capita_inr": 76378.29686244579
+    },
+    {
+      "district": "Bikaner",
+      "n_cells": 5621,
+      "population": 3121437.0,
+      "y_crore": 34432.16,
+      "gdp_crore": 34432.16,
+      "median_gdp_per_capita_inr": 46968.06723429343
+    },
+    {
+      "district": "Nagaur",
+      "n_cells": 3370,
+      "population": 3899911.0,
+      "y_crore": 30544.58,
+      "gdp_crore": 30544.58,
+      "median_gdp_per_capita_inr": 74879.76257516445
+    },
+    {
+      "district": "Sikar",
+      "n_cells": 1453,
+      "population": 3084517.0,
+      "y_crore": 28667.18,
+      "gdp_crore": 28667.18,
+      "median_gdp_per_capita_inr": 93142.52680246852
+    },
+    {
+      "district": "Ganganagar",
+      "n_cells": 1946,
+      "population": 2161826.0,
+      "y_crore": 28577.75,
+      "gdp_crore": 28577.75,
+      "median_gdp_per_capita_inr": 121240.36993539729
+    },
+    {
+      "district": "Barmer",
+      "n_cells": 5554,
+      "population": 3399834.0,
+      "y_crore": 28545.46,
+      "gdp_crore": 28545.46,
+      "median_gdp_per_capita_inr": 67390.22788326113
+    },
+    {
+      "district": "Kota",
+      "n_cells": 1043,
+      "population": 2277372.0,
+      "y_crore": 25849.06,
+      "gdp_crore": 25849.059999999998,
+      "median_gdp_per_capita_inr": 94985.02734553613
+    },
+    {
+      "district": "Pali",
+      "n_cells": 2412,
+      "population": 2295333.0,
+      "y_crore": 23022.74,
+      "gdp_crore": 23022.74,
+      "median_gdp_per_capita_inr": 87530.82408649065
+    },
+    {
+      "district": "Hanumangarh",
+      "n_cells": 1837,
+      "population": 2112112.0,
+      "y_crore": 22767.61,
+      "gdp_crore": 22767.61,
+      "median_gdp_per_capita_inr": 82764.1160415989
+    },
+    {
+      "district": "Bharatpur",
+      "n_cells": 968,
+      "population": 3002849.0,
+      "y_crore": 21083.600000000002,
+      "gdp_crore": 21083.600000000006,
+      "median_gdp_per_capita_inr": 69000.6844120464
+    },
+    {
+      "district": "Chittaurgarh",
+      "n_cells": 1515,
+      "population": 1824061.0,
+      "y_crore": 19715.13,
+      "gdp_crore": 19715.129999999997,
+      "median_gdp_per_capita_inr": 107585.55211224819
+    },
+    {
+      "district": "Jhunjhunun",
+      "n_cells": 1107,
+      "population": 2508115.0,
+      "y_crore": 18922.55,
+      "gdp_crore": 18922.55,
+      "median_gdp_per_capita_inr": 73035.11745117493
+    },
+    {
+      "district": "Rajsamand",
+      "n_cells": 930,
+      "population": 1358301.0,
+      "y_crore": 18137.66,
+      "gdp_crore": 18137.66,
+      "median_gdp_per_capita_inr": 128264.05687320503
+    },
+    {
+      "district": "Churu",
+      "n_cells": 2611,
+      "population": 2256150.0,
+      "y_crore": 17651.57,
+      "gdp_crore": 17651.57,
+      "median_gdp_per_capita_inr": 63903.2439089803
+    },
+    {
+      "district": "Jalor",
+      "n_cells": 2120,
+      "population": 2302889.0,
+      "y_crore": 15220.970000000001,
+      "gdp_crore": 15220.970000000001,
+      "median_gdp_per_capita_inr": 59130.969015159004
+    },
+    {
+      "district": "Dausa",
+      "n_cells": 681,
+      "population": 2256166.0,
+      "y_crore": 15208.43,
+      "gdp_crore": 15208.429999999998,
+      "median_gdp_per_capita_inr": 64735.38225855636
+    },
+    {
+      "district": "Tonk",
+      "n_cells": 1412,
+      "population": 1689815.0,
+      "y_crore": 14996.1,
+      "gdp_crore": 14996.100000000002,
+      "median_gdp_per_capita_inr": 81598.9294146861
+    },
+    {
+      "district": "Jhalawar",
+      "n_cells": 1268,
+      "population": 1687517.0,
+      "y_crore": 14891.95,
+      "gdp_crore": 14891.949999999999,
+      "median_gdp_per_capita_inr": 84847.31614195787
+    },
+    {
+      "district": "Banswara",
+      "n_cells": 923,
+      "population": 2270902.0,
+      "y_crore": 14661.57,
+      "gdp_crore": 14661.570000000003,
+      "median_gdp_per_capita_inr": 64025.18860538986
+    },
+    {
+      "district": "Baran",
+      "n_cells": 1314,
+      "population": 1421593.0,
+      "y_crore": 13950.710000000001,
+      "gdp_crore": 13950.71,
+      "median_gdp_per_capita_inr": 99105.40499288138
+    },
+    {
+      "district": "Sirohi",
+      "n_cells": 1024,
+      "population": 1269819.0,
+      "y_crore": 12608.56,
+      "gdp_crore": 12608.56,
+      "median_gdp_per_capita_inr": 95388.54041434244
+    },
+    {
+      "district": "Sawai Madhopur",
+      "n_cells": 977,
+      "population": 1601356.0,
+      "y_crore": 12396.57,
+      "gdp_crore": 12396.57,
+      "median_gdp_per_capita_inr": 81112.51827675693
+    },
+    {
+      "district": "Bundi",
+      "n_cells": 1147,
+      "population": 1414472.0,
+      "y_crore": 12371.6,
+      "gdp_crore": 12371.599999999999,
+      "median_gdp_per_capita_inr": 80420.6899381147
+    },
+    {
+      "district": "Karauli",
+      "n_cells": 946,
+      "population": 1642984.0,
+      "y_crore": 11367.01,
+      "gdp_crore": 11367.01,
+      "median_gdp_per_capita_inr": 62661.229739492155
+    },
+    {
+      "district": "Jaisalmer",
+      "n_cells": 7314,
+      "population": 871654.0,
+      "y_crore": 10120.34,
+      "gdp_crore": 10120.339999999998,
+      "median_gdp_per_capita_inr": 41910.52124769686
+    },
+    {
+      "district": "Dhaulpur",
+      "n_cells": 587,
+      "population": 1483680.0,
+      "y_crore": 9476.85,
+      "gdp_crore": 9476.849999999999,
+      "median_gdp_per_capita_inr": 58549.36668845676
+    },
+    {
+      "district": "Dungarpur",
+      "n_cells": 770,
+      "population": 1714101.0,
+      "y_crore": 9413.79,
+      "gdp_crore": 9413.79,
+      "median_gdp_per_capita_inr": 53349.1855576206
+    },
+    {
+      "district": "Pratapgarh",
+      "n_cells": 868,
+      "population": 1099713.0,
+      "y_crore": 7038.02,
+      "gdp_crore": 7038.02,
+      "median_gdp_per_capita_inr": 61175.1356695405
+    }
+  ],
+  "metros": {
+    "NCR (RJ districts)": [
+      "Alwar"
+    ]
+  },
+  "center": [
+    74.2,
+    26.6
+  ],
+  "zoom": 6.1,
+  "metrics": [
+    {
+      "id": "wealth_index",
+      "label": "Wealth index",
+      "units": "percentile 0\u00e2\u20ac\u201c100",
+      "group": "Model output",
+      "default": true
+    },
+    {
+      "id": "gdp_per_capita_inr",
+      "label": "Allocated GDDP per capita",
+      "units": "\u00e2\u201a\u00b9/person",
+      "group": "Model output"
+    },
+    {
+      "id": "gdp_crore",
+      "label": "Allocated cell GDDP",
+      "units": "\u00e2\u201a\u00b9 crore",
+      "group": "Model output"
+    },
+    {
+      "id": "intensity_raw",
+      "label": "Economic intensity s_i (pre-scale)",
+      "units": "index",
+      "group": "Model output"
+    },
+    {
+      "id": "population",
+      "label": "Population",
+      "units": "people",
+      "group": "Input"
+    },
+    {
+      "id": "night_lights",
+      "label": "Night lights",
+      "units": "nW/cm\u00c2\u00b2/sr",
+      "group": "Input"
+    },
+    {
+      "id": "road_km",
+      "label": "Road length",
+      "units": "km",
+      "group": "Input"
+    },
+    {
+      "id": "poi_count",
+      "label": "OSM POIs (all groups)",
+      "units": "count",
+      "group": "Input"
+    },
+    {
+      "id": "building_area_m2",
+      "label": "Building footprint area",
+      "units": "m\u00c2\u00b2",
+      "group": "Input"
+    },
+    {
+      "id": "building_count",
+      "label": "Building count",
+      "units": "buildings",
+      "group": "Input"
+    },
+    {
+      "id": "building_share",
+      "label": "Built-up share of cell",
+      "units": "share 0\u00e2\u20ac\u201c1",
+      "group": "Input"
+    },
+    {
+      "id": "landuse_residential",
+      "label": "Landuse: residential",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "landuse_industrial",
+      "label": "Landuse: industrial",
+      "units": "share of cell area",
+      "group": "Landuse"
+    },
+    {
+      "id": "poi_amenity_hospital",
+      "label": "Hospitals",
+      "units": "count",
+      "group": "POI class"
+    },
+    {
+      "id": "poi_leisure",
+      "label": "Leisure sites",
+      "units": "count",
+      "group": "POI class"
+    }
+  ],
+  "source": {
+    "gddp_year": "2023-24",
+    "price_basis": "constant",
+    "base_year": "2011-12",
+    "units": "INR crore",
+    "page": "https://desddp.rajasthan.gov.in/Publications.aspx",
+    "notes": [
+      "DES Rajasthan, 'Estimates of District Domestic Product of Rajasthan 2011-12 to 2023-24' (Nov 2024), Table 3: GDDP at constant 2011-12 prices, \u20b9 lakh, 2023-24 (provisional).",
+      "The publication uses the 33-district structure, which matches the geoBoundaries ADM2 layer one-to-one."
+    ],
+    "total_crore": 845115.1100000001,
+    "population_product": "Kontur Population India 2023 (H3 R8 summed to R7)",
+    "total_population": 83114158.0,
+    "nightlights_product": "VIIRS VNL v2.2 average_masked (annual mean radiance)",
+    "nightlights_year": "2025",
+    "nightlights_used": true,
+    "osm": "OpenStreetMap via Geofabrik extract (ODbL)"
+  },
+  "evaluation": {
+    "max_abs_rel_recon_error": 2.1381738549667794e-16,
+    "ensemble": {
+      "n_seeds": 5,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "pre_scale_district_log_loss": 0.03617473365204851,
+      "caption": "ensemble range across seeds, not a calibrated probability of error."
+    },
+    "holdout": {
+      "holdout_districts": [
+        "Alwar",
+        "Banswara",
+        "Bundi",
+        "Chittaurgarh",
+        "Ganganagar",
+        "Jaisalmer",
+        "Karauli"
+      ],
+      "n_train_districts": 26,
+      "n_holdout_districts": 7,
+      "pre_scale_holdout_mape": 0.32941860337532786,
+      "final_loss": 0.017977375418743533,
+      "note": "MAPE is on district sums BEFORE dasymetric scale. Post-scale reconstruction \u2248 0 is conservation, not accuracy."
+    },
+    "ablation_ntl": {
+      "runs": [
+        {
+          "tag": "with_ntl",
+          "n_features": 94,
+          "pre_scale_district_log_loss": 0.03659620827192955,
+          "final_train_loss": 0.0368619406695506
+        },
+        {
+          "tag": "without_ntl",
+          "n_features": 92,
+          "pre_scale_district_log_loss": 0.0460456154040957,
+          "final_train_loss": 0.04920120370267589
+        }
+      ],
+      "note": "Ablation compares pre-scale district log-loss with and without night_lights features. NTL is in the model when the raster is present."
+    },
+    "spearman": {
+      "wealth_index_vs_night_lights": 0.502757075623332,
+      "wealth_index_vs_road_km": 0.27629307759423055,
+      "wealth_index_vs_poi_count": 0.1260946338989307,
+      "gdp_per_capita_vs_night_lights": 0.502757075623332,
+      "note": "Spearman vs NTL/roads/POIs is a sanity check, not truth. wealth_index is not a DHS score."
+    }
+  },
+  "caption": "ensemble range across seeds, not a calibrated probability of error.",
+  "disclaimer": "Cell GDP is an allocation of official district GDP, not a measurement. wealth_index is not a DHS score."
+}

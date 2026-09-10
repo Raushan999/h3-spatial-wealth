@@ -1,0 +1,10 @@
+{
+  "url": "https://data.worldpop.org/GIS/Population/Global_2000_2020_1km_UNadj/2020/IND/ind_ppp_2020_1km_Aggregated_UNadj.tif",
+  "date": "2026-09-05",
+  "fetched_at": "2026-09-05T15:03:40.292570+00:00",
+  "license": "CC BY 4.0 (WorldPop)",
+  "units": "people per 1 km pixel (2020)",
+  "un_adjusted": true,
+  "year": 2020,
+  "role": "fallback w_i"
+}

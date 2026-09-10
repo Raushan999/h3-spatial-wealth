@@ -1,0 +1,665 @@
+﻿=== UP ===
+== UP Uttar Pradesh ==
+== 1. Fetch raw datasets ==
+{'gddp': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\gddp\\UP\\gddp.json', 'adm1': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\boundaries\\IN\\geoBoundaries-IND-adm1.geojson', 'adm2': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\boundaries\\IN\\geoBoundaries-IND-adm2.geojson', 'population': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\population\\kontur_population_india.gpkg', 'population_worldpop': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\population\\IN\\ind_ppp_2020_1km_Aggregated_UNadj.tif', 'nightlights': 'D:\\CursorProjects\\spatialdisintegration\\data\\processed\\h3_nightlights_2025.parquet', 'osm': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\osm\\IN\\central-zone-latest.osm.pbf'}
+== 2. District polygons + GDDP targets ==
+boundary units=75  gddp units=75
+districts: ['Agra', 'Aligarh', 'Ambedkar Nagar', 'Amethi', 'Amroha', 'Auraiya', 'Ayodhya', 'Azamgarh', 'Baghpat', 'Bahraich', 'Ballia', 'Balrampur', 'Banda', 'Barabanki', 'Bareilly', 'Basti', 'Bhadohi', 'Bijnor', 'Budaun', 'Bulandshahr', 'Chandauli', 'Chitrakoot', 'Deoria', 'Etah', 'Etawah', 'Farrukhabad', 'Fatehpur', 'Firozabad', 'Gautam Buddha Nagar', 'Ghaziabad', 'Ghazipur', 'Gonda', 'Gorakhpur', 'Hamirpur', 'Hapur', 'Hardoi', 'Hathras', 'Jalaun', 'Jaunpur', 'Jhansi', 'Kannauj', 'Kanpur Dehat', 'Kanpur Nagar', 'Kasganj', 'Kaushambi', 'Kushinagar', 'Lakhimpur Kheri', 'Lalitpur', 'Lucknow', 'Mahoba', 'Mahrajganj', 'Mainpuri', 'Mathura', 'Mau', 'Meerut', 'Mirzapur', 'Moradabad', 'Muzaffarnagar', 'Pilibhit', 'Pratapgarh', 'Prayagraj', 'Rae Bareli', 'Rampur', 'Saharanpur', 'Sambhal', 'Sant Kabir Nagar', 'Shahjahanpur', 'Shamli', 'Shrawasti', 'Siddharthnagar', 'Sitapur', 'Sonbhadra', 'Sultanpur', 'Unnao', 'Varanasi']
+== 3. H3 R7 index ==
+python : 
+At C:\Users\Raushan Prakash\AppData\Local\Temp\ps-script-073462c5-8e36-4b40-9282-efe9df5e7cca.ps1:115 char:3
++   python -X utf8 run_state.py --state $s 2>&1 | Out-File -Append -Enc ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+H3 polyfill:   0%|          | 0/75 [00:00<?, ?it/s]
+H3 polyfill:   5%|Γûî         | 4/75 [00:00<00:02, 30.58it/s]
+H3 polyfill:  11%|Γûê         | 8/75 [00:00<00:02, 31.06it/s]
+H3 polyfill:  16%|ΓûêΓûî        | 12/75 [00:00<00:02, 30.70it/s]
+H3 polyfill:  21%|ΓûêΓûêΓûÅ       | 16/75 [00:00<00:02, 27.09it/s]
+H3 polyfill:  27%|ΓûêΓûêΓûï       | 20/75 [00:00<00:01, 28.71it/s]
+H3 polyfill:  32%|ΓûêΓûêΓûêΓûÅ      | 24/75 [00:00<00:01, 30.17it/s]
+H3 polyfill:  39%|ΓûêΓûêΓûêΓûè      | 29/75 [00:00<00:01, 34.71it/s]
+H3 polyfill:  44%|ΓûêΓûêΓûêΓûêΓûì     | 33/75 [00:01<00:01, 33.83it/s]
+H3 polyfill:  49%|ΓûêΓûêΓûêΓûêΓûë     | 37/75 [00:01<00:01, 33.77it/s]
+H3 polyfill:  55%|ΓûêΓûêΓûêΓûêΓûêΓûì    | 41/75 [00:01<00:01, 27.34it/s]
+H3 polyfill:  61%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûÅ   | 46/75 [00:01<00:00, 31.09it/s]
+H3 polyfill:  67%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûï   | 50/75 [00:01<00:00, 27.46it/s]
+H3 polyfill:  73%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûÄ  | 55/75 [00:01<00:00, 31.34it/s]
+H3 polyfill:  79%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûè  | 59/75 [00:01<00:00, 29.95it/s]
+H3 polyfill:  84%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûì | 63/75 [00:02<00:00, 26.84it/s]
+H3 polyfill:  89%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûë | 67/75 [00:02<00:00, 27.38it/s]
+H3 polyfill:  95%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûì| 71/75 [00:02<00:00, 29.45it/s]
+H3 polyfill: 100%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê| 75/75 [00:02<00:00, 28.16it/s]
+H3 polyfill: 100%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê| 75/75 [00:02<00:00, 29.54it/s]
+R7 cells=46723
+== 4. Features ==
+UP Kontur population after R7 join: 239,532,136 (239.5M; sanity range 199ΓÇô250M)
+night lights: 97.2% of R7 cells lit, mean=2.047 max=118.3 nW/cm┬▓/sr
+OSM: streaming D:\CursorProjects\spatialdisintegration\data\raw\osm\IN\central-zone-latest.osm.pbf (351 MB)
+  ...2,000,000 tagged objects  buildings=591,053 pois=12,251 road_km=60,351
+  ...4,000,000 tagged objects  buildings=1,202,339 pois=12,931 road_km=77,401
+OSM stats: {
+  "pois": 15112,
+  "road_segments": 1601240,
+  "landuse_residential": 52807,
+  "landuse_industrial": 2523,
+  "buildings": 1608450,
+  "landuse_commercial": 665,
+  "landuse_retail": 62,
+  "objects_scanned": 5448753,
+  "cells_with_buildings": 9464,
+  "cells_with_pois": 1856,
+  "cells_with_roads": 28775
+}
+OSM joined: roads>0 in 28,775 cells, buildings>0 in 9,464, POIs>0 in 1,856 of 46,723 cells
+features: ['population_exists_z', 'population_log_z', 'night_lights_exists_z', 'night_lights_log_z', 'road_km_exists_z', 'road_km_log_z', 'poi_count_exists_z', 'poi_count_log_z', 'building_area_m2_exists_z', 'building_area_m2_log_z', 'building_count_exists_z', 'building_count_log_z', 'poi_amenity_restaurant_exists_z', 'poi_amenity_restaurant_log_z', 'poi_amenity_cafe_exists_z', 'poi_amenity_cafe_log_z', 'poi_amenity_bar_exists_z', 'poi_amenity_bar_log_z', 'poi_amenity_pub_exists_z', 'poi_amenity_pub_log_z', 'poi_amenity_cinema_exists_z', 'poi_amenity_cinema_log_z', 'poi_amenity_theatre_exists_z', 'poi_amenity_theatre_log_z', 'poi_amenity_nightclub_exists_z', 'poi_amenity_nightclub_log_z', 'poi_amenity_university_exists_z', 'poi_amenity_university_log_z', 'poi_amenity_hospital_exists_z', 'poi_amenity_hospital_log_z', 'poi_amenity_bank_exists_z', 'poi_amenity_bank_log_z', 'poi_shop_mall_exists_z', 'poi_shop_mall_log_z', 'poi_shop_luxury_exists_z', 'poi_shop_luxury_log_z', 'poi_shop_supermarket_exists_z', 'poi_shop_supermarket_log_z', 'poi_shop_convenience_exists_z', 'poi_shop_convenience_log_z', 'poi_tourism_hotel_exists_z', 'poi_tourism_hotel_log_z', 'poi_tourism_guest_house_exists_z', 'poi_tourism_guest_house_log_z', 'poi_leisure_exists_z', 'poi_leisure_log_z', 'poi_office_exists_z', 'poi_office_log_z', 'poi_amenity_restaurant_density_exists_z', 'poi_amenity_restaurant_density_log_z', 'poi_amenity_cafe_density_exists_z', 'poi_amenity_cafe_density_log_z', 'poi_amenity_bar_density_exists_z', 'poi_amenity_bar_density_log_z', 'poi_amenity_pub_density_exists_z', 'poi_amenity_pub_density_log_z', 'poi_amenity_cinema_density_exists_z', 'poi_amenity_cinema_density_log_z', 'poi_amenity_theatre_density_exists_z', 'poi_amenity_theatre_density_log_z', 'poi_amenity_nightclub_density_exists_z', 'poi_amenity_nightclub_density_log_z', 'poi_amenity_university_density_exists_z', 'poi_amenity_university_density_log_z', 'poi_amenity_hospital_density_exists_z', 'poi_amenity_hospital_density_log_z', 'poi_amenity_bank_density_exists_z', 'poi_amenity_bank_density_log_z', 'poi_shop_mall_density_exists_z', 'poi_shop_mall_density_log_z', 'poi_shop_luxury_density_exists_z', 'poi_shop_luxury_density_log_z', 'poi_shop_supermarket_density_exists_z', 'poi_shop_supermarket_density_log_z', 'poi_shop_convenience_density_exists_z', 'poi_shop_convenience_density_log_z', 'poi_tourism_hotel_density_exists_z', 'poi_tourism_hotel_density_log_z', 'poi_tourism_guest_house_density_exists_z', 'poi_tourism_guest_house_density_log_z', 'poi_leisure_density_exists_z', 'poi_leisure_density_log_z', 'poi_office_density_exists_z', 'poi_office_density_log_z', 'landuse_residential_z', 'landuse_residential_exists_z', 'landuse_commercial_z', 'landuse_commercial_exists_z', 'landuse_industrial_z', 'landuse_industrial_exists_z', 'landuse_retail_z', 'landuse_retail_exists_z', 'building_share_z', 'building_share_exists_z']
+          population       road_km  ...  building_area_m2  night_lights
+count   46723.000000  46723.000000  ...      4.672300e+04  46723.000000
+mean     5126.642895      2.199634  ...      3.846018e+03      2.046786
+std      7232.781425      2.961552  ...      3.086341e+04      3.885146
+min         0.000000      0.000000  ...      0.000000e+00      0.000000
+25%      1893.500000      0.000000  ...      0.000000e+00      0.785664
+50%      3735.000000      1.712959  ...      0.000000e+00      1.287478
+75%      6109.000000      3.108302  ...      0.000000e+00      2.008281
+max    247684.000000     48.080461  ...      1.418590e+06    118.261767
+
+[8 rows x 5 columns]
+== 5. Train 5-seed hierarchical GNN ==
+[ensemble seed=0] epoch 001  loss=22.97476  L_agg=22.97042
+[ensemble seed=0] epoch 005  loss=6.65815  L_agg=6.65814
+[ensemble seed=0] epoch 010  loss=0.15689  L_agg=0.15686
+[ensemble seed=0] epoch 015  loss=0.57507  L_agg=0.57506
+[ensemble seed=0] epoch 020  loss=0.49159  L_agg=0.49149
+[ensemble seed=0] epoch 025  loss=0.30398  L_agg=0.29726
+[ensemble seed=0] epoch 030  loss=0.22322  L_agg=0.21545
+[ensemble seed=0] epoch 035  loss=0.18388  L_agg=0.17647
+[ensemble seed=0] epoch 040  loss=0.16347  L_agg=0.15649
+[ensemble seed=0] epoch 045  loss=0.15316  L_agg=0.14653
+[ensemble seed=0] epoch 050  loss=0.14972  L_agg=0.14320
+[ensemble seed=1] epoch 001  loss=23.04156  L_agg=23.03686
+[ensemble seed=1] epoch 005  loss=7.70176  L_agg=7.70175
+[ensemble seed=1] epoch 010  loss=0.24746  L_agg=0.24740
+[ensemble seed=1] epoch 015  loss=0.49050  L_agg=0.49048
+[ensemble seed=1] epoch 020  loss=0.58670  L_agg=0.58657
+[ensemble seed=1] epoch 025  loss=0.35098  L_agg=0.34444
+[ensemble seed=1] epoch 030  loss=0.22238  L_agg=0.21483
+[ensemble seed=1] epoch 035  loss=0.17752  L_agg=0.16983
+[ensemble seed=1] epoch 040  loss=0.15684  L_agg=0.14947
+[ensemble seed=1] epoch 045  loss=0.14782  L_agg=0.14066
+[ensemble seed=1] epoch 050  loss=0.14505  L_agg=0.13798
+[ensemble seed=2] epoch 001  loss=22.94635  L_agg=22.94218
+[ensemble seed=2] epoch 005  loss=7.89336  L_agg=7.89335
+[ensemble seed=2] epoch 010  loss=0.36038  L_agg=0.36032
+[ensemble seed=2] epoch 015  loss=0.36917  L_agg=0.36916
+[ensemble seed=2] epoch 020  loss=0.59367  L_agg=0.59366
+[ensemble seed=2] epoch 025  loss=0.35204  L_agg=0.34800
+[ensemble seed=2] epoch 030  loss=0.23939  L_agg=0.23263
+[ensemble seed=2] epoch 035  loss=0.18581  L_agg=0.17862
+[ensemble seed=2] epoch 040  loss=0.15653  L_agg=0.14968
+[ensemble seed=2] epoch 045  loss=0.14331  L_agg=0.13677
+[ensemble seed=2] epoch 050  loss=0.13926  L_agg=0.13286
+[ensemble seed=3] epoch 001  loss=22.95188  L_agg=22.94766
+[ensemble seed=3] epoch 005  loss=6.72034  L_agg=6.72034
+[ensemble seed=3] epoch 010  loss=0.17555  L_agg=0.17552
+[ensemble seed=3] epoch 015  loss=0.51052  L_agg=0.51051
+[ensemble seed=3] epoch 020  loss=0.55852  L_agg=0.55850
+[ensemble seed=3] epoch 025  loss=0.29788  L_agg=0.29277
+[ensemble seed=3] epoch 030  loss=0.19774  L_agg=0.19127
+[ensemble seed=3] epoch 035  loss=0.15288  L_agg=0.14654
+[ensemble seed=3] epoch 040  loss=0.12760  L_agg=0.12173
+[ensemble seed=3] epoch 045  loss=0.11308  L_agg=0.10790
+[ensemble seed=3] epoch 050  loss=0.10656  L_agg=0.10177
+[ensemble seed=4] epoch 001  loss=23.27691  L_agg=23.27106
+[ensemble seed=4] epoch 005  loss=8.19788  L_agg=8.19787
+[ensemble seed=4] epoch 010  loss=0.33222  L_agg=0.33218
+[ensemble seed=4] epoch 015  loss=0.47496  L_agg=0.47495
+[ensemble seed=4] epoch 020  loss=0.52864  L_agg=0.52771
+[ensemble seed=4] epoch 025  loss=0.35062  L_agg=0.34268
+[ensemble seed=4] epoch 030  loss=0.23847  L_agg=0.22957
+[ensemble seed=4] epoch 035  loss=0.19007  L_agg=0.18084
+[ensemble seed=4] epoch 040  loss=0.16779  L_agg=0.15873
+[ensemble seed=4] epoch 045  loss=0.15772  L_agg=0.14888
+[ensemble seed=4] epoch 050  loss=0.15465  L_agg=0.14591
+== 6. Evaluation ==
+[holdout seed=0] epoch 001  loss=23.03313  L_agg=23.02879
+[holdout seed=0] epoch 005  loss=6.65651  L_agg=6.65650
+[holdout seed=0] epoch 010  loss=0.16091  L_agg=0.16089
+[holdout seed=0] epoch 015  loss=0.56927  L_agg=0.56927
+[holdout seed=0] epoch 020  loss=0.48778  L_agg=0.48771
+[holdout seed=0] epoch 025  loss=0.32352  L_agg=0.31661
+[holdout seed=0] epoch 030  loss=0.25626  L_agg=0.24782
+[holdout seed=0] epoch 035  loss=0.22141  L_agg=0.21268
+[holdout seed=0] epoch 040  loss=0.20219  L_agg=0.19372
+[holdout seed=0] epoch 045  loss=0.19176  L_agg=0.18362
+[holdout seed=0] epoch 050  loss=0.18837  L_agg=0.18032
+[ablation_with_ntl seed=0] epoch 001  loss=22.97476  L_agg=22.97042
+[ablation_with_ntl seed=0] epoch 005  loss=6.65815  L_agg=6.65814
+[ablation_with_ntl seed=0] epoch 010  loss=0.15689  L_agg=0.15686
+[ablation_with_ntl seed=0] epoch 015  loss=0.57507  L_agg=0.57506
+[ablation_with_ntl seed=0] epoch 020  loss=0.49159  L_agg=0.49149
+[ablation_with_ntl seed=0] epoch 025  loss=0.30398  L_agg=0.29726
+[ablation_with_ntl seed=0] epoch 030  loss=0.22316  L_agg=0.21539
+[ablation_with_ntl seed=0] epoch 035  loss=0.18551  L_agg=0.17764
+[ablation_with_ntl seed=0] epoch 040  loss=0.16664  L_agg=0.15900
+[ablation_with_ntl seed=0] epoch 045  loss=0.15776  L_agg=0.15035
+[ablation_with_ntl seed=0] epoch 050  loss=0.15461  L_agg=0.14729
+[ablation_without_ntl seed=0] epoch 001  loss=22.67078  L_agg=22.66789
+[ablation_without_ntl seed=0] epoch 005  loss=7.18677  L_agg=7.18677
+[ablation_without_ntl seed=0] epoch 010  loss=0.24896  L_agg=0.24896
+[ablation_without_ntl seed=0] epoch 015  loss=0.41348  L_agg=0.41348
+[ablation_without_ntl seed=0] epoch 020  loss=0.54971  L_agg=0.54971
+[ablation_without_ntl seed=0] epoch 025  loss=0.37333  L_agg=0.36771
+[ablation_without_ntl seed=0] epoch 030  loss=0.26748  L_agg=0.26084
+[ablation_without_ntl seed=0] epoch 035  loss=0.20579  L_agg=0.19910
+[ablation_without_ntl seed=0] epoch 040  loss=0.17373  L_agg=0.16730
+[ablation_without_ntl seed=0] epoch 045  loss=0.15827  L_agg=0.15204
+[ablation_without_ntl seed=0] epoch 050  loss=0.15373  L_agg=0.14753
+{
+  "ensemble": {
+    "n_seeds": 5,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "pre_scale_district_log_loss": 0.11258101947555849,
+    "caption": "ensemble range across seeds, not a calibrated probability of error."
+  },
+  "holdout": {
+    "holdout_districts": [
+      "Aligarh",
+      "Ambedkar Nagar",
+      "Auraiya",
+      "Banda",
+      "Bijnor",
+      "Chandauli",
+      "Gorakhpur",
+      "Hathras",
+      "Jhansi",
+      "Kaushambi",
+      "Lakhimpur Kheri",
+      "Mainpuri",
+      "Moradabad",
+      "Sant Kabir Nagar",
+      "Sultanpur"
+    ],
+    "n_train_districts": 60,
+    "n_holdout_districts": 15,
+    "pre_scale_holdout_mape": 0.9844307332958385,
+    "final_loss": 0.18836582443623778,
+    "note": "MAPE is on district sums BEFORE dasymetric scale. Post-scale reconstruction \u2248 0 is conservation, not accuracy."
+  },
+  "ablation_ntl": {
+    "runs": [
+      {
+        "tag": "with_ntl",
+        "n_features": 94,
+        "pre_scale_district_log_loss": 0.12839643175383827,
+        "final_train_loss": 0.15461143451889708
+      },
+      {
+        "tag": "without_ntl",
+        "n_features": 92,
+        "pre_scale_district_log_loss": 0.1477909747895138,
+        "final_train_loss": 0.15373004628608655
+      }
+    ],
+    "note": "Ablation compares pre-scale district log-loss with and without night_lights features. NTL is in the model when the raster is present."
+  },
+  "spearman": {
+    "wealth_index_vs_night_lights": 0.17300154012061048,
+    "wealth_index_vs_road_km": 0.17754347752513325,
+    "wealth_index_vs_poi_count": 0.20914275785138783,
+    "gdp_per_capita_vs_night_lights": 0.17300154012061048,
+    "note": "Spearman vs NTL/roads/POIs is a sanity check, not truth. wealth_index is not a DHS score."
+  }
+}
+== 7. Export ==
+{
+  "n_cells": 46723,
+  "n_districts": 75,
+  "max_abs_rel_recon_error": 1.880377538552882e-16,
+  "caption": "ensemble range across seeds, not a calibrated probability of error."
+}
+wrote D:\CursorProjects\spatialdisintegration\data\output\UP\up_h3_r7_wealth.csv
+=== BR ===
+== BR Bihar ==
+== 1. Fetch raw datasets ==
+{'gddp': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\gddp\\BR\\gddp.json', 'adm1': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\boundaries\\IN\\geoBoundaries-IND-adm1.geojson', 'adm2': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\boundaries\\IN\\geoBoundaries-IND-adm2.geojson', 'population': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\population\\kontur_population_india.gpkg', 'population_worldpop': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\population\\IN\\ind_ppp_2020_1km_Aggregated_UNadj.tif', 'nightlights': 'D:\\CursorProjects\\spatialdisintegration\\data\\processed\\h3_nightlights_2025.parquet', 'osm': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\osm\\IN\\eastern-zone-latest.osm.pbf'}
+== 2. District polygons + GDDP targets ==
+boundary units=38  gddp units=38
+districts: ['Araria', 'Arwal', 'Aurangabad', 'Banka', 'Begusarai', 'Bhagalpur', 'Bhojpur', 'Buxar', 'Darbhanga', 'East Champaran', 'Gaya', 'Gopalganj', 'Jamui', 'Jehanabad', 'Kaimur', 'Katihar', 'Khagaria', 'Kishanganj', 'Lakhisarai', 'Madhepura', 'Madhubani', 'Munger', 'Muzaffarpur', 'Nalanda', 'Nawada', 'Patna', 'Purnia', 'Rohtas', 'Saharsa', 'Samastipur', 'Saran', 'Sheikhpura', 'Sheohar', 'Sitamarhi', 'Siwan', 'Supaul', 'Vaishali', 'West Champaran']
+== 3. H3 R7 index ==
+python : 
+At C:\Users\Raushan Prakash\AppData\Local\Temp\ps-script-073462c5-8e36-4b40-9282-efe9df5e7cca.ps1:115 char:3
++   python -X utf8 run_state.py --state $s 2>&1 | Out-File -Append -Enc ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+H3 polyfill:   0%|          | 0/38 [00:00<?, ?it/s]
+H3 polyfill:   8%|Γûè         | 3/38 [00:00<00:01, 20.87it/s]
+H3 polyfill:  16%|ΓûêΓûî        | 6/38 [00:00<00:01, 20.95it/s]
+H3 polyfill:  24%|ΓûêΓûêΓûÄ       | 9/38 [00:00<00:01, 21.69it/s]
+H3 polyfill:  32%|ΓûêΓûêΓûêΓûÅ      | 12/38 [00:00<00:01, 16.92it/s]
+H3 polyfill:  39%|ΓûêΓûêΓûêΓûë      | 15/38 [00:00<00:01, 19.07it/s]
+H3 polyfill:  47%|ΓûêΓûêΓûêΓûêΓûï     | 18/38 [00:00<00:00, 21.36it/s]
+H3 polyfill:  55%|ΓûêΓûêΓûêΓûêΓûêΓûî    | 21/38 [00:01<00:00, 20.86it/s]
+H3 polyfill:  63%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûÄ   | 24/38 [00:01<00:00, 19.95it/s]
+H3 polyfill:  71%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûê   | 27/38 [00:01<00:00, 17.59it/s]
+H3 polyfill:  79%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûë  | 30/38 [00:01<00:00, 18.10it/s]
+H3 polyfill:  89%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûë | 34/38 [00:01<00:00, 21.66it/s]
+H3 polyfill:  97%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûï| 37/38 [00:01<00:00, 22.91it/s]
+H3 polyfill: 100%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê| 38/38 [00:01<00:00, 20.04it/s]
+R7 cells=17829
+== 4. Features ==
+BR Kontur population after R7 join: 129,725,241 (129.7M; sanity range 100ΓÇô140M)
+night lights: 94.5% of R7 cells lit, mean=1.704 max=72.5 nW/cm┬▓/sr
+OSM: streaming D:\CursorProjects\spatialdisintegration\data\raw\osm\IN\eastern-zone-latest.osm.pbf (247 MB)
+  ...2,000,000 tagged objects  buildings=123,138 pois=2,684 road_km=22,179
+OSM stats: {
+  "pois": 3158,
+  "landuse_residential": 13845,
+  "road_segments": 688761,
+  "buildings": 195883,
+  "landuse_industrial": 678,
+  "landuse_commercial": 76,
+  "landuse_retail": 10,
+  "objects_scanned": 3704640,
+  "cells_with_buildings": 5938,
+  "cells_with_pois": 665,
+  "cells_with_roads": 10496
+}
+OSM joined: roads>0 in 10,496 cells, buildings>0 in 5,938, POIs>0 in 665 of 17,829 cells
+features: ['population_exists_z', 'population_log_z', 'night_lights_exists_z', 'night_lights_log_z', 'road_km_exists_z', 'road_km_log_z', 'poi_count_exists_z', 'poi_count_log_z', 'building_area_m2_exists_z', 'building_area_m2_log_z', 'building_count_exists_z', 'building_count_log_z', 'poi_amenity_restaurant_exists_z', 'poi_amenity_restaurant_log_z', 'poi_amenity_cafe_exists_z', 'poi_amenity_cafe_log_z', 'poi_amenity_bar_exists_z', 'poi_amenity_bar_log_z', 'poi_amenity_pub_exists_z', 'poi_amenity_pub_log_z', 'poi_amenity_cinema_exists_z', 'poi_amenity_cinema_log_z', 'poi_amenity_theatre_exists_z', 'poi_amenity_theatre_log_z', 'poi_amenity_nightclub_exists_z', 'poi_amenity_nightclub_log_z', 'poi_amenity_university_exists_z', 'poi_amenity_university_log_z', 'poi_amenity_hospital_exists_z', 'poi_amenity_hospital_log_z', 'poi_amenity_bank_exists_z', 'poi_amenity_bank_log_z', 'poi_shop_mall_exists_z', 'poi_shop_mall_log_z', 'poi_shop_luxury_exists_z', 'poi_shop_luxury_log_z', 'poi_shop_supermarket_exists_z', 'poi_shop_supermarket_log_z', 'poi_shop_convenience_exists_z', 'poi_shop_convenience_log_z', 'poi_tourism_hotel_exists_z', 'poi_tourism_hotel_log_z', 'poi_tourism_guest_house_exists_z', 'poi_tourism_guest_house_log_z', 'poi_leisure_exists_z', 'poi_leisure_log_z', 'poi_office_exists_z', 'poi_office_log_z', 'poi_amenity_restaurant_density_exists_z', 'poi_amenity_restaurant_density_log_z', 'poi_amenity_cafe_density_exists_z', 'poi_amenity_cafe_density_log_z', 'poi_amenity_bar_density_exists_z', 'poi_amenity_bar_density_log_z', 'poi_amenity_pub_density_exists_z', 'poi_amenity_pub_density_log_z', 'poi_amenity_cinema_density_exists_z', 'poi_amenity_cinema_density_log_z', 'poi_amenity_theatre_density_exists_z', 'poi_amenity_theatre_density_log_z', 'poi_amenity_nightclub_density_exists_z', 'poi_amenity_nightclub_density_log_z', 'poi_amenity_university_density_exists_z', 'poi_amenity_university_density_log_z', 'poi_amenity_hospital_density_exists_z', 'poi_amenity_hospital_density_log_z', 'poi_amenity_bank_density_exists_z', 'poi_amenity_bank_density_log_z', 'poi_shop_mall_density_exists_z', 'poi_shop_mall_density_log_z', 'poi_shop_luxury_density_exists_z', 'poi_shop_luxury_density_log_z', 'poi_shop_supermarket_density_exists_z', 'poi_shop_supermarket_density_log_z', 'poi_shop_convenience_density_exists_z', 'poi_shop_convenience_density_log_z', 'poi_tourism_hotel_density_exists_z', 'poi_tourism_hotel_density_log_z', 'poi_tourism_guest_house_density_exists_z', 'poi_tourism_guest_house_density_log_z', 'poi_leisure_density_exists_z', 'poi_leisure_density_log_z', 'poi_office_density_exists_z', 'poi_office_density_log_z', 'landuse_residential_z', 'landuse_residential_exists_z', 'landuse_commercial_z', 'landuse_commercial_exists_z', 'landuse_industrial_z', 'landuse_industrial_exists_z', 'landuse_retail_z', 'landuse_retail_exists_z', 'building_share_z', 'building_share_exists_z']
+          population       road_km  ...  building_area_m2  night_lights
+count   17829.000000  17829.000000  ...      17829.000000  17829.000000
+mean     7276.080599      1.894552  ...       1136.373508      1.703512
+std      7798.965885      2.360379  ...       8715.063376      2.463197
+min         0.000000      0.000000  ...          0.000000      0.000000
+25%      3029.000000      0.000000  ...          0.000000      0.894897
+50%      5886.000000      1.457709  ...          0.000000      1.350597
+75%      9422.000000      2.878324  ...         64.294460      1.867688
+max    199283.000000     43.498116  ...     573653.493808     72.542011
+
+[8 rows x 5 columns]
+== 5. Train 5-seed hierarchical GNN ==
+[ensemble seed=0] epoch 001  loss=24.22137  L_agg=24.21716
+[ensemble seed=0] epoch 005  loss=7.52921  L_agg=7.52915
+[ensemble seed=0] epoch 010  loss=0.26854  L_agg=0.26840
+[ensemble seed=0] epoch 015  loss=0.45305  L_agg=0.45294
+[ensemble seed=0] epoch 020  loss=0.60987  L_agg=0.60976
+[ensemble seed=0] epoch 025  loss=0.33315  L_agg=0.33298
+[ensemble seed=0] epoch 030  loss=0.15848  L_agg=0.15805
+[ensemble seed=0] epoch 035  loss=0.08885  L_agg=0.08841
+[ensemble seed=0] epoch 040  loss=0.06056  L_agg=0.06008
+[ensemble seed=0] epoch 045  loss=0.05005  L_agg=0.04955
+[ensemble seed=0] epoch 050  loss=0.04718  L_agg=0.04668
+[ensemble seed=1] epoch 001  loss=24.30289  L_agg=24.29827
+[ensemble seed=1] epoch 005  loss=8.71682  L_agg=8.71676
+[ensemble seed=1] epoch 010  loss=0.44613  L_agg=0.44593
+[ensemble seed=1] epoch 015  loss=0.31810  L_agg=0.31799
+[ensemble seed=1] epoch 020  loss=0.64582  L_agg=0.64571
+[ensemble seed=1] epoch 025  loss=0.39580  L_agg=0.39559
+[ensemble seed=1] epoch 030  loss=0.15532  L_agg=0.15460
+[ensemble seed=1] epoch 035  loss=0.07978  L_agg=0.07806
+[ensemble seed=1] epoch 040  loss=0.04486  L_agg=0.04365
+[ensemble seed=1] epoch 045  loss=0.03229  L_agg=0.03132
+[ensemble seed=1] epoch 050  loss=0.02928  L_agg=0.02832
+[ensemble seed=2] epoch 001  loss=24.23701  L_agg=24.23274
+[ensemble seed=2] epoch 005  loss=9.16592  L_agg=9.16584
+[ensemble seed=2] epoch 010  loss=0.65466  L_agg=0.65443
+[ensemble seed=2] epoch 015  loss=0.21324  L_agg=0.21311
+[ensemble seed=2] epoch 020  loss=0.59621  L_agg=0.59609
+[ensemble seed=2] epoch 025  loss=0.42990  L_agg=0.42976
+[ensemble seed=2] epoch 030  loss=0.22971  L_agg=0.22941
+[ensemble seed=2] epoch 035  loss=0.12210  L_agg=0.12162
+[ensemble seed=2] epoch 040  loss=0.07940  L_agg=0.07869
+[ensemble seed=2] epoch 045  loss=0.06285  L_agg=0.06216
+[ensemble seed=2] epoch 050  loss=0.05829  L_agg=0.05759
+[ensemble seed=3] epoch 001  loss=24.24211  L_agg=24.23782
+[ensemble seed=3] epoch 005  loss=7.63176  L_agg=7.63171
+[ensemble seed=3] epoch 010  loss=0.33429  L_agg=0.33414
+[ensemble seed=3] epoch 015  loss=0.33198  L_agg=0.33189
+[ensemble seed=3] epoch 020  loss=0.59614  L_agg=0.59605
+[ensemble seed=3] epoch 025  loss=0.36553  L_agg=0.36540
+[ensemble seed=3] epoch 030  loss=0.16545  L_agg=0.16475
+[ensemble seed=3] epoch 035  loss=0.08452  L_agg=0.08293
+[ensemble seed=3] epoch 040  loss=0.04914  L_agg=0.04805
+[ensemble seed=3] epoch 045  loss=0.03719  L_agg=0.03633
+[ensemble seed=3] epoch 050  loss=0.03424  L_agg=0.03337
+[ensemble seed=4] epoch 001  loss=24.55839  L_agg=24.55251
+[ensemble seed=4] epoch 005  loss=9.27344  L_agg=9.27337
+[ensemble seed=4] epoch 010  loss=0.61180  L_agg=0.61154
+[ensemble seed=4] epoch 015  loss=0.28696  L_agg=0.28676
+[ensemble seed=4] epoch 020  loss=0.63353  L_agg=0.63338
+[ensemble seed=4] epoch 025  loss=0.38661  L_agg=0.38634
+[ensemble seed=4] epoch 030  loss=0.18550  L_agg=0.18282
+[ensemble seed=4] epoch 035  loss=0.10111  L_agg=0.09657
+[ensemble seed=4] epoch 040  loss=0.07242  L_agg=0.06710
+[ensemble seed=4] epoch 045  loss=0.06353  L_agg=0.05803
+[ensemble seed=4] epoch 050  loss=0.06127  L_agg=0.05576
+== 6. Evaluation ==
+[holdout seed=0] epoch 001  loss=24.35005  L_agg=24.34584
+[holdout seed=0] epoch 005  loss=7.58621  L_agg=7.58615
+[holdout seed=0] epoch 010  loss=0.27074  L_agg=0.27061
+[holdout seed=0] epoch 015  loss=0.46017  L_agg=0.46008
+[holdout seed=0] epoch 020  loss=0.61423  L_agg=0.61412
+[holdout seed=0] epoch 025  loss=0.33344  L_agg=0.33313
+[holdout seed=0] epoch 030  loss=0.16327  L_agg=0.16212
+[holdout seed=0] epoch 035  loss=0.09706  L_agg=0.09552
+[holdout seed=0] epoch 040  loss=0.06279  L_agg=0.06160
+[holdout seed=0] epoch 045  loss=0.05078  L_agg=0.04972
+[holdout seed=0] epoch 050  loss=0.04773  L_agg=0.04667
+[ablation_with_ntl seed=0] epoch 001  loss=24.22137  L_agg=24.21716
+[ablation_with_ntl seed=0] epoch 005  loss=7.52921  L_agg=7.52915
+[ablation_with_ntl seed=0] epoch 010  loss=0.26854  L_agg=0.26840
+[ablation_with_ntl seed=0] epoch 015  loss=0.45305  L_agg=0.45294
+[ablation_with_ntl seed=0] epoch 020  loss=0.60987  L_agg=0.60976
+[ablation_with_ntl seed=0] epoch 025  loss=0.33315  L_agg=0.33298
+[ablation_with_ntl seed=0] epoch 030  loss=0.15848  L_agg=0.15805
+[ablation_with_ntl seed=0] epoch 035  loss=0.08832  L_agg=0.08788
+[ablation_with_ntl seed=0] epoch 040  loss=0.05971  L_agg=0.05922
+[ablation_with_ntl seed=0] epoch 045  loss=0.04923  L_agg=0.04876
+[ablation_with_ntl seed=0] epoch 050  loss=0.04639  L_agg=0.04591
+[ablation_without_ntl seed=0] epoch 001  loss=23.93921  L_agg=23.93629
+[ablation_without_ntl seed=0] epoch 005  loss=8.35039  L_agg=8.35039
+[ablation_without_ntl seed=0] epoch 010  loss=0.45153  L_agg=0.45148
+[ablation_without_ntl seed=0] epoch 015  loss=0.28431  L_agg=0.28426
+[ablation_without_ntl seed=0] epoch 020  loss=0.59472  L_agg=0.59467
+[ablation_without_ntl seed=0] epoch 025  loss=0.39952  L_agg=0.39944
+[ablation_without_ntl seed=0] epoch 030  loss=0.20955  L_agg=0.20926
+[ablation_without_ntl seed=0] epoch 035  loss=0.11623  L_agg=0.11571
+[ablation_without_ntl seed=0] epoch 040  loss=0.07362  L_agg=0.07297
+[ablation_without_ntl seed=0] epoch 045  loss=0.05720  L_agg=0.05654
+[ablation_without_ntl seed=0] epoch 050  loss=0.05283  L_agg=0.05216
+{
+  "ensemble": {
+    "n_seeds": 5,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "pre_scale_district_log_loss": 0.07183797507597811,
+    "caption": "ensemble range across seeds, not a calibrated probability of error."
+  },
+  "holdout": {
+    "holdout_districts": [
+      "Araria",
+      "Arwal",
+      "Aurangabad",
+      "East Champaran",
+      "Gaya",
+      "Khagaria",
+      "Madhubani",
+      "Purnia"
+    ],
+    "n_train_districts": 30,
+    "n_holdout_districts": 8,
+    "pre_scale_holdout_mape": 1.3501013817445675,
+    "final_loss": 0.047731782064012414,
+    "note": "MAPE is on district sums BEFORE dasymetric scale. Post-scale reconstruction \u2248 0 is conservation, not accuracy."
+  },
+  "ablation_ntl": {
+    "runs": [
+      {
+        "tag": "with_ntl",
+        "n_features": 94,
+        "pre_scale_district_log_loss": 0.1333694856699068,
+        "final_train_loss": 0.046389200246272244
+      },
+      {
+        "tag": "without_ntl",
+        "n_features": 92,
+        "pre_scale_district_log_loss": 0.03873057473911024,
+        "final_train_loss": 0.052833229631433616
+      }
+    ],
+    "note": "Ablation compares pre-scale district log-loss with and without night_lights features. NTL is in the model when the raster is present."
+  },
+  "spearman": {
+    "wealth_index_vs_night_lights": 0.5331743816593338,
+    "wealth_index_vs_road_km": 0.23868160326979274,
+    "wealth_index_vs_poi_count": 0.22238614654865252,
+    "gdp_per_capita_vs_night_lights": 0.5331743816593338,
+    "note": "Spearman vs NTL/roads/POIs is a sanity check, not truth. wealth_index is not a DHS score."
+  }
+}
+== 7. Export ==
+{
+  "n_cells": 17829,
+  "n_districts": 38,
+  "max_abs_rel_recon_error": 1.437508096045597e-16,
+  "caption": "ensemble range across seeds, not a calibrated probability of error."
+}
+wrote D:\CursorProjects\spatialdisintegration\data\output\BR\br_h3_r7_wealth.csv
+=== RJ ===
+== RJ Rajasthan ==
+== 1. Fetch raw datasets ==
+{'gddp': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\gddp\\RJ\\gddp.json', 'adm1': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\boundaries\\IN\\geoBoundaries-IND-adm1.geojson', 'adm2': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\boundaries\\IN\\geoBoundaries-IND-adm2.geojson', 'population': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\population\\kontur_population_india.gpkg', 'population_worldpop': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\population\\IN\\ind_ppp_2020_1km_Aggregated_UNadj.tif', 'nightlights': 'D:\\CursorProjects\\spatialdisintegration\\data\\processed\\h3_nightlights_2025.parquet', 'osm': 'D:\\CursorProjects\\spatialdisintegration\\data\\raw\\osm\\IN\\northern-zone-latest.osm.pbf'}
+== 2. District polygons + GDDP targets ==
+boundary units=33  gddp units=33
+districts: ['Ajmer', 'Alwar', 'Banswara', 'Baran', 'Barmer', 'Bharatpur', 'Bhilwara', 'Bikaner', 'Bundi', 'Chittaurgarh', 'Churu', 'Dausa', 'Dhaulpur', 'Dungarpur', 'Ganganagar', 'Hanumangarh', 'Jaipur', 'Jaisalmer', 'Jalor', 'Jhalawar', 'Jhunjhunun', 'Jodhpur', 'Karauli', 'Kota', 'Nagaur', 'Pali', 'Pratapgarh', 'Rajsamand', 'Sawai Madhopur', 'Sikar', 'Sirohi', 'Tonk', 'Udaipur']
+== 3. H3 R7 index ==
+python : 
+At C:\Users\Raushan Prakash\AppData\Local\Temp\ps-script-073462c5-8e36-4b40-9282-efe9df5e7cca.ps1:115 char:3
++   python -X utf8 run_state.py --state $s 2>&1 | Out-File -Append -Enc ...
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+H3 polyfill:   0%|          | 0/33 [00:00<?, ?it/s]
+H3 polyfill:   3%|ΓûÄ         | 1/33 [00:00<00:04,  6.72it/s]
+H3 polyfill:   6%|Γûî         | 2/33 [00:00<00:06,  4.73it/s]
+H3 polyfill:  12%|ΓûêΓûÅ        | 4/33 [00:00<00:03,  7.78it/s]
+H3 polyfill:  15%|ΓûêΓûî        | 5/33 [00:01<00:06,  4.21it/s]
+H3 polyfill:  18%|ΓûêΓûè        | 6/33 [00:01<00:05,  4.93it/s]
+H3 polyfill:  21%|ΓûêΓûê        | 7/33 [00:01<00:04,  5.23it/s]
+H3 polyfill:  24%|ΓûêΓûêΓûì       | 8/33 [00:01<00:06,  3.74it/s]
+H3 polyfill:  30%|ΓûêΓûêΓûê       | 10/33 [00:01<00:04,  5.29it/s]
+H3 polyfill:  33%|ΓûêΓûêΓûêΓûÄ      | 11/33 [00:02<00:04,  4.87it/s]
+H3 polyfill:  42%|ΓûêΓûêΓûêΓûêΓûÅ     | 14/33 [00:02<00:02,  7.92it/s]
+H3 polyfill:  45%|ΓûêΓûêΓûêΓûêΓûî     | 15/33 [00:02<00:02,  7.33it/s]
+H3 polyfill:  48%|ΓûêΓûêΓûêΓûêΓûè     | 16/33 [00:02<00:02,  6.48it/s]
+H3 polyfill:  52%|ΓûêΓûêΓûêΓûêΓûêΓûÅ    | 17/33 [00:02<00:02,  6.07it/s]
+H3 polyfill:  55%|ΓûêΓûêΓûêΓûêΓûêΓûì    | 18/33 [00:03<00:04,  3.55it/s]
+H3 polyfill:  58%|ΓûêΓûêΓûêΓûêΓûêΓûè    | 19/33 [00:03<00:03,  4.07it/s]
+H3 polyfill:  64%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûÄ   | 21/33 [00:03<00:02,  5.34it/s]
+H3 polyfill:  67%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûï   | 22/33 [00:04<00:02,  4.58it/s]
+H3 polyfill:  73%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûÄ  | 24/33 [00:04<00:01,  6.37it/s]
+H3 polyfill:  76%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûî  | 25/33 [00:04<00:01,  5.54it/s]
+H3 polyfill:  79%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûë  | 26/33 [00:04<00:01,  5.52it/s]
+H3 polyfill:  85%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûì | 28/33 [00:05<00:00,  7.15it/s]
+H3 polyfill:  91%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê | 30/33 [00:05<00:00,  8.45it/s]
+H3 polyfill:  97%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûï| 32/33 [00:05<00:00,  9.27it/s]
+H3 polyfill: 100%|ΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê| 33/33 [00:05<00:00,  5.95it/s]
+R7 cells=65948
+== 4. Features ==
+RJ Kontur population after R7 join: 83,114,158 (83.1M; sanity range 68ΓÇô90M)
+night lights: 75.4% of R7 cells lit, mean=0.823 max=135.2 nW/cm┬▓/sr
+OSM: streaming D:\CursorProjects\spatialdisintegration\data\raw\osm\IN\northern-zone-latest.osm.pbf (223 MB)
+  ...2,000,000 tagged objects  buildings=72,954 pois=9,170 road_km=80,008
+OSM stats: {
+  "pois": 10023,
+  "landuse_residential": 41278,
+  "road_segments": 1148261,
+  "buildings": 203156,
+  "landuse_industrial": 1024,
+  "landuse_retail": 20,
+  "landuse_commercial": 123,
+  "objects_scanned": 2993160,
+  "cells_with_buildings": 6171,
+  "cells_with_pois": 1771,
+  "cells_with_roads": 30474
+}
+OSM joined: roads>0 in 30,474 cells, buildings>0 in 6,171, POIs>0 in 1,771 of 65,948 cells
+features: ['population_exists_z', 'population_log_z', 'night_lights_exists_z', 'night_lights_log_z', 'road_km_exists_z', 'road_km_log_z', 'poi_count_exists_z', 'poi_count_log_z', 'building_area_m2_exists_z', 'building_area_m2_log_z', 'building_count_exists_z', 'building_count_log_z', 'poi_amenity_restaurant_exists_z', 'poi_amenity_restaurant_log_z', 'poi_amenity_cafe_exists_z', 'poi_amenity_cafe_log_z', 'poi_amenity_bar_exists_z', 'poi_amenity_bar_log_z', 'poi_amenity_pub_exists_z', 'poi_amenity_pub_log_z', 'poi_amenity_cinema_exists_z', 'poi_amenity_cinema_log_z', 'poi_amenity_theatre_exists_z', 'poi_amenity_theatre_log_z', 'poi_amenity_nightclub_exists_z', 'poi_amenity_nightclub_log_z', 'poi_amenity_university_exists_z', 'poi_amenity_university_log_z', 'poi_amenity_hospital_exists_z', 'poi_amenity_hospital_log_z', 'poi_amenity_bank_exists_z', 'poi_amenity_bank_log_z', 'poi_shop_mall_exists_z', 'poi_shop_mall_log_z', 'poi_shop_luxury_exists_z', 'poi_shop_luxury_log_z', 'poi_shop_supermarket_exists_z', 'poi_shop_supermarket_log_z', 'poi_shop_convenience_exists_z', 'poi_shop_convenience_log_z', 'poi_tourism_hotel_exists_z', 'poi_tourism_hotel_log_z', 'poi_tourism_guest_house_exists_z', 'poi_tourism_guest_house_log_z', 'poi_leisure_exists_z', 'poi_leisure_log_z', 'poi_office_exists_z', 'poi_office_log_z', 'poi_amenity_restaurant_density_exists_z', 'poi_amenity_restaurant_density_log_z', 'poi_amenity_cafe_density_exists_z', 'poi_amenity_cafe_density_log_z', 'poi_amenity_bar_density_exists_z', 'poi_amenity_bar_density_log_z', 'poi_amenity_pub_density_exists_z', 'poi_amenity_pub_density_log_z', 'poi_amenity_cinema_density_exists_z', 'poi_amenity_cinema_density_log_z', 'poi_amenity_theatre_density_exists_z', 'poi_amenity_theatre_density_log_z', 'poi_amenity_nightclub_density_exists_z', 'poi_amenity_nightclub_density_log_z', 'poi_amenity_university_density_exists_z', 'poi_amenity_university_density_log_z', 'poi_amenity_hospital_density_exists_z', 'poi_amenity_hospital_density_log_z', 'poi_amenity_bank_density_exists_z', 'poi_amenity_bank_density_log_z', 'poi_shop_mall_density_exists_z', 'poi_shop_mall_density_log_z', 'poi_shop_luxury_density_exists_z', 'poi_shop_luxury_density_log_z', 'poi_shop_supermarket_density_exists_z', 'poi_shop_supermarket_density_log_z', 'poi_shop_convenience_density_exists_z', 'poi_shop_convenience_density_log_z', 'poi_tourism_hotel_density_exists_z', 'poi_tourism_hotel_density_log_z', 'poi_tourism_guest_house_density_exists_z', 'poi_tourism_guest_house_density_log_z', 'poi_leisure_density_exists_z', 'poi_leisure_density_log_z', 'poi_office_density_exists_z', 'poi_office_density_log_z', 'landuse_residential_z', 'landuse_residential_exists_z', 'landuse_commercial_z', 'landuse_commercial_exists_z', 'landuse_industrial_z', 'landuse_industrial_exists_z', 'landuse_retail_z', 'landuse_retail_exists_z', 'building_share_z', 'building_share_exists_z']
+         population       road_km     poi_count  building_area_m2  night_lights
+count  65948.000000  65948.000000  65948.000000      6.594800e+04  65948.000000
+mean    1260.298387      1.327563      0.151983      7.542342e+02      0.822799
+std     2652.563717      2.087149      2.867518      1.724011e+04      2.253012
+min        0.000000      0.000000      0.000000      0.000000e+00      0.000000
+25%      129.000000      0.000000      0.000000      0.000000e+00      0.018197
+50%      628.500000      0.000000      0.000000      0.000000e+00      0.333785
+75%     1542.000000      2.412012      0.000000      0.000000e+00      0.890131
+max    89599.000000     43.713915    263.000000      1.513804e+06    135.195712
+== 5. Train 5-seed hierarchical GNN ==
+[ensemble seed=0] epoch 001  loss=26.14886  L_agg=26.14458
+[ensemble seed=0] epoch 005  loss=7.92442  L_agg=7.92410
+[ensemble seed=0] epoch 010  loss=0.24802  L_agg=0.24682
+[ensemble seed=0] epoch 015  loss=0.66010  L_agg=0.65929
+[ensemble seed=0] epoch 020  loss=0.73702  L_agg=0.73650
+[ensemble seed=0] epoch 025  loss=0.39373  L_agg=0.39340
+[ensemble seed=0] epoch 030  loss=0.18039  L_agg=0.18018
+[ensemble seed=0] epoch 035  loss=0.08450  L_agg=0.08436
+[ensemble seed=0] epoch 040  loss=0.04959  L_agg=0.04948
+[ensemble seed=0] epoch 045  loss=0.03924  L_agg=0.03915
+[ensemble seed=0] epoch 050  loss=0.03686  L_agg=0.03677
+[ensemble seed=1] epoch 001  loss=26.22592  L_agg=26.22123
+[ensemble seed=1] epoch 005  loss=9.13101  L_agg=9.13060
+[ensemble seed=1] epoch 010  loss=0.38964  L_agg=0.38833
+[ensemble seed=1] epoch 015  loss=0.51309  L_agg=0.51220
+[ensemble seed=1] epoch 020  loss=0.77957  L_agg=0.77897
+[ensemble seed=1] epoch 025  loss=0.45114  L_agg=0.45070
+[ensemble seed=1] epoch 030  loss=0.16089  L_agg=0.16059
+[ensemble seed=1] epoch 035  loss=0.05327  L_agg=0.05241
+[ensemble seed=1] epoch 040  loss=0.04955  L_agg=0.04741
+[ensemble seed=1] epoch 045  loss=0.04973  L_agg=0.04732
+[ensemble seed=1] epoch 050  loss=0.04775  L_agg=0.04561
+[ensemble seed=2] epoch 001  loss=26.14016  L_agg=26.13602
+[ensemble seed=2] epoch 005  loss=9.38688  L_agg=9.38648
+[ensemble seed=2] epoch 010  loss=0.55992  L_agg=0.55892
+[ensemble seed=2] epoch 015  loss=0.39316  L_agg=0.39254
+[ensemble seed=2] epoch 020  loss=0.71529  L_agg=0.71497
+[ensemble seed=2] epoch 025  loss=0.47673  L_agg=0.47654
+[ensemble seed=2] epoch 030  loss=0.24685  L_agg=0.24672
+[ensemble seed=2] epoch 035  loss=0.12210  L_agg=0.12202
+[ensemble seed=2] epoch 040  loss=0.06593  L_agg=0.06587
+[ensemble seed=2] epoch 045  loss=0.04926  L_agg=0.04897
+[ensemble seed=2] epoch 050  loss=0.04623  L_agg=0.04593
+[ensemble seed=3] epoch 001  loss=26.13615  L_agg=26.13202
+[ensemble seed=3] epoch 005  loss=8.06905  L_agg=8.06875
+[ensemble seed=3] epoch 010  loss=0.31803  L_agg=0.31720
+[ensemble seed=3] epoch 015  loss=0.50606  L_agg=0.50554
+[ensemble seed=3] epoch 020  loss=0.70236  L_agg=0.70204
+[ensemble seed=3] epoch 025  loss=0.38650  L_agg=0.38629
+[ensemble seed=3] epoch 030  loss=0.13131  L_agg=0.13117
+[ensemble seed=3] epoch 035  loss=0.04961  L_agg=0.04803
+[ensemble seed=3] epoch 040  loss=0.05114  L_agg=0.04758
+[ensemble seed=3] epoch 045  loss=0.05131  L_agg=0.04746
+[ensemble seed=3] epoch 050  loss=0.05075  L_agg=0.04692
+[ensemble seed=4] epoch 001  loss=26.47702  L_agg=26.47123
+[ensemble seed=4] epoch 005  loss=9.76517  L_agg=9.76492
+[ensemble seed=4] epoch 010  loss=0.50415  L_agg=0.50327
+[ensemble seed=4] epoch 015  loss=0.49239  L_agg=0.49171
+[ensemble seed=4] epoch 020  loss=0.76360  L_agg=0.76319
+[ensemble seed=4] epoch 025  loss=0.40858  L_agg=0.40835
+[ensemble seed=4] epoch 030  loss=0.10834  L_agg=0.10772
+[ensemble seed=4] epoch 035  loss=0.05749  L_agg=0.05153
+[ensemble seed=4] epoch 040  loss=0.05223  L_agg=0.04507
+[ensemble seed=4] epoch 045  loss=0.05164  L_agg=0.04429
+[ensemble seed=4] epoch 050  loss=0.05145  L_agg=0.04408
+== 6. Evaluation ==
+[holdout seed=0] epoch 001  loss=26.03648  L_agg=26.03221
+[holdout seed=0] epoch 005  loss=7.74043  L_agg=7.73997
+[holdout seed=0] epoch 010  loss=0.23477  L_agg=0.23335
+[holdout seed=0] epoch 015  loss=0.67080  L_agg=0.66990
+[holdout seed=0] epoch 020  loss=0.71198  L_agg=0.71132
+[holdout seed=0] epoch 025  loss=0.36364  L_agg=0.36312
+[holdout seed=0] epoch 030  loss=0.14654  L_agg=0.14612
+[holdout seed=0] epoch 035  loss=0.04963  L_agg=0.04928
+[holdout seed=0] epoch 040  loss=0.02177  L_agg=0.02142
+[holdout seed=0] epoch 045  loss=0.01819  L_agg=0.01754
+[holdout seed=0] epoch 050  loss=0.01798  L_agg=0.01731
+[ablation_with_ntl seed=0] epoch 001  loss=26.14886  L_agg=26.14458
+[ablation_with_ntl seed=0] epoch 005  loss=7.92442  L_agg=7.92410
+[ablation_with_ntl seed=0] epoch 010  loss=0.24802  L_agg=0.24682
+[ablation_with_ntl seed=0] epoch 015  loss=0.66010  L_agg=0.65929
+[ablation_with_ntl seed=0] epoch 020  loss=0.73702  L_agg=0.73650
+[ablation_with_ntl seed=0] epoch 025  loss=0.39373  L_agg=0.39340
+[ablation_with_ntl seed=0] epoch 030  loss=0.18039  L_agg=0.18018
+[ablation_with_ntl seed=0] epoch 035  loss=0.08450  L_agg=0.08436
+[ablation_with_ntl seed=0] epoch 040  loss=0.04959  L_agg=0.04948
+[ablation_with_ntl seed=0] epoch 045  loss=0.03924  L_agg=0.03914
+[ablation_with_ntl seed=0] epoch 050  loss=0.03686  L_agg=0.03677
+[ablation_without_ntl seed=0] epoch 001  loss=25.85687  L_agg=25.85396
+[ablation_without_ntl seed=0] epoch 005  loss=8.63240  L_agg=8.63223
+[ablation_without_ntl seed=0] epoch 010  loss=0.38752  L_agg=0.38678
+[ablation_without_ntl seed=0] epoch 015  loss=0.50030  L_agg=0.49982
+[ablation_without_ntl seed=0] epoch 020  loss=0.72318  L_agg=0.72291
+[ablation_without_ntl seed=0] epoch 025  loss=0.43479  L_agg=0.43462
+[ablation_without_ntl seed=0] epoch 030  loss=0.19411  L_agg=0.19399
+[ablation_without_ntl seed=0] epoch 035  loss=0.06664  L_agg=0.06637
+[ablation_without_ntl seed=0] epoch 040  loss=0.05133  L_agg=0.04882
+[ablation_without_ntl seed=0] epoch 045  loss=0.04975  L_agg=0.04675
+[ablation_without_ntl seed=0] epoch 050  loss=0.04920  L_agg=0.04610
+{
+  "ensemble": {
+    "n_seeds": 5,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "pre_scale_district_log_loss": 0.03617473365204851,
+    "caption": "ensemble range across seeds, not a calibrated probability of error."
+  },
+  "holdout": {
+    "holdout_districts": [
+      "Alwar",
+      "Banswara",
+      "Bundi",
+      "Chittaurgarh",
+      "Ganganagar",
+      "Jaisalmer",
+      "Karauli"
+    ],
+    "n_train_districts": 26,
+    "n_holdout_districts": 7,
+    "pre_scale_holdout_mape": 0.32941860337532786,
+    "final_loss": 0.017977375418743533,
+    "note": "MAPE is on district sums BEFORE dasymetric scale. Post-scale reconstruction \u2248 0 is conservation, not accuracy."
+  },
+  "ablation_ntl": {
+    "runs": [
+      {
+        "tag": "with_ntl",
+        "n_features": 94,
+        "pre_scale_district_log_loss": 0.03659620827192955,
+        "final_train_loss": 0.0368619406695506
+      },
+      {
+        "tag": "without_ntl",
+        "n_features": 92,
+        "pre_scale_district_log_loss": 0.0460456154040957,
+        "final_train_loss": 0.04920120370267589
+      }
+    ],
+    "note": "Ablation compares pre-scale district log-loss with and without night_lights features. NTL is in the model when the raster is present."
+  },
+  "spearman": {
+    "wealth_index_vs_night_lights": 0.502757075623332,
+    "wealth_index_vs_road_km": 0.27629307759423055,
+    "wealth_index_vs_poi_count": 0.1260946338989307,
+    "gdp_per_capita_vs_night_lights": 0.502757075623332,
+    "note": "Spearman vs NTL/roads/POIs is a sanity check, not truth. wealth_index is not a DHS score."
+  }
+}
+== 7. Export ==
+{
+  "n_cells": 65948,
+  "n_districts": 33,
+  "max_abs_rel_recon_error": 2.1381738549667794e-16,
+  "caption": "ensemble range across seeds, not a calibrated probability of error."
+}
+wrote D:\CursorProjects\spatialdisintegration\data\output\RJ\rj_h3_r7_wealth.csv
+BATCH2 DONE
