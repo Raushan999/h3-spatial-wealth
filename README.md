@@ -1,4 +1,28 @@
-# Spatial GDDP disaggregation
+# 🗺️ Spatial GDDP Disaggregation
+
+> **What:** Take a single officially-published district GDP number and distribute it across thousands of small hexagonal patches, weighted by satellite and map evidence — so that every patch's share sums back *exactly* to the original total.
+
+---
+
+## 🌐 Live Demo
+
+**[→ Open the interactive map](https://raushan999.github.io/h3-spatial-wealth/)**
+
+![Spatial wealth map showing Bihar FY 2023-24 with hexagonal GDP-per-capita overlay](docs/screenshot/image.png)
+
+> The map above shows **Bihar, FY 2023-24** — each hexagon is a ~5 km² patch coloured by its estimated allocated GDDP per capita. Brighter cells = higher estimated economic activity. Use the filters panel (bottom-left) to switch state, metric, district, or colour scale.
+
+**What you can do on the map:**
+
+- Switch between states and fiscal years
+- Toggle between *Allocated GDDP per capita* and *Wealth index percentile* views
+- Filter by metro area or individual district
+- Hide unpopulated cells with the population slider
+- Download the underlying data via the *Data & downloads* panel
+
+---
+
+
 
 ## The problem, in plain words
 
@@ -15,28 +39,33 @@ That single number describes the *entire* district — a huge, mixed area with d
 We call this **disaggregation** — splitting a known total into smaller, spatially located pieces that **add back up exactly** to the original total:
 
 $$
-\sum_{i \,\in\, \text{Pune}} GDP_i = Y_{\text{Pune}}
+\sum_{i \in \text{Pune}} GDP_i = Y_{\text{Pune}}
 $$
 
 where each $i$ is one small hexagonal patch of Pune, and $GDP_i$ is that patch's *estimated* share.
 
 ### What is actually measured vs. estimated
 
-| | Value | Status |
-|---|---|---|
-| District GDP | ₹281,986 crore | **Observed** — published by the state government |
-| Population, night lights, roads, buildings, shops, land use per patch | e.g. 9,585 people, 12.94 night-light units | **Observed** — satellite / survey / map data |
-| GDP of one 5 km² patch | e.g. ₹81.91 crore | **Estimated** — no such number is ever published; we compute it |
+
+|                                                                       | Value                                      | Status                                                          |
+| --------------------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------------------- |
+| District GDP                                                          | ₹281,986 crore                             | **Observed** — published by the state government                |
+| Population, night lights, roads, buildings, shops, land use per patch | e.g. 9,585 people, 12.94 night-light units | **Observed** — satellite / survey / map data                    |
+| GDP of one 5 km² patch                                                | e.g. ₹81.91 crore                          | **Estimated** — no such number is ever published; we compute it |
+
 
 There is **no dataset anywhere that measures GDP at this fine a scale.** Everything at the patch level is an *educated allocation*, not a measurement. This is the single most important thing to understand about this project — we are not "discovering" true hyper-local GDP, we are proposing a plausible, constrained split of a known total.
 
 ---
+
+
 
 ## Why split by a 5 km² hexagon (H3)?
 
 We needed a way to divide *any* district — regardless of its shape — into small, roughly equal-sized, comparable units. We use **H3**, an open hexagonal grid system (built by Uber), at a resolution where each cell covers about **5 km²**.
 
 Why hexagons instead of squares or the messy shapes of villages/wards:
+
 - Every cell is roughly the same size and shape, so patches are comparable across a whole state.
 - Each cell has a fixed, well-defined neighbourhood (its 6 touching cells), which matters later.
 - Cells naturally nest into larger parent cells (a form of zoom-out), which we also use.
@@ -44,6 +73,8 @@ Why hexagons instead of squares or the messy shapes of villages/wards:
 Pune's district boundary, filled with this hexagon grid, produces **3,235 individual patches**. Each patch is one *unit* we must assign a GDP value to.
 
 ---
+
+
 
 ## What information do we have about each patch?
 
@@ -59,18 +90,21 @@ For every hexagon, we collect):
 None of these are money. They are *circumstantial evidence* that a patch is more or less economically active — the same way a real-estate analyst might say "this area probably has higher property value because it has more shops, better roads, and brighter streets at night," without ever seeing a bank statement.
 
 **Important limitation:** each signal is an imperfect and biased proxy.
+
 - Night lights show electrified activity, not farming or informal daytime work.
 - Roads and shop counts come from crowd-sourced maps, which are more complete in cities than villages.
 - A brightly lit factory and a wealthy neighbourhood can look similar in raw light data.
 
 ---
 
+
+
 ## Why not just divide GDP by population share?
 
 The simplest possible method: give each patch a share of GDP proportional to its population.
 
 $$
-GDP_i = Y_g \times \frac{population_i}{\sum_{j \,\in\, g} population_j}
+GDP_i = Y_g \times \frac{population_i}{\sum_{j \in g} population_j}
 $$
 
 This assumes **every person in the district produces the same amount of economic value**, no matter where they live. That is a strong and often wrong assumption — a person living next to a business district plausibly contributes to (or benefits from) more surrounding economic activity than someone in a remote, low-activity village, even before considering their own income.
@@ -80,6 +114,8 @@ This assumes **every person in the district produces the same amount of economic
 That is the actual justification for this project's added complexity: **letting non-population evidence, including neighbourhood context, influence how the district total is split.**
 
 ---
+
+
 
 ## Why also look at neighbouring patches?
 
@@ -91,6 +127,8 @@ This is done with a **Graph Neural Network (GNN)** — a model built to work on 
 
 ---
 
+
+
 ## How the model turns evidence into a number, and money appears
 
 Because no patch has an observed GDP, the model cannot be shown "the correct answer" for any individual hexagon. Instead:
@@ -101,25 +139,25 @@ $$
 s_i \geq 0
 $$
 
-2. That score is multiplied by the patch's population to get a raw weighted contribution:
+1. That score is multiplied by the patch's population to get a raw weighted contribution:
 
 $$
 z_i = s_i \times population_i
 $$
 
-3. All patches inside one district are added up to get that district's *predicted* total:
+1. All patches inside one district are added up to get that district's *predicted* total:
 
 $$
-\widehat{Y}_g = \sum_{i \,\in\, g} z_i
+\widehat{Y}*g = \sum*{i \in g} z_i
 $$
 
-4. This predicted total is compared against the *real, published* district GDP, $Y_g$. The comparison uses a squared error on a logarithmic scale (so a state with a ₹500,000 crore economy and one with a ₹10,000 crore economy are judged on *proportional* accuracy, not raw rupee difference):
+1. This predicted total is compared against the *real, published* district GDP, $Y_g$. The comparison uses a squared error on a logarithmic scale (so a state with a ₹500,000 crore economy and one with a ₹10,000 crore economy are judged on *proportional* accuracy, not raw rupee difference):
 
 $$
-\text{loss} = \frac{1}{|G|}\sum_{g \,\in\, G} \Big(\log_{10}\widehat{Y}_g - \log_{10}Y_g\Big)^2
+\text{loss} = \frac{1}{|G|}\sum_{g \in G} \Big(\log_{10}\widehat{Y}*g - \log*{10}Y_g\Big)^2
 $$
 
-5. The model's internal parameters are then nudged, repeatedly, so that its predicted district totals get closer to the real ones. This is standard neural-network training (forward pass → compare to target → backpropagate error → update parameters → repeat for many rounds).
+1. The model's internal parameters are then nudged, repeatedly, so that its predicted district totals get closer to the real ones. This is standard neural-network training (forward pass → compare to target → backpropagate error → update parameters → repeat for many rounds).
 
 **This is the answer to "where does money come from if the model never saw real GDP for a single hexagon?"** — the model is *only ever graded on whether its patch-level guesses, once summed up, reproduce the real district total.* It never sees a rupee value at the patch level, only at the district level, and only as a sum-check.
 
@@ -127,12 +165,14 @@ This means the model can freely be *wrong* about how the money is split *within*
 
 ---
 
+
+
 ## From model score to final rupee value
 
 The model's raw score $s_i$ alone will not sum exactly to the real district GDP — training makes it *close*, not *exact*. So one final, purely arithmetic step is applied per district, with no learning involved:
 
 $$
-k_g = \frac{Y_g}{\displaystyle\sum_{i \,\in\, g} s_i \times population_i}
+k_g = \frac{Y_g}{\displaystyle\sum_{i \in g} s_i \times population_i}
 $$
 
 This is a single correction number per district: *how much do we need to scale up or down the model's raw output so the district adds up perfectly to the real number.*
@@ -146,7 +186,7 @@ $$
 Because $k_g$ is the *same number for every patch in a district*, it does not change how the district's money is *distributed* between patches — it only rescales all of them together so they add up correctly:
 
 $$
-\sum_{i \,\in\, g} GDP_i = Y_g \quad \text{(guaranteed by construction, every time)}
+\sum_{i \in g} GDP_i = Y_g \quad \text{(guaranteed by construction, every time)}
 $$
 
 **This exact match is not evidence the model is accurate.** It is simple arithmetic — dividing a fixed total proportionally by whatever raw scores the model produced. A district's cells summing correctly to its known total is *guaranteed by the formula*, not *earned by good predictions*.
@@ -155,28 +195,35 @@ Finally, dividing by population gives a per-person value, and ranking every patc
 
 ---
 
+
+
 ## What the model actually learns vs. what is just arithmetic
 
-| Learned by the model (from data + training) | Fixed arithmetic (no learning) |
-|---|---|
-| How much population, lights, roads, shops, buildings, land use, and neighbouring patches matter | The per-district correction factor $k_g$ |
-| The raw intensity score $s_i$ for every patch | Multiplying $s_i \times population_i \times k_g$ |
-| — | Forcing every district's patches to sum exactly to $Y_g$ |
-| — | Ranking patches into a 0–100 percentile |
+
+| Learned by the model (from data + training)                                                     | Fixed arithmetic (no learning)                           |
+| ----------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| How much population, lights, roads, shops, buildings, land use, and neighbouring patches matter | The per-district correction factor $k_g$                 |
+| The raw intensity score $s_i$ for every patch                                                   | Multiplying $s_i \times population_i \times k_g$         |
+| —                                                                                               | Forcing every district's patches to sum exactly to $Y_g$ |
+| —                                                                                               | Ranking patches into a 0–100 percentile                  |
+
 
 ---
+
+
 
 ## The honest, central limitation
 
 A district with, say, 3,000 patches only has **one** real number to check the model against (its total GDP). That single equation:
 
 $$
-\sum_{i \,\in\, g} GDP_i = Y_g
+\sum_{i \in g} GDP_i = Y_g
 $$
 
 has **infinitely many possible correct-looking solutions** — many completely different ways of splitting money between 3,000 patches would all satisfy this one equation equally well. The features, the neighbourhood-sharing, and the training process all influence *which one* particular split the model lands on — but none of them *prove* that split is the real one, because **the real, true split at this fine a scale has never been measured, by anyone, anywhere, in this data.**
 
 This is why:
+
 - The model's within-district pattern should be treated as a *plausible, evidence-informed guess*, not a verified measurement.
 - Any evaluation done on district-level totals (including this project's own checks) can look reassuring while saying almost nothing about whether the *split inside* each district is right.
 - Cross-checking model output against the same satellite/OSM signals it was trained on (e.g. "our wealth score is correlated with night lights") is expected and mild supporting evidence at best — not independent proof, since those same signals were fed into the model.
@@ -185,19 +232,25 @@ If someone asks *"how do we know the hexagon-level numbers are correct?"* — th
 
 ---
 
+
+
 ## Data sources
 
-| Data | What it gives us | Source |
-|---|---|---|
-| District GDDP (the only real money figure) | One total per district, per state | Respective state's Directorate of Economics & Statistics / Economic Survey, mostly retrieved via [OpenCity](https://data.opencity.in/) or official state portals |
-| District & state boundaries | Shapes used to build the hexagon grid | [geoBoundaries](https://www.geoboundaries.org/) |
-| Population per hexagon | People living in each patch | [Kontur Population (via HDX)](https://data.humdata.org/dataset/kontur-population-india); [WorldPop](https://www.worldpop.org/) as an alternate option |
-| Night-time lights | Proxy for electrified/active areas | [VIIRS VNL night-lights, EOG / Payne Institute](https://eogdata.mines.edu/products/vnl/) |
-| Roads, buildings, land use, shops/services (POIs) | Physical and commercial infrastructure per patch | [OpenStreetMap](https://www.openstreetmap.org/), extracted via [Geofabrik](https://download.geofabrik.de/) |
+
+| Data                                              | What it gives us                                 | Source                                                                                                                                                           |
+| ------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| District GDDP (the only real money figure)        | One total per district, per state                | Respective state's Directorate of Economics & Statistics / Economic Survey, mostly retrieved via [OpenCity](https://data.opencity.in/) or official state portals |
+| District & state boundaries                       | Shapes used to build the hexagon grid            | [geoBoundaries](https://www.geoboundaries.org/)                                                                                                                  |
+| Population per hexagon                            | People living in each patch                      | [Kontur Population (via HDX)](https://data.humdata.org/dataset/kontur-population-india); [WorldPop](https://www.worldpop.org/) as an alternate option            |
+| Night-time lights                                 | Proxy for electrified/active areas               | [VIIRS VNL night-lights, EOG / Payne Institute](https://eogdata.mines.edu/products/vnl/)                                                                         |
+| Roads, buildings, land use, shops/services (POIs) | Physical and commercial infrastructure per patch | [OpenStreetMap](https://www.openstreetmap.org/), extracted via [Geofabrik](https://download.geofabrik.de/)                                                       |
+
 
 None of these sources contain a GDP figure smaller than "one district." The GDP number itself always comes only from the official government table.
 
 ---
+
+
 
 ## Running the project (to reproduce or add a new state)
 
